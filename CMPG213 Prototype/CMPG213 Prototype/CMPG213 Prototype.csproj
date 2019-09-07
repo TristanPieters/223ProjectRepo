@@ -79,6 +79,12 @@
     <Compile Include="Form_Home_Page.Designer.cs">
       <DependentUpon>Form_Home_Page.cs</DependentUpon>
     </Compile>
+    <Compile Include="Manage_Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage_Employees.Designer.cs">
+      <DependentUpon>Manage_Employees.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_FuelPrices.resx">
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Home_Page.resx">
       <DependentUpon>Form_Home_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage_Employees.resx">
+      <DependentUpon>Manage_Employees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

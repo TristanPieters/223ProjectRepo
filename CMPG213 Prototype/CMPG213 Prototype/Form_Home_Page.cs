@@ -48,5 +48,13 @@ namespace CMPG213_Prototype
             updFuelPriceFrm.ShowDialog();
             //
         }
+
+        private void BtnEmpManage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Manage_Employees ME = new Manage_Employees();
+            ME.ShowDialog();
+            this.Close();
+        }
     }
 }
