@@ -36,7 +36,7 @@ namespace CMPG213_Prototype
             try
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand(@"Insert Into EMPLOYEE Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')", conn);
+                SqlCommand command = new SqlCommand(@"Insert Into EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')", conn);
                 SqlDataAdapter adapter = new SqlDataAdapter();
                 adapter.InsertCommand = command;
                 adapter.InsertCommand.ExecuteNonQuery();
@@ -56,7 +56,7 @@ namespace CMPG213_Prototype
             try
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand("Update From EMPLOYEE Where Emp_FName = '" + fName + "' AND Emp_LName = '" + lName + "'", conn);
+                SqlCommand command = new SqlCommand(@"UPDATE EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')", conn);
                 SqlDataAdapter adap = new SqlDataAdapter();
                 adap.DeleteCommand = command;
                 adap.DeleteCommand.ExecuteNonQuery();

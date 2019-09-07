@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.btnExitHomeP = new System.Windows.Forms.Button();
             this.btnViewAccntDB = new System.Windows.Forms.Button();
             this.btnFuelRecvOrd = new System.Windows.Forms.Button();
             this.btnFuelPlaceOrd = new System.Windows.Forms.Button();
@@ -49,8 +48,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnSaleViewTotal = new System.Windows.Forms.Button();
+=======
+>>>>>>> master
             this.btnSaleNew = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnEmpManage = new System.Windows.Forms.Button();
@@ -67,13 +69,11 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.btnReports = new System.Windows.Forms.Button();
+=======
+>>>>>>> master
             this.btnHelpSupp = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.gBoxAccounts.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -81,10 +81,13 @@
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+<<<<<<< HEAD
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
+=======
+>>>>>>> master
             this.SuspendLayout();
             // 
             // label2
@@ -98,6 +101,7 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "System Developed By FutureTech";
             // 
+<<<<<<< HEAD
             // btnExitHomeP
             // 
             this.btnExitHomeP.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -110,6 +114,8 @@
             this.btnExitHomeP.UseVisualStyleBackColor = true;
             this.btnExitHomeP.Click += new System.EventHandler(this.btnExitHomeP_Click);
             // 
+=======
+>>>>>>> master
             // btnViewAccntDB
             // 
             this.btnViewAccntDB.Font = new System.Drawing.Font("Palatino Linotype", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -124,8 +130,12 @@
             // btnFuelRecvOrd
             // 
             this.btnFuelRecvOrd.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnFuelRecvOrd.Location = new System.Drawing.Point(281, 79);
             this.btnFuelRecvOrd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.btnFuelRecvOrd.Location = new System.Drawing.Point(127, 327);
+>>>>>>> master
             this.btnFuelRecvOrd.Name = "btnFuelRecvOrd";
             this.btnFuelRecvOrd.Size = new System.Drawing.Size(136, 50);
             this.btnFuelRecvOrd.TabIndex = 1;
@@ -135,8 +145,12 @@
             // btnFuelPlaceOrd
             // 
             this.btnFuelPlaceOrd.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnFuelPlaceOrd.Location = new System.Drawing.Point(96, 79);
             this.btnFuelPlaceOrd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.btnFuelPlaceOrd.Location = new System.Drawing.Point(19, 327);
+>>>>>>> master
             this.btnFuelPlaceOrd.Name = "btnFuelPlaceOrd";
             this.btnFuelPlaceOrd.Size = new System.Drawing.Size(136, 50);
             this.btnFuelPlaceOrd.TabIndex = 0;
@@ -161,8 +175,12 @@
             this.gBoxAccounts.Controls.Add(this.btnAccntManage);
             this.gBoxAccounts.Controls.Add(this.btnViewAccntDB);
             this.gBoxAccounts.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.gBoxAccounts.Location = new System.Drawing.Point(147, 7);
             this.gBoxAccounts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.gBoxAccounts.Location = new System.Drawing.Point(12, 12);
+>>>>>>> master
             this.gBoxAccounts.Name = "gBoxAccounts";
             this.gBoxAccounts.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gBoxAccounts.Size = new System.Drawing.Size(331, 223);
@@ -173,8 +191,12 @@
             // btnViewAccOutstn
             // 
             this.btnViewAccOutstn.Font = new System.Drawing.Font("Palatino Linotype", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnViewAccOutstn.Location = new System.Drawing.Point(8, 156);
             this.btnViewAccOutstn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.btnViewAccOutstn.Location = new System.Drawing.Point(7, 89);
+>>>>>>> master
             this.btnViewAccOutstn.Name = "btnViewAccOutstn";
             this.btnViewAccOutstn.Size = new System.Drawing.Size(147, 60);
             this.btnViewAccOutstn.TabIndex = 5;
@@ -196,7 +218,6 @@
             // 
             this.groupBox1.Controls.Add(this.tableLayoutPanel1);
             this.groupBox1.Controls.Add(this.btnUpdFuelPrice);
-            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(999, 15);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -337,6 +358,7 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Fuel Type";
             // 
+<<<<<<< HEAD
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnSaleViewTotal);
@@ -372,14 +394,30 @@
             this.btnSaleNew.TabIndex = 0;
             this.btnSaleNew.Text = "New Sale";
             this.btnSaleNew.UseVisualStyleBackColor = true;
+=======
+            // btnSaleNew
+            // 
+            this.btnSaleNew.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaleNew.Location = new System.Drawing.Point(641, 224);
+            this.btnSaleNew.Name = "btnSaleNew";
+            this.btnSaleNew.Size = new System.Drawing.Size(102, 41);
+            this.btnSaleNew.TabIndex = 0;
+            this.btnSaleNew.Text = "New Sale";
+            this.btnSaleNew.UseVisualStyleBackColor = true;
+            this.btnSaleNew.Click += new System.EventHandler(this.btnSaleNew_Click);
+>>>>>>> master
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnEmpManage);
             this.groupBox2.Controls.Add(this.btnEmpManageHours);
             this.groupBox2.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.groupBox2.Location = new System.Drawing.Point(4, 4);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.groupBox2.Location = new System.Drawing.Point(12, 199);
+>>>>>>> master
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Size = new System.Drawing.Size(331, 127);
@@ -554,6 +592,7 @@
             this.label22.TabIndex = 6;
             this.label22.Text = "Fuel Type";
             // 
+<<<<<<< HEAD
             // btnReports
             // 
             this.btnReports.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -570,6 +609,12 @@
             this.btnHelpSupp.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHelpSupp.Location = new System.Drawing.Point(1107, 441);
             this.btnHelpSupp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            // btnHelpSupp
+            // 
+            this.btnHelpSupp.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHelpSupp.Location = new System.Drawing.Point(830, 421);
+>>>>>>> master
             this.btnHelpSupp.Name = "btnHelpSupp";
             this.btnHelpSupp.Size = new System.Drawing.Size(140, 62);
             this.btnHelpSupp.TabIndex = 10;
@@ -577,6 +622,7 @@
             this.btnHelpSupp.UseVisualStyleBackColor = true;
             this.btnHelpSupp.Click += new System.EventHandler(this.btnHelpSupp_Click);
             // 
+<<<<<<< HEAD
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -636,17 +682,26 @@
             this.tabPage4.Text = "ORDERS";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+=======
+>>>>>>> master
             // Form_Home_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1263, 610);
             this.Controls.Add(this.tabControl1);
+=======
+            this.ClientSize = new System.Drawing.Size(947, 496);
+            this.Controls.Add(this.btnFuelRecvOrd);
+            this.Controls.Add(this.btnSaleNew);
+            this.Controls.Add(this.btnFuelPlaceOrd);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.gBoxAccounts);
+>>>>>>> master
             this.Controls.Add(this.btnHelpSupp);
-            this.Controls.Add(this.btnReports);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnExitHomeP);
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form_Home_Page";
@@ -661,10 +716,13 @@
             this.groupBox4.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+<<<<<<< HEAD
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+=======
+>>>>>>> master
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -672,7 +730,6 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnExitHomeP;
         private System.Windows.Forms.Button btnViewAccntDB;
         private System.Windows.Forms.Button btnFuelRecvOrd;
         private System.Windows.Forms.Button btnFuelPlaceOrd;
@@ -707,15 +764,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnSaleViewTotal;
         private System.Windows.Forms.Button btnSaleNew;
-        private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnHelpSupp;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
     }
 }
