@@ -6,7 +6,7 @@ Current_Fuel_Reserve decimal(10,3) );
 
 create table EMPLOYEE (
 Emp_ID int identity(1,1) primary key not null,
-ShiftTime time(7),
+ShiftTime datetime,
 Emp_FName nvarchar(50),
 Emp_LName nvarchar(50),
 Emp_CellNum nvarchar(50),
@@ -14,6 +14,14 @@ Emp_JOB nvarchar(50),
 Emp_Email nvarchar(62),
 Emp_Username nvarchar (10),
 Emp_Password nvarchar(8) );
+
+create table WSHIFT (
+Shift_ID int identity(1,1) primary key not null,
+Emp_ID int ,
+start_time datetime,
+end_time datetime,  
+constraint fk_Emp_Shifts foreign key (Emp_ID) references EMPLOYEE(Emp_ID) );
+
 
 create table ACCOUNT (
 Acc_ID int identity(1,1) primary key not null,
@@ -62,3 +70,4 @@ Amt_OrderdLiters decimal (18,3),
 constraint fk_OD_Forder foreign key (Order_ID) references FORDER(Order_ID),
 constraint fk_OD_Fuel foreign key (Fuel_ID) references FUEL(Fuel_ID),
 constraint pk_OD primary key (Order_ID,Fuel_ID) );
+

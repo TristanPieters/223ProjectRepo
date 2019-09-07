@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnExitHomeP = new System.Windows.Forms.Button();
             this.btnViewAccntDB = new System.Windows.Forms.Button();
-            this.gBoxFuel = new System.Windows.Forms.GroupBox();
-            this.btnFuelViewSales = new System.Windows.Forms.Button();
-            this.btnFuelResView = new System.Windows.Forms.Button();
             this.btnFuelRecvOrd = new System.Windows.Forms.Button();
             this.btnFuelPlaceOrd = new System.Windows.Forms.Button();
             this.btnUpdFuelPrice = new System.Windows.Forms.Button();
@@ -68,13 +64,16 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.btnFuelResRefresh = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnSaleViewTotal = new System.Windows.Forms.Button();
             this.btnSaleNew = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnHelpSupp = new System.Windows.Forms.Button();
-            this.gBoxFuel.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.gBoxAccounts.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -82,17 +81,11 @@
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Stallions Gas Station";
             // 
             // label2
             // 
@@ -107,7 +100,7 @@
             // btnExitHomeP
             // 
             this.btnExitHomeP.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExitHomeP.Location = new System.Drawing.Point(830, 434);
+            this.btnExitHomeP.Location = new System.Drawing.Point(830, 414);
             this.btnExitHomeP.Name = "btnExitHomeP";
             this.btnExitHomeP.Size = new System.Drawing.Size(105, 37);
             this.btnExitHomeP.TabIndex = 2;
@@ -125,44 +118,10 @@
             this.btnViewAccntDB.Text = "View Account Database";
             this.btnViewAccntDB.UseVisualStyleBackColor = true;
             // 
-            // gBoxFuel
-            // 
-            this.gBoxFuel.Controls.Add(this.btnFuelViewSales);
-            this.gBoxFuel.Controls.Add(this.btnFuelResView);
-            this.gBoxFuel.Controls.Add(this.btnFuelRecvOrd);
-            this.gBoxFuel.Controls.Add(this.btnFuelPlaceOrd);
-            this.gBoxFuel.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBoxFuel.Location = new System.Drawing.Point(312, 60);
-            this.gBoxFuel.Name = "gBoxFuel";
-            this.gBoxFuel.Size = new System.Drawing.Size(248, 181);
-            this.gBoxFuel.TabIndex = 4;
-            this.gBoxFuel.TabStop = false;
-            this.gBoxFuel.Text = "Fuel";
-            // 
-            // btnFuelViewSales
-            // 
-            this.btnFuelViewSales.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFuelViewSales.Location = new System.Drawing.Point(139, 135);
-            this.btnFuelViewSales.Name = "btnFuelViewSales";
-            this.btnFuelViewSales.Size = new System.Drawing.Size(102, 41);
-            this.btnFuelViewSales.TabIndex = 4;
-            this.btnFuelViewSales.Text = "Fuel Summary";
-            this.btnFuelViewSales.UseVisualStyleBackColor = true;
-            // 
-            // btnFuelResView
-            // 
-            this.btnFuelResView.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFuelResView.Location = new System.Drawing.Point(140, 25);
-            this.btnFuelResView.Name = "btnFuelResView";
-            this.btnFuelResView.Size = new System.Drawing.Size(102, 41);
-            this.btnFuelResView.TabIndex = 2;
-            this.btnFuelResView.Text = "Reserves";
-            this.btnFuelResView.UseVisualStyleBackColor = true;
-            // 
             // btnFuelRecvOrd
             // 
             this.btnFuelRecvOrd.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFuelRecvOrd.Location = new System.Drawing.Point(7, 135);
+            this.btnFuelRecvOrd.Location = new System.Drawing.Point(211, 64);
             this.btnFuelRecvOrd.Name = "btnFuelRecvOrd";
             this.btnFuelRecvOrd.Size = new System.Drawing.Size(102, 41);
             this.btnFuelRecvOrd.TabIndex = 1;
@@ -172,7 +131,7 @@
             // btnFuelPlaceOrd
             // 
             this.btnFuelPlaceOrd.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFuelPlaceOrd.Location = new System.Drawing.Point(7, 25);
+            this.btnFuelPlaceOrd.Location = new System.Drawing.Point(72, 64);
             this.btnFuelPlaceOrd.Name = "btnFuelPlaceOrd";
             this.btnFuelPlaceOrd.Size = new System.Drawing.Size(102, 41);
             this.btnFuelPlaceOrd.TabIndex = 0;
@@ -196,7 +155,7 @@
             this.gBoxAccounts.Controls.Add(this.btnAccntManage);
             this.gBoxAccounts.Controls.Add(this.btnViewAccntDB);
             this.gBoxAccounts.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gBoxAccounts.Location = new System.Drawing.Point(312, 270);
+            this.gBoxAccounts.Location = new System.Drawing.Point(110, 6);
             this.gBoxAccounts.Name = "gBoxAccounts";
             this.gBoxAccounts.Size = new System.Drawing.Size(248, 181);
             this.gBoxAccounts.TabIndex = 5;
@@ -227,8 +186,9 @@
             // 
             this.groupBox1.Controls.Add(this.tableLayoutPanel1);
             this.groupBox1.Controls.Add(this.btnUpdFuelPrice);
+            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(606, 60);
+            this.groupBox1.Location = new System.Drawing.Point(749, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(186, 201);
             this.groupBox1.TabIndex = 5;
@@ -359,9 +319,9 @@
             this.groupBox2.Controls.Add(this.btnEmpManage);
             this.groupBox2.Controls.Add(this.btnEmpManageHours);
             this.groupBox2.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(18, 263);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(248, 181);
+            this.groupBox2.Size = new System.Drawing.Size(248, 103);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Employees";
@@ -389,9 +349,8 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tableLayoutPanel2);
-            this.groupBox4.Controls.Add(this.btnFuelResRefresh);
             this.groupBox4.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(606, 270);
+            this.groupBox4.Location = new System.Drawing.Point(525, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(218, 201);
             this.groupBox4.TabIndex = 7;
@@ -518,22 +477,12 @@
             this.label22.TabIndex = 6;
             this.label22.Text = "Fuel Type";
             // 
-            // btnFuelResRefresh
-            // 
-            this.btnFuelResRefresh.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFuelResRefresh.Location = new System.Drawing.Point(53, 155);
-            this.btnFuelResRefresh.Name = "btnFuelResRefresh";
-            this.btnFuelResRefresh.Size = new System.Drawing.Size(102, 41);
-            this.btnFuelResRefresh.TabIndex = 3;
-            this.btnFuelResRefresh.Text = "Refresh";
-            this.btnFuelResRefresh.UseVisualStyleBackColor = true;
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnSaleViewTotal);
             this.groupBox3.Controls.Add(this.btnSaleNew);
             this.groupBox3.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(18, 60);
+            this.groupBox3.Location = new System.Drawing.Point(181, 172);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(248, 181);
             this.groupBox3.TabIndex = 8;
@@ -563,7 +512,7 @@
             // btnReports
             // 
             this.btnReports.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReports.Location = new System.Drawing.Point(830, 321);
+            this.btnReports.Location = new System.Drawing.Point(830, 315);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(105, 37);
             this.btnReports.TabIndex = 9;
@@ -573,7 +522,7 @@
             // btnHelpSupp
             // 
             this.btnHelpSupp.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHelpSupp.Location = new System.Drawing.Point(830, 370);
+            this.btnHelpSupp.Location = new System.Drawing.Point(830, 358);
             this.btnHelpSupp.Name = "btnHelpSupp";
             this.btnHelpSupp.Size = new System.Drawing.Size(105, 50);
             this.btnHelpSupp.TabIndex = 10;
@@ -581,26 +530,75 @@
             this.btnHelpSupp.UseVisualStyleBackColor = true;
             this.btnHelpSupp.Click += new System.EventHandler(this.btnHelpSupp_Click);
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(507, 294);
+            this.tabControl1.TabIndex = 11;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(499, 175);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "HOME";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.gBoxAccounts);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(499, 268);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "ACCOUNTS";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox2);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(499, 175);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "EMPLOYEES";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.btnFuelPlaceOrd);
+            this.tabPage4.Controls.Add(this.btnFuelRecvOrd);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(499, 175);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "ORDERS";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
             // Form_Home_Page
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(947, 496);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnHelpSupp);
             this.Controls.Add(this.btnReports);
-            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.gBoxAccounts);
-            this.Controls.Add(this.gBoxFuel);
             this.Controls.Add(this.btnExitHomeP);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "Form_Home_Page";
             this.Text = "Stallions Gas Station Home Page";
             this.Load += new System.EventHandler(this.Form_Home_Page_Load);
-            this.gBoxFuel.ResumeLayout(false);
             this.gBoxAccounts.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -610,20 +608,19 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnExitHomeP;
         private System.Windows.Forms.Button btnViewAccntDB;
-        private System.Windows.Forms.GroupBox gBoxFuel;
-        private System.Windows.Forms.Button btnFuelViewSales;
-        private System.Windows.Forms.Button btnFuelResView;
         private System.Windows.Forms.Button btnFuelRecvOrd;
         private System.Windows.Forms.Button btnFuelPlaceOrd;
         private System.Windows.Forms.Button btnUpdFuelPrice;
@@ -657,11 +654,15 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Button btnFuelResRefresh;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnSaleViewTotal;
         private System.Windows.Forms.Button btnSaleNew;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnHelpSupp;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
     }
 }
