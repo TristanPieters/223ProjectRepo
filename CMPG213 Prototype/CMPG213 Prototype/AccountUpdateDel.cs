@@ -18,7 +18,11 @@ namespace CMPG213_Prototype
             InitializeComponent();
         }
         SqlConnection CONN = new SqlConnection();
+<<<<<<< Updated upstream
         //SqlDataAdapter adapter;
+=======
+        
+>>>>>>> Stashed changes
 
 
         private void AccountUpdateDel_Load(object sender, EventArgs e)
@@ -31,18 +35,21 @@ namespace CMPG213_Prototype
 
         private void BtnDeleteAccount_Click(object sender, EventArgs e)
         {
-       /*     con.Open();
+
+            CONN.Open();
             SqlCommand command;
-            string sql;
+            string sql = @" DELETE FROM ACCOUNT WHERE Acc_IDnum  ='" + tbxID.Text + "'";
             SqlDataAdapter adapter = new SqlDataAdapter();
-            sql = @" DELETE FROM Account WHERE LastName ='" + textBox1.Text + "'"";
- command = new SqlCommand(sql, con);
+         
+            command = new SqlCommand(sql,CONN);
             DataSet ds = new DataSet();
             adapter.DeleteCommand = command;
-            adapter.DeleteCommand.ExecuteNonQuery(); //Deletes from database, Adapter
-            makes changes
+            adapter.DeleteCommand.ExecuteNonQuery();
+            adapter.Fill(ds, "ACCOUNT");
+            dataGridView1.DataSource = ds;
+            dataGridView1.DataMember = "ACCOUNT";
 
- con.Close();*/
+            CONN.Close();
         }
 
         private void TbxID_TextChanged(object sender, EventArgs e)

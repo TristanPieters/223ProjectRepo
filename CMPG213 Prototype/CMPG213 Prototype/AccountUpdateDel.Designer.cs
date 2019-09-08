@@ -83,7 +83,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1686, 446);
+            this.dataGridView1.Size = new System.Drawing.Size(1253, 446);
             this.dataGridView1.TabIndex = 0;
             // 
             // accIDDataGridViewTextBoxColumn
@@ -308,7 +308,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1780, 1559);
+            this.ClientSize = new System.Drawing.Size(1974, 1559);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
