@@ -50,11 +50,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -62,8 +66,12 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.tabControl1.Location = new System.Drawing.Point(19, 37);
+=======
+            this.tabControl1.Location = new System.Drawing.Point(24, 30);
+>>>>>>> master
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(320, 186);
@@ -142,8 +150,13 @@
             // label2
             // 
             this.label2.AutoSize = true;
+<<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(12, 73);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+=======
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label2.Location = new System.Drawing.Point(6, 38);
+>>>>>>> master
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(152, 25);
             this.label2.TabIndex = 1;
@@ -152,8 +165,13 @@
             // label1
             // 
             this.label1.AutoSize = true;
+<<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(12, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+=======
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(6, 11);
+>>>>>>> master
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(174, 25);
             this.label1.TabIndex = 0;
@@ -193,7 +211,12 @@
             // 
             // button2
             // 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
+=======
+            this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+>>>>>>> master
             this.button2.Location = new System.Drawing.Point(8, 47);
 =======
             this.button2.Location = new System.Drawing.Point(22, 140);
@@ -203,8 +226,12 @@
             this.button2.Size = new System.Drawing.Size(150, 44);
             this.button2.TabIndex = 9;
             this.button2.Text = "Delete";
+<<<<<<< HEAD
             this.button2.UseVisualStyleBackColor = true;
 <<<<<<< Updated upstream
+=======
+            this.button2.UseVisualStyleBackColor = false;
+>>>>>>> master
             this.button2.Click += new System.EventHandler(this.button2_Click);
 =======
             this.button2.Click += new System.EventHandler(this.Button2_Click);
@@ -231,8 +258,13 @@
             // label4
             // 
             this.label4.AutoSize = true;
+<<<<<<< HEAD
             this.label4.Location = new System.Drawing.Point(16, 29);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+=======
+            this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label4.Location = new System.Drawing.Point(8, 15);
+>>>>>>> master
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(174, 25);
             this.label4.TabIndex = 5;
@@ -275,8 +307,13 @@
             // label7
             // 
             this.label7.AutoSize = true;
+<<<<<<< HEAD
             this.label7.Location = new System.Drawing.Point(16, 131);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+=======
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label7.Location = new System.Drawing.Point(8, 68);
+>>>>>>> master
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(157, 25);
             this.label7.TabIndex = 10;
@@ -325,8 +362,13 @@
             // label5
             // 
             this.label5.AutoSize = true;
+<<<<<<< HEAD
             this.label5.Location = new System.Drawing.Point(16, 79);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+=======
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label5.Location = new System.Drawing.Point(8, 41);
+>>>>>>> master
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(152, 25);
             this.label5.TabIndex = 6;
@@ -335,8 +377,13 @@
             // label6
             // 
             this.label6.AutoSize = true;
+<<<<<<< HEAD
             this.label6.Location = new System.Drawing.Point(16, 27);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+=======
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label6.Location = new System.Drawing.Point(8, 14);
+>>>>>>> master
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(174, 25);
             this.label6.TabIndex = 5;
@@ -364,10 +411,33 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox2.Controls.Add(this.tabControl1);
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(375, 267);
+            this.groupBox2.TabIndex = 1;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "MAINTAIIN FUEL";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(400, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 267);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
+            // 
             // MaintainFuel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(394, 251);
 =======
@@ -375,6 +445,12 @@
 >>>>>>> Stashed changes
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+=======
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(512, 311);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.groupBox2);
+>>>>>>> master
             this.Name = "MaintainFuel";
             this.Text = "MaintainFuel";
             this.Load += new System.EventHandler(this.MaintainFuel_Load);
@@ -386,6 +462,8 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -413,5 +491,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
