@@ -84,5 +84,10 @@ namespace CMPG213_Prototype
             }
             conn.Close();
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
