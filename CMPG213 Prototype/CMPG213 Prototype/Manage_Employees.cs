@@ -20,8 +20,7 @@ namespace CMPG213_Prototype
         string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True";
         SqlConnection conn;
 
-        string fName, lName, job, email, username, password, shift;
-        int cellNr = 0;
+        string fName, lName, job, email, username, password, shift, cellNr;
 
 
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -33,7 +32,7 @@ namespace CMPG213_Prototype
             username = txbShiftTime.Text;
             password = txbEmp_Password.Text;
             shift = txbShiftTime.Text;
-            cellNr = int.Parse(txbEmp_CellNum.Text);
+            cellNr = txbEmp_CellNum.Text;
             string sql = @"Insert Into EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')";
 
             try
@@ -62,7 +61,7 @@ namespace CMPG213_Prototype
             username = txbShiftTime.Text;
             password = txbEmp_Password.Text;
             shift = txbShiftTime.Text;
-            cellNr = int.Parse(txbEmp_CellNum.Text);
+            cellNr = txbEmp_CellNum.Text;
             string sql = @"UPDATE EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')";
 
             try
