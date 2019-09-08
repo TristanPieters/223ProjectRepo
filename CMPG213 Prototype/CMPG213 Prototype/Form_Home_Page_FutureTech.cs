@@ -68,34 +68,34 @@ namespace CMPG213_Prototype
         private void BtnReports_Click(object sender, EventArgs e)
         {
             //Daily report
-             CONN.Open();
-             String transID;
-             DateTime transDate;
-             decimal transAmnt;
-             double transLitersSold;
+            // CONN.Open();
+             //String transID;
+             //DateTime transDate;
+             //decimal transAmnt;
+             //double transLitersSold;
 
-            SqlCommand commTrans;
-            SqlCommand commEmp;
-            SqlCommand commAcc;
-            SqlCommand commFuel;
-            SqlCommand commReward;
-            SqlDataAdapter dataReader = new SqlDataAdapter();
+           // SqlCommand commTrans;
+            //SqlCommand commEmp;
+            //SqlCommand commAcc;
+            //SqlCommand commFuel;
+            //SqlCommand commReward;
+            //SqlDataAdapter dataReader = new SqlDataAdapter();
 
-            String sqlTrans,sqlEmp,sqlAcc,sqlFuel,sqlReward, Output;
+            //String sqlTrans,sqlEmp,sqlAcc,sqlFuel,sqlReward, Output;
 
-            sqlTrans = "Select Trans_ID,Dateofsale,Amount_Liters_Sold, Liters_Sold from TRANSACT";
-            sqlEmp = "Select Emp_ID from EMPLOYEE";
-            sqlAcc = "Select Acc_ID from ACCOUNT";
-            sqlFuel = "Select Fuel_ID from FUEL";
-            sqlReward = "Select Reward_ID from REWARD";
+            //sqlTrans = "Select Trans_ID,Dateofsale,Amount_Liters_Sold, Liters_Sold from TRANSACT";
+            //sqlEmp = "Select Emp_ID from EMPLOYEE";
+            //sqlAcc = "Select Acc_ID from ACCOUNT";
+            //sqlFuel = "Select Fuel_ID from FUEL";
+            //sqlReward = "Select Reward_ID from REWARD";
 
-            commTrans = new SqlCommand(sqlTrans, CONN);
-            commEmp = new SqlCommand(sqlEmp, CONN);
-            commAcc = new SqlCommand(sqlAcc, CONN);
-            commFuel = new SqlCommand(sqlFuel, CONN);
-            commReward = new SqlCommand(sqlReward, CONN);
+            //commTrans = new SqlCommand(sqlTrans, CONN);
+            //commEmp = new SqlCommand(sqlEmp, CONN);
+            //commAcc = new SqlCommand(sqlAcc, CONN);
+            //commFuel = new SqlCommand(sqlFuel, CONN);
+            //commReward = new SqlCommand(sqlReward, CONN);
 
-            dataReader = comm.ExcecuteReader();
+            //dataReader = comm.ExcecuteReader();
 
 
 
@@ -144,6 +144,12 @@ namespace CMPG213_Prototype
         {
             AccountUpdateDel myForm = new AccountUpdateDel();
             myForm.ShowDialog();
+        }
+
+        private void btnNewSale_Click(object sender, EventArgs e)
+        {
+            FuelSalesForm formSales = new FuelSalesForm();
+            formSales.ShowDialog();
         }
     }
 }
