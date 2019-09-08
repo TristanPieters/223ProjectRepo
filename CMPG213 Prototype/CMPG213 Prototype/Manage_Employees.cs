@@ -17,7 +17,11 @@ namespace CMPG213_Prototype
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
+        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True";
+=======
         string constring = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security = True";
+>>>>>>> master
         SqlConnection conn;
 
         string fName, lName, job, email, username, password, shift, cellNr;
@@ -25,14 +29,14 @@ namespace CMPG213_Prototype
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            fName = txbEmp_FName.Text;
-            lName = txbEmp_LName.Text;
-            job = txbEmp_Job.Text;
-            email = txbEmp_Email.Text;
-            username = txbShiftTime.Text;
-            password = txbEmp_Password.Text;
-            shift = txbShiftTime.Text;
-            cellNr = txbEmp_CellNum.Text;
+            fName = txbEmp_FNameAdd.Text;
+            lName = txbEmp_LNameAdd.Text;
+            job = txbEmp_JobAdd.Text;
+            email = txbEmp_EmailAdd.Text;
+            username = txbUsernameAdd.Text;
+            password = txbEmp_PasswordAdd.Text;
+            shift = txbShiftTimeAdd.Text;
+            cellNr = txbEmp_CellNumAdd.Text;
             string sql = @"Insert Into EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')";
 
             try
@@ -54,15 +58,15 @@ namespace CMPG213_Prototype
 
         private void BtnChange_Click(object sender, EventArgs e)
         {
-            fName = txbEmp_FName.Text;
-            lName = txbEmp_LName.Text;
-            job = txbEmp_Job.Text;
-            email = txbEmp_Email.Text;
-            username = txbShiftTime.Text;
-            password = txbEmp_Password.Text;
-            shift = txbShiftTime.Text;
-            cellNr = txbEmp_CellNum.Text;
-            string sql = @"UPDATE EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')";
+            fName = txbEmp_FNameUp.Text;
+            lName = txbEmp_LNameUp.Text;
+            job = txbEmp_JobUp.Text;
+            email = txbEmp_EmailUp.Text;
+            username = txbUsernameUp.Text;
+            password = txbEmp_PasswordUp.Text;
+            shift = txbShiftTimeUp.Text;
+            cellNr = txbEmp_CellNumUp.Text;
+            string sql = @"UPDATE EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "' WHERE Emp_ID = '" + cmbUpdate.SelectedItem + "'";
 
             try
             {
@@ -84,9 +88,7 @@ namespace CMPG213_Prototype
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            fName = txbEmp_FName.Text;
-            lName = txbEmp_LName.Text;
-            string sql = @"Delete From EMPLOYEE Where Emp_FName = '" + fName + "' AND Emp_LName = '" + lName + "'";
+            string sql = @"Delete From EMPLOYEE Where Emp_ID = '" + cmbDelete.SelectedItem + "'";
             try
             {
                 conn.Open();
@@ -112,6 +114,19 @@ namespace CMPG213_Prototype
         private void Manage_Employees_Load(object sender, EventArgs e)
         {
             conn = new SqlConnection(constring);
+            string sql = @"SELECT * FROM EMPLOYEE";
+            SqlDataReader reader;
+            SqlCommand comm = new SqlCommand(sql, conn);
+            conn.Open();
+            reader = comm.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string output = Convert.ToString(reader.GetValue(1));
+                cmbDelete.Items.Add(output);
+                cmbUpdate.Items.Add(output);
+            }
+            conn.Close();
         }
     }
 }
