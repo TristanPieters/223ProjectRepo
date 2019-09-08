@@ -10,8 +10,8 @@ using System.Windows.Forms;
 using System.IO;
 using System.Data.SqlClient;
 using System.Configuration;
-using System.Data;
-using System.Text;
+//using System.Data;
+//using System.Text;
 
 namespace CMPG213_Prototype
 {
@@ -21,7 +21,7 @@ namespace CMPG213_Prototype
         {
             InitializeComponent();
         }
-        SqlConnection CONN;
+        
         private void Form_Home_Page_FutureTech_Load(object sender, EventArgs e)
         {
             MessageBox.Show("Welcome to Stallion's Gas Station designed and developed by FUTURETECH");
@@ -54,7 +54,7 @@ namespace CMPG213_Prototype
 
         private void BtnUpdateFuelPrice_Click(object sender, EventArgs e)
         {
-            Form_FuelPrices updateFuelPriceForm = new Form_FuelPrices();
+            MaintainFuel updateFuelPriceForm = new MaintainFuel();
             updateFuelPriceForm.ShowDialog();
         }
 
@@ -68,25 +68,25 @@ namespace CMPG213_Prototype
         private void BtnReports_Click(object sender, EventArgs e)
         {
             //Daily report
-            CONN.Open();
-            String transID;
-            DateTime transDate;
-            decimal transAmnt;
-            double transLitersSold;
+           // CONN.Open();
+           // String transID;
+           // DateTime transDate;
+           // decimal transAmnt;
+           // double transLitersSold;
 
-            SqlCommand comm;
-            SqlDataAdapter dataReader = new SqlDataAdapter();
-            String sql,sqlEmp,sqlAcc,sqlFuel,sqlReward, Output;
-            sql = "Select Trans_ID,Dateofsale,Amount_Liters_Sold, Liters_Sold from TRANSACT";
-            comm = new SqlCommand(sql, CONN);
+            //SqlCommand comm;
+            //SqlDataAdapter dataReader = new SqlDataAdapter();
+            //String sql,sqlEmp,sqlAcc,sqlFuel,sqlReward, Output;
+            //sql = "Select Trans_ID,Dateofsale,Amount_Liters_Sold, Liters_Sold from TRANSACT";
+            //comm = new SqlCommand(sql, CONN);
             
 
-            sqlEmp = "Select Emp_ID from EMPLOYEE";
-            sqlAcc = "Select Acc_ID from ACCOUNT";
-            sqlFuel = "Select Fuel_ID from FUEL";
-            sqlReward = "Select Reward_ID from REWARD";
+            //sqlEmp = "Select Emp_ID from EMPLOYEE";
+           // sqlAcc = "Select Acc_ID from ACCOUNT";
+           //sqlFuel = "Select Fuel_ID from FUEL";
+            //sqlReward = "Select Reward_ID from REWARD";
 
-            dataReader = comm.ExcecuteReader();
+           // dataReader = comm.ExcecuteReader();
 
 
 
