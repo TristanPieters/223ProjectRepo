@@ -26,7 +26,7 @@ namespace CMPG213_Prototype
         {
             MessageBox.Show("Welcome to Stallion's Gas Station designed and developed by FUTURETECH");
 
-            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security = True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
             string sql = @"Select * From FUEL";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
@@ -87,25 +87,24 @@ namespace CMPG213_Prototype
 
         private void BtnUpdateFuelPrice_Click(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
+
             Maintain_Fuel updateFuelPriceForm = new Maintain_Fuel();
-            updateFuelPriceForm.ShowDialog();
-=======
+            //updateFuelPriceForm.ShowDialog(
             //MaintainFuel updateFuelPriceForm = new MaintainFuel();
             //updateFuelPriceForm.ShowDialog();
->>>>>>> Stashed changes
+
         }
 
         private void BtnManageEmployees_Click(object sender, EventArgs e)
         {
             this.Hide();
-<<<<<<< Updated upstream
+
            // Manage_Employees manageEmpForm = new Manage_Employees();
            // manageEmpForm.ShowDialog();
-=======
+
           //  Manage_Employees manageEmpForm = new Manage_Employees();
             //manageEmpForm.ShowDialog();
->>>>>>> Stashed changes
+
         }
 
         private void BtnReports_Click(object sender, EventArgs e)
