@@ -68,34 +68,35 @@ namespace CMPG213_Prototype
         private void BtnReports_Click(object sender, EventArgs e)
         {
             //Daily report
-            // CONN.Open();
-             //String transID;
-             //DateTime transDate;
-             //decimal transAmnt;
-             //double transLitersSold;
+            CONN.Open();
+            String transID;
+            DateTime transDate;
+            decimal transAmnt;
+            double transLitersSold;
 
-           // SqlCommand commTrans;
-            //SqlCommand commEmp;
-            //SqlCommand commAcc;
-            //SqlCommand commFuel;
-            //SqlCommand commReward;
-            //SqlDataAdapter dataReader = new SqlDataAdapter();
+            SqlCommand commTrans;
+            SqlCommand commEmp;
+            SqlCommand commAcc;
+            SqlCommand commFuel;
+            SqlCommand commReward;
 
-            //String sqlTrans,sqlEmp,sqlAcc,sqlFuel,sqlReward, Output;
+            SqlDataAdapter dataReader = new SqlDataAdapter();
 
-            //sqlTrans = "Select Trans_ID,Dateofsale,Amount_Liters_Sold, Liters_Sold from TRANSACT";
-            //sqlEmp = "Select Emp_ID from EMPLOYEE";
-            //sqlAcc = "Select Acc_ID from ACCOUNT";
-            //sqlFuel = "Select Fuel_ID from FUEL";
-            //sqlReward = "Select Reward_ID from REWARD";
+            String sqlTrans,sqlEmp,sqlAcc,sqlFuel,sqlReward, Output;
 
-            //commTrans = new SqlCommand(sqlTrans, CONN);
-            //commEmp = new SqlCommand(sqlEmp, CONN);
-            //commAcc = new SqlCommand(sqlAcc, CONN);
-            //commFuel = new SqlCommand(sqlFuel, CONN);
-            //commReward = new SqlCommand(sqlReward, CONN);
+            sqlTrans = "Select Trans_ID,Dateofsale,Amount_Liters_Sold, Liters_Sold from TRANSACT";
+            sqlEmp = "Select Emp_ID from EMPLOYEE";
+            sqlAcc = "Select Acc_ID from ACCOUNT";
+            sqlFuel = "Select Fuel_ID from FUEL";
+            sqlReward = "Select Reward_ID from REWARD";
 
-            //dataReader = comm.ExcecuteReader();
+            commTrans = new SqlCommand(sqlTrans, CONN);
+            commEmp = new SqlCommand(sqlEmp, CONN);
+            commAcc = new SqlCommand(sqlAcc, CONN);
+            commFuel = new SqlCommand(sqlFuel, CONN);
+            commReward = new SqlCommand(sqlReward, CONN);
+
+            dataReader = comm.ExcecuteReader();
 
 
 
