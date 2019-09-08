@@ -25,6 +25,39 @@ namespace CMPG213_Prototype
         private void Form_Home_Page_FutureTech_Load(object sender, EventArgs e)
         {
             MessageBox.Show("Welcome to Stallion's Gas Station designed and developed by FUTURETECH");
+
+            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security = True");
+            string sql = @"Select * From FUEL";
+            SqlDataReader reader;
+            SqlCommand comm = new SqlCommand(sql, conn);
+            conn.Open();
+            reader = comm.ExecuteReader();
+            int counter = 1;
+            //string reffrance = "label" + Convert.ToString(counter);
+
+            while (reader.Read())
+            {
+                string output = Convert.ToString(reader.GetValue(2));
+
+                if(counter == 1)
+                {
+                    label1.Text = output;
+                }
+               else if (counter == 2 )
+                {
+                   label2.Text = output;
+                }
+                else if(counter == 3 )
+                {
+                    label3.Text = output;
+                }
+                else if (counter == 4)
+                {
+                    label4.Text = output;
+                }
+                counter++;  
+            }
+            conn.Close();
         }
 
         private void GbFuelType_Enter(object sender, EventArgs e)
