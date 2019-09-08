@@ -188,7 +188,12 @@
             this.btnNewSale.Size = new System.Drawing.Size(101, 40);
             this.btnNewSale.TabIndex = 0;
             this.btnNewSale.Text = "NEW SALE";
+<<<<<<< Updated upstream
             this.btnNewSale.UseVisualStyleBackColor = false;
+=======
+            this.btnNewSale.UseVisualStyleBackColor = true;
+            this.btnNewSale.Click += new System.EventHandler(this.btnNewSale_Click);
+>>>>>>> Stashed changes
             // 
             // btnHelpAndSupport
             // 
