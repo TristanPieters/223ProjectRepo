@@ -304,7 +304,7 @@
             this.btnAddAccounts.Location = new System.Drawing.Point(32, 62);
             this.btnAddAccounts.Margin = new System.Windows.Forms.Padding(6);
             this.btnAddAccounts.Name = "btnAddAccounts";
-            this.btnAddAccounts.Size = new System.Drawing.Size(270, 73);
+            this.btnAddAccounts.Size = new System.Drawing.Size(385, 127);
             this.btnAddAccounts.TabIndex = 0;
             this.btnAddAccounts.Text = "Add New Accounts";
             this.btnAddAccounts.UseVisualStyleBackColor = false;
@@ -317,22 +317,24 @@
             this.btnViewAccountDB.Location = new System.Drawing.Point(32, 221);
             this.btnViewAccountDB.Margin = new System.Windows.Forms.Padding(6);
             this.btnViewAccountDB.Name = "btnViewAccountDB";
-            this.btnViewAccountDB.Size = new System.Drawing.Size(270, 73);
+            this.btnViewAccountDB.Size = new System.Drawing.Size(385, 121);
             this.btnViewAccountDB.TabIndex = 1;
             this.btnViewAccountDB.Text = "View Outstanding Accounts";
             this.btnViewAccountDB.UseVisualStyleBackColor = false;
+            this.btnViewAccountDB.Click += new System.EventHandler(this.BtnViewAccountDB_Click);
             // 
             // btnViewOutstandingAcc
             // 
             this.btnViewOutstandingAcc.BackColor = System.Drawing.Color.White;
             this.btnViewOutstandingAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewOutstandingAcc.Location = new System.Drawing.Point(32, 394);
+            this.btnViewOutstandingAcc.Location = new System.Drawing.Point(32, 373);
             this.btnViewOutstandingAcc.Margin = new System.Windows.Forms.Padding(6);
             this.btnViewOutstandingAcc.Name = "btnViewOutstandingAcc";
-            this.btnViewOutstandingAcc.Size = new System.Drawing.Size(270, 73);
+            this.btnViewOutstandingAcc.Size = new System.Drawing.Size(385, 125);
             this.btnViewOutstandingAcc.TabIndex = 2;
             this.btnViewOutstandingAcc.Text = "Update and Delete Accounts ";
             this.btnViewOutstandingAcc.UseVisualStyleBackColor = false;
+            this.btnViewOutstandingAcc.Click += new System.EventHandler(this.BtnViewOutstandingAcc_Click);
             // 
             // tpEmpolyees
             // 

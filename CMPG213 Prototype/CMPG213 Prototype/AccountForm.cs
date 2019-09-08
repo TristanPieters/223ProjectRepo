@@ -25,8 +25,8 @@ namespace CMPG213_Prototype
             string sName, sSurname, sID, sCellnr, sEmail , sql="";
             SqlCommand comm;
             SqlDataAdapter adapter = new SqlDataAdapter();
-            string constr =  @"";
-            CONN = new SqlConnection(constr);
+
+
             sName = tbxFirstName.Text;
             sSurname = tbxLastName.Text;
             sID = tbxID.Text;
@@ -48,7 +48,7 @@ namespace CMPG213_Prototype
         {
 
 
-            
+            CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\Dewald\Desktop\223ProjectRepo\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
 ;          
         }
     }

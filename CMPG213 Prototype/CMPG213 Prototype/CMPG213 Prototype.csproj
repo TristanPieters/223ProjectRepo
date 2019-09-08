@@ -67,11 +67,11 @@
     <Compile Include="AccountForm.designer.cs">
       <DependentUpon>AccountForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_FuelPrices.cs">
+    <Compile Include="AccountUpdateDel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_FuelPrices.Designer.cs">
-      <DependentUpon>Form_FuelPrices.cs</DependentUpon>
+    <Compile Include="AccountUpdateDel.Designer.cs">
+      <DependentUpon>AccountUpdateDel.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_HelpSupport.cs">
       <SubType>Form</SubType>
@@ -99,11 +99,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AccountForm.resx">
-      <DependentUpon>AccountForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_FuelPrices.resx">
-      <DependentUpon>Form_FuelPrices.cs</DependentUpon>
+    <Compile Include="StallionsDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StallionsDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountUpdateDel.resx">
+      <DependentUpon>AccountUpdateDel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_HelpSupport.resx">
       <DependentUpon>Form_HelpSupport.cs</DependentUpon>
@@ -135,6 +137,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="StallionsDbDataSet.xsc">
+      <DependentUpon>StallionsDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StallionsDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StallionsDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StallionsDbDataSet.xss">
+      <DependentUpon>StallionsDbDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

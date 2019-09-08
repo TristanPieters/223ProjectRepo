@@ -125,5 +125,16 @@ namespace CMPG213_Prototype
             AccountForm myForm = new AccountForm();
             myForm.ShowDialog();
         }
+
+        private void BtnViewAccountDB_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnViewOutstandingAcc_Click(object sender, EventArgs e)
+        {
+            AccountUpdateDel myForm = new AccountUpdateDel();
+            myForm.ShowDialog();
+        }
     }
 }
