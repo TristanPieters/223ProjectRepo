@@ -106,6 +106,7 @@
             this.comBoxFuelType.Name = "comBoxFuelType";
             this.comBoxFuelType.Size = new System.Drawing.Size(100, 21);
             this.comBoxFuelType.TabIndex = 5;
+            this.comBoxFuelType.SelectedIndexChanged += new System.EventHandler(this.comBoxFuelType_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -118,12 +119,20 @@
             // 
             // lblFuelPrice
             // 
+<<<<<<< Updated upstream
             this.lblFuelPrice.AutoSize = true;
             this.lblFuelPrice.Location = new System.Drawing.Point(86, 118);
             this.lblFuelPrice.Name = "lblFuelPrice";
             this.lblFuelPrice.Size = new System.Drawing.Size(68, 13);
+=======
+            this.lblFuelPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblFuelPrice.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblFuelPrice.Location = new System.Drawing.Point(117, 149);
+            this.lblFuelPrice.Name = "lblFuelPrice";
+            this.lblFuelPrice.Size = new System.Drawing.Size(64, 22);
+>>>>>>> Stashed changes
             this.lblFuelPrice.TabIndex = 7;
-            this.lblFuelPrice.Text = "[FuelPrice]";
+            this.lblFuelPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
             // 
@@ -140,6 +149,7 @@
             this.tBoxFuelAmountLiters.Name = "tBoxFuelAmountLiters";
             this.tBoxFuelAmountLiters.Size = new System.Drawing.Size(100, 20);
             this.tBoxFuelAmountLiters.TabIndex = 9;
+            this.tBoxFuelAmountLiters.TextChanged += new System.EventHandler(this.tBoxFuelAmountLiters_TextChanged);
             // 
             // label6
             // 
@@ -196,7 +206,10 @@
             // 
             // btnCreateNewAcc
             // 
+<<<<<<< Updated upstream
             this.btnCreateNewAcc.ForeColor = System.Drawing.SystemColors.ControlText;
+=======
+>>>>>>> Stashed changes
             this.btnCreateNewAcc.Location = new System.Drawing.Point(39, 217);
             this.btnCreateNewAcc.Name = "btnCreateNewAcc";
             this.btnCreateNewAcc.Size = new System.Drawing.Size(147, 44);
@@ -209,13 +222,20 @@
             this.lblAccNewCredit.AutoSize = true;
             this.lblAccNewCredit.Location = new System.Drawing.Point(117, 191);
             this.lblAccNewCredit.Name = "lblAccNewCredit";
+<<<<<<< Updated upstream
             this.lblAccNewCredit.Size = new System.Drawing.Size(73, 13);
+=======
+            this.lblAccNewCredit.Size = new System.Drawing.Size(62, 13);
+>>>>>>> Stashed changes
             this.lblAccNewCredit.TabIndex = 10;
             this.lblAccNewCredit.Text = "[NewCredit]";
             // 
             // btnAccUpdateCredit
             // 
+<<<<<<< Updated upstream
             this.btnAccUpdateCredit.ForeColor = System.Drawing.SystemColors.ControlText;
+=======
+>>>>>>> Stashed changes
             this.btnAccUpdateCredit.Location = new System.Drawing.Point(116, 154);
             this.btnAccUpdateCredit.Name = "btnAccUpdateCredit";
             this.btnAccUpdateCredit.Size = new System.Drawing.Size(75, 28);
@@ -228,7 +248,11 @@
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(7, 191);
             this.label11.Name = "label11";
+<<<<<<< Updated upstream
             this.label11.Size = new System.Drawing.Size(119, 13);
+=======
+            this.label11.Size = new System.Drawing.Size(101, 13);
+>>>>>>> Stashed changes
             this.label11.TabIndex = 8;
             this.label11.Text = "New Credit Amount:";
             // 
@@ -253,7 +277,11 @@
             this.lblAccCreditOutstand.AutoSize = true;
             this.lblAccCreditOutstand.Location = new System.Drawing.Point(7, 116);
             this.lblAccCreditOutstand.Name = "lblAccCreditOutstand";
+<<<<<<< Updated upstream
             this.lblAccCreditOutstand.Size = new System.Drawing.Size(99, 13);
+=======
+            this.lblAccCreditOutstand.Size = new System.Drawing.Size(83, 13);
+>>>>>>> Stashed changes
             this.lblAccCreditOutstand.TabIndex = 5;
             this.lblAccCreditOutstand.Text = "[OutstandCredit]";
             // 
@@ -262,7 +290,11 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(7, 98);
             this.label9.Name = "label9";
+<<<<<<< Updated upstream
             this.label9.Size = new System.Drawing.Size(181, 13);
+=======
+            this.label9.Size = new System.Drawing.Size(151, 13);
+>>>>>>> Stashed changes
             this.label9.TabIndex = 4;
             this.label9.Text = "Outstanding credit amount (R):";
             // 
@@ -271,7 +303,11 @@
             this.lblAccHolderName.AutoSize = true;
             this.lblAccHolderName.Location = new System.Drawing.Point(7, 75);
             this.lblAccHolderName.Name = "lblAccHolderName";
+<<<<<<< Updated upstream
             this.lblAccHolderName.Size = new System.Drawing.Size(95, 13);
+=======
+            this.lblAccHolderName.Size = new System.Drawing.Size(82, 13);
+>>>>>>> Stashed changes
             this.lblAccHolderName.TabIndex = 3;
             this.lblAccHolderName.Text = "[AccHoldName]";
             // 
@@ -280,7 +316,11 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(7, 57);
             this.label8.Name = "label8";
+<<<<<<< Updated upstream
             this.label8.Size = new System.Drawing.Size(135, 13);
+=======
+            this.label8.Size = new System.Drawing.Size(115, 13);
+>>>>>>> Stashed changes
             this.label8.TabIndex = 2;
             this.label8.Text = "Account Holder Name:";
             // 
@@ -296,7 +336,11 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(7, 25);
             this.label7.Name = "label7";
+<<<<<<< Updated upstream
             this.label7.Size = new System.Drawing.Size(79, 13);
+=======
+            this.label7.Size = new System.Drawing.Size(67, 13);
+>>>>>>> Stashed changes
             this.label7.TabIndex = 0;
             this.label7.Text = "Account Nr.:";
             // 
