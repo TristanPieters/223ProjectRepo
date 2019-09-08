@@ -86,9 +86,9 @@
             this.gbFuelType.Controls.Add(this.lblUnleaded95);
             this.gbFuelType.Controls.Add(this.lblUnleaded93);
             this.gbFuelType.Location = new System.Drawing.Point(1112, 56);
-            this.gbFuelType.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gbFuelType.Margin = new System.Windows.Forms.Padding(6);
             this.gbFuelType.Name = "gbFuelType";
-            this.gbFuelType.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gbFuelType.Padding = new System.Windows.Forms.Padding(6);
             this.gbFuelType.Size = new System.Drawing.Size(206, 271);
             this.gbFuelType.TabIndex = 0;
             this.gbFuelType.TabStop = false;
@@ -138,9 +138,9 @@
             // gbPrice
             // 
             this.gbPrice.Location = new System.Drawing.Point(1330, 56);
-            this.gbPrice.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gbPrice.Margin = new System.Windows.Forms.Padding(6);
             this.gbPrice.Name = "gbPrice";
-            this.gbPrice.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gbPrice.Padding = new System.Windows.Forms.Padding(6);
             this.gbPrice.Size = new System.Drawing.Size(206, 271);
             this.gbPrice.TabIndex = 1;
             this.gbPrice.TabStop = false;
@@ -149,7 +149,7 @@
             // btnExit
             // 
             this.btnExit.Location = new System.Drawing.Point(1400, 781);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(6);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(176, 62);
             this.btnExit.TabIndex = 2;
@@ -162,9 +162,9 @@
             this.gbSales.Controls.Add(this.btnUpdateFuelPrice);
             this.gbSales.Controls.Add(this.btnNewSale);
             this.gbSales.Location = new System.Drawing.Point(1112, 356);
-            this.gbSales.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gbSales.Margin = new System.Windows.Forms.Padding(6);
             this.gbSales.Name = "gbSales";
-            this.gbSales.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.gbSales.Padding = new System.Windows.Forms.Padding(6);
             this.gbSales.Size = new System.Drawing.Size(424, 296);
             this.gbSales.TabIndex = 3;
             this.gbSales.TabStop = false;
@@ -173,7 +173,7 @@
             // btnUpdateFuelPrice
             // 
             this.btnUpdateFuelPrice.Location = new System.Drawing.Point(12, 69);
-            this.btnUpdateFuelPrice.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnUpdateFuelPrice.Margin = new System.Windows.Forms.Padding(6);
             this.btnUpdateFuelPrice.Name = "btnUpdateFuelPrice";
             this.btnUpdateFuelPrice.Size = new System.Drawing.Size(206, 77);
             this.btnUpdateFuelPrice.TabIndex = 1;
@@ -184,7 +184,7 @@
             // btnNewSale
             // 
             this.btnNewSale.Location = new System.Drawing.Point(12, 179);
-            this.btnNewSale.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnNewSale.Margin = new System.Windows.Forms.Padding(6);
             this.btnNewSale.Name = "btnNewSale";
             this.btnNewSale.Size = new System.Drawing.Size(202, 77);
             this.btnNewSale.TabIndex = 0;
@@ -194,7 +194,7 @@
             // btnHelpAndSupport
             // 
             this.btnHelpAndSupport.Location = new System.Drawing.Point(1112, 781);
-            this.btnHelpAndSupport.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnHelpAndSupport.Margin = new System.Windows.Forms.Padding(6);
             this.btnHelpAndSupport.Name = "btnHelpAndSupport";
             this.btnHelpAndSupport.Size = new System.Drawing.Size(272, 62);
             this.btnHelpAndSupport.TabIndex = 4;
@@ -205,7 +205,7 @@
             // btnReports
             // 
             this.btnReports.Location = new System.Drawing.Point(1400, 683);
-            this.btnReports.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnReports.Margin = new System.Windows.Forms.Padding(6);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(176, 62);
             this.btnReports.TabIndex = 5;
@@ -231,7 +231,7 @@
             this.tabControl.Controls.Add(this.tpEmpolyees);
             this.tabControl.Controls.Add(this.tpOrders);
             this.tabControl.Location = new System.Drawing.Point(24, 17);
-            this.tabControl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(6);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(862, 635);
@@ -241,9 +241,9 @@
             // 
             this.tpHome.Controls.Add(this.pictureBox1);
             this.tpHome.Location = new System.Drawing.Point(8, 39);
-            this.tpHome.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tpHome.Margin = new System.Windows.Forms.Padding(6);
             this.tpHome.Name = "tpHome";
-            this.tpHome.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tpHome.Padding = new System.Windows.Forms.Padding(6);
             this.tpHome.Size = new System.Drawing.Size(846, 588);
             this.tpHome.TabIndex = 0;
             this.tpHome.Text = "HOME";
@@ -253,7 +253,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(822, 562);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -264,9 +264,9 @@
             // 
             this.tpAccounts.Controls.Add(this.panel1);
             this.tpAccounts.Location = new System.Drawing.Point(8, 39);
-            this.tpAccounts.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tpAccounts.Margin = new System.Windows.Forms.Padding(6);
             this.tpAccounts.Name = "tpAccounts";
-            this.tpAccounts.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tpAccounts.Padding = new System.Windows.Forms.Padding(6);
             this.tpAccounts.Size = new System.Drawing.Size(846, 588);
             this.tpAccounts.TabIndex = 1;
             this.tpAccounts.Text = "ACCOUNTS";
@@ -280,7 +280,7 @@
             this.panel1.Controls.Add(this.btnViewAccountDB);
             this.panel1.Controls.Add(this.btnViewOutstandingAcc);
             this.panel1.Location = new System.Drawing.Point(0, -4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(866, 588);
             this.panel1.TabIndex = 8;
@@ -290,7 +290,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(700, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(146, 588);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -302,7 +302,7 @@
             this.btnAddAccounts.BackColor = System.Drawing.Color.White;
             this.btnAddAccounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddAccounts.Location = new System.Drawing.Point(32, 62);
-            this.btnAddAccounts.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnAddAccounts.Margin = new System.Windows.Forms.Padding(6);
             this.btnAddAccounts.Name = "btnAddAccounts";
             this.btnAddAccounts.Size = new System.Drawing.Size(270, 73);
             this.btnAddAccounts.TabIndex = 0;
@@ -315,7 +315,7 @@
             this.btnViewAccountDB.BackColor = System.Drawing.Color.White;
             this.btnViewAccountDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewAccountDB.Location = new System.Drawing.Point(32, 221);
-            this.btnViewAccountDB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnViewAccountDB.Margin = new System.Windows.Forms.Padding(6);
             this.btnViewAccountDB.Name = "btnViewAccountDB";
             this.btnViewAccountDB.Size = new System.Drawing.Size(270, 73);
             this.btnViewAccountDB.TabIndex = 1;
@@ -327,18 +327,18 @@
             this.btnViewOutstandingAcc.BackColor = System.Drawing.Color.White;
             this.btnViewOutstandingAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewOutstandingAcc.Location = new System.Drawing.Point(32, 394);
-            this.btnViewOutstandingAcc.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnViewOutstandingAcc.Margin = new System.Windows.Forms.Padding(6);
             this.btnViewOutstandingAcc.Name = "btnViewOutstandingAcc";
             this.btnViewOutstandingAcc.Size = new System.Drawing.Size(270, 73);
             this.btnViewOutstandingAcc.TabIndex = 2;
-            this.btnViewOutstandingAcc.Text = "View Account Database";
+            this.btnViewOutstandingAcc.Text = "Update and Delete Accounts ";
             this.btnViewOutstandingAcc.UseVisualStyleBackColor = false;
             // 
             // tpEmpolyees
             // 
             this.tpEmpolyees.Controls.Add(this.panel2);
             this.tpEmpolyees.Location = new System.Drawing.Point(8, 39);
-            this.tpEmpolyees.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tpEmpolyees.Margin = new System.Windows.Forms.Padding(6);
             this.tpEmpolyees.Name = "tpEmpolyees";
             this.tpEmpolyees.Size = new System.Drawing.Size(846, 588);
             this.tpEmpolyees.TabIndex = 2;
@@ -352,7 +352,7 @@
             this.panel2.Controls.Add(this.btnManageEmployees);
             this.panel2.Controls.Add(this.btnWorkHouers);
             this.panel2.Location = new System.Drawing.Point(-8, -4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel2.Margin = new System.Windows.Forms.Padding(6);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(854, 596);
             this.panel2.TabIndex = 3;
@@ -361,7 +361,7 @@
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(708, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(138, 588);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -373,7 +373,7 @@
             this.btnManageEmployees.BackColor = System.Drawing.Color.White;
             this.btnManageEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageEmployees.Location = new System.Drawing.Point(36, 127);
-            this.btnManageEmployees.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnManageEmployees.Margin = new System.Windows.Forms.Padding(6);
             this.btnManageEmployees.Name = "btnManageEmployees";
             this.btnManageEmployees.Size = new System.Drawing.Size(302, 90);
             this.btnManageEmployees.TabIndex = 2;
@@ -386,7 +386,7 @@
             this.btnWorkHouers.BackColor = System.Drawing.Color.White;
             this.btnWorkHouers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWorkHouers.Location = new System.Drawing.Point(36, 300);
-            this.btnWorkHouers.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnWorkHouers.Margin = new System.Windows.Forms.Padding(6);
             this.btnWorkHouers.Name = "btnWorkHouers";
             this.btnWorkHouers.Size = new System.Drawing.Size(302, 90);
             this.btnWorkHouers.TabIndex = 0;
@@ -397,7 +397,7 @@
             // 
             this.tpOrders.Controls.Add(this.panel3);
             this.tpOrders.Location = new System.Drawing.Point(8, 39);
-            this.tpOrders.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tpOrders.Margin = new System.Windows.Forms.Padding(6);
             this.tpOrders.Name = "tpOrders";
             this.tpOrders.Size = new System.Drawing.Size(846, 588);
             this.tpOrders.TabIndex = 3;
@@ -411,7 +411,7 @@
             this.panel3.Controls.Add(this.btnPlaceOrder);
             this.panel3.Controls.Add(this.btnReceiveOrder);
             this.panel3.Location = new System.Drawing.Point(-8, -4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.panel3.Margin = new System.Windows.Forms.Padding(6);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(862, 596);
             this.panel3.TabIndex = 2;
@@ -420,7 +420,7 @@
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(702, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(154, 588);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -432,7 +432,7 @@
             this.btnPlaceOrder.BackColor = System.Drawing.Color.White;
             this.btnPlaceOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlaceOrder.Location = new System.Drawing.Point(32, 85);
-            this.btnPlaceOrder.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnPlaceOrder.Margin = new System.Windows.Forms.Padding(6);
             this.btnPlaceOrder.Name = "btnPlaceOrder";
             this.btnPlaceOrder.Size = new System.Drawing.Size(236, 62);
             this.btnPlaceOrder.TabIndex = 0;
@@ -444,7 +444,7 @@
             this.btnReceiveOrder.BackColor = System.Drawing.Color.White;
             this.btnReceiveOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReceiveOrder.Location = new System.Drawing.Point(32, 300);
-            this.btnReceiveOrder.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnReceiveOrder.Margin = new System.Windows.Forms.Padding(6);
             this.btnReceiveOrder.Name = "btnReceiveOrder";
             this.btnReceiveOrder.Size = new System.Drawing.Size(236, 62);
             this.btnReceiveOrder.TabIndex = 1;
@@ -468,7 +468,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.gbPrice);
             this.Controls.Add(this.gbFuelType);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form_Home_Page_FutureTech";
             this.Text = "Form_Home_Page_FutureTech";
             this.Load += new System.EventHandler(this.Form_Home_Page_FutureTech_Load);
