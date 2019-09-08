@@ -93,5 +93,11 @@ namespace CMPG213_Prototype
         {
 
         }
+
+        private void BtnAddAccounts_Click(object sender, EventArgs e)
+        {
+            AccountForm myForm = new AccountForm();
+            myForm.ShowDialog();
+        }
     }
 }
