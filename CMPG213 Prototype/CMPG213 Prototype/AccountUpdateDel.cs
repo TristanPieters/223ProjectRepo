@@ -64,5 +64,20 @@ namespace CMPG213_Prototype
             dataGridView1.DataSource = ds;
             dataGridView1.DataMember = "ACCOUNT";
         }
+
+        private void BtnOutstanding_Click(object sender, EventArgs e)
+        {
+            CONN.Open();
+            SqlCommand comm;
+            string sql;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            sql = @"Select * FROM ACCOUNT WHERE Acc_Debt > 0";//Only select the surnames
+            comm = new SqlCommand(sql, CONN);
+            DataSet ds = new DataSet();
+            adapter.SelectCommand = comm;
+            adapter.Fill(ds, "ACCOUNT");
+            dataGridView1.DataSource = ds;
+            dataGridView1.DataMember = "ACCOUNT";
+        }
     }
 }

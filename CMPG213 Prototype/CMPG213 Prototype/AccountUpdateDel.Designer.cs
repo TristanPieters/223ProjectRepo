@@ -57,8 +57,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.aCCOUNTTableAdapter = new CMPG213_Prototype.StallionsDbDataSetTableAdapters.ACCOUNTTableAdapter();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnFillterLiters = new System.Windows.Forms.Button();
+            this.btnOutstanding = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stallionsDbDataSet)).BeginInit();
@@ -87,7 +87,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1253, 446);
+            this.dataGridView1.Size = new System.Drawing.Size(1361, 446);
             this.dataGridView1.TabIndex = 0;
             // 
             // accIDDataGridViewTextBoxColumn
@@ -310,32 +310,33 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Location = new System.Drawing.Point(103, 897);
+            this.groupBox3.Controls.Add(this.btnFillterLiters);
+            this.groupBox3.Controls.Add(this.btnOutstanding);
+            this.groupBox3.Location = new System.Drawing.Point(103, 899);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(357, 222);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Filter By";
             // 
-            // button2
+            // btnFillterLiters
             // 
-            this.button2.Location = new System.Drawing.Point(30, 121);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 61);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnFillterLiters.Location = new System.Drawing.Point(30, 126);
+            this.btnFillterLiters.Name = "btnFillterLiters";
+            this.btnFillterLiters.Size = new System.Drawing.Size(277, 61);
+            this.btnFillterLiters.TabIndex = 1;
+            this.btnFillterLiters.Text = "Most Litres";
+            this.btnFillterLiters.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnOutstanding
             // 
-            this.button1.Location = new System.Drawing.Point(30, 43);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 59);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOutstanding.Location = new System.Drawing.Point(30, 43);
+            this.btnOutstanding.Name = "btnOutstanding";
+            this.btnOutstanding.Size = new System.Drawing.Size(277, 59);
+            this.btnOutstanding.TabIndex = 0;
+            this.btnOutstanding.Text = "Outstanding Accounts";
+            this.btnOutstanding.UseVisualStyleBackColor = true;
+            this.btnOutstanding.Click += new System.EventHandler(this.BtnOutstanding_Click);
             // 
             // AccountUpdateDel
             // 
@@ -393,7 +394,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnFillterLiters;
+        private System.Windows.Forms.Button btnOutstanding;
     }
 }
