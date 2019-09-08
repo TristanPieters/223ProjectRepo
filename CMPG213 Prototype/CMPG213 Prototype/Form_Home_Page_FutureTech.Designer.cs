@@ -198,7 +198,10 @@
             this.btnNewSale.TabIndex = 0;
             this.btnNewSale.Text = "NEW SALE";
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
             this.btnNewSale.UseVisualStyleBackColor = true;
@@ -207,8 +210,12 @@
             // btnHelpAndSupport
             // 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 =======
+>>>>>>> Stashed changes
+=======
+
 >>>>>>> Stashed changes
 
             this.btnNewSale.UseVisualStyleBackColor = false;
@@ -218,6 +225,9 @@
 <<<<<<< Updated upstream
 
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
             this.btnHelpAndSupport.BackColor = System.Drawing.SystemColors.ControlLightLight;
