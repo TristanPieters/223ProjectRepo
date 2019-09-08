@@ -68,6 +68,7 @@ namespace CMPG213_Prototype
         private void BtnReports_Click(object sender, EventArgs e)
         {
             //Daily report
+            /*
             CONN.Open();
             String transID;
             DateTime transDate;
@@ -120,7 +121,7 @@ namespace CMPG213_Prototype
                 MessageBox.Show("Error" + ex);
             }
             
-
+    */
            
 
         }

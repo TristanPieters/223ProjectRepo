@@ -64,7 +64,12 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.gbFuelType.SuspendLayout();
+            this.gbPrice.SuspendLayout();
             this.gbSales.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tpHome.SuspendLayout();
@@ -134,6 +139,10 @@
             // 
             // gbPrice
             // 
+            this.gbPrice.Controls.Add(this.label4);
+            this.gbPrice.Controls.Add(this.label3);
+            this.gbPrice.Controls.Add(this.label2);
+            this.gbPrice.Controls.Add(this.label1);
             this.gbPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbPrice.Location = new System.Drawing.Point(587, 29);
             this.gbPrice.Name = "gbPrice";
@@ -188,7 +197,6 @@
             this.btnNewSale.Size = new System.Drawing.Size(101, 40);
             this.btnNewSale.TabIndex = 0;
             this.btnNewSale.Text = "NEW SALE";
-            this.btnNewSale.UseVisualStyleBackColor = false;
             this.btnNewSale.UseVisualStyleBackColor = true;
             this.btnNewSale.Click += new System.EventHandler(this.btnNewSale_Click);
             // 
@@ -466,6 +474,42 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "STALLION\'S GAS STATION";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "label3";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "label4";
+            // 
             // Form_Home_Page_FutureTech
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -478,6 +522,8 @@
             this.Load += new System.EventHandler(this.Form_Home_Page_FutureTech_Load);
             this.gbFuelType.ResumeLayout(false);
             this.gbFuelType.PerformLayout();
+            this.gbPrice.ResumeLayout(false);
+            this.gbPrice.PerformLayout();
             this.gbSales.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.tpHome.ResumeLayout(false);
@@ -534,5 +580,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
