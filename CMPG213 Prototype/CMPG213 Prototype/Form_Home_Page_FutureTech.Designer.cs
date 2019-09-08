@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Home_Page_FutureTech));
             this.gbFuelType = new System.Windows.Forms.GroupBox();
             this.lblDiesel500 = new System.Windows.Forms.Label();
             this.lblDiesel50 = new System.Windows.Forms.Label();
@@ -54,13 +55,16 @@
             this.tpOrders = new System.Windows.Forms.TabPage();
             this.btnReceiveOrder = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbFuelType.SuspendLayout();
             this.gbSales.SuspendLayout();
             this.tabControl.SuspendLayout();
+            this.tpHome.SuspendLayout();
             this.tpAccounts.SuspendLayout();
             this.gbAccounts.SuspendLayout();
             this.tpEmpolyees.SuspendLayout();
             this.tpOrders.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbFuelType
@@ -205,6 +209,7 @@
             // 
             // tpHome
             // 
+            this.tpHome.Controls.Add(this.pictureBox1);
             this.tpHome.Location = new System.Drawing.Point(4, 22);
             this.tpHome.Name = "tpHome";
             this.tpHome.Padding = new System.Windows.Forms.Padding(3);
@@ -322,6 +327,16 @@
             this.btnPlaceOrder.Text = "PLACE ORDER";
             this.btnPlaceOrder.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(411, 292);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form_Home_Page_FutureTech
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -342,10 +357,12 @@
             this.gbFuelType.PerformLayout();
             this.gbSales.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
+            this.tpHome.ResumeLayout(false);
             this.tpAccounts.ResumeLayout(false);
             this.gbAccounts.ResumeLayout(false);
             this.tpEmpolyees.ResumeLayout(false);
             this.tpOrders.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -379,5 +396,6 @@
         private System.Windows.Forms.Button btnWorkHouers;
         private System.Windows.Forms.Button btnReceiveOrder;
         private System.Windows.Forms.Button btnPlaceOrder;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
