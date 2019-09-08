@@ -67,7 +67,27 @@ namespace CMPG213_Prototype
 
         private void btnUdate_Click(object sender, EventArgs e)
         {
+            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security = True");
+            string fueldescription = Convert.ToString(comboBox1.SelectedItem);
+            string fuelppl = textBox6.Text;
+            string fuelreserves = textBox5.Text;
+            string sql = @"UPDATE FUEL SET Fuel_Price_Per_Liter = '" + fuelppl + "', Current_Fuel_Reserve = '" + fuelreserves + "' WHERE Fuel_Description = '" + fueldescription + "'";
 
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adap = new SqlDataAdapter();
+                SqlCommand comm = new SqlCommand(sql, conn);
+                adap.UpdateCommand = new SqlCommand(sql, conn);
+                adap.UpdateCommand.ExecuteNonQuery();
+                MessageBox.Show("Record Updated successfully");
+                comm.Dispose();
+                conn.Close();
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
 
         private void Maintain_Fuel_Load(object sender, EventArgs e)

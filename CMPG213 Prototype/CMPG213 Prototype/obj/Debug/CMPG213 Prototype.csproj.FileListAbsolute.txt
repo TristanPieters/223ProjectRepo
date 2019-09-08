@@ -1,5 +1,8 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb.mdf
 D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb_log.ldf
 D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe.config
@@ -18,6 +21,7 @@ D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213
 D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
 D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
 D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
+<<<<<<< Updated upstream
 =======
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb.mdf
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb_log.ldf
@@ -73,4 +77,6 @@ C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototy
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

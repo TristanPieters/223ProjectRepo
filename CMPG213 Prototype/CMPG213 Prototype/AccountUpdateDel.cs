@@ -18,8 +18,11 @@ namespace CMPG213_Prototype
             InitializeComponent();
         }
         SqlConnection CONN = new SqlConnection();
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
 
         private void AccountUpdateDel_Load(object sender, EventArgs e)
         {

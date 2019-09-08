@@ -197,20 +197,29 @@
             this.btnNewSale.Size = new System.Drawing.Size(101, 40);
             this.btnNewSale.TabIndex = 0;
             this.btnNewSale.Text = "NEW SALE";
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
             this.btnNewSale.UseVisualStyleBackColor = true;
             this.btnNewSale.Click += new System.EventHandler(this.btnNewSale_Click);
             // 
             // btnHelpAndSupport
             // 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 
             this.btnNewSale.UseVisualStyleBackColor = false;
 
             this.btnNewSale.UseVisualStyleBackColor = true;
             this.btnNewSale.Click += new System.EventHandler(this.btnNewSale_Click);
+<<<<<<< Updated upstream
 
 
+=======
+>>>>>>> Stashed changes
             this.btnHelpAndSupport.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnHelpAndSupport.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnHelpAndSupport.Location = new System.Drawing.Point(412, 376);
