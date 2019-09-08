@@ -44,8 +44,8 @@
             this.lblCurrentFuelPrices = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tpHome = new System.Windows.Forms.TabPage();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tpAccounts = new System.Windows.Forms.TabPage();
-            this.gbAccounts = new System.Windows.Forms.GroupBox();
             this.btnViewOutstandingAcc = new System.Windows.Forms.Button();
             this.btnViewAccountDB = new System.Windows.Forms.Button();
             this.btnManageAccounts = new System.Windows.Forms.Button();
@@ -55,16 +55,28 @@
             this.tpOrders = new System.Windows.Forms.TabPage();
             this.btnReceiveOrder = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.gbFuelType.SuspendLayout();
             this.gbSales.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tpHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tpAccounts.SuspendLayout();
-            this.gbAccounts.SuspendLayout();
             this.tpEmpolyees.SuspendLayout();
             this.tpOrders.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // gbFuelType
@@ -184,6 +196,7 @@
             this.btnReports.TabIndex = 5;
             this.btnReports.Text = "REPORTS";
             this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.Click += new System.EventHandler(this.BtnReports_Click);
             // 
             // lblCurrentFuelPrices
             // 
@@ -218,115 +231,6 @@
             this.tpHome.Text = "HOME";
             this.tpHome.UseVisualStyleBackColor = true;
             // 
-            // tpAccounts
-            // 
-            this.tpAccounts.Controls.Add(this.gbAccounts);
-            this.tpAccounts.Location = new System.Drawing.Point(4, 22);
-            this.tpAccounts.Name = "tpAccounts";
-            this.tpAccounts.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAccounts.Size = new System.Drawing.Size(423, 304);
-            this.tpAccounts.TabIndex = 1;
-            this.tpAccounts.Text = "ACCOUNTS";
-            this.tpAccounts.UseVisualStyleBackColor = true;
-            // 
-            // gbAccounts
-            // 
-            this.gbAccounts.Controls.Add(this.btnViewOutstandingAcc);
-            this.gbAccounts.Controls.Add(this.btnViewAccountDB);
-            this.gbAccounts.Controls.Add(this.btnManageAccounts);
-            this.gbAccounts.Location = new System.Drawing.Point(16, 21);
-            this.gbAccounts.Name = "gbAccounts";
-            this.gbAccounts.Size = new System.Drawing.Size(364, 244);
-            this.gbAccounts.TabIndex = 0;
-            this.gbAccounts.TabStop = false;
-            this.gbAccounts.Text = "ACCOUNTS";
-            // 
-            // btnViewOutstandingAcc
-            // 
-            this.btnViewOutstandingAcc.Location = new System.Drawing.Point(40, 107);
-            this.btnViewOutstandingAcc.Name = "btnViewOutstandingAcc";
-            this.btnViewOutstandingAcc.Size = new System.Drawing.Size(135, 38);
-            this.btnViewOutstandingAcc.TabIndex = 2;
-            this.btnViewOutstandingAcc.Text = "View Account Database";
-            this.btnViewOutstandingAcc.UseVisualStyleBackColor = true;
-            // 
-            // btnViewAccountDB
-            // 
-            this.btnViewAccountDB.Location = new System.Drawing.Point(40, 185);
-            this.btnViewAccountDB.Name = "btnViewAccountDB";
-            this.btnViewAccountDB.Size = new System.Drawing.Size(135, 38);
-            this.btnViewAccountDB.TabIndex = 1;
-            this.btnViewAccountDB.Text = "View Outstanding Accounts";
-            this.btnViewAccountDB.UseVisualStyleBackColor = true;
-            // 
-            // btnManageAccounts
-            // 
-            this.btnManageAccounts.Location = new System.Drawing.Point(40, 35);
-            this.btnManageAccounts.Name = "btnManageAccounts";
-            this.btnManageAccounts.Size = new System.Drawing.Size(135, 38);
-            this.btnManageAccounts.TabIndex = 0;
-            this.btnManageAccounts.Text = "Manage Accounts";
-            this.btnManageAccounts.UseVisualStyleBackColor = true;
-            // 
-            // tpEmpolyees
-            // 
-            this.tpEmpolyees.Controls.Add(this.btnManageEmployees);
-            this.tpEmpolyees.Controls.Add(this.btnWorkHouers);
-            this.tpEmpolyees.Location = new System.Drawing.Point(4, 22);
-            this.tpEmpolyees.Name = "tpEmpolyees";
-            this.tpEmpolyees.Size = new System.Drawing.Size(423, 304);
-            this.tpEmpolyees.TabIndex = 2;
-            this.tpEmpolyees.Text = "EMPLOYEES";
-            this.tpEmpolyees.UseVisualStyleBackColor = true;
-            // 
-            // btnManageEmployees
-            // 
-            this.btnManageEmployees.Location = new System.Drawing.Point(24, 25);
-            this.btnManageEmployees.Name = "btnManageEmployees";
-            this.btnManageEmployees.Size = new System.Drawing.Size(103, 40);
-            this.btnManageEmployees.TabIndex = 2;
-            this.btnManageEmployees.Text = "MANAGE EMPLOYEES";
-            this.btnManageEmployees.UseVisualStyleBackColor = true;
-            this.btnManageEmployees.Click += new System.EventHandler(this.BtnManageEmployees_Click);
-            // 
-            // btnWorkHouers
-            // 
-            this.btnWorkHouers.Location = new System.Drawing.Point(24, 99);
-            this.btnWorkHouers.Name = "btnWorkHouers";
-            this.btnWorkHouers.Size = new System.Drawing.Size(103, 40);
-            this.btnWorkHouers.TabIndex = 0;
-            this.btnWorkHouers.Text = "MANAGE WORK HOUERS";
-            this.btnWorkHouers.UseVisualStyleBackColor = true;
-            // 
-            // tpOrders
-            // 
-            this.tpOrders.Controls.Add(this.btnReceiveOrder);
-            this.tpOrders.Controls.Add(this.btnPlaceOrder);
-            this.tpOrders.Location = new System.Drawing.Point(4, 22);
-            this.tpOrders.Name = "tpOrders";
-            this.tpOrders.Size = new System.Drawing.Size(423, 304);
-            this.tpOrders.TabIndex = 3;
-            this.tpOrders.Text = "OREDERS";
-            this.tpOrders.UseVisualStyleBackColor = true;
-            // 
-            // btnReceiveOrder
-            // 
-            this.btnReceiveOrder.Location = new System.Drawing.Point(15, 81);
-            this.btnReceiveOrder.Name = "btnReceiveOrder";
-            this.btnReceiveOrder.Size = new System.Drawing.Size(118, 32);
-            this.btnReceiveOrder.TabIndex = 1;
-            this.btnReceiveOrder.Text = "RECIEVE ORDER";
-            this.btnReceiveOrder.UseVisualStyleBackColor = true;
-            // 
-            // btnPlaceOrder
-            // 
-            this.btnPlaceOrder.Location = new System.Drawing.Point(15, 24);
-            this.btnPlaceOrder.Name = "btnPlaceOrder";
-            this.btnPlaceOrder.Size = new System.Drawing.Size(118, 32);
-            this.btnPlaceOrder.TabIndex = 0;
-            this.btnPlaceOrder.Text = "PLACE ORDER";
-            this.btnPlaceOrder.UseVisualStyleBackColor = true;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -336,6 +240,184 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // tpAccounts
+            // 
+            this.tpAccounts.Controls.Add(this.panel1);
+            this.tpAccounts.Location = new System.Drawing.Point(4, 22);
+            this.tpAccounts.Name = "tpAccounts";
+            this.tpAccounts.Padding = new System.Windows.Forms.Padding(3);
+            this.tpAccounts.Size = new System.Drawing.Size(423, 304);
+            this.tpAccounts.TabIndex = 1;
+            this.tpAccounts.Text = "ACCOUNTS";
+            this.tpAccounts.UseVisualStyleBackColor = true;
+            // 
+            // btnViewOutstandingAcc
+            // 
+            this.btnViewOutstandingAcc.BackColor = System.Drawing.Color.White;
+            this.btnViewOutstandingAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewOutstandingAcc.Location = new System.Drawing.Point(16, 205);
+            this.btnViewOutstandingAcc.Name = "btnViewOutstandingAcc";
+            this.btnViewOutstandingAcc.Size = new System.Drawing.Size(135, 38);
+            this.btnViewOutstandingAcc.TabIndex = 2;
+            this.btnViewOutstandingAcc.Text = "View Account Database";
+            this.btnViewOutstandingAcc.UseVisualStyleBackColor = false;
+            // 
+            // btnViewAccountDB
+            // 
+            this.btnViewAccountDB.BackColor = System.Drawing.Color.White;
+            this.btnViewAccountDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAccountDB.Location = new System.Drawing.Point(16, 115);
+            this.btnViewAccountDB.Name = "btnViewAccountDB";
+            this.btnViewAccountDB.Size = new System.Drawing.Size(135, 38);
+            this.btnViewAccountDB.TabIndex = 1;
+            this.btnViewAccountDB.Text = "View Outstanding Accounts";
+            this.btnViewAccountDB.UseVisualStyleBackColor = false;
+            // 
+            // btnManageAccounts
+            // 
+            this.btnManageAccounts.BackColor = System.Drawing.Color.White;
+            this.btnManageAccounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageAccounts.Location = new System.Drawing.Point(16, 32);
+            this.btnManageAccounts.Name = "btnManageAccounts";
+            this.btnManageAccounts.Size = new System.Drawing.Size(135, 38);
+            this.btnManageAccounts.TabIndex = 0;
+            this.btnManageAccounts.Text = "Manage Accounts";
+            this.btnManageAccounts.UseVisualStyleBackColor = false;
+            // 
+            // tpEmpolyees
+            // 
+            this.tpEmpolyees.Controls.Add(this.panel2);
+            this.tpEmpolyees.Location = new System.Drawing.Point(4, 22);
+            this.tpEmpolyees.Name = "tpEmpolyees";
+            this.tpEmpolyees.Size = new System.Drawing.Size(423, 304);
+            this.tpEmpolyees.TabIndex = 2;
+            this.tpEmpolyees.Text = "EMPLOYEES";
+            this.tpEmpolyees.UseVisualStyleBackColor = true;
+            // 
+            // btnManageEmployees
+            // 
+            this.btnManageEmployees.BackColor = System.Drawing.Color.White;
+            this.btnManageEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageEmployees.Location = new System.Drawing.Point(18, 66);
+            this.btnManageEmployees.Name = "btnManageEmployees";
+            this.btnManageEmployees.Size = new System.Drawing.Size(151, 47);
+            this.btnManageEmployees.TabIndex = 2;
+            this.btnManageEmployees.Text = "MANAGE EMPLOYEES";
+            this.btnManageEmployees.UseVisualStyleBackColor = false;
+            this.btnManageEmployees.Click += new System.EventHandler(this.BtnManageEmployees_Click);
+            // 
+            // btnWorkHouers
+            // 
+            this.btnWorkHouers.BackColor = System.Drawing.Color.White;
+            this.btnWorkHouers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWorkHouers.Location = new System.Drawing.Point(18, 156);
+            this.btnWorkHouers.Name = "btnWorkHouers";
+            this.btnWorkHouers.Size = new System.Drawing.Size(151, 47);
+            this.btnWorkHouers.TabIndex = 0;
+            this.btnWorkHouers.Text = "MANAGE WORK HOUERS";
+            this.btnWorkHouers.UseVisualStyleBackColor = false;
+            // 
+            // tpOrders
+            // 
+            this.tpOrders.Controls.Add(this.panel3);
+            this.tpOrders.Location = new System.Drawing.Point(4, 22);
+            this.tpOrders.Name = "tpOrders";
+            this.tpOrders.Size = new System.Drawing.Size(423, 304);
+            this.tpOrders.TabIndex = 3;
+            this.tpOrders.Text = "OREDERS";
+            this.tpOrders.UseVisualStyleBackColor = true;
+            // 
+            // btnReceiveOrder
+            // 
+            this.btnReceiveOrder.BackColor = System.Drawing.Color.White;
+            this.btnReceiveOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceiveOrder.Location = new System.Drawing.Point(16, 156);
+            this.btnReceiveOrder.Name = "btnReceiveOrder";
+            this.btnReceiveOrder.Size = new System.Drawing.Size(118, 32);
+            this.btnReceiveOrder.TabIndex = 1;
+            this.btnReceiveOrder.Text = "RECIEVE ORDER";
+            this.btnReceiveOrder.UseVisualStyleBackColor = false;
+            // 
+            // btnPlaceOrder
+            // 
+            this.btnPlaceOrder.BackColor = System.Drawing.Color.White;
+            this.btnPlaceOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaceOrder.Location = new System.Drawing.Point(16, 44);
+            this.btnPlaceOrder.Name = "btnPlaceOrder";
+            this.btnPlaceOrder.Size = new System.Drawing.Size(118, 32);
+            this.btnPlaceOrder.TabIndex = 0;
+            this.btnPlaceOrder.Text = "PLACE ORDER";
+            this.btnPlaceOrder.UseVisualStyleBackColor = false;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.btnManageAccounts);
+            this.panel1.Controls.Add(this.btnViewAccountDB);
+            this.panel1.Controls.Add(this.btnViewOutstandingAcc);
+            this.panel1.Location = new System.Drawing.Point(0, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(433, 306);
+            this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(350, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(73, 306);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.btnManageEmployees);
+            this.panel2.Controls.Add(this.btnWorkHouers);
+            this.panel2.Location = new System.Drawing.Point(-4, -2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(427, 310);
+            this.panel2.TabIndex = 3;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(354, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(69, 306);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Controls.Add(this.pictureBox4);
+            this.panel3.Controls.Add(this.btnPlaceOrder);
+            this.panel3.Controls.Add(this.btnReceiveOrder);
+            this.panel3.Location = new System.Drawing.Point(-4, -2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(431, 310);
+            this.panel3.TabIndex = 2;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(351, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(77, 306);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 2;
+            this.pictureBox4.TabStop = false;
             // 
             // Form_Home_Page_FutureTech
             // 
@@ -358,11 +440,16 @@
             this.gbSales.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.tpHome.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tpAccounts.ResumeLayout(false);
-            this.gbAccounts.ResumeLayout(false);
             this.tpEmpolyees.ResumeLayout(false);
             this.tpOrders.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -388,7 +475,6 @@
         private System.Windows.Forms.TabPage tpAccounts;
         private System.Windows.Forms.TabPage tpEmpolyees;
         private System.Windows.Forms.TabPage tpOrders;
-        private System.Windows.Forms.GroupBox gbAccounts;
         private System.Windows.Forms.Button btnViewOutstandingAcc;
         private System.Windows.Forms.Button btnViewAccountDB;
         private System.Windows.Forms.Button btnManageAccounts;
@@ -397,5 +483,13 @@
         private System.Windows.Forms.Button btnReceiveOrder;
         private System.Windows.Forms.Button btnPlaceOrder;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

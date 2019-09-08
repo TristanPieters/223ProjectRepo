@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Data.SqlClient;
 
 namespace CMPG213_Prototype
 {
@@ -58,6 +60,38 @@ namespace CMPG213_Prototype
             this.Hide();
             Manage_Employees manageEmpForm = new Manage_Employees();
             manageEmpForm.ShowDialog();
+        }
+
+        private void BtnReports_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                StreamWriter inputFile;
+                inputFile = File.CreateText("Report.txt");
+
+                saveFileDialog1.InitialDirectory = @"c:/";
+                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    inputFile = File.CreateText(saveFileDialog1.FileName);
+                   
+
+                    inputFile.Close();
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Error" + ex);
+            }
+            
+
+           
+
+        }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
