@@ -16,7 +16,7 @@ namespace CMPG213_Prototype
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_Home_Page());
+            Application.Run(new Form_Home_Page_FutureTech());
             //test//
         }
     }
