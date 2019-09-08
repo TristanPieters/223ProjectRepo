@@ -32,8 +32,11 @@ namespace CMPG213_Prototype
             sID = tbxID.Text;
             sCellnr = tbxCellNumber.Text;
             sEmail = tbxEmail.Text;
+            CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+
             CONN.Open();
-            sql = "Insert into ACCOUNT (Acc_FName,Acc_LName,Acc_Email,Acc_Cellnum,Acc_IDnum) values('"+ sName + "','" + sSurname + "','" + sEmail + "','" + sCellnr + "','" + sID+ "',) ";
+            sql = @"Insert into ACCOUNT (Acc_FName,Acc_LName,Acc_Email,Acc_Cellnum,Acc_IDnum) values('"+ sName + "','" + sSurname + "','" + sEmail + "','" + sCellnr + "','" + sID + "') ";
+          //  @"Insert Into EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')";
 
             comm = new SqlCommand(sql, CONN);
 
@@ -48,7 +51,7 @@ namespace CMPG213_Prototype
         {
 
 
-            CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\Dewald\Desktop\223ProjectRepo\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+            
 ;          
         }
     }

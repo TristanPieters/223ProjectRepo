@@ -1,102 +1,16 @@
-<<<<<<< Updated upstream
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csprojAssemblyReference.cache
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_Home_Page.resources
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Properties.Resources.resources
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.GenerateResource.cache
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe.config
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.pdb
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Accounts.mdf
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Accounts_log.ldf
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Employees.mdf
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Employees_log.ldf
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Fuel.mdf
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Fuel_log.ldf
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Transactions.mdf
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Transactions_log.ldf
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_HelpSupport.resources
-C:\Users\Crispy\Desktop\PUK\Year 2\CMPG213\Project\Phase 3\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_FuelPrices.resources
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Accounts.mdf
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Accounts_log.ldf
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Employees.mdf
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Employees_log.ldf
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Fuel.mdf
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Fuel_log.ldf
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Transactions.mdf
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\Transactions_log.ldf
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe.config
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.pdb
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csprojAssemblyReference.cache
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_FuelPrices.resources
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_HelpSupport.resources
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_Home_Page.resources
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Properties.Resources.resources
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.GenerateResource.cache
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
-C:\Users\neilf\Desktop\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe.config
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.pdb
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csprojAssemblyReference.cache
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_FuelPrices.resources
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_HelpSupport.resources
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_Home_Page.resources
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Properties.Resources.resources
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.GenerateResource.cache
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb.mdf
-D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb_log.ldf
-C:\Users\Andre\Documents\CMPG223_Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csprojAssemblyReference.cache
-C:\Users\Andre\Documents\CMPG223_Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_FuelPrices.resources
-C:\Users\Andre\Documents\CMPG223_Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_HelpSupport.resources
-C:\Users\Andre\Documents\CMPG223_Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_Home_Page.resources
-C:\Users\Andre\Documents\CMPG223_Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_Home_Page_FutureTech.resources
-C:\Users\Andre\Documents\CMPG223_Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Manage_Employees.resources
-C:\Users\Andre\Documents\CMPG223_Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Properties.Resources.resources
-C:\Users\Andre\Documents\CMPG223_Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.GenerateResource.cache
-C:\Users\Andre\Documents\CMPG223_Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
-C:\Users\Andre\Documents\CMPG223_Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
-C:\Users\Andre\Documents\CMPG223_Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
-=======
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csprojAssemblyReference.cache
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_FuelPrices.resources
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_HelpSupport.resources
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_Home_Page.resources
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Manage_Employees.resources
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Properties.Resources.resources
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.GenerateResource.cache
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
->>>>>>> Stashed changes
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb.mdf
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb_log.ldf
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe.config
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.pdb
-C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_Home_Page_FutureTech.resources
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb.mdf
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb_log.ldf
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe.config
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.pdb
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csprojAssemblyReference.cache
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_FuelPrices.resources
+C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.AccountUpdateDel.resources
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_HelpSupport.resources
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_Home_Page_FutureTech.resources
+C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.MaintainFuel.resources
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Manage_Employees.resources
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Properties.Resources.resources
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.GenerateResource.cache
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.AccountForm.resources
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.AccountUpdateDel.resources
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.MaintainFuel.resources
+C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csprojAssemblyReference.cache
