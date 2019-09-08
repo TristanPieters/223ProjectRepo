@@ -2,6 +2,9 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb.mdf
@@ -23,7 +26,10 @@ D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213
 D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
 D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb.mdf
@@ -44,6 +50,9 @@ C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototy
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb.mdf
 C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb_log.ldf
@@ -63,29 +72,6 @@ C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG21
 C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
 C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
 C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
-=======
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb.mdf
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDb_log.ldf
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe.config
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.pdb
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.AccountForm.resources
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.AccountUpdateDel.resources
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_HelpSupport.resources
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_Home_Page_FutureTech.resources
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.FuelSalesForm.resources
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Maintain_Employees.resources
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Maintain_Fuel.resources
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Properties.Resources.resources
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.GenerateResource.cache
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
-C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
->>>>>>> Stashed changes
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
-=======
 C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csprojAssemblyReference.cache
 C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.AccountForm.resources
 C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.AccountUpdateDel.resources
@@ -99,6 +85,9 @@ C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG21
 C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
 C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

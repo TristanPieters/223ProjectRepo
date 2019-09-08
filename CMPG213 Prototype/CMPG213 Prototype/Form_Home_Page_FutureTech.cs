@@ -87,23 +87,13 @@ namespace CMPG213_Prototype
 
         private void BtnUpdateFuelPrice_Click(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 
             Maintain_Fuel updateFuelPriceForm = new Maintain_Fuel();
             //updateFuelPriceForm.ShowDialog(
             //MaintainFuel updateFuelPriceForm = new MaintainFuel();
             //updateFuelPriceForm.ShowDialog();
-
-=======
-            Maintain_Fuel updateFuelPriceForm = new Maintain_Fuel();
-            updateFuelPriceForm.ShowDialog();
-=======
-
-            Maintain_Fuel updateFuelPriceForm = new Maintain_Fuel();
             updateFuelPriceForm.ShowDialog();
 
->>>>>>> Stashed changes
             //MaintainFuel updateFuelPriceForm = new MaintainFuel();
             //updateFuelPriceForm.ShowDialog();
 
@@ -112,23 +102,15 @@ namespace CMPG213_Prototype
         private void BtnManageEmployees_Click(object sender, EventArgs e)
         {
             this.Hide();
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
 
            // Manage_Employees manageEmpForm = new Manage_Employees();
            // manageEmpForm.ShowDialog();
 
-<<<<<<< Updated upstream
           //  Manage_Employees manageEmpForm = new Manage_Employees();
             //manageEmpForm.ShowDialog();
 
-=======
            // Manage_Employees manageEmpForm = new Manage_Employees();
            // manageEmpForm.ShowDialog();
-=======
->>>>>>> Stashed changes
           //  Manage_Employees manageEmpForm = new Manage_Employees();
             //manageEmpForm.ShowDialog();
 
