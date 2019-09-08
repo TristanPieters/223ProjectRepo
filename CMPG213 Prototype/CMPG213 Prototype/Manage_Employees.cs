@@ -17,7 +17,11 @@ namespace CMPG213_Prototype
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
         string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True";
+=======
+        string constring = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security = True";
+>>>>>>> master
         SqlConnection conn;
 
         string fName, lName, job, email, username, password, shift, cellNr;

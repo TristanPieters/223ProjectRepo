@@ -63,6 +63,7 @@
             this.btnReceiveOrder = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbFuelType.SuspendLayout();
             this.gbSales.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -77,6 +78,7 @@
             this.tpOrders.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbFuelType
@@ -85,7 +87,8 @@
             this.gbFuelType.Controls.Add(this.lblDiesel50);
             this.gbFuelType.Controls.Add(this.lblUnleaded95);
             this.gbFuelType.Controls.Add(this.lblUnleaded93);
-            this.gbFuelType.Location = new System.Drawing.Point(556, 29);
+            this.gbFuelType.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gbFuelType.Location = new System.Drawing.Point(467, 29);
             this.gbFuelType.Name = "gbFuelType";
             this.gbFuelType.Size = new System.Drawing.Size(103, 141);
             this.gbFuelType.TabIndex = 0;
@@ -98,7 +101,7 @@
             this.lblDiesel500.AutoSize = true;
             this.lblDiesel500.Location = new System.Drawing.Point(6, 110);
             this.lblDiesel500.Name = "lblDiesel500";
-            this.lblDiesel500.Size = new System.Drawing.Size(69, 13);
+            this.lblDiesel500.Size = new System.Drawing.Size(80, 13);
             this.lblDiesel500.TabIndex = 3;
             this.lblDiesel500.Text = "DIESEL 500:";
             // 
@@ -107,7 +110,7 @@
             this.lblDiesel50.AutoSize = true;
             this.lblDiesel50.Location = new System.Drawing.Point(6, 83);
             this.lblDiesel50.Name = "lblDiesel50";
-            this.lblDiesel50.Size = new System.Drawing.Size(63, 13);
+            this.lblDiesel50.Size = new System.Drawing.Size(73, 13);
             this.lblDiesel50.TabIndex = 2;
             this.lblDiesel50.Text = "DIESEL 50:";
             // 
@@ -116,7 +119,7 @@
             this.lblUnleaded95.AutoSize = true;
             this.lblUnleaded95.Location = new System.Drawing.Point(6, 54);
             this.lblUnleaded95.Name = "lblUnleaded95";
-            this.lblUnleaded95.Size = new System.Drawing.Size(84, 13);
+            this.lblUnleaded95.Size = new System.Drawing.Size(96, 13);
             this.lblUnleaded95.TabIndex = 1;
             this.lblUnleaded95.Text = "UNLEADED 95:";
             // 
@@ -125,13 +128,14 @@
             this.lblUnleaded93.AutoSize = true;
             this.lblUnleaded93.Location = new System.Drawing.Point(6, 26);
             this.lblUnleaded93.Name = "lblUnleaded93";
-            this.lblUnleaded93.Size = new System.Drawing.Size(84, 13);
+            this.lblUnleaded93.Size = new System.Drawing.Size(96, 13);
             this.lblUnleaded93.TabIndex = 0;
             this.lblUnleaded93.Text = "UNLEADED 93:";
             // 
             // gbPrice
             // 
-            this.gbPrice.Location = new System.Drawing.Point(665, 29);
+            this.gbPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gbPrice.Location = new System.Drawing.Point(587, 29);
             this.gbPrice.Name = "gbPrice";
             this.gbPrice.Size = new System.Drawing.Size(103, 141);
             this.gbPrice.TabIndex = 1;
@@ -140,19 +144,23 @@
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(700, 406);
+            this.btnExit.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnExit.Location = new System.Drawing.Point(670, 376);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(88, 32);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "EXIT";
-            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // gbSales
             // 
+            this.gbSales.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.gbSales.Controls.Add(this.btnUpdateFuelPrice);
             this.gbSales.Controls.Add(this.btnNewSale);
-            this.gbSales.Location = new System.Drawing.Point(556, 185);
+            this.gbSales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gbSales.Location = new System.Drawing.Point(467, 195);
             this.gbSales.Name = "gbSales";
             this.gbSales.Size = new System.Drawing.Size(212, 154);
             this.gbSales.TabIndex = 3;
@@ -161,49 +169,62 @@
             // 
             // btnUpdateFuelPrice
             // 
+            this.btnUpdateFuelPrice.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUpdateFuelPrice.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnUpdateFuelPrice.Location = new System.Drawing.Point(6, 36);
             this.btnUpdateFuelPrice.Name = "btnUpdateFuelPrice";
             this.btnUpdateFuelPrice.Size = new System.Drawing.Size(103, 40);
             this.btnUpdateFuelPrice.TabIndex = 1;
             this.btnUpdateFuelPrice.Text = "Maintain Fuel";
-            this.btnUpdateFuelPrice.UseVisualStyleBackColor = true;
+            this.btnUpdateFuelPrice.UseVisualStyleBackColor = false;
             this.btnUpdateFuelPrice.Click += new System.EventHandler(this.BtnUpdateFuelPrice_Click);
             // 
             // btnNewSale
             // 
+            this.btnNewSale.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnNewSale.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnNewSale.Location = new System.Drawing.Point(6, 93);
             this.btnNewSale.Name = "btnNewSale";
             this.btnNewSale.Size = new System.Drawing.Size(101, 40);
             this.btnNewSale.TabIndex = 0;
             this.btnNewSale.Text = "NEW SALE";
+<<<<<<< Updated upstream
+            this.btnNewSale.UseVisualStyleBackColor = false;
+=======
             this.btnNewSale.UseVisualStyleBackColor = true;
+            this.btnNewSale.Click += new System.EventHandler(this.btnNewSale_Click);
+>>>>>>> Stashed changes
             // 
             // btnHelpAndSupport
             // 
-            this.btnHelpAndSupport.Location = new System.Drawing.Point(556, 406);
+            this.btnHelpAndSupport.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnHelpAndSupport.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnHelpAndSupport.Location = new System.Drawing.Point(412, 376);
             this.btnHelpAndSupport.Name = "btnHelpAndSupport";
-            this.btnHelpAndSupport.Size = new System.Drawing.Size(136, 32);
+            this.btnHelpAndSupport.Size = new System.Drawing.Size(158, 32);
             this.btnHelpAndSupport.TabIndex = 4;
             this.btnHelpAndSupport.Text = "HELP AND SUPPORT";
-            this.btnHelpAndSupport.UseVisualStyleBackColor = true;
+            this.btnHelpAndSupport.UseVisualStyleBackColor = false;
             this.btnHelpAndSupport.Click += new System.EventHandler(this.BtnHelpAndSupport_Click);
             // 
             // btnReports
             // 
-            this.btnReports.Location = new System.Drawing.Point(700, 355);
+            this.btnReports.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnReports.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnReports.Location = new System.Drawing.Point(576, 376);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(88, 32);
             this.btnReports.TabIndex = 5;
             this.btnReports.Text = "REPORTS";
-            this.btnReports.UseVisualStyleBackColor = true;
+            this.btnReports.UseVisualStyleBackColor = false;
             this.btnReports.Click += new System.EventHandler(this.BtnReports_Click);
             // 
             // lblCurrentFuelPrices
             // 
             this.lblCurrentFuelPrices.AutoSize = true;
-            this.lblCurrentFuelPrices.Location = new System.Drawing.Point(593, 9);
+            this.lblCurrentFuelPrices.Location = new System.Drawing.Point(506, 13);
             this.lblCurrentFuelPrices.Name = "lblCurrentFuelPrices";
-            this.lblCurrentFuelPrices.Size = new System.Drawing.Size(124, 13);
+            this.lblCurrentFuelPrices.Size = new System.Drawing.Size(142, 13);
             this.lblCurrentFuelPrices.TabIndex = 6;
             this.lblCurrentFuelPrices.Text = "CURRET FUEL PRICES";
             // 
@@ -214,7 +235,7 @@
             this.tabControl.Controls.Add(this.tpAccounts);
             this.tabControl.Controls.Add(this.tpEmpolyees);
             this.tabControl.Controls.Add(this.tpOrders);
-            this.tabControl.Location = new System.Drawing.Point(12, 9);
+            this.tabControl.Location = new System.Drawing.Point(24, 23);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(431, 330);
@@ -225,7 +246,7 @@
             this.tpHome.Controls.Add(this.pictureBox1);
             this.tpHome.Location = new System.Drawing.Point(4, 22);
             this.tpHome.Name = "tpHome";
-            this.tpHome.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpHome.Padding = new System.Windows.Forms.Padding(3);
             this.tpHome.Size = new System.Drawing.Size(423, 304);
             this.tpHome.TabIndex = 0;
             this.tpHome.Text = "HOME";
@@ -234,9 +255,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
+            this.pictureBox1.Location = new System.Drawing.Point(-4, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(411, 292);
+            this.pictureBox1.Size = new System.Drawing.Size(431, 308);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -246,7 +267,7 @@
             this.tpAccounts.Controls.Add(this.panel1);
             this.tpAccounts.Location = new System.Drawing.Point(4, 22);
             this.tpAccounts.Name = "tpAccounts";
-            this.tpAccounts.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpAccounts.Padding = new System.Windows.Forms.Padding(3);
             this.tpAccounts.Size = new System.Drawing.Size(423, 304);
             this.tpAccounts.TabIndex = 1;
             this.tpAccounts.Text = "ACCOUNTS";
@@ -279,6 +300,7 @@
             // 
             this.btnAddAccounts.BackColor = System.Drawing.Color.White;
             this.btnAddAccounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddAccounts.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAddAccounts.Location = new System.Drawing.Point(16, 32);
             this.btnAddAccounts.Name = "btnAddAccounts";
             this.btnAddAccounts.Size = new System.Drawing.Size(192, 66);
@@ -291,6 +313,7 @@
             // 
             this.btnViewAccountDB.BackColor = System.Drawing.Color.White;
             this.btnViewAccountDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAccountDB.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnViewAccountDB.Location = new System.Drawing.Point(16, 115);
             this.btnViewAccountDB.Name = "btnViewAccountDB";
             this.btnViewAccountDB.Size = new System.Drawing.Size(192, 63);
@@ -303,6 +326,7 @@
             // 
             this.btnViewOutstandingAcc.BackColor = System.Drawing.Color.White;
             this.btnViewOutstandingAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewOutstandingAcc.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnViewOutstandingAcc.Location = new System.Drawing.Point(16, 194);
             this.btnViewOutstandingAcc.Name = "btnViewOutstandingAcc";
             this.btnViewOutstandingAcc.Size = new System.Drawing.Size(192, 65);
@@ -346,6 +370,7 @@
             // 
             this.btnManageEmployees.BackColor = System.Drawing.Color.White;
             this.btnManageEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageEmployees.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnManageEmployees.Location = new System.Drawing.Point(18, 66);
             this.btnManageEmployees.Name = "btnManageEmployees";
             this.btnManageEmployees.Size = new System.Drawing.Size(151, 47);
@@ -358,6 +383,7 @@
             // 
             this.btnWorkHouers.BackColor = System.Drawing.Color.White;
             this.btnWorkHouers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnWorkHouers.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnWorkHouers.Location = new System.Drawing.Point(18, 156);
             this.btnWorkHouers.Name = "btnWorkHouers";
             this.btnWorkHouers.Size = new System.Drawing.Size(151, 47);
@@ -400,6 +426,7 @@
             // 
             this.btnPlaceOrder.BackColor = System.Drawing.Color.White;
             this.btnPlaceOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaceOrder.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnPlaceOrder.Location = new System.Drawing.Point(16, 44);
             this.btnPlaceOrder.Name = "btnPlaceOrder";
             this.btnPlaceOrder.Size = new System.Drawing.Size(118, 32);
@@ -411,6 +438,7 @@
             // 
             this.btnReceiveOrder.BackColor = System.Drawing.Color.White;
             this.btnReceiveOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReceiveOrder.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnReceiveOrder.Location = new System.Drawing.Point(16, 156);
             this.btnReceiveOrder.Name = "btnReceiveOrder";
             this.btnReceiveOrder.Size = new System.Drawing.Size(118, 32);
@@ -422,19 +450,32 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tabControl);
+            this.groupBox1.Controls.Add(this.gbPrice);
+            this.groupBox1.Controls.Add(this.btnReports);
+            this.groupBox1.Controls.Add(this.lblCurrentFuelPrices);
+            this.groupBox1.Controls.Add(this.btnExit);
+            this.groupBox1.Controls.Add(this.btnHelpAndSupport);
+            this.groupBox1.Controls.Add(this.gbFuelType);
+            this.groupBox1.Controls.Add(this.gbSales);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Location = new System.Drawing.Point(12, 9);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(776, 414);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "STALLION\'S GAS STATION";
+            // 
             // Form_Home_Page_FutureTech
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.tabControl);
-            this.Controls.Add(this.lblCurrentFuelPrices);
-            this.Controls.Add(this.btnReports);
-            this.Controls.Add(this.btnHelpAndSupport);
-            this.Controls.Add(this.gbSales);
-            this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.gbPrice);
-            this.Controls.Add(this.gbFuelType);
+            this.Controls.Add(this.groupBox1);
             this.Name = "Form_Home_Page_FutureTech";
             this.Text = "Form_Home_Page_FutureTech";
             this.Load += new System.EventHandler(this.Form_Home_Page_FutureTech_Load);
@@ -453,8 +494,9 @@
             this.tpOrders.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -494,5 +536,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

@@ -85,6 +85,12 @@
     <Compile Include="Form_Home_Page_FutureTech.Designer.cs">
       <DependentUpon>Form_Home_Page_FutureTech.cs</DependentUpon>
     </Compile>
+    <Compile Include="FuelSalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FuelSalesForm.Designer.cs">
+      <DependentUpon>FuelSalesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MaintainFuel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StallionsDbDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AccountUpdateDel.resx">
       <DependentUpon>AccountUpdateDel.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Home_Page_FutureTech.resx">
       <DependentUpon>Form_Home_Page_FutureTech.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FuelSalesForm.resx">
+      <DependentUpon>FuelSalesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MaintainFuel.resx">
       <DependentUpon>MaintainFuel.cs</DependentUpon>

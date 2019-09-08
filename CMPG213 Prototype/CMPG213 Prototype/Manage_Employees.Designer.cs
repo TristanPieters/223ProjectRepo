@@ -77,6 +77,7 @@
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
+<<<<<<< HEAD
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -114,13 +115,163 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Add";
             this.tabPage1.UseVisualStyleBackColor = true;
+=======
+            // lblShiftTime
+            // 
+            this.lblShiftTime.AutoSize = true;
+            this.lblShiftTime.Location = new System.Drawing.Point(6, 44);
+            this.lblShiftTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblShiftTime.Name = "lblShiftTime";
+            this.lblShiftTime.Size = new System.Drawing.Size(76, 15);
+            this.lblShiftTime.TabIndex = 2;
+            this.lblShiftTime.Text = "Shift Time:";
+            // 
+            // lblEmp_FName
+            // 
+            this.lblEmp_FName.AutoSize = true;
+            this.lblEmp_FName.Location = new System.Drawing.Point(6, 113);
+            this.lblEmp_FName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmp_FName.Name = "lblEmp_FName";
+            this.lblEmp_FName.Size = new System.Drawing.Size(148, 15);
+            this.lblEmp_FName.TabIndex = 3;
+            this.lblEmp_FName.Text = "Employee First Name:";
+            // 
+            // lblEmp_LName
+            // 
+            this.lblEmp_LName.AutoSize = true;
+            this.lblEmp_LName.Location = new System.Drawing.Point(6, 183);
+            this.lblEmp_LName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmp_LName.Name = "lblEmp_LName";
+            this.lblEmp_LName.Size = new System.Drawing.Size(147, 15);
+            this.lblEmp_LName.TabIndex = 4;
+            this.lblEmp_LName.Text = "Employee Last Name:";
+            // 
+            // lblEmp_CellNum
+            // 
+            this.lblEmp_CellNum.AutoSize = true;
+            this.lblEmp_CellNum.Location = new System.Drawing.Point(324, 38);
+            this.lblEmp_CellNum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmp_CellNum.Name = "lblEmp_CellNum";
+            this.lblEmp_CellNum.Size = new System.Drawing.Size(158, 15);
+            this.lblEmp_CellNum.TabIndex = 5;
+            this.lblEmp_CellNum.Text = "Employee Cell Number:";
+            // 
+            // lblEmp_Job
+            // 
+            this.lblEmp_Job.AutoSize = true;
+            this.lblEmp_Job.Location = new System.Drawing.Point(324, 110);
+            this.lblEmp_Job.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmp_Job.Name = "lblEmp_Job";
+            this.lblEmp_Job.Size = new System.Drawing.Size(101, 15);
+            this.lblEmp_Job.TabIndex = 6;
+            this.lblEmp_Job.Text = "Employee Job:";
+            // 
+            // lblEmp_Email
+            // 
+            this.lblEmp_Email.AutoSize = true;
+            this.lblEmp_Email.Location = new System.Drawing.Point(324, 180);
+            this.lblEmp_Email.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmp_Email.Name = "lblEmp_Email";
+            this.lblEmp_Email.Size = new System.Drawing.Size(115, 15);
+            this.lblEmp_Email.TabIndex = 7;
+            this.lblEmp_Email.Text = "Employee Email:";
+            // 
+            // lblEmp_Username
+            // 
+            this.lblEmp_Username.AutoSize = true;
+            this.lblEmp_Username.Location = new System.Drawing.Point(324, 259);
+            this.lblEmp_Username.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmp_Username.Name = "lblEmp_Username";
+            this.lblEmp_Username.Size = new System.Drawing.Size(144, 15);
+            this.lblEmp_Username.TabIndex = 8;
+            this.lblEmp_Username.Text = "Employee Username:";
+            // 
+            // lblEmp_Password
+            // 
+            this.lblEmp_Password.AutoSize = true;
+            this.lblEmp_Password.Location = new System.Drawing.Point(6, 262);
+            this.lblEmp_Password.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmp_Password.Name = "lblEmp_Password";
+            this.lblEmp_Password.Size = new System.Drawing.Size(140, 15);
+            this.lblEmp_Password.TabIndex = 9;
+            this.lblEmp_Password.Text = "Employee Password:";
+            // 
+            // txbShiftTime
+            // 
+            this.txbShiftTime.Location = new System.Drawing.Point(170, 38);
+            this.txbShiftTime.Margin = new System.Windows.Forms.Padding(2);
+            this.txbShiftTime.Name = "txbShiftTime";
+            this.txbShiftTime.Size = new System.Drawing.Size(111, 21);
+            this.txbShiftTime.TabIndex = 11;
+            // 
+            // txbEmp_FName
+            // 
+            this.txbEmp_FName.Location = new System.Drawing.Point(170, 110);
+            this.txbEmp_FName.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_FName.Name = "txbEmp_FName";
+            this.txbEmp_FName.Size = new System.Drawing.Size(111, 21);
+            this.txbEmp_FName.TabIndex = 12;
+            // 
+            // txbEmp_LName
+            // 
+            this.txbEmp_LName.Location = new System.Drawing.Point(170, 180);
+            this.txbEmp_LName.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_LName.Name = "txbEmp_LName";
+            this.txbEmp_LName.Size = new System.Drawing.Size(111, 21);
+            this.txbEmp_LName.TabIndex = 13;
+            // 
+            // txbEmp_CellNum
+            // 
+            this.txbEmp_CellNum.Location = new System.Drawing.Point(491, 38);
+            this.txbEmp_CellNum.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_CellNum.Name = "txbEmp_CellNum";
+            this.txbEmp_CellNum.Size = new System.Drawing.Size(120, 21);
+            this.txbEmp_CellNum.TabIndex = 14;
+            // 
+            // txbEmp_Job
+            // 
+            this.txbEmp_Job.Location = new System.Drawing.Point(491, 107);
+            this.txbEmp_Job.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_Job.Name = "txbEmp_Job";
+            this.txbEmp_Job.Size = new System.Drawing.Size(120, 21);
+            this.txbEmp_Job.TabIndex = 15;
+            // 
+            // txbEmp_Email
+            // 
+            this.txbEmp_Email.Location = new System.Drawing.Point(491, 177);
+            this.txbEmp_Email.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_Email.Name = "txbEmp_Email";
+            this.txbEmp_Email.Size = new System.Drawing.Size(120, 21);
+            this.txbEmp_Email.TabIndex = 16;
+            // 
+            // txbEmp_Username
+            // 
+            this.txbEmp_Username.Location = new System.Drawing.Point(491, 259);
+            this.txbEmp_Username.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_Username.Name = "txbEmp_Username";
+            this.txbEmp_Username.Size = new System.Drawing.Size(120, 21);
+            this.txbEmp_Username.TabIndex = 17;
+            // 
+            // txbEmp_Password
+            // 
+            this.txbEmp_Password.Location = new System.Drawing.Point(170, 259);
+            this.txbEmp_Password.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_Password.Name = "txbEmp_Password";
+            this.txbEmp_Password.Size = new System.Drawing.Size(111, 21);
+            this.txbEmp_Password.TabIndex = 18;
+>>>>>>> master
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlText;
+<<<<<<< HEAD
             this.btnAdd.Location = new System.Drawing.Point(231, 380);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.btnAdd.Location = new System.Drawing.Point(9, 395);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> master
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(117, 55);
             this.btnAdd.TabIndex = 69;
@@ -165,6 +316,7 @@
             // 
             // label5
             // 
+<<<<<<< HEAD
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(104, 245);
             this.label5.Name = "label5";
@@ -477,18 +629,36 @@
             this.cmbDelete.Name = "cmbDelete";
             this.cmbDelete.Size = new System.Drawing.Size(121, 24);
             this.cmbDelete.TabIndex = 54;
+=======
+            this.btnChange.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnChange.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnChange.Location = new System.Drawing.Point(170, 395);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(88, 45);
+            this.btnChange.TabIndex = 20;
+            this.btnChange.Text = "Change";
+            this.btnChange.UseVisualStyleBackColor = false;
+            this.btnChange.Click += new System.EventHandler(this.BtnChange_Click);
+>>>>>>> master
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
+<<<<<<< HEAD
             this.btnDelete.Location = new System.Drawing.Point(19, 102);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.btnDelete.Location = new System.Drawing.Point(337, 395);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> master
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(117, 55);
             this.btnDelete.TabIndex = 53;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+<<<<<<< HEAD
             // 
             // label17
             // 
@@ -498,14 +668,80 @@
             this.label17.Size = new System.Drawing.Size(91, 17);
             this.label17.TabIndex = 45;
             this.label17.Text = "Employee ID:";
+=======
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnBack.Location = new System.Drawing.Point(509, 395);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(88, 45);
+            this.btnBack.TabIndex = 22;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.btnAdd);
+            this.groupBox1.Controls.Add(this.lblShiftTime);
+            this.groupBox1.Controls.Add(this.lblEmp_FName);
+            this.groupBox1.Controls.Add(this.lblEmp_LName);
+            this.groupBox1.Controls.Add(this.lblEmp_CellNum);
+            this.groupBox1.Controls.Add(this.lblEmp_Job);
+            this.groupBox1.Controls.Add(this.lblEmp_Email);
+            this.groupBox1.Controls.Add(this.txbEmp_CellNum);
+            this.groupBox1.Controls.Add(this.txbEmp_Job);
+            this.groupBox1.Controls.Add(this.txbEmp_Email);
+            this.groupBox1.Controls.Add(this.txbEmp_Username);
+            this.groupBox1.Controls.Add(this.txbEmp_Password);
+            this.groupBox1.Controls.Add(this.btnBack);
+            this.groupBox1.Controls.Add(this.btnChange);
+            this.groupBox1.Controls.Add(this.btnDelete);
+            this.groupBox1.Controls.Add(this.lblEmp_Username);
+            this.groupBox1.Controls.Add(this.lblEmp_Password);
+            this.groupBox1.Controls.Add(this.txbShiftTime);
+            this.groupBox1.Controls.Add(this.txbEmp_FName);
+            this.groupBox1.Controls.Add(this.txbEmp_LName);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(740, 456);
+            this.groupBox1.TabIndex = 23;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "ENTER EMPLOYEE";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(646, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(88, 430);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
+>>>>>>> master
             // 
             // Manage_Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(522, 640);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+=======
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(845, 480);
+            this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2);
+>>>>>>> master
             this.Name = "Manage_Employees";
             this.Text = "Manage_Employees";
             this.Load += new System.EventHandler(this.Manage_Employees_Load);
