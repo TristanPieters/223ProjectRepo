@@ -29,38 +29,38 @@
         private void InitializeComponent()
         {
             this.gbFuelType = new System.Windows.Forms.GroupBox();
-            this.gbPrice = new System.Windows.Forms.GroupBox();
-            this.lblUnleaded93 = new System.Windows.Forms.Label();
-            this.lblUnleaded95 = new System.Windows.Forms.Label();
-            this.lblDiesel50 = new System.Windows.Forms.Label();
             this.lblDiesel500 = new System.Windows.Forms.Label();
+            this.lblDiesel50 = new System.Windows.Forms.Label();
+            this.lblUnleaded95 = new System.Windows.Forms.Label();
+            this.lblUnleaded93 = new System.Windows.Forms.Label();
+            this.gbPrice = new System.Windows.Forms.GroupBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.gbSales = new System.Windows.Forms.GroupBox();
-            this.btnNewSale = new System.Windows.Forms.Button();
             this.btnUpdateFuelPrice = new System.Windows.Forms.Button();
+            this.btnNewSale = new System.Windows.Forms.Button();
             this.btnHelpAndSupport = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.lblCurrentFuelPrices = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tpHome = new System.Windows.Forms.TabPage();
             this.tpAccounts = new System.Windows.Forms.TabPage();
-            this.tpEmpolyees = new System.Windows.Forms.TabPage();
-            this.tpOrders = new System.Windows.Forms.TabPage();
             this.gbAccounts = new System.Windows.Forms.GroupBox();
-            this.btnManageAccounts = new System.Windows.Forms.Button();
-            this.btnViewAccountDB = new System.Windows.Forms.Button();
             this.btnViewOutstandingAcc = new System.Windows.Forms.Button();
-            this.btnWorkHouers = new System.Windows.Forms.Button();
+            this.btnViewAccountDB = new System.Windows.Forms.Button();
+            this.btnManageAccounts = new System.Windows.Forms.Button();
+            this.tpEmpolyees = new System.Windows.Forms.TabPage();
             this.btnManageEmployees = new System.Windows.Forms.Button();
-            this.btnPlaceOrder = new System.Windows.Forms.Button();
+            this.btnWorkHouers = new System.Windows.Forms.Button();
+            this.tpOrders = new System.Windows.Forms.TabPage();
             this.btnReceiveOrder = new System.Windows.Forms.Button();
+            this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.gbFuelType.SuspendLayout();
             this.gbSales.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.tpAccounts.SuspendLayout();
+            this.gbAccounts.SuspendLayout();
             this.tpEmpolyees.SuspendLayout();
             this.tpOrders.SuspendLayout();
-            this.gbAccounts.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbFuelType
@@ -77,32 +77,14 @@
             this.gbFuelType.Text = "FUEL TYPE";
             this.gbFuelType.Enter += new System.EventHandler(this.GbFuelType_Enter);
             // 
-            // gbPrice
+            // lblDiesel500
             // 
-            this.gbPrice.Location = new System.Drawing.Point(665, 29);
-            this.gbPrice.Name = "gbPrice";
-            this.gbPrice.Size = new System.Drawing.Size(103, 141);
-            this.gbPrice.TabIndex = 1;
-            this.gbPrice.TabStop = false;
-            this.gbPrice.Text = "PRICE";
-            // 
-            // lblUnleaded93
-            // 
-            this.lblUnleaded93.AutoSize = true;
-            this.lblUnleaded93.Location = new System.Drawing.Point(6, 26);
-            this.lblUnleaded93.Name = "lblUnleaded93";
-            this.lblUnleaded93.Size = new System.Drawing.Size(84, 13);
-            this.lblUnleaded93.TabIndex = 0;
-            this.lblUnleaded93.Text = "UNLEADED 93:";
-            // 
-            // lblUnleaded95
-            // 
-            this.lblUnleaded95.AutoSize = true;
-            this.lblUnleaded95.Location = new System.Drawing.Point(6, 54);
-            this.lblUnleaded95.Name = "lblUnleaded95";
-            this.lblUnleaded95.Size = new System.Drawing.Size(84, 13);
-            this.lblUnleaded95.TabIndex = 1;
-            this.lblUnleaded95.Text = "UNLEADED 95:";
+            this.lblDiesel500.AutoSize = true;
+            this.lblDiesel500.Location = new System.Drawing.Point(6, 110);
+            this.lblDiesel500.Name = "lblDiesel500";
+            this.lblDiesel500.Size = new System.Drawing.Size(69, 13);
+            this.lblDiesel500.TabIndex = 3;
+            this.lblDiesel500.Text = "DIESEL 500:";
             // 
             // lblDiesel50
             // 
@@ -113,14 +95,32 @@
             this.lblDiesel50.TabIndex = 2;
             this.lblDiesel50.Text = "DIESEL 50:";
             // 
-            // lblDiesel500
+            // lblUnleaded95
             // 
-            this.lblDiesel500.AutoSize = true;
-            this.lblDiesel500.Location = new System.Drawing.Point(6, 110);
-            this.lblDiesel500.Name = "lblDiesel500";
-            this.lblDiesel500.Size = new System.Drawing.Size(69, 13);
-            this.lblDiesel500.TabIndex = 3;
-            this.lblDiesel500.Text = "DIESEL 500:";
+            this.lblUnleaded95.AutoSize = true;
+            this.lblUnleaded95.Location = new System.Drawing.Point(6, 54);
+            this.lblUnleaded95.Name = "lblUnleaded95";
+            this.lblUnleaded95.Size = new System.Drawing.Size(84, 13);
+            this.lblUnleaded95.TabIndex = 1;
+            this.lblUnleaded95.Text = "UNLEADED 95:";
+            // 
+            // lblUnleaded93
+            // 
+            this.lblUnleaded93.AutoSize = true;
+            this.lblUnleaded93.Location = new System.Drawing.Point(6, 26);
+            this.lblUnleaded93.Name = "lblUnleaded93";
+            this.lblUnleaded93.Size = new System.Drawing.Size(84, 13);
+            this.lblUnleaded93.TabIndex = 0;
+            this.lblUnleaded93.Text = "UNLEADED 93:";
+            // 
+            // gbPrice
+            // 
+            this.gbPrice.Location = new System.Drawing.Point(665, 29);
+            this.gbPrice.Name = "gbPrice";
+            this.gbPrice.Size = new System.Drawing.Size(103, 141);
+            this.gbPrice.TabIndex = 1;
+            this.gbPrice.TabStop = false;
+            this.gbPrice.Text = "PRICE";
             // 
             // btnExit
             // 
@@ -130,6 +130,7 @@
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // gbSales
             // 
@@ -142,6 +143,16 @@
             this.gbSales.TabStop = false;
             this.gbSales.Text = "SALES";
             // 
+            // btnUpdateFuelPrice
+            // 
+            this.btnUpdateFuelPrice.Location = new System.Drawing.Point(6, 36);
+            this.btnUpdateFuelPrice.Name = "btnUpdateFuelPrice";
+            this.btnUpdateFuelPrice.Size = new System.Drawing.Size(103, 40);
+            this.btnUpdateFuelPrice.TabIndex = 1;
+            this.btnUpdateFuelPrice.Text = "UPDATE FUEL PRICE";
+            this.btnUpdateFuelPrice.UseVisualStyleBackColor = true;
+            this.btnUpdateFuelPrice.Click += new System.EventHandler(this.BtnUpdateFuelPrice_Click);
+            // 
             // btnNewSale
             // 
             this.btnNewSale.Location = new System.Drawing.Point(6, 93);
@@ -151,15 +162,6 @@
             this.btnNewSale.Text = "NEW SALE";
             this.btnNewSale.UseVisualStyleBackColor = true;
             // 
-            // btnUpdateFuelPrice
-            // 
-            this.btnUpdateFuelPrice.Location = new System.Drawing.Point(6, 36);
-            this.btnUpdateFuelPrice.Name = "btnUpdateFuelPrice";
-            this.btnUpdateFuelPrice.Size = new System.Drawing.Size(103, 40);
-            this.btnUpdateFuelPrice.TabIndex = 1;
-            this.btnUpdateFuelPrice.Text = "UPDATE FUEL PRICE";
-            this.btnUpdateFuelPrice.UseVisualStyleBackColor = true;
-            // 
             // btnHelpAndSupport
             // 
             this.btnHelpAndSupport.Location = new System.Drawing.Point(556, 406);
@@ -168,6 +170,7 @@
             this.btnHelpAndSupport.TabIndex = 4;
             this.btnHelpAndSupport.Text = "HELP AND SUPPORT";
             this.btnHelpAndSupport.UseVisualStyleBackColor = true;
+            this.btnHelpAndSupport.Click += new System.EventHandler(this.BtnHelpAndSupport_Click);
             // 
             // btnReports
             // 
@@ -221,28 +224,6 @@
             this.tpAccounts.Text = "ACCOUNTS";
             this.tpAccounts.UseVisualStyleBackColor = true;
             // 
-            // tpEmpolyees
-            // 
-            this.tpEmpolyees.Controls.Add(this.btnManageEmployees);
-            this.tpEmpolyees.Controls.Add(this.btnWorkHouers);
-            this.tpEmpolyees.Location = new System.Drawing.Point(4, 22);
-            this.tpEmpolyees.Name = "tpEmpolyees";
-            this.tpEmpolyees.Size = new System.Drawing.Size(423, 304);
-            this.tpEmpolyees.TabIndex = 2;
-            this.tpEmpolyees.Text = "EMPLOYEES";
-            this.tpEmpolyees.UseVisualStyleBackColor = true;
-            // 
-            // tpOrders
-            // 
-            this.tpOrders.Controls.Add(this.btnReceiveOrder);
-            this.tpOrders.Controls.Add(this.btnPlaceOrder);
-            this.tpOrders.Location = new System.Drawing.Point(4, 22);
-            this.tpOrders.Name = "tpOrders";
-            this.tpOrders.Size = new System.Drawing.Size(423, 304);
-            this.tpOrders.TabIndex = 3;
-            this.tpOrders.Text = "OREDERS";
-            this.tpOrders.UseVisualStyleBackColor = true;
-            // 
             // gbAccounts
             // 
             this.gbAccounts.Controls.Add(this.btnViewOutstandingAcc);
@@ -255,14 +236,14 @@
             this.gbAccounts.TabStop = false;
             this.gbAccounts.Text = "ACCOUNTS";
             // 
-            // btnManageAccounts
+            // btnViewOutstandingAcc
             // 
-            this.btnManageAccounts.Location = new System.Drawing.Point(40, 35);
-            this.btnManageAccounts.Name = "btnManageAccounts";
-            this.btnManageAccounts.Size = new System.Drawing.Size(135, 38);
-            this.btnManageAccounts.TabIndex = 0;
-            this.btnManageAccounts.Text = "Manage Accounts";
-            this.btnManageAccounts.UseVisualStyleBackColor = true;
+            this.btnViewOutstandingAcc.Location = new System.Drawing.Point(40, 107);
+            this.btnViewOutstandingAcc.Name = "btnViewOutstandingAcc";
+            this.btnViewOutstandingAcc.Size = new System.Drawing.Size(135, 38);
+            this.btnViewOutstandingAcc.TabIndex = 2;
+            this.btnViewOutstandingAcc.Text = "View Account Database";
+            this.btnViewOutstandingAcc.UseVisualStyleBackColor = true;
             // 
             // btnViewAccountDB
             // 
@@ -273,14 +254,35 @@
             this.btnViewAccountDB.Text = "View Outstanding Accounts";
             this.btnViewAccountDB.UseVisualStyleBackColor = true;
             // 
-            // btnViewOutstandingAcc
+            // btnManageAccounts
             // 
-            this.btnViewOutstandingAcc.Location = new System.Drawing.Point(40, 107);
-            this.btnViewOutstandingAcc.Name = "btnViewOutstandingAcc";
-            this.btnViewOutstandingAcc.Size = new System.Drawing.Size(135, 38);
-            this.btnViewOutstandingAcc.TabIndex = 2;
-            this.btnViewOutstandingAcc.Text = "View Account Database";
-            this.btnViewOutstandingAcc.UseVisualStyleBackColor = true;
+            this.btnManageAccounts.Location = new System.Drawing.Point(40, 35);
+            this.btnManageAccounts.Name = "btnManageAccounts";
+            this.btnManageAccounts.Size = new System.Drawing.Size(135, 38);
+            this.btnManageAccounts.TabIndex = 0;
+            this.btnManageAccounts.Text = "Manage Accounts";
+            this.btnManageAccounts.UseVisualStyleBackColor = true;
+            // 
+            // tpEmpolyees
+            // 
+            this.tpEmpolyees.Controls.Add(this.btnManageEmployees);
+            this.tpEmpolyees.Controls.Add(this.btnWorkHouers);
+            this.tpEmpolyees.Location = new System.Drawing.Point(4, 22);
+            this.tpEmpolyees.Name = "tpEmpolyees";
+            this.tpEmpolyees.Size = new System.Drawing.Size(423, 304);
+            this.tpEmpolyees.TabIndex = 2;
+            this.tpEmpolyees.Text = "EMPLOYEES";
+            this.tpEmpolyees.UseVisualStyleBackColor = true;
+            // 
+            // btnManageEmployees
+            // 
+            this.btnManageEmployees.Location = new System.Drawing.Point(24, 25);
+            this.btnManageEmployees.Name = "btnManageEmployees";
+            this.btnManageEmployees.Size = new System.Drawing.Size(103, 40);
+            this.btnManageEmployees.TabIndex = 2;
+            this.btnManageEmployees.Text = "MANAGE EMPLOYEES";
+            this.btnManageEmployees.UseVisualStyleBackColor = true;
+            this.btnManageEmployees.Click += new System.EventHandler(this.BtnManageEmployees_Click);
             // 
             // btnWorkHouers
             // 
@@ -291,23 +293,16 @@
             this.btnWorkHouers.Text = "MANAGE WORK HOUERS";
             this.btnWorkHouers.UseVisualStyleBackColor = true;
             // 
-            // btnManageEmployees
+            // tpOrders
             // 
-            this.btnManageEmployees.Location = new System.Drawing.Point(24, 25);
-            this.btnManageEmployees.Name = "btnManageEmployees";
-            this.btnManageEmployees.Size = new System.Drawing.Size(103, 40);
-            this.btnManageEmployees.TabIndex = 2;
-            this.btnManageEmployees.Text = "MANAGE EMPLOYEES";
-            this.btnManageEmployees.UseVisualStyleBackColor = true;
-            // 
-            // btnPlaceOrder
-            // 
-            this.btnPlaceOrder.Location = new System.Drawing.Point(15, 24);
-            this.btnPlaceOrder.Name = "btnPlaceOrder";
-            this.btnPlaceOrder.Size = new System.Drawing.Size(118, 32);
-            this.btnPlaceOrder.TabIndex = 0;
-            this.btnPlaceOrder.Text = "PLACE ORDER";
-            this.btnPlaceOrder.UseVisualStyleBackColor = true;
+            this.tpOrders.Controls.Add(this.btnReceiveOrder);
+            this.tpOrders.Controls.Add(this.btnPlaceOrder);
+            this.tpOrders.Location = new System.Drawing.Point(4, 22);
+            this.tpOrders.Name = "tpOrders";
+            this.tpOrders.Size = new System.Drawing.Size(423, 304);
+            this.tpOrders.TabIndex = 3;
+            this.tpOrders.Text = "OREDERS";
+            this.tpOrders.UseVisualStyleBackColor = true;
             // 
             // btnReceiveOrder
             // 
@@ -317,6 +312,15 @@
             this.btnReceiveOrder.TabIndex = 1;
             this.btnReceiveOrder.Text = "RECIEVE ORDER";
             this.btnReceiveOrder.UseVisualStyleBackColor = true;
+            // 
+            // btnPlaceOrder
+            // 
+            this.btnPlaceOrder.Location = new System.Drawing.Point(15, 24);
+            this.btnPlaceOrder.Name = "btnPlaceOrder";
+            this.btnPlaceOrder.Size = new System.Drawing.Size(118, 32);
+            this.btnPlaceOrder.TabIndex = 0;
+            this.btnPlaceOrder.Text = "PLACE ORDER";
+            this.btnPlaceOrder.UseVisualStyleBackColor = true;
             // 
             // Form_Home_Page_FutureTech
             // 
@@ -339,9 +343,9 @@
             this.gbSales.ResumeLayout(false);
             this.tabControl.ResumeLayout(false);
             this.tpAccounts.ResumeLayout(false);
+            this.gbAccounts.ResumeLayout(false);
             this.tpEmpolyees.ResumeLayout(false);
             this.tpOrders.ResumeLayout(false);
-            this.gbAccounts.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
