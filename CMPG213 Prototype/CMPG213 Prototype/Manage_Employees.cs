@@ -19,28 +19,32 @@ namespace CMPG213_Prototype
         }
         string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C: \Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True";
         SqlConnection conn;
-        SqlCommand comm;
-        DataSet ds;
-        SqlDataAdapter adap;
 
-        String fName, lName, job, email, username, password;
-        DateTime shift;
+        string fName, lName, job, email, username, password, shift;
         int cellNr = 0;
 
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            String fName = txbEmp_FName.Text, lName = txbEmp_LName.Text, job = txbEmp_Job.Text, email = txbEmp_Email.Text, username = txbShiftTime.Text, password = txbEmp_Password.Text, shift = txbShiftTime.Text;
-            int cellNr = int.Parse(txbEmp_CellNum.Text);
+            fName = txbEmp_FName.Text;
+            lName = txbEmp_LName.Text;
+            job = txbEmp_Job.Text;
+            email = txbEmp_Email.Text;
+            username = txbShiftTime.Text;
+            password = txbEmp_Password.Text;
+            shift = txbShiftTime.Text;
+            cellNr = int.Parse(txbEmp_CellNum.Text);
+            string sql = @"Insert Into EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')";
 
             try
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand(@"Insert Into EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')", conn);
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.InsertCommand = command;
-                adapter.InsertCommand.ExecuteNonQuery();
+                SqlDataAdapter adap = new SqlDataAdapter();
+                SqlCommand comm = new SqlCommand(sql,conn);
+                adap.InsertCommand = new SqlCommand(sql, conn);
+                adap.InsertCommand.ExecuteNonQuery();
                 MessageBox.Show("Record inserted successfully");
+                comm.Dispose();
                 conn.Close();
             }
             catch (SqlException error)
@@ -51,16 +55,25 @@ namespace CMPG213_Prototype
 
         private void BtnChange_Click(object sender, EventArgs e)
         {
-            String fName = txbEmp_FName.Text, lName = txbEmp_LName.Text, job = txbEmp_Job.Text, email = txbEmp_Email.Text, username = txbShiftTime.Text, password = txbEmp_Password.Text, shift = txbShiftTime.Text;
-            int cellNr = int.Parse(txbEmp_CellNum.Text);
+            fName = txbEmp_FName.Text;
+            lName = txbEmp_LName.Text;
+            job = txbEmp_Job.Text;
+            email = txbEmp_Email.Text;
+            username = txbShiftTime.Text;
+            password = txbEmp_Password.Text;
+            shift = txbShiftTime.Text;
+            cellNr = int.Parse(txbEmp_CellNum.Text);
+            string sql = @"UPDATE EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')";
+
             try
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand(@"UPDATE EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')", conn);
                 SqlDataAdapter adap = new SqlDataAdapter();
-                adap.DeleteCommand = command;
-                adap.DeleteCommand.ExecuteNonQuery();
-                MessageBox.Show("Record successfuly deleted!");
+                SqlCommand comm = new SqlCommand(sql, conn);
+                adap.UpdateCommand = new SqlCommand(sql, conn);
+                adap.UpdateCommand.ExecuteNonQuery();
+                MessageBox.Show("Record successfuly updated!");
+                comm.Dispose();
                 conn.Close();
 
             }
@@ -72,17 +85,19 @@ namespace CMPG213_Prototype
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            String fName = txbEmp_FName.Text, lName = txbEmp_LName.Text;
+            fName = txbEmp_FName.Text;
+            lName = txbEmp_LName.Text;
+            string sql = @"Delete From EMPLOYEE Where Emp_FName = '" + fName + "' AND Emp_LName = '" + lName + "'";
             try
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand("Delete From EMPLOYEE Where Emp_FName = '" +fName+ "' AND Emp_LName = '" + lName + "'" , conn);
                 SqlDataAdapter adap = new SqlDataAdapter();
-                adap.DeleteCommand = command;
+                SqlCommand comm = new SqlCommand(sql, conn);
+                adap.DeleteCommand = new SqlCommand(sql, conn);
                 adap.DeleteCommand.ExecuteNonQuery();
                 MessageBox.Show("Record successfuly deleted!");
+                comm.Dispose();
                 conn.Close();
-                
             }
             catch (SqlException error)
             {
@@ -97,7 +112,7 @@ namespace CMPG213_Prototype
 
         private void Manage_Employees_Load(object sender, EventArgs e)
         {
-            
+            conn = new SqlConnection(constring);
         }
     }
 }
