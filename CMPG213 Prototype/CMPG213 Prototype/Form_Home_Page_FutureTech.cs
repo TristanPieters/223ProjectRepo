@@ -54,15 +54,15 @@ namespace CMPG213_Prototype
 
         private void BtnUpdateFuelPrice_Click(object sender, EventArgs e)
         {
-            MaintainFuel updateFuelPriceForm = new MaintainFuel();
+            Maintain_Fuel updateFuelPriceForm = new Maintain_Fuel();
             updateFuelPriceForm.ShowDialog();
         }
 
         private void BtnManageEmployees_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Manage_Employees manageEmpForm = new Manage_Employees();
-            manageEmpForm.ShowDialog();
+           // Manage_Employees manageEmpForm = new Manage_Employees();
+           // manageEmpForm.ShowDialog();
         }
 
         private void BtnReports_Click(object sender, EventArgs e)
