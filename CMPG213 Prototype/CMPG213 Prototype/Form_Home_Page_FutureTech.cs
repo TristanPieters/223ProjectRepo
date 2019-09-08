@@ -25,6 +25,39 @@ namespace CMPG213_Prototype
         private void Form_Home_Page_FutureTech_Load(object sender, EventArgs e)
         {
             MessageBox.Show("Welcome to Stallion's Gas Station designed and developed by FUTURETECH");
+
+            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security = True");
+            string sql = @"Select * From FUEL";
+            SqlDataReader reader;
+            SqlCommand comm = new SqlCommand(sql, conn);
+            conn.Open();
+            reader = comm.ExecuteReader();
+            int counter = 1;
+            //string reffrance = "label" + Convert.ToString(counter);
+
+            while (reader.Read())
+            {
+                string output = Convert.ToString(reader.GetValue(2));
+
+                if(counter == 1)
+                {
+                    label1.Text = output;
+                }
+               else if (counter == 2 )
+                {
+                   label2.Text = output;
+                }
+                else if(counter == 3 )
+                {
+                    label3.Text = output;
+                }
+                else if (counter == 4)
+                {
+                    label4.Text = output;
+                }
+                counter++;  
+            }
+            conn.Close();
         }
 
         private void GbFuelType_Enter(object sender, EventArgs e)
@@ -54,48 +87,50 @@ namespace CMPG213_Prototype
 
         private void BtnUpdateFuelPrice_Click(object sender, EventArgs e)
         {
-            MaintainFuel updateFuelPriceForm = new MaintainFuel();
+            Maintain_Fuel updateFuelPriceForm = new Maintain_Fuel();
             updateFuelPriceForm.ShowDialog();
         }
 
         private void BtnManageEmployees_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Manage_Employees manageEmpForm = new Manage_Employees();
-            manageEmpForm.ShowDialog();
+           // Manage_Employees manageEmpForm = new Manage_Employees();
+           // manageEmpForm.ShowDialog();
         }
 
         private void BtnReports_Click(object sender, EventArgs e)
         {
             //Daily report
-            // CONN.Open();
-             //String transID;
-             //DateTime transDate;
-             //decimal transAmnt;
-             //double transLitersSold;
+            /*
+            CONN.Open();
+            String transID;
+            DateTime transDate;
+            decimal transAmnt;
+            double transLitersSold;
 
-           // SqlCommand commTrans;
-            //SqlCommand commEmp;
-            //SqlCommand commAcc;
-            //SqlCommand commFuel;
-            //SqlCommand commReward;
-            //SqlDataAdapter dataReader = new SqlDataAdapter();
+            SqlCommand commTrans;
+            SqlCommand commEmp;
+            SqlCommand commAcc;
+            SqlCommand commFuel;
+            SqlCommand commReward;
 
-            //String sqlTrans,sqlEmp,sqlAcc,sqlFuel,sqlReward, Output;
+            SqlDataAdapter dataReader = new SqlDataAdapter();
 
-            //sqlTrans = "Select Trans_ID,Dateofsale,Amount_Liters_Sold, Liters_Sold from TRANSACT";
-            //sqlEmp = "Select Emp_ID from EMPLOYEE";
-            //sqlAcc = "Select Acc_ID from ACCOUNT";
-            //sqlFuel = "Select Fuel_ID from FUEL";
-            //sqlReward = "Select Reward_ID from REWARD";
+            String sqlTrans,sqlEmp,sqlAcc,sqlFuel,sqlReward, Output;
 
-            //commTrans = new SqlCommand(sqlTrans, CONN);
-            //commEmp = new SqlCommand(sqlEmp, CONN);
-            //commAcc = new SqlCommand(sqlAcc, CONN);
-            //commFuel = new SqlCommand(sqlFuel, CONN);
-            //commReward = new SqlCommand(sqlReward, CONN);
+            sqlTrans = "Select Trans_ID,Dateofsale,Amount_Liters_Sold, Liters_Sold from TRANSACT";
+            sqlEmp = "Select Emp_ID from EMPLOYEE";
+            sqlAcc = "Select Acc_ID from ACCOUNT";
+            sqlFuel = "Select Fuel_ID from FUEL";
+            sqlReward = "Select Reward_ID from REWARD";
 
-            //dataReader = comm.ExcecuteReader();
+            commTrans = new SqlCommand(sqlTrans, CONN);
+            commEmp = new SqlCommand(sqlEmp, CONN);
+            commAcc = new SqlCommand(sqlAcc, CONN);
+            commFuel = new SqlCommand(sqlFuel, CONN);
+            commReward = new SqlCommand(sqlReward, CONN);
+
+            dataReader = comm.ExcecuteReader();
 
 
 
@@ -119,7 +154,7 @@ namespace CMPG213_Prototype
                 MessageBox.Show("Error" + ex);
             }
             
-
+    */
            
 
         }

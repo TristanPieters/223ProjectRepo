@@ -16,5 +16,10 @@ namespace CMPG213_Prototype
         {
             InitializeComponent();
         }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
