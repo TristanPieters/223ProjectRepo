@@ -138,7 +138,7 @@
             // txbShiftTime
             // 
             this.txbShiftTime.Location = new System.Drawing.Point(170, 38);
-            this.txbShiftTime.Margin = new System.Windows.Forms.Padding(2);
+            this.txbShiftTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbShiftTime.Name = "txbShiftTime";
             this.txbShiftTime.Size = new System.Drawing.Size(111, 21);
             this.txbShiftTime.TabIndex = 11;
@@ -146,7 +146,7 @@
             // txbEmp_FName
             // 
             this.txbEmp_FName.Location = new System.Drawing.Point(170, 110);
-            this.txbEmp_FName.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_FName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbEmp_FName.Name = "txbEmp_FName";
             this.txbEmp_FName.Size = new System.Drawing.Size(111, 21);
             this.txbEmp_FName.TabIndex = 12;
@@ -154,7 +154,7 @@
             // txbEmp_LName
             // 
             this.txbEmp_LName.Location = new System.Drawing.Point(170, 180);
-            this.txbEmp_LName.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_LName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbEmp_LName.Name = "txbEmp_LName";
             this.txbEmp_LName.Size = new System.Drawing.Size(111, 21);
             this.txbEmp_LName.TabIndex = 13;
@@ -162,7 +162,7 @@
             // txbEmp_CellNum
             // 
             this.txbEmp_CellNum.Location = new System.Drawing.Point(491, 38);
-            this.txbEmp_CellNum.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_CellNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbEmp_CellNum.Name = "txbEmp_CellNum";
             this.txbEmp_CellNum.Size = new System.Drawing.Size(120, 21);
             this.txbEmp_CellNum.TabIndex = 14;
@@ -170,7 +170,7 @@
             // txbEmp_Job
             // 
             this.txbEmp_Job.Location = new System.Drawing.Point(491, 107);
-            this.txbEmp_Job.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_Job.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbEmp_Job.Name = "txbEmp_Job";
             this.txbEmp_Job.Size = new System.Drawing.Size(120, 21);
             this.txbEmp_Job.TabIndex = 15;
@@ -178,7 +178,7 @@
             // txbEmp_Email
             // 
             this.txbEmp_Email.Location = new System.Drawing.Point(491, 177);
-            this.txbEmp_Email.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_Email.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbEmp_Email.Name = "txbEmp_Email";
             this.txbEmp_Email.Size = new System.Drawing.Size(120, 21);
             this.txbEmp_Email.TabIndex = 16;
@@ -186,7 +186,7 @@
             // txbEmp_Username
             // 
             this.txbEmp_Username.Location = new System.Drawing.Point(491, 259);
-            this.txbEmp_Username.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_Username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbEmp_Username.Name = "txbEmp_Username";
             this.txbEmp_Username.Size = new System.Drawing.Size(120, 21);
             this.txbEmp_Username.TabIndex = 17;
@@ -194,7 +194,7 @@
             // txbEmp_Password
             // 
             this.txbEmp_Password.Location = new System.Drawing.Point(170, 259);
-            this.txbEmp_Password.Margin = new System.Windows.Forms.Padding(2);
+            this.txbEmp_Password.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txbEmp_Password.Name = "txbEmp_Password";
             this.txbEmp_Password.Size = new System.Drawing.Size(111, 21);
             this.txbEmp_Password.TabIndex = 18;
@@ -204,7 +204,7 @@
             this.btnAdd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAdd.Location = new System.Drawing.Point(9, 410);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(88, 45);
             this.btnAdd.TabIndex = 19;
@@ -217,7 +217,7 @@
             this.btnChange.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnChange.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnChange.Location = new System.Drawing.Point(170, 410);
-            this.btnChange.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(88, 45);
             this.btnChange.TabIndex = 20;
@@ -230,7 +230,7 @@
             this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnDelete.Location = new System.Drawing.Point(334, 410);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(88, 45);
             this.btnDelete.TabIndex = 21;
@@ -243,7 +243,7 @@
             this.btnBack.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnBack.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnBack.Location = new System.Drawing.Point(518, 410);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(88, 45);
             this.btnBack.TabIndex = 22;
@@ -277,9 +277,9 @@
             this.groupBox1.Controls.Add(this.txbEmp_LName);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 5);
+            this.groupBox1.Location = new System.Drawing.Point(-1, 1);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(740, 463);
+            this.groupBox1.Size = new System.Drawing.Size(753, 480);
             this.groupBox1.TabIndex = 23;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ENTER EMPLOYEE";
@@ -287,9 +287,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(638, 20);
+            this.pictureBox1.Location = new System.Drawing.Point(665, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(88, 435);
+            this.pictureBox1.Size = new System.Drawing.Size(88, 469);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
@@ -298,10 +298,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(779, 480);
+            this.ClientSize = new System.Drawing.Size(750, 480);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Manage_Employees";
             this.Text = "Manage_Employees";
             this.Load += new System.EventHandler(this.Manage_Employees_Load);

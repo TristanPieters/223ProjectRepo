@@ -63,7 +63,6 @@
             this.btnReceiveOrder = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbFuelType.SuspendLayout();
             this.gbSales.SuspendLayout();
             this.tabControl.SuspendLayout();
@@ -78,7 +77,6 @@
             this.tpOrders.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbFuelType
@@ -87,12 +85,7 @@
             this.gbFuelType.Controls.Add(this.lblDiesel50);
             this.gbFuelType.Controls.Add(this.lblUnleaded95);
             this.gbFuelType.Controls.Add(this.lblUnleaded93);
-<<<<<<< Updated upstream
             this.gbFuelType.Location = new System.Drawing.Point(556, 29);
-=======
-            this.gbFuelType.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gbFuelType.Location = new System.Drawing.Point(551, 45);
->>>>>>> Stashed changes
             this.gbFuelType.Name = "gbFuelType";
             this.gbFuelType.Size = new System.Drawing.Size(103, 141);
             this.gbFuelType.TabIndex = 0;
@@ -105,11 +98,7 @@
             this.lblDiesel500.AutoSize = true;
             this.lblDiesel500.Location = new System.Drawing.Point(6, 110);
             this.lblDiesel500.Name = "lblDiesel500";
-<<<<<<< Updated upstream
             this.lblDiesel500.Size = new System.Drawing.Size(69, 13);
-=======
-            this.lblDiesel500.Size = new System.Drawing.Size(80, 13);
->>>>>>> Stashed changes
             this.lblDiesel500.TabIndex = 3;
             this.lblDiesel500.Text = "DIESEL 500:";
             // 
@@ -118,11 +107,7 @@
             this.lblDiesel50.AutoSize = true;
             this.lblDiesel50.Location = new System.Drawing.Point(6, 83);
             this.lblDiesel50.Name = "lblDiesel50";
-<<<<<<< Updated upstream
             this.lblDiesel50.Size = new System.Drawing.Size(63, 13);
-=======
-            this.lblDiesel50.Size = new System.Drawing.Size(73, 13);
->>>>>>> Stashed changes
             this.lblDiesel50.TabIndex = 2;
             this.lblDiesel50.Text = "DIESEL 50:";
             // 
@@ -131,11 +116,7 @@
             this.lblUnleaded95.AutoSize = true;
             this.lblUnleaded95.Location = new System.Drawing.Point(6, 54);
             this.lblUnleaded95.Name = "lblUnleaded95";
-<<<<<<< Updated upstream
             this.lblUnleaded95.Size = new System.Drawing.Size(84, 13);
-=======
-            this.lblUnleaded95.Size = new System.Drawing.Size(96, 13);
->>>>>>> Stashed changes
             this.lblUnleaded95.TabIndex = 1;
             this.lblUnleaded95.Text = "UNLEADED 95:";
             // 
@@ -144,22 +125,13 @@
             this.lblUnleaded93.AutoSize = true;
             this.lblUnleaded93.Location = new System.Drawing.Point(6, 26);
             this.lblUnleaded93.Name = "lblUnleaded93";
-<<<<<<< Updated upstream
             this.lblUnleaded93.Size = new System.Drawing.Size(84, 13);
-=======
-            this.lblUnleaded93.Size = new System.Drawing.Size(96, 13);
->>>>>>> Stashed changes
             this.lblUnleaded93.TabIndex = 0;
             this.lblUnleaded93.Text = "UNLEADED 93:";
             // 
             // gbPrice
             // 
-<<<<<<< Updated upstream
             this.gbPrice.Location = new System.Drawing.Point(665, 29);
-=======
-            this.gbPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gbPrice.Location = new System.Drawing.Point(660, 45);
->>>>>>> Stashed changes
             this.gbPrice.Name = "gbPrice";
             this.gbPrice.Size = new System.Drawing.Size(103, 141);
             this.gbPrice.TabIndex = 1;
@@ -168,30 +140,19 @@
             // 
             // btnExit
             // 
-<<<<<<< Updated upstream
             this.btnExit.Location = new System.Drawing.Point(700, 406);
-=======
-            this.btnExit.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnExit.Location = new System.Drawing.Point(675, 370);
->>>>>>> Stashed changes
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(88, 32);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "EXIT";
-            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // gbSales
             // 
             this.gbSales.Controls.Add(this.btnUpdateFuelPrice);
             this.gbSales.Controls.Add(this.btnNewSale);
-<<<<<<< Updated upstream
             this.gbSales.Location = new System.Drawing.Point(556, 185);
-=======
-            this.gbSales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gbSales.Location = new System.Drawing.Point(551, 192);
->>>>>>> Stashed changes
             this.gbSales.Name = "gbSales";
             this.gbSales.Size = new System.Drawing.Size(212, 154);
             this.gbSales.TabIndex = 3;
@@ -200,84 +161,49 @@
             // 
             // btnUpdateFuelPrice
             // 
-<<<<<<< Updated upstream
-=======
-            this.btnUpdateFuelPrice.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUpdateFuelPrice.ForeColor = System.Drawing.SystemColors.ControlText;
->>>>>>> Stashed changes
             this.btnUpdateFuelPrice.Location = new System.Drawing.Point(6, 36);
             this.btnUpdateFuelPrice.Name = "btnUpdateFuelPrice";
             this.btnUpdateFuelPrice.Size = new System.Drawing.Size(103, 40);
             this.btnUpdateFuelPrice.TabIndex = 1;
-<<<<<<< Updated upstream
             this.btnUpdateFuelPrice.Text = "Maintain Fuel";
             this.btnUpdateFuelPrice.UseVisualStyleBackColor = true;
-=======
-            this.btnUpdateFuelPrice.Text = "UPDATE FUEL PRICE";
-            this.btnUpdateFuelPrice.UseVisualStyleBackColor = false;
->>>>>>> Stashed changes
             this.btnUpdateFuelPrice.Click += new System.EventHandler(this.BtnUpdateFuelPrice_Click);
             // 
             // btnNewSale
             // 
-<<<<<<< Updated upstream
-=======
-            this.btnNewSale.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnNewSale.ForeColor = System.Drawing.SystemColors.ControlText;
->>>>>>> Stashed changes
             this.btnNewSale.Location = new System.Drawing.Point(6, 93);
             this.btnNewSale.Name = "btnNewSale";
             this.btnNewSale.Size = new System.Drawing.Size(101, 40);
             this.btnNewSale.TabIndex = 0;
             this.btnNewSale.Text = "NEW SALE";
-            this.btnNewSale.UseVisualStyleBackColor = false;
+            this.btnNewSale.UseVisualStyleBackColor = true;
             // 
             // btnHelpAndSupport
             // 
-<<<<<<< Updated upstream
             this.btnHelpAndSupport.Location = new System.Drawing.Point(556, 406);
             this.btnHelpAndSupport.Name = "btnHelpAndSupport";
             this.btnHelpAndSupport.Size = new System.Drawing.Size(136, 32);
-=======
-            this.btnHelpAndSupport.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHelpAndSupport.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHelpAndSupport.Location = new System.Drawing.Point(15, 370);
-            this.btnHelpAndSupport.Name = "btnHelpAndSupport";
-            this.btnHelpAndSupport.Size = new System.Drawing.Size(166, 32);
->>>>>>> Stashed changes
             this.btnHelpAndSupport.TabIndex = 4;
             this.btnHelpAndSupport.Text = "HELP AND SUPPORT";
-            this.btnHelpAndSupport.UseVisualStyleBackColor = false;
+            this.btnHelpAndSupport.UseVisualStyleBackColor = true;
             this.btnHelpAndSupport.Click += new System.EventHandler(this.BtnHelpAndSupport_Click);
             // 
             // btnReports
             // 
-<<<<<<< Updated upstream
             this.btnReports.Location = new System.Drawing.Point(700, 355);
-=======
-            this.btnReports.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnReports.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReports.Location = new System.Drawing.Point(557, 370);
->>>>>>> Stashed changes
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(88, 32);
             this.btnReports.TabIndex = 5;
             this.btnReports.Text = "REPORTS";
-            this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.UseVisualStyleBackColor = true;
             this.btnReports.Click += new System.EventHandler(this.BtnReports_Click);
             // 
             // lblCurrentFuelPrices
             // 
             this.lblCurrentFuelPrices.AutoSize = true;
-<<<<<<< Updated upstream
             this.lblCurrentFuelPrices.Location = new System.Drawing.Point(593, 9);
             this.lblCurrentFuelPrices.Name = "lblCurrentFuelPrices";
             this.lblCurrentFuelPrices.Size = new System.Drawing.Size(124, 13);
-=======
-            this.lblCurrentFuelPrices.Location = new System.Drawing.Point(596, 16);
-            this.lblCurrentFuelPrices.Name = "lblCurrentFuelPrices";
-            this.lblCurrentFuelPrices.Size = new System.Drawing.Size(142, 13);
->>>>>>> Stashed changes
             this.lblCurrentFuelPrices.TabIndex = 6;
             this.lblCurrentFuelPrices.Text = "CURRET FUEL PRICES";
             // 
@@ -288,11 +214,7 @@
             this.tabControl.Controls.Add(this.tpAccounts);
             this.tabControl.Controls.Add(this.tpEmpolyees);
             this.tabControl.Controls.Add(this.tpOrders);
-<<<<<<< Updated upstream
             this.tabControl.Location = new System.Drawing.Point(12, 9);
-=======
-            this.tabControl.Location = new System.Drawing.Point(15, 23);
->>>>>>> Stashed changes
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(431, 330);
@@ -337,11 +259,7 @@
             this.panel1.Controls.Add(this.btnAddAccounts);
             this.panel1.Controls.Add(this.btnViewAccountDB);
             this.panel1.Controls.Add(this.btnViewOutstandingAcc);
-<<<<<<< Updated upstream
             this.panel1.Location = new System.Drawing.Point(0, -2);
-=======
-            this.panel1.Location = new System.Drawing.Point(3, 2);
->>>>>>> Stashed changes
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(433, 306);
             this.panel1.TabIndex = 8;
@@ -361,10 +279,6 @@
             // 
             this.btnAddAccounts.BackColor = System.Drawing.Color.White;
             this.btnAddAccounts.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
-=======
-            this.btnAddAccounts.ForeColor = System.Drawing.SystemColors.ControlText;
->>>>>>> Stashed changes
             this.btnAddAccounts.Location = new System.Drawing.Point(16, 32);
             this.btnAddAccounts.Name = "btnAddAccounts";
             this.btnAddAccounts.Size = new System.Drawing.Size(192, 66);
@@ -377,10 +291,6 @@
             // 
             this.btnViewAccountDB.BackColor = System.Drawing.Color.White;
             this.btnViewAccountDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
-=======
-            this.btnViewAccountDB.ForeColor = System.Drawing.SystemColors.ControlText;
->>>>>>> Stashed changes
             this.btnViewAccountDB.Location = new System.Drawing.Point(16, 115);
             this.btnViewAccountDB.Name = "btnViewAccountDB";
             this.btnViewAccountDB.Size = new System.Drawing.Size(192, 63);
@@ -393,10 +303,6 @@
             // 
             this.btnViewOutstandingAcc.BackColor = System.Drawing.Color.White;
             this.btnViewOutstandingAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
-=======
-            this.btnViewOutstandingAcc.ForeColor = System.Drawing.SystemColors.ControlText;
->>>>>>> Stashed changes
             this.btnViewOutstandingAcc.Location = new System.Drawing.Point(16, 194);
             this.btnViewOutstandingAcc.Name = "btnViewOutstandingAcc";
             this.btnViewOutstandingAcc.Size = new System.Drawing.Size(192, 65);
@@ -440,10 +346,6 @@
             // 
             this.btnManageEmployees.BackColor = System.Drawing.Color.White;
             this.btnManageEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
-=======
-            this.btnManageEmployees.ForeColor = System.Drawing.SystemColors.ControlText;
->>>>>>> Stashed changes
             this.btnManageEmployees.Location = new System.Drawing.Point(18, 66);
             this.btnManageEmployees.Name = "btnManageEmployees";
             this.btnManageEmployees.Size = new System.Drawing.Size(151, 47);
@@ -456,10 +358,6 @@
             // 
             this.btnWorkHouers.BackColor = System.Drawing.Color.White;
             this.btnWorkHouers.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
-=======
-            this.btnWorkHouers.ForeColor = System.Drawing.SystemColors.ControlText;
->>>>>>> Stashed changes
             this.btnWorkHouers.Location = new System.Drawing.Point(18, 156);
             this.btnWorkHouers.Name = "btnWorkHouers";
             this.btnWorkHouers.Size = new System.Drawing.Size(151, 47);
@@ -502,10 +400,6 @@
             // 
             this.btnPlaceOrder.BackColor = System.Drawing.Color.White;
             this.btnPlaceOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
-=======
-            this.btnPlaceOrder.ForeColor = System.Drawing.SystemColors.ControlText;
->>>>>>> Stashed changes
             this.btnPlaceOrder.Location = new System.Drawing.Point(16, 44);
             this.btnPlaceOrder.Name = "btnPlaceOrder";
             this.btnPlaceOrder.Size = new System.Drawing.Size(118, 32);
@@ -517,10 +411,6 @@
             // 
             this.btnReceiveOrder.BackColor = System.Drawing.Color.White;
             this.btnReceiveOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< Updated upstream
-=======
-            this.btnReceiveOrder.ForeColor = System.Drawing.SystemColors.ControlText;
->>>>>>> Stashed changes
             this.btnReceiveOrder.Location = new System.Drawing.Point(16, 156);
             this.btnReceiveOrder.Name = "btnReceiveOrder";
             this.btnReceiveOrder.Size = new System.Drawing.Size(118, 32);
@@ -532,31 +422,10 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Controls.Add(this.tabControl);
-            this.groupBox1.Controls.Add(this.btnExit);
-            this.groupBox1.Controls.Add(this.btnHelpAndSupport);
-            this.groupBox1.Controls.Add(this.btnReports);
-            this.groupBox1.Controls.Add(this.lblCurrentFuelPrices);
-            this.groupBox1.Controls.Add(this.gbSales);
-            this.groupBox1.Controls.Add(this.gbFuelType);
-            this.groupBox1.Controls.Add(this.gbPrice);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(7, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(781, 420);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "STALLIONS GAS STATION";
-            // 
             // Form_Home_Page_FutureTech
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.lblCurrentFuelPrices);
@@ -566,11 +435,6 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.gbPrice);
             this.Controls.Add(this.gbFuelType);
-=======
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.groupBox1);
->>>>>>> Stashed changes
             this.Name = "Form_Home_Page_FutureTech";
             this.Text = "Form_Home_Page_FutureTech";
             this.Load += new System.EventHandler(this.Form_Home_Page_FutureTech_Load);
@@ -589,9 +453,8 @@
             this.tpOrders.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -631,6 +494,5 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

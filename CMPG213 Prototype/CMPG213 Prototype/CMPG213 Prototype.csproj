@@ -104,9 +104,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StallionsDbDataSet.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AccountForm.resx">
-      <DependentUpon>AccountForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AccountUpdateDel.resx">
       <DependentUpon>AccountUpdateDel.cs</DependentUpon>
     </EmbeddedResource>

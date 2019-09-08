@@ -17,7 +17,6 @@ namespace CMPG213_Prototype
         public MaintainFuel()
         {
             InitializeComponent();
-<<<<<<< Updated upstream
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,18 +42,5 @@ namespace CMPG213_Prototype
                 MessageBox.Show(error.Message);
             }
         }
-=======
-        }
-
-        private void Label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void GroupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
->>>>>>> Stashed changes
     }
 }
