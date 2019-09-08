@@ -145,5 +145,11 @@ namespace CMPG213_Prototype
             AccountUpdateDel myForm = new AccountUpdateDel();
             myForm.ShowDialog();
         }
+
+        private void btnNewSale_Click(object sender, EventArgs e)
+        {
+            FuelSalesForm formSales = new FuelSalesForm();
+            formSales.ShowDialog();
+        }
     }
 }
