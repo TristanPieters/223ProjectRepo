@@ -97,3 +97,5 @@ C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototy
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
+C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.AccountForm.resources
+C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.AccountUpdateDel.resources
