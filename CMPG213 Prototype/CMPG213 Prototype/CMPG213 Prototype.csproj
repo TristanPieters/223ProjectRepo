@@ -85,6 +85,12 @@
     <Compile Include="Form_Home_Page_FutureTech.Designer.cs">
       <DependentUpon>Form_Home_Page_FutureTech.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaintainFuel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintainFuel.Designer.cs">
+      <DependentUpon>MaintainFuel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Manage_Employees.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Home_Page_FutureTech.resx">
       <DependentUpon>Form_Home_Page_FutureTech.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintainFuel.resx">
+      <DependentUpon>MaintainFuel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manage_Employees.resx">
       <DependentUpon>Manage_Employees.cs</DependentUpon>
