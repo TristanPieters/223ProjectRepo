@@ -43,7 +43,7 @@ namespace CMPG213_Prototype
             }
         }
 
-<<<<<<< Updated upstream
+
         private void button2_Click(object sender, EventArgs e)
         {
             SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security = True");
