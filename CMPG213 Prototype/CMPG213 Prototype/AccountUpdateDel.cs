@@ -126,5 +126,15 @@ namespace CMPG213_Prototype
             dataGridView1.DataSource = ds;
             dataGridView1.DataMember = "ACCOUNT";
         }
+
+        private void GroupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -53,7 +53,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAddAccounts = new System.Windows.Forms.Button();
-            this.btnViewAccountDB = new System.Windows.Forms.Button();
             this.btnViewOutstandingAcc = new System.Windows.Forms.Button();
             this.tpEmpolyees = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -319,7 +318,6 @@
             this.panel1.BackColor = System.Drawing.Color.Black;
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.btnAddAccounts);
-            this.panel1.Controls.Add(this.btnViewAccountDB);
             this.panel1.Controls.Add(this.btnViewOutstandingAcc);
             this.panel1.Location = new System.Drawing.Point(0, -2);
             this.panel1.Name = "panel1";
@@ -350,25 +348,12 @@
             this.btnAddAccounts.UseVisualStyleBackColor = false;
             this.btnAddAccounts.Click += new System.EventHandler(this.BtnAddAccounts_Click);
             // 
-            // btnViewAccountDB
-            // 
-            this.btnViewAccountDB.BackColor = System.Drawing.Color.White;
-            this.btnViewAccountDB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewAccountDB.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnViewAccountDB.Location = new System.Drawing.Point(16, 115);
-            this.btnViewAccountDB.Name = "btnViewAccountDB";
-            this.btnViewAccountDB.Size = new System.Drawing.Size(192, 63);
-            this.btnViewAccountDB.TabIndex = 1;
-            this.btnViewAccountDB.Text = "VIEW OUTSTANDING ACCOUNTS";
-            this.btnViewAccountDB.UseVisualStyleBackColor = false;
-            this.btnViewAccountDB.Click += new System.EventHandler(this.BtnViewAccountDB_Click);
-            // 
             // btnViewOutstandingAcc
             // 
             this.btnViewOutstandingAcc.BackColor = System.Drawing.Color.White;
             this.btnViewOutstandingAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewOutstandingAcc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnViewOutstandingAcc.Location = new System.Drawing.Point(16, 194);
+            this.btnViewOutstandingAcc.Location = new System.Drawing.Point(16, 131);
             this.btnViewOutstandingAcc.Name = "btnViewOutstandingAcc";
             this.btnViewOutstandingAcc.Size = new System.Drawing.Size(192, 65);
             this.btnViewOutstandingAcc.TabIndex = 2;
@@ -564,7 +549,6 @@
         private System.Windows.Forms.TabPage tpEmpolyees;
         private System.Windows.Forms.TabPage tpOrders;
         private System.Windows.Forms.Button btnViewOutstandingAcc;
-        private System.Windows.Forms.Button btnViewAccountDB;
         private System.Windows.Forms.Button btnAddAccounts;
         private System.Windows.Forms.Button btnManageEmployees;
         private System.Windows.Forms.Button btnWorkHouers;
