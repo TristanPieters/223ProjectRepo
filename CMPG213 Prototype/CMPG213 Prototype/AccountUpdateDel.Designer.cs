@@ -59,6 +59,25 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnFillterLiters = new System.Windows.Forms.Button();
             this.btnOutstanding = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tbxLiters = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbxDebt = new System.Windows.Forms.TextBox();
+            this.btnUpdateAccount = new System.Windows.Forms.Button();
+            this.tbxIDu = new System.Windows.Forms.TextBox();
+            this.tbxCellNumberU = new System.Windows.Forms.TextBox();
+            this.tbxLastNameU = new System.Windows.Forms.TextBox();
+            this.tbxEmailU = new System.Windows.Forms.TextBox();
+            this.tbxFirstNameU = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stallionsDbDataSet)).BeginInit();
@@ -67,6 +86,8 @@
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -83,11 +104,11 @@
             this.accDebtDataGridViewTextBoxColumn,
             this.accLSoldDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.aCCOUNTBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 65);
+            this.dataGridView1.Location = new System.Drawing.Point(59, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1361, 446);
+            this.dataGridView1.Size = new System.Drawing.Size(1390, 446);
             this.dataGridView1.TabIndex = 0;
             // 
             // accIDDataGridViewTextBoxColumn
@@ -276,7 +297,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.bindingNavigator1);
-            this.groupBox1.Location = new System.Drawing.Point(93, 615);
+            this.groupBox1.Location = new System.Drawing.Point(139, 493);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(357, 222);
             this.groupBox1.TabIndex = 4;
@@ -288,7 +309,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btnDeleteAccount);
             this.groupBox2.Controls.Add(this.tbxID);
-            this.groupBox2.Location = new System.Drawing.Point(504, 615);
+            this.groupBox2.Location = new System.Drawing.Point(550, 493);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(357, 222);
             this.groupBox2.TabIndex = 5;
@@ -312,7 +333,7 @@
             // 
             this.groupBox3.Controls.Add(this.btnFillterLiters);
             this.groupBox3.Controls.Add(this.btnOutstanding);
-            this.groupBox3.Location = new System.Drawing.Point(103, 899);
+            this.groupBox3.Location = new System.Drawing.Point(1022, 493);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(357, 222);
             this.groupBox3.TabIndex = 5;
@@ -338,11 +359,214 @@
             this.btnOutstanding.UseVisualStyleBackColor = true;
             this.btnOutstanding.Click += new System.EventHandler(this.BtnOutstanding_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox4.Controls.Add(this.numericUpDown1);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.tbxLiters);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.tbxDebt);
+            this.groupBox4.Controls.Add(this.btnUpdateAccount);
+            this.groupBox4.Controls.Add(this.tbxIDu);
+            this.groupBox4.Controls.Add(this.tbxCellNumberU);
+            this.groupBox4.Controls.Add(this.tbxLastNameU);
+            this.groupBox4.Controls.Add(this.tbxEmailU);
+            this.groupBox4.Controls.Add(this.tbxFirstNameU);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupBox4.Location = new System.Drawing.Point(115, 746);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(1273, 646);
+            this.groupBox4.TabIndex = 6;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "UPDATE ACCOUNT";
+            // 
+            // tbxLiters
+            // 
+            this.tbxLiters.Location = new System.Drawing.Point(244, 431);
+            this.tbxLiters.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxLiters.Name = "tbxLiters";
+            this.tbxLiters.Size = new System.Drawing.Size(240, 32);
+            this.tbxLiters.TabIndex = 17;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(72, 434);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 26);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "Liters:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(632, 331);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 26);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Debt:";
+            // 
+            // tbxDebt
+            // 
+            this.tbxDebt.Location = new System.Drawing.Point(814, 328);
+            this.tbxDebt.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxDebt.Name = "tbxDebt";
+            this.tbxDebt.Size = new System.Drawing.Size(240, 32);
+            this.tbxDebt.TabIndex = 14;
+            // 
+            // btnUpdateAccount
+            // 
+            this.btnUpdateAccount.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUpdateAccount.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnUpdateAccount.Location = new System.Drawing.Point(934, 508);
+            this.btnUpdateAccount.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdateAccount.Name = "btnUpdateAccount";
+            this.btnUpdateAccount.Size = new System.Drawing.Size(172, 85);
+            this.btnUpdateAccount.TabIndex = 12;
+            this.btnUpdateAccount.Text = "Update";
+            this.btnUpdateAccount.UseVisualStyleBackColor = false;
+            this.btnUpdateAccount.Click += new System.EventHandler(this.BtnAdd_Click);
+            // 
+            // tbxIDu
+            // 
+            this.tbxIDu.Location = new System.Drawing.Point(244, 319);
+            this.tbxIDu.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxIDu.Name = "tbxIDu";
+            this.tbxIDu.Size = new System.Drawing.Size(240, 32);
+            this.tbxIDu.TabIndex = 11;
+            // 
+            // tbxCellNumberU
+            // 
+            this.tbxCellNumberU.Location = new System.Drawing.Point(244, 205);
+            this.tbxCellNumberU.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxCellNumberU.Name = "tbxCellNumberU";
+            this.tbxCellNumberU.Size = new System.Drawing.Size(240, 32);
+            this.tbxCellNumberU.TabIndex = 9;
+            // 
+            // tbxLastNameU
+            // 
+            this.tbxLastNameU.Location = new System.Drawing.Point(804, 96);
+            this.tbxLastNameU.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxLastNameU.Name = "tbxLastNameU";
+            this.tbxLastNameU.Size = new System.Drawing.Size(240, 32);
+            this.tbxLastNameU.TabIndex = 8;
+            // 
+            // tbxEmailU
+            // 
+            this.tbxEmailU.Location = new System.Drawing.Point(804, 201);
+            this.tbxEmailU.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxEmailU.Name = "tbxEmailU";
+            this.tbxEmailU.Size = new System.Drawing.Size(240, 32);
+            this.tbxEmailU.TabIndex = 7;
+            // 
+            // tbxFirstNameU
+            // 
+            this.tbxFirstNameU.Location = new System.Drawing.Point(244, 96);
+            this.tbxFirstNameU.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxFirstNameU.Name = "tbxFirstNameU";
+            this.tbxFirstNameU.Size = new System.Drawing.Size(240, 32);
+            this.tbxFirstNameU.TabIndex = 6;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(72, 581);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 26);
+            this.label6.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(72, 325);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 26);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "ID:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(72, 207);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 26);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Cell Number:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(632, 205);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 26);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Email:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(632, 102);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 26);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Last Name:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(72, 96);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(136, 26);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "First Name:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(632, 437);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(247, 26);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Account ID to change:";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(934, 437);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 32);
+            this.numericUpDown1.TabIndex = 20;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // AccountUpdateDel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1974, 1559);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -361,6 +585,9 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -396,5 +623,24 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnFillterLiters;
         private System.Windows.Forms.Button btnOutstanding;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox tbxLiters;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbxDebt;
+        private System.Windows.Forms.Button btnUpdateAccount;
+        private System.Windows.Forms.TextBox tbxIDu;
+        private System.Windows.Forms.TextBox tbxCellNumberU;
+        private System.Windows.Forms.TextBox tbxLastNameU;
+        private System.Windows.Forms.TextBox tbxEmailU;
+        private System.Windows.Forms.TextBox tbxFirstNameU;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Label label10;
     }
 }

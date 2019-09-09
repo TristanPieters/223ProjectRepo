@@ -19,6 +19,10 @@ namespace CMPG213_Prototype
         }
         SqlConnection CONN = new SqlConnection();
 
+
+
+
+
         private void AccountUpdateDel_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'stallionsDbDataSet.ACCOUNT' table. You can move, or remove it, as needed.
@@ -73,6 +77,39 @@ namespace CMPG213_Prototype
             adapter.Fill(ds, "ACCOUNT");
             dataGridView1.DataSource = ds;
             dataGridView1.DataMember = "ACCOUNT";
+        }
+
+        private void BtnAdd_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security = True");
+            string sName, sSurname, sID, sCellnr, sEmail;
+            decimal dDebt;
+            double Liters;
+
+            sName = tbxFirstNameU.Text;
+            sSurname = tbxLastNameU.Text;
+            sID = tbxIDu.Text;
+            sCellnr = tbxCellNumberU.Text;
+            sEmail = tbxEmailU.Text;
+            dDebt = Convert.ToDecimal(tbxDebt.Text);
+            Liters = Convert.ToDouble(tbxLiters.Text);
+           string sql = @"UPDATE ACCOUNT SET Acc_FName = '" + sName + "', Acc_LName = '" + sSurname + "', Acc_Email = '" + sEmail + "', Acc_Cellnum = '" + sCellnr + "', Acc_Debt = '" + dDebt + "', Acc_LSold = '" + Liters + "' WHERE Acc_ID = '" + Convert.ToString(numericUpDown1.Value) + "'";
+
+            try
+            {
+                conn.Open();
+                SqlDataAdapter adap = new SqlDataAdapter();
+                SqlCommand comm = new SqlCommand(sql, conn);
+                adap.UpdateCommand = new SqlCommand(sql, conn);
+                adap.UpdateCommand.ExecuteNonQuery();
+                MessageBox.Show("Record Updated successfully");
+                comm.Dispose();
+                conn.Close();
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
     }
 }

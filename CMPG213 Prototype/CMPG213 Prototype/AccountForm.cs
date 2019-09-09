@@ -42,7 +42,7 @@ namespace CMPG213_Prototype
 
             adapter.InsertCommand = new SqlCommand(sql,CONN);
             adapter.InsertCommand.ExecuteNonQuery();
-
+            MessageBox.Show("Account Added");
             CONN.Close();
             comm.Dispose();
         }
