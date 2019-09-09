@@ -177,12 +177,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="StallionsDb.mdf">
+    <Content Include="StallionsDBF.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="StallionsDb_log.ldf">
+    <Content Include="StallionsDBF_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>StallionsDb.mdf</DependentUpon>
+      <DependentUpon>StallionsDBF.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
