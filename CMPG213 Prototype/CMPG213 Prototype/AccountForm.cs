@@ -27,67 +27,92 @@ namespace CMPG213_Prototype
             SqlDataAdapter adapter = new SqlDataAdapter();
             int length = tbxID.Text.Length;
             int lengthCell = tbxCellNumber.Text.Length;
-
-            if (tbxFirstName.Text != " ")
-            {
-                sName = tbxFirstName.Text;
-            }
-            else
-            {
+            Boolean bAccount = true;
+            
+                if (tbxFirstName.Text == " ")
+                {
                 MessageBox.Show("First Name Required");
                 tbxFirstName.Focus();
+                bAccount = false;
+            }
+                else
+                {
+                    
+                sName = tbxFirstName.Text;
             }
 
-            if (tbxLastName.Text != " ")
+                if (tbxLastName.Text != " ")
+                {
+                    sSurname = tbxLastName.Text;
+                }
+                else
+                {
+                    MessageBox.Show("LastName Required");
+                    tbxLastName.Focus();
+                bAccount = false;
+            }
+
+                if ((length == 13) && (tbxID.Text != " "))
+                {
+                    sID = tbxID.Text;
+                
+            }
+                else
+                {
+                    MessageBox.Show("ID required and must be 13 digits");
+                    tbxID.Focus();
+                bAccount = false;
+            }
+
+                if ((lengthCell == 10) || (tbxCellNumber.Text != " "))
+                {
+                    sCellnr = tbxCellNumber.Text;
+                }
+                else
+                {
+                    MessageBox.Show("Cell required and must be 10 digits");
+                    tbxCellNumber.Focus();
+                bAccount = false;
+
+            }
+
+                if ((tbxEmail.Text != " ") || (!tbxEmail.Text.Contains('@') || !this.tbxEmail.Text.Contains('.')))
+                {
+                    sEmail = tbxEmail.Text;
+                }
+                else
+                {
+                         MessageBox.Show("Email incorrect");
+                          tbxEmail.Focus();
+                        bAccount = false;
+            }
+
+    
+
+
+            if (bAccount == true)
             {
-                sSurname = tbxLastName.Text;
+                CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
+
+                CONN.Open();
+                sql = @"Insert into ACCOUNT (Acc_FName,Acc_LName,Acc_Email,Acc_Cellnum,Acc_IDnum) values('" + sName + "','" + sSurname + "','" + sEmail + "','" + sCellnr + "','" + sID + "') ";
+
+
+                comm = new SqlCommand(sql, CONN);
+
+                adapter.InsertCommand = new SqlCommand(sql, CONN);
+                adapter.InsertCommand.ExecuteNonQuery();
+                MessageBox.Show("Account Added");
+                CONN.Close();
+                comm.Dispose();
+
+                this.Close();
             }
             else
             {
-                MessageBox.Show("LastName Required");
-                tbxLastName.Focus();
+                MessageBox.Show("Try Again");
             }
-
-            if ((length != 13) && (tbxID.Text != " "))
-            {
-                sID = tbxID.Text;
-            }
-            else
-            {
-                MessageBox.Show("ID required and must be 13 digits");
-                tbxFirstName.Focus();
-            }
-
-            if ((lengthCell != 10) && (tbxCellNumber.Text != " "))
-            {
-                sCellnr = tbxCellNumber.Text;
-            }
-            else
-            {
-                MessageBox.Show("Cell required and must be 10 digits");
-                tbxFirstName.Focus();
-            }
-
-            if ((tbxEmail.Text != " ") && (!tbxEmail.Text.Contains('@') || !this.tbxEmail.Text.Contains('.')))
-            {
-                sEmail = tbxEmail.Text;
-            }
-           
-            CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
-
-            CONN.Open();
-            sql = @"Insert into ACCOUNT (Acc_FName,Acc_LName,Acc_Email,Acc_Cellnum,Acc_IDnum) values('"+ sName + "','" + sSurname + "','" + sEmail + "','" + sCellnr + "','" + sID + "') ";
-          
-
-            comm = new SqlCommand(sql, CONN);
-
-            adapter.InsertCommand = new SqlCommand(sql,CONN);
-            adapter.InsertCommand.ExecuteNonQuery();
-            MessageBox.Show("Account Added");
-            CONN.Close();
-            comm.Dispose();
-
-            this.Close();
+            
         }
 
         private void AccountForm_Load(object sender, EventArgs e)

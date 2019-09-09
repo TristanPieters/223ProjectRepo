@@ -24,7 +24,14 @@ namespace CMPG213_Prototype
         
         private void Form_Home_Page_FutureTech_Load(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             string connstr = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf; Integrated Security = True";
+=======
+
+            
+
+            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True";
+>>>>>>> Stashed changes
             SqlConnection conn = new SqlConnection(connstr);
             string sql = @"Select * From FUEL";
             SqlDataReader reader;
