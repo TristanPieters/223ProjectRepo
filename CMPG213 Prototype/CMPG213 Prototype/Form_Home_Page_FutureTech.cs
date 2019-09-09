@@ -120,6 +120,7 @@ namespace CMPG213_Prototype
         {
             //Daily report
             /*
+            SqlConnection CONN = new SqlConnection();
             CONN.Open();
             String transID;
             DateTime transDate;
@@ -150,8 +151,6 @@ namespace CMPG213_Prototype
 
             dataReader = comm.ExcecuteReader();
 
-
-
             try
             {
                 StreamWriter inputFile;
@@ -171,8 +170,9 @@ namespace CMPG213_Prototype
             {
                 MessageBox.Show("Error" + ex);
             }
+            */
             
-    */
+    
            
 
         }

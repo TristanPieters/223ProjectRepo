@@ -203,7 +203,7 @@
             this.btnCreateNewAcc.Name = "btnCreateNewAcc";
             this.btnCreateNewAcc.Size = new System.Drawing.Size(147, 44);
             this.btnCreateNewAcc.TabIndex = 11;
-            this.btnCreateNewAcc.Text = "Create New Account";
+            this.btnCreateNewAcc.Text = "CREATE NEW ACCOUNT";
             this.btnCreateNewAcc.UseVisualStyleBackColor = true;
             // 
             // lblAccNewCredit
@@ -222,7 +222,7 @@
             this.btnAccUpdateCredit.Name = "btnAccUpdateCredit";
             this.btnAccUpdateCredit.Size = new System.Drawing.Size(75, 28);
             this.btnAccUpdateCredit.TabIndex = 9;
-            this.btnAccUpdateCredit.Text = "Update";
+            this.btnAccUpdateCredit.Text = "UPDATE";
             this.btnAccUpdateCredit.UseVisualStyleBackColor = true;
             // 
             // label11
@@ -309,7 +309,7 @@
             this.btnCompSale.Name = "btnCompSale";
             this.btnCompSale.Size = new System.Drawing.Size(141, 49);
             this.btnCompSale.TabIndex = 14;
-            this.btnCompSale.Text = "Complete Sale";
+            this.btnCompSale.Text = "COMPLETE SALE";
             this.btnCompSale.UseVisualStyleBackColor = true;
             this.btnCompSale.Click += new System.EventHandler(this.btnCompSale_Click);
             // 
@@ -320,13 +320,14 @@
             this.btnReturnHome.Name = "btnReturnHome";
             this.btnReturnHome.Size = new System.Drawing.Size(112, 43);
             this.btnReturnHome.TabIndex = 15;
-            this.btnReturnHome.Text = "Return Home";
+            this.btnReturnHome.Text = "RETURN HOME";
             this.btnReturnHome.UseVisualStyleBackColor = true;
             this.btnReturnHome.Click += new System.EventHandler(this.btnReturnHome_Click);
             // 
             // gbSales
             // 
             this.gbSales.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gbSales.Controls.Add(this.pictureBox1);
             this.gbSales.Controls.Add(this.label2);
             this.gbSales.Controls.Add(this.btnReturnHome);
             this.gbSales.Controls.Add(this.lblEmpName);
@@ -346,7 +347,7 @@
             this.gbSales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbSales.Location = new System.Drawing.Point(12, 12);
             this.gbSales.Name = "gbSales";
-            this.gbSales.Size = new System.Drawing.Size(524, 372);
+            this.gbSales.Size = new System.Drawing.Size(584, 372);
             this.gbSales.TabIndex = 16;
             this.gbSales.TabStop = false;
             this.gbSales.Text = "SALES";
@@ -354,9 +355,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(626, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(519, 26);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 355);
+            this.pictureBox1.Size = new System.Drawing.Size(63, 326);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
@@ -366,8 +367,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(701, 424);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(635, 424);
             this.Controls.Add(this.gbSales);
             this.Name = "FuelSalesForm";
             this.Text = "FuelSalesForm";

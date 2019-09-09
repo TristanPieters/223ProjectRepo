@@ -51,6 +51,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.tbxID);
@@ -67,10 +68,10 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(36, 11);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(284, 407);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Size = new System.Drawing.Size(312, 407);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "ADD ACCOUNT";
@@ -80,7 +81,7 @@
             this.btnCancel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCancel.Location = new System.Drawing.Point(162, 337);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(86, 44);
             this.btnCancel.TabIndex = 13;
@@ -92,7 +93,7 @@
             this.btnAdd.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAdd.Location = new System.Drawing.Point(39, 337);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(86, 44);
             this.btnAdd.TabIndex = 12;
@@ -103,7 +104,7 @@
             // tbxID
             // 
             this.tbxID.Location = new System.Drawing.Point(122, 250);
-            this.tbxID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxID.Margin = new System.Windows.Forms.Padding(2);
             this.tbxID.Name = "tbxID";
             this.tbxID.Size = new System.Drawing.Size(122, 20);
             this.tbxID.TabIndex = 11;
@@ -111,7 +112,7 @@
             // tbxCellNumber
             // 
             this.tbxCellNumber.Location = new System.Drawing.Point(122, 202);
-            this.tbxCellNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxCellNumber.Margin = new System.Windows.Forms.Padding(2);
             this.tbxCellNumber.Name = "tbxCellNumber";
             this.tbxCellNumber.Size = new System.Drawing.Size(122, 20);
             this.tbxCellNumber.TabIndex = 9;
@@ -119,7 +120,7 @@
             // tbxLastName
             // 
             this.tbxLastName.Location = new System.Drawing.Point(122, 92);
-            this.tbxLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxLastName.Margin = new System.Windows.Forms.Padding(2);
             this.tbxLastName.Name = "tbxLastName";
             this.tbxLastName.Size = new System.Drawing.Size(122, 20);
             this.tbxLastName.TabIndex = 8;
@@ -127,7 +128,7 @@
             // tbxEmail
             // 
             this.tbxEmail.Location = new System.Drawing.Point(122, 144);
-            this.tbxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxEmail.Margin = new System.Windows.Forms.Padding(2);
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(122, 20);
             this.tbxEmail.TabIndex = 7;
@@ -135,7 +136,7 @@
             // tbxFirstName
             // 
             this.tbxFirstName.Location = new System.Drawing.Point(122, 50);
-            this.tbxFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.tbxFirstName.Name = "tbxFirstName";
             this.tbxFirstName.Size = new System.Drawing.Size(122, 20);
             this.tbxFirstName.TabIndex = 6;
@@ -202,9 +203,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(418, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(254, 16);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 406);
+            this.pictureBox1.Size = new System.Drawing.Size(53, 386);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -214,10 +215,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(530, 459);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(375, 459);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AccountForm";
             this.Text = "AccountForm";
             this.Load += new System.EventHandler(this.AccountForm_Load);
