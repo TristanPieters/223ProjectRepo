@@ -60,6 +60,8 @@
             this.btnFillterLiters = new System.Windows.Forms.Button();
             this.btnOutstanding = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
             this.tbxLiters = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -76,8 +78,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stallionsDbDataSet)).BeginInit();
@@ -108,7 +108,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1390, 446);
+            this.dataGridView1.Size = new System.Drawing.Size(1320, 446);
             this.dataGridView1.TabIndex = 0;
             // 
             // accIDDataGridViewTextBoxColumn
@@ -348,6 +348,7 @@
             this.btnFillterLiters.TabIndex = 1;
             this.btnFillterLiters.Text = "Most Litres";
             this.btnFillterLiters.UseVisualStyleBackColor = true;
+            this.btnFillterLiters.Click += new System.EventHandler(this.BtnFillterLiters_Click);
             // 
             // btnOutstanding
             // 
@@ -390,6 +391,28 @@
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "UPDATE ACCOUNT";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(934, 437);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 32);
+            this.numericUpDown1.TabIndex = 20;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(632, 437);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(247, 26);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "Account ID to change:";
             // 
             // tbxLiters
             // 
@@ -538,28 +561,6 @@
             this.label7.Size = new System.Drawing.Size(136, 26);
             this.label7.TabIndex = 0;
             this.label7.Text = "First Name:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(632, 437);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(247, 26);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Account ID to change:";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(934, 437);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 32);
-            this.numericUpDown1.TabIndex = 20;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // AccountUpdateDel
             // 

@@ -70,7 +70,7 @@ namespace CMPG213_Prototype
             SqlCommand comm;
             string sql;
             SqlDataAdapter adapter = new SqlDataAdapter();
-            sql = @"Select * FROM ACCOUNT WHERE Acc_Debt > 0";//Only select the surnames
+            sql = @"Select * FROM ACCOUNT WHERE Acc_Debt > 0";
             comm = new SqlCommand(sql, CONN);
             DataSet ds = new DataSet();
             adapter.SelectCommand = comm;
@@ -110,6 +110,21 @@ namespace CMPG213_Prototype
             {
                 MessageBox.Show(error.Message);
             }
+        }
+
+        private void BtnFillterLiters_Click(object sender, EventArgs e)
+        {
+            CONN.Open();
+            SqlCommand comm;
+            string sql;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            sql = @"Select * FROM ACCOUNT WHERE Acc_LSold > 0";
+            comm = new SqlCommand(sql, CONN);
+            DataSet ds = new DataSet();
+            adapter.SelectCommand = comm;
+            adapter.Fill(ds, "ACCOUNT");
+            dataGridView1.DataSource = ds;
+            dataGridView1.DataMember = "ACCOUNT";
         }
     }
 }
