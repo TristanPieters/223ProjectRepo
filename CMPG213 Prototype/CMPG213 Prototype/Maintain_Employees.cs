@@ -55,10 +55,20 @@ namespace CMPG213_Prototype
             {
                 MessageBox.Show(error.Message);
             }
+
+            txbShiftTimeAdd.Text = "";
+            txbEmp_FNameAdd.Text = "";
+            txbEmp_LNameAdd.Text = "";
+            txbEmp_PasswordAdd.Text = "";
+            txbEmp_CellNumAdd.Text = "";
+            txbEmp_JobAdd.Text = "";
+            txbEmp_EmailAdd.Text = "";
+            txbUsernameAdd.Text = "";
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
+
             shift = txbShiftTimeUp.Text;
             fName = txbEmp_FNameUp.Text;
             lName = txbEmp_LNameUp.Text;
@@ -68,7 +78,8 @@ namespace CMPG213_Prototype
             email = txbEmp_EmailUp.Text;
             username = txbUsernameUp.Text;
 
-            string sql = @"UPDATE EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')";
+            string sql = @"UPDATE EMPLOYEE SET ShiftTime ='" + shift + "', Emp_FName = '" + fName + "', Emp_LName = '" + lName + "', Emp_CellNum = '" + cellNr + "', Emp_JOB = '" + job + "', Emp_Email = '" + email + "', Emp_Username = '" + username + "', Emp_Password = '" + password + "' WHERE Emp_ID = '" + cmbUpdate.SelectedItem + "'";
+
 
             try
             {
@@ -86,11 +97,20 @@ namespace CMPG213_Prototype
             {
                 MessageBox.Show(error.Message);
             }
+
+            txbShiftTimeUp.Text = "";
+            txbEmp_FNameUp.Text = "";
+            txbEmp_LNameUp.Text = "";
+            txbEmp_PasswordUp.Text = "";
+            txbEmp_CellNumUp.Text = "";
+            txbEmp_JobUp.Text = "";
+            txbEmp_EmailUp.Text = "";
+            txbUsernameUp.Text = "";
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
-            string sql = @"Delete From EMPLOYEE Where Emp_FName = '" + fName + "' AND Emp_LName = '" + lName + "'";
+            string sql = @"DELETE FROM EMPLOYEE WHERE Emp_ID = '" + cmbDelete.SelectedItem + "'";
             try
             {
                 conn.Open();
@@ -110,15 +130,15 @@ namespace CMPG213_Prototype
 
         private void BtnBack1_Click(object sender, EventArgs e)
         {
+            this.Close();
             Form_Home_Page_FutureTech home = new Form_Home_Page_FutureTech();
             home.ShowDialog();
-            this.Close();
         }
 
         private void Maintain_Employees_Load(object sender, EventArgs e)
         {
             conn = new SqlConnection(constring);
-            string sql = @"SELECT * FROM EMPLOYEE";
+            string sql = @"SELECT Emp_ID FROM EMPLOYEE";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
             conn.Open();
@@ -126,7 +146,7 @@ namespace CMPG213_Prototype
 
             while (reader.Read())
             {
-                string output = Convert.ToString(reader.GetValue(1));
+                string output = Convert.ToString(reader.GetValue(0));
                 cmbUpdate.Items.Add(output);
                 cmbDelete.Items.Add(output);
             }

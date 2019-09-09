@@ -102,10 +102,9 @@ namespace CMPG213_Prototype
 
         private void BtnManageEmployees_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Maintain_Employees manageEmpForm = new Maintain_Employees();
             manageEmpForm.ShowDialog();
-            this.Hide();
-
         }
 
         private void BtnReports_Click(object sender, EventArgs e)
