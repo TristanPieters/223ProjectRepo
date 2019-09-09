@@ -24,10 +24,7 @@ namespace CMPG213_Prototype
         
         private void Form_Home_Page_FutureTech_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Welcome to Stallion's Gas Station designed and developed by FUTURETECH");
-
-            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True";
-            SqlConnection conn = new SqlConnection(connstr);
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBF.mdf;Integrated Security=True");
             string sql = @"Select * From FUEL";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
@@ -194,6 +191,11 @@ namespace CMPG213_Prototype
         {
             FuelSalesForm formSales = new FuelSalesForm();
             formSales.ShowDialog();
+        }
+
+        private void btnClockIN_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

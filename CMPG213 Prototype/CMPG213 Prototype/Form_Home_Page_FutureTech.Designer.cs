@@ -69,13 +69,13 @@
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnClockOut = new System.Windows.Forms.Button();
             this.btnClockIN = new System.Windows.Forms.Button();
+            this.tpRewards = new System.Windows.Forms.TabPage();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.btnShowRewardAccount = new System.Windows.Forms.Button();
+            this.btnMaintainReward = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tpRewards = new System.Windows.Forms.TabPage();
-            this.btnMaintainReward = new System.Windows.Forms.Button();
-            this.btnShowRewardAccount = new System.Windows.Forms.Button();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.gbFuelType.SuspendLayout();
             this.gbPrice.SuspendLayout();
             this.gbSales.SuspendLayout();
@@ -94,9 +94,9 @@
             this.tpSifts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.tpRewards.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbFuelType
@@ -293,7 +293,7 @@
             this.tabControl.Location = new System.Drawing.Point(24, 23);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(389, 330);
+            this.tabControl.Size = new System.Drawing.Size(415, 330);
             this.tabControl.TabIndex = 7;
             // 
             // tpHome
@@ -496,7 +496,7 @@
             this.tpSifts.Controls.Add(this.btnClockIN);
             this.tpSifts.Location = new System.Drawing.Point(4, 22);
             this.tpSifts.Name = "tpSifts";
-            this.tpSifts.Size = new System.Drawing.Size(381, 304);
+            this.tpSifts.Size = new System.Drawing.Size(407, 304);
             this.tpSifts.TabIndex = 4;
             this.tpSifts.Text = "SHIFTS";
             // 
@@ -541,6 +541,51 @@
             this.btnClockIN.TabIndex = 0;
             this.btnClockIN.Text = "CLOCK IN";
             this.btnClockIN.UseVisualStyleBackColor = false;
+            this.btnClockIN.Click += new System.EventHandler(this.btnClockIN_Click);
+            // 
+            // tpRewards
+            // 
+            this.tpRewards.BackColor = System.Drawing.Color.Black;
+            this.tpRewards.Controls.Add(this.pictureBox7);
+            this.tpRewards.Controls.Add(this.btnShowRewardAccount);
+            this.tpRewards.Controls.Add(this.btnMaintainReward);
+            this.tpRewards.Location = new System.Drawing.Point(4, 22);
+            this.tpRewards.Name = "tpRewards";
+            this.tpRewards.Size = new System.Drawing.Size(381, 304);
+            this.tpRewards.TabIndex = 5;
+            this.tpRewards.Text = "REWARDS";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(337, 10);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(48, 284);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 2;
+            this.pictureBox7.TabStop = false;
+            // 
+            // btnShowRewardAccount
+            // 
+            this.btnShowRewardAccount.BackColor = System.Drawing.Color.White;
+            this.btnShowRewardAccount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnShowRewardAccount.Location = new System.Drawing.Point(15, 141);
+            this.btnShowRewardAccount.Name = "btnShowRewardAccount";
+            this.btnShowRewardAccount.Size = new System.Drawing.Size(155, 42);
+            this.btnShowRewardAccount.TabIndex = 1;
+            this.btnShowRewardAccount.Text = "SHOW REWARDS ON ACCOUNT";
+            this.btnShowRewardAccount.UseVisualStyleBackColor = false;
+            // 
+            // btnMaintainReward
+            // 
+            this.btnMaintainReward.BackColor = System.Drawing.Color.White;
+            this.btnMaintainReward.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMaintainReward.Location = new System.Drawing.Point(15, 38);
+            this.btnMaintainReward.Name = "btnMaintainReward";
+            this.btnMaintainReward.Size = new System.Drawing.Size(155, 42);
+            this.btnMaintainReward.TabIndex = 0;
+            this.btnMaintainReward.Text = "MAINTAIN REWARDS";
+            this.btnMaintainReward.UseVisualStyleBackColor = false;
             // 
             // openFileDialog1
             // 
@@ -565,50 +610,6 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "STALLION\'S GAS STATION";
-            // 
-            // tpRewards
-            // 
-            this.tpRewards.BackColor = System.Drawing.Color.Black;
-            this.tpRewards.Controls.Add(this.pictureBox7);
-            this.tpRewards.Controls.Add(this.btnShowRewardAccount);
-            this.tpRewards.Controls.Add(this.btnMaintainReward);
-            this.tpRewards.Location = new System.Drawing.Point(4, 22);
-            this.tpRewards.Name = "tpRewards";
-            this.tpRewards.Size = new System.Drawing.Size(381, 304);
-            this.tpRewards.TabIndex = 5;
-            this.tpRewards.Text = "REWARDS";
-            // 
-            // btnMaintainReward
-            // 
-            this.btnMaintainReward.BackColor = System.Drawing.Color.White;
-            this.btnMaintainReward.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMaintainReward.Location = new System.Drawing.Point(15, 38);
-            this.btnMaintainReward.Name = "btnMaintainReward";
-            this.btnMaintainReward.Size = new System.Drawing.Size(155, 42);
-            this.btnMaintainReward.TabIndex = 0;
-            this.btnMaintainReward.Text = "MAINTAIN REWARDS";
-            this.btnMaintainReward.UseVisualStyleBackColor = false;
-            // 
-            // btnShowRewardAccount
-            // 
-            this.btnShowRewardAccount.BackColor = System.Drawing.Color.White;
-            this.btnShowRewardAccount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnShowRewardAccount.Location = new System.Drawing.Point(15, 141);
-            this.btnShowRewardAccount.Name = "btnShowRewardAccount";
-            this.btnShowRewardAccount.Size = new System.Drawing.Size(155, 42);
-            this.btnShowRewardAccount.TabIndex = 1;
-            this.btnShowRewardAccount.Text = "SHOW REWARDS ON ACCOUNT";
-            this.btnShowRewardAccount.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(337, 10);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(48, 284);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 2;
-            this.pictureBox7.TabStop = false;
             // 
             // Form_Home_Page_FutureTech
             // 
@@ -640,10 +641,10 @@
             this.tpSifts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.tpRewards.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MaintainFOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,11 @@
       <DependentUpon>Maintain_Fuel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
+    <Compile Include="ProjectDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjectDS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StallionsDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -125,6 +136,9 @@
     <EmbeddedResource Include="FuelSalesForm.resx">
       <DependentUpon>FuelSalesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MaintainFOrder.resx">
+      <DependentUpon>MaintainFOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Maintain_Employees.resx">
       <DependentUpon>Maintain_Employees.cs</DependentUpon>
     </EmbeddedResource>
@@ -140,6 +154,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ProjectDS.xsc">
+      <DependentUpon>ProjectDS.xsd</DependentUpon>
+    </None>
+    <None Include="ProjectDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjectDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProjectDS.xss">
+      <DependentUpon>ProjectDS.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -177,12 +202,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="StallionsDBF.mdf">
+    <Content Include="StallionsDBFF.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="StallionsDBF_log.ldf">
+    <Content Include="StallionsDBFF_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>StallionsDBF.mdf</DependentUpon>
+      <DependentUpon>StallionsDBFF.mdf</DependentUpon>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
