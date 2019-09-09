@@ -205,5 +205,11 @@ namespace CMPG213_Prototype
         {
 
         }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+            FOrderForm fOrder = new FOrderForm();
+            fOrder.Show();
+        }
     }
 }

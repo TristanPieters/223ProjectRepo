@@ -61,12 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MaintainFOrder.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include=".Designer.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include=".Designer.cs" />
     <Compile Include="AccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +73,18 @@
     </Compile>
     <Compile Include="AccountUpdateDel.Designer.cs">
       <DependentUpon>AccountUpdateDel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClockInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClockInForm.Designer.cs">
+      <DependentUpon>ClockInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FOrderForm.Designer.cs">
+      <DependentUpon>FOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_HelpSupport.cs">
       <SubType>Form</SubType>
@@ -127,6 +134,9 @@
     <EmbeddedResource Include="AccountUpdateDel.resx">
       <DependentUpon>AccountUpdateDel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FOrderForm.resx">
+      <DependentUpon>FOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_HelpSupport.resx">
       <DependentUpon>Form_HelpSupport.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,9 +145,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FuelSalesForm.resx">
       <DependentUpon>FuelSalesForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MaintainFOrder.resx">
-      <DependentUpon>MaintainFOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maintain_Employees.resx">
       <DependentUpon>Maintain_Employees.cs</DependentUpon>

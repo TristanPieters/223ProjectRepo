@@ -474,6 +474,7 @@
             this.btnPlaceOrder.TabIndex = 0;
             this.btnPlaceOrder.Text = "PLACE ORDER";
             this.btnPlaceOrder.UseVisualStyleBackColor = false;
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
             // 
             // btnReceiveOrder
             // 

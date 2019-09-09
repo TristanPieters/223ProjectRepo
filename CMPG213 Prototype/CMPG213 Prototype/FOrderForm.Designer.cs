@@ -1,43 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace CMPG213_Prototype
+﻿namespace CMPG213_Prototype
 {
-    public partial class _ : Form
+    partial class FOrderForm
     {
-        private TabControl tabControl1;
-        private TabPage tabPage1;
-        private Button btnADD;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Label label2;
-        private Label label1;
-        private TabPage tabPage2;
-        private TabPage tbDelete;
-        private ComboBox comboBox2;
-        private Button button1;
-        private Label label3;
-        private TabPage tpUpdate;
-        private ComboBox comboBox1;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Button btnUdate;
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
 
-        public _()
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
         {
-            InitializeComponent();
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
         }
 
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -47,6 +35,7 @@ namespace CMPG213_Prototype
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tbDelete = new System.Windows.Forms.TabPage();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,7 +48,6 @@ namespace CMPG213_Prototype
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnUdate = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tbDelete.SuspendLayout();
@@ -72,11 +60,11 @@ namespace CMPG213_Prototype
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tbDelete);
             this.tabControl1.Controls.Add(this.tpUpdate);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(211, 94);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(317, 215);
-            this.tabControl1.TabIndex = 1;
+            this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
@@ -135,6 +123,16 @@ namespace CMPG213_Prototype
             this.label1.Size = new System.Drawing.Size(110, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "FUEL DESCRIPTION";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(309, 189);
+            this.tabPage2.TabIndex = 3;
+            this.tabPage2.Text = "RECIEVE";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tbDelete
             // 
@@ -253,21 +251,14 @@ namespace CMPG213_Prototype
             this.btnUdate.Text = "UPDATE";
             this.btnUdate.UseVisualStyleBackColor = false;
             // 
-            // tabPage2
+            // FOrderForm
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(309, 189);
-            this.tabPage2.TabIndex = 3;
-            this.tabPage2.Text = "RECIEVE";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // _
-            // 
-            this.ClientSize = new System.Drawing.Size(683, 424);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tabControl1);
-            this.Name = "_";
+            this.Name = "FOrderForm";
+            this.Text = "FOrderForm";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -278,5 +269,28 @@ namespace CMPG213_Prototype
             this.ResumeLayout(false);
 
         }
+
+        #endregion
+
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button btnADD;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tbDelete;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TabPage tpUpdate;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnUdate;
     }
 }
