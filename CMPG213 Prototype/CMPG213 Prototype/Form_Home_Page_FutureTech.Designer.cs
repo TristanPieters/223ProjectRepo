@@ -41,8 +41,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.gbSales = new System.Windows.Forms.GroupBox();
-            this.btnUpdateFuelPrice = new System.Windows.Forms.Button();
             this.btnNewSale = new System.Windows.Forms.Button();
+            this.btnUpdateFuelPrice = new System.Windows.Forms.Button();
             this.btnHelpAndSupport = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
             this.lblCurrentFuelPrices = new System.Windows.Forms.Label();
@@ -64,14 +64,18 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
             this.btnReceiveOrder = new System.Windows.Forms.Button();
+            this.tpSifts = new System.Windows.Forms.TabPage();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.btnClockOut = new System.Windows.Forms.Button();
+            this.btnClockIN = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tpSifts = new System.Windows.Forms.TabPage();
-            this.btnClockIN = new System.Windows.Forms.Button();
-            this.btnClockOut = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.tpRewards = new System.Windows.Forms.TabPage();
+            this.btnMaintainReward = new System.Windows.Forms.Button();
+            this.btnShowRewardAccount = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.gbFuelType.SuspendLayout();
             this.gbPrice.SuspendLayout();
             this.gbSales.SuspendLayout();
@@ -87,10 +91,12 @@
             this.tpOrders.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.tpSifts.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.tpRewards.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // gbFuelType
@@ -218,18 +224,6 @@
             this.gbSales.TabStop = false;
             this.gbSales.Text = "SALES";
             // 
-            // btnUpdateFuelPrice
-            // 
-            this.btnUpdateFuelPrice.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUpdateFuelPrice.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnUpdateFuelPrice.Location = new System.Drawing.Point(531, 188);
-            this.btnUpdateFuelPrice.Name = "btnUpdateFuelPrice";
-            this.btnUpdateFuelPrice.Size = new System.Drawing.Size(103, 40);
-            this.btnUpdateFuelPrice.TabIndex = 1;
-            this.btnUpdateFuelPrice.Text = "MAINTAIN FUEL";
-            this.btnUpdateFuelPrice.UseVisualStyleBackColor = false;
-            this.btnUpdateFuelPrice.Click += new System.EventHandler(this.BtnUpdateFuelPrice_Click);
-            // 
             // btnNewSale
             // 
             this.btnNewSale.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -241,6 +235,18 @@
             this.btnNewSale.Text = "NEW SALE";
             this.btnNewSale.UseVisualStyleBackColor = false;
             this.btnNewSale.Click += new System.EventHandler(this.btnNewSale_Click);
+            // 
+            // btnUpdateFuelPrice
+            // 
+            this.btnUpdateFuelPrice.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUpdateFuelPrice.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnUpdateFuelPrice.Location = new System.Drawing.Point(531, 188);
+            this.btnUpdateFuelPrice.Name = "btnUpdateFuelPrice";
+            this.btnUpdateFuelPrice.Size = new System.Drawing.Size(103, 40);
+            this.btnUpdateFuelPrice.TabIndex = 1;
+            this.btnUpdateFuelPrice.Text = "MAINTAIN FUEL";
+            this.btnUpdateFuelPrice.UseVisualStyleBackColor = false;
+            this.btnUpdateFuelPrice.Click += new System.EventHandler(this.BtnUpdateFuelPrice_Click);
             // 
             // btnHelpAndSupport
             // 
@@ -283,6 +289,7 @@
             this.tabControl.Controls.Add(this.tpEmpolyees);
             this.tabControl.Controls.Add(this.tpOrders);
             this.tabControl.Controls.Add(this.tpSifts);
+            this.tabControl.Controls.Add(this.tpRewards);
             this.tabControl.Location = new System.Drawing.Point(24, 23);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -480,6 +487,61 @@
             this.btnReceiveOrder.Text = "RECIEVE ORDER";
             this.btnReceiveOrder.UseVisualStyleBackColor = false;
             // 
+            // tpSifts
+            // 
+            this.tpSifts.BackColor = System.Drawing.Color.Black;
+            this.tpSifts.Controls.Add(this.pictureBox6);
+            this.tpSifts.Controls.Add(this.pictureBox5);
+            this.tpSifts.Controls.Add(this.btnClockOut);
+            this.tpSifts.Controls.Add(this.btnClockIN);
+            this.tpSifts.Location = new System.Drawing.Point(4, 22);
+            this.tpSifts.Name = "tpSifts";
+            this.tpSifts.Size = new System.Drawing.Size(381, 304);
+            this.tpSifts.TabIndex = 4;
+            this.tpSifts.Text = "SHIFTS";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(38, 94);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(97, 101);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 3;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(332, 10);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(53, 284);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 2;
+            this.pictureBox5.TabStop = false;
+            // 
+            // btnClockOut
+            // 
+            this.btnClockOut.BackColor = System.Drawing.Color.White;
+            this.btnClockOut.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClockOut.Location = new System.Drawing.Point(38, 210);
+            this.btnClockOut.Name = "btnClockOut";
+            this.btnClockOut.Size = new System.Drawing.Size(95, 33);
+            this.btnClockOut.TabIndex = 1;
+            this.btnClockOut.Text = "CLOCK OUT";
+            this.btnClockOut.UseVisualStyleBackColor = false;
+            // 
+            // btnClockIN
+            // 
+            this.btnClockIN.BackColor = System.Drawing.Color.White;
+            this.btnClockIN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnClockIN.Location = new System.Drawing.Point(38, 47);
+            this.btnClockIN.Name = "btnClockIN";
+            this.btnClockIN.Size = new System.Drawing.Size(95, 33);
+            this.btnClockIN.TabIndex = 0;
+            this.btnClockIN.Text = "CLOCK IN";
+            this.btnClockIN.UseVisualStyleBackColor = false;
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -504,60 +566,49 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "STALLION\'S GAS STATION";
             // 
-            // tpSifts
+            // tpRewards
             // 
-            this.tpSifts.BackColor = System.Drawing.Color.Black;
-            this.tpSifts.Controls.Add(this.pictureBox6);
-            this.tpSifts.Controls.Add(this.pictureBox5);
-            this.tpSifts.Controls.Add(this.btnClockOut);
-            this.tpSifts.Controls.Add(this.btnClockIN);
-            this.tpSifts.Location = new System.Drawing.Point(4, 22);
-            this.tpSifts.Name = "tpSifts";
-            this.tpSifts.Size = new System.Drawing.Size(381, 304);
-            this.tpSifts.TabIndex = 4;
-            this.tpSifts.Text = "SHIFTS";
+            this.tpRewards.BackColor = System.Drawing.Color.Black;
+            this.tpRewards.Controls.Add(this.pictureBox7);
+            this.tpRewards.Controls.Add(this.btnShowRewardAccount);
+            this.tpRewards.Controls.Add(this.btnMaintainReward);
+            this.tpRewards.Location = new System.Drawing.Point(4, 22);
+            this.tpRewards.Name = "tpRewards";
+            this.tpRewards.Size = new System.Drawing.Size(381, 304);
+            this.tpRewards.TabIndex = 5;
+            this.tpRewards.Text = "REWARDS";
             // 
-            // btnClockIN
+            // btnMaintainReward
             // 
-            this.btnClockIN.BackColor = System.Drawing.Color.White;
-            this.btnClockIN.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClockIN.Location = new System.Drawing.Point(38, 47);
-            this.btnClockIN.Name = "btnClockIN";
-            this.btnClockIN.Size = new System.Drawing.Size(95, 33);
-            this.btnClockIN.TabIndex = 0;
-            this.btnClockIN.Text = "CLOCK IN";
-            this.btnClockIN.UseVisualStyleBackColor = false;
+            this.btnMaintainReward.BackColor = System.Drawing.Color.White;
+            this.btnMaintainReward.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMaintainReward.Location = new System.Drawing.Point(15, 38);
+            this.btnMaintainReward.Name = "btnMaintainReward";
+            this.btnMaintainReward.Size = new System.Drawing.Size(155, 42);
+            this.btnMaintainReward.TabIndex = 0;
+            this.btnMaintainReward.Text = "MAINTAIN REWARDS";
+            this.btnMaintainReward.UseVisualStyleBackColor = false;
             // 
-            // btnClockOut
+            // btnShowRewardAccount
             // 
-            this.btnClockOut.BackColor = System.Drawing.Color.White;
-            this.btnClockOut.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClockOut.Location = new System.Drawing.Point(38, 210);
-            this.btnClockOut.Name = "btnClockOut";
-            this.btnClockOut.Size = new System.Drawing.Size(95, 33);
-            this.btnClockOut.TabIndex = 1;
-            this.btnClockOut.Text = "CLOCK OUT";
-            this.btnClockOut.UseVisualStyleBackColor = false;
+            this.btnShowRewardAccount.BackColor = System.Drawing.Color.White;
+            this.btnShowRewardAccount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnShowRewardAccount.Location = new System.Drawing.Point(15, 141);
+            this.btnShowRewardAccount.Name = "btnShowRewardAccount";
+            this.btnShowRewardAccount.Size = new System.Drawing.Size(155, 42);
+            this.btnShowRewardAccount.TabIndex = 1;
+            this.btnShowRewardAccount.Text = "SHOW REWARDS ON ACCOUNT";
+            this.btnShowRewardAccount.UseVisualStyleBackColor = false;
             // 
-            // pictureBox5
+            // pictureBox7
             // 
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(332, 10);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(53, 284);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 2;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(38, 94);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(97, 101);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 3;
-            this.pictureBox6.TabStop = false;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(337, 10);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(48, 284);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 2;
+            this.pictureBox7.TabStop = false;
             // 
             // Form_Home_Page_FutureTech
             // 
@@ -586,11 +637,13 @@
             this.tpOrders.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.tpSifts.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tpSifts.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.tpRewards.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -640,5 +693,9 @@
         private System.Windows.Forms.Button btnClockOut;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.TabPage tpRewards;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Button btnShowRewardAccount;
+        private System.Windows.Forms.Button btnMaintainReward;
     }
 }
