@@ -61,7 +61,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include=".Designer.cs" />
     <Compile Include="AccountForm.cs">
       <SubType>Form</SubType>
     </Compile>
