@@ -133,6 +133,9 @@
     <EmbeddedResource Include="AccountUpdateDel.resx">
       <DependentUpon>AccountUpdateDel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClockInForm.resx">
+      <DependentUpon>ClockInForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FOrderForm.resx">
       <DependentUpon>FOrderForm.cs</DependentUpon>
     </EmbeddedResource>

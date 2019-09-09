@@ -24,12 +24,8 @@ namespace CMPG213_Prototype
         
         private void Form_Home_Page_FutureTech_Load(object sender, EventArgs e)
         {
-
-            MessageBox.Show("Welcome to Stallion's Gas Station designed and developed by FUTURETECH");
-
-            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True";
+            string connstr = @"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf; Integrated Security = True";
             SqlConnection conn = new SqlConnection(connstr);
-
             string sql = @"Select * From FUEL";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
@@ -90,16 +86,8 @@ namespace CMPG213_Prototype
 
         private void BtnUpdateFuelPrice_Click(object sender, EventArgs e)
         {
-
             Maintain_Fuel updateFuelPriceForm = new Maintain_Fuel();
-            //updateFuelPriceForm.ShowDialog(
-            //MaintainFuel updateFuelPriceForm = new MaintainFuel();
-            //updateFuelPriceForm.ShowDialog();
             updateFuelPriceForm.ShowDialog();
-
-            //MaintainFuel updateFuelPriceForm = new MaintainFuel();
-            //updateFuelPriceForm.ShowDialog();
-
         }
 
         private void BtnManageEmployees_Click(object sender, EventArgs e)
@@ -200,7 +188,8 @@ namespace CMPG213_Prototype
 
         private void btnClockIN_Click(object sender, EventArgs e)
         {
-
+            ClockInForm clock = new ClockInForm();
+            clock.Show();
         }
 
         private void btnPlaceOrder_Click(object sender, EventArgs e)

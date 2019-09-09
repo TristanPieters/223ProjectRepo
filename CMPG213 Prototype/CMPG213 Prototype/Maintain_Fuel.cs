@@ -19,9 +19,8 @@ namespace CMPG213_Prototype
         }
 
         private void btnADD_Click(object sender, EventArgs e)
-        {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
-            
+        { 
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
             string fueldescription = textBox1.Text;
             string fuelppl = textBox2.Text;
             string sql = @"Insert Into FUEL (Fuel_Description, Fuel_Price_Per_Liter) Values('" + fueldescription + "','" + fuelppl + "')";
@@ -93,7 +92,7 @@ namespace CMPG213_Prototype
 
         private void Maintain_Fuel_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf; Integrated Security = True");
             string sql = @"Select * From FUEL";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
