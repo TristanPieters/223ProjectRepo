@@ -36,7 +36,7 @@ namespace CMPG213_Prototype
 
             CONN.Open();
             sql = @"Insert into ACCOUNT (Acc_FName,Acc_LName,Acc_Email,Acc_Cellnum,Acc_IDnum) values('"+ sName + "','" + sSurname + "','" + sEmail + "','" + sCellnr + "','" + sID + "') ";
-          //  @"Insert Into EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')";
+          
 
             comm = new SqlCommand(sql, CONN);
 
@@ -45,6 +45,8 @@ namespace CMPG213_Prototype
             MessageBox.Show("Account Added");
             CONN.Close();
             comm.Dispose();
+
+            this.Close();
         }
 
         private void AccountForm_Load(object sender, EventArgs e)
@@ -53,6 +55,11 @@ namespace CMPG213_Prototype
 
             
 ;          
+        }
+
+        private void BtnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
