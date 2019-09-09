@@ -26,7 +26,8 @@ namespace CMPG213_Prototype
         {
             MessageBox.Show("Welcome to Stallion's Gas Station designed and developed by FUTURETECH");
 
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True";
+            SqlConnection conn = new SqlConnection(connstr);
             string sql = @"Select * From FUEL";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
@@ -101,18 +102,9 @@ namespace CMPG213_Prototype
 
         private void BtnManageEmployees_Click(object sender, EventArgs e)
         {
+            Maintain_Employees manageEmpForm = new Maintain_Employees();
+            manageEmpForm.ShowDialog();
             this.Hide();
-
-           // Manage_Employees manageEmpForm = new Manage_Employees();
-           // manageEmpForm.ShowDialog();
-
-          //  Manage_Employees manageEmpForm = new Manage_Employees();
-            //manageEmpForm.ShowDialog();
-
-           // Manage_Employees manageEmpForm = new Manage_Employees();
-           // manageEmpForm.ShowDialog();
-          //  Manage_Employees manageEmpForm = new Manage_Employees();
-            //manageEmpForm.ShowDialog();
 
         }
 
