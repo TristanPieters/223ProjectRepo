@@ -22,16 +22,57 @@ namespace CMPG213_Prototype
         SqlConnection CONN;
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            string sName, sSurname, sID, sCellnr, sEmail , sql="";
+            string sName = " ", sSurname = " ", sID = " ", sCellnr = " ", sEmail = " " , sql="";
             SqlCommand comm;
             SqlDataAdapter adapter = new SqlDataAdapter();
+            int length = tbxID.Text.Length;
+            int lengthCell = tbxCellNumber.Text.Length;
 
+            if (tbxFirstName.Text != " ")
+            {
+                sName = tbxFirstName.Text;
+            }
+            else
+            {
+                MessageBox.Show("First Name Required");
+                tbxFirstName.Focus();
+            }
 
-            sName = tbxFirstName.Text;
-            sSurname = tbxLastName.Text;
-            sID = tbxID.Text;
-            sCellnr = tbxCellNumber.Text;
-            sEmail = tbxEmail.Text;
+            if (tbxLastName.Text != " ")
+            {
+                sSurname = tbxLastName.Text;
+            }
+            else
+            {
+                MessageBox.Show("LastName Required");
+                tbxLastName.Focus();
+            }
+
+            if ((length != 13) && (tbxID.Text != " "))
+            {
+                sID = tbxID.Text;
+            }
+            else
+            {
+                MessageBox.Show("ID required and must be 13 digits");
+                tbxFirstName.Focus();
+            }
+
+            if ((lengthCell != 10) && (tbxCellNumber.Text != " "))
+            {
+                sCellnr = tbxCellNumber.Text;
+            }
+            else
+            {
+                MessageBox.Show("Cell required and must be 10 digits");
+                tbxFirstName.Focus();
+            }
+
+            if ((tbxEmail.Text != " ") && (!tbxEmail.Text.Contains('@') || !this.tbxEmail.Text.Contains('.')))
+            {
+                sEmail = tbxEmail.Text;
+            }
+           
             CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
 
             CONN.Open();

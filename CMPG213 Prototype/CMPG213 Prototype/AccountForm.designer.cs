@@ -68,9 +68,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(72, 21);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(624, 783);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -80,7 +80,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(508, 31);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(106, 742);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,10 +92,10 @@
             this.btnCancel.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnCancel.Location = new System.Drawing.Point(324, 648);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(172, 85);
-            this.btnCancel.TabIndex = 13;
+            this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
@@ -105,10 +105,10 @@
             this.btnAdd.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAdd.Location = new System.Drawing.Point(78, 648);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(172, 85);
-            this.btnAdd.TabIndex = 12;
+            this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "ADD";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
@@ -116,42 +116,42 @@
             // tbxID
             // 
             this.tbxID.Location = new System.Drawing.Point(244, 481);
-            this.tbxID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxID.Margin = new System.Windows.Forms.Padding(4);
             this.tbxID.Name = "tbxID";
             this.tbxID.Size = new System.Drawing.Size(240, 32);
-            this.tbxID.TabIndex = 11;
+            this.tbxID.TabIndex = 5;
             // 
             // tbxCellNumber
             // 
             this.tbxCellNumber.Location = new System.Drawing.Point(244, 388);
-            this.tbxCellNumber.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxCellNumber.Margin = new System.Windows.Forms.Padding(4);
             this.tbxCellNumber.Name = "tbxCellNumber";
             this.tbxCellNumber.Size = new System.Drawing.Size(240, 32);
-            this.tbxCellNumber.TabIndex = 9;
+            this.tbxCellNumber.TabIndex = 4;
             // 
             // tbxLastName
             // 
             this.tbxLastName.Location = new System.Drawing.Point(244, 177);
-            this.tbxLastName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxLastName.Margin = new System.Windows.Forms.Padding(4);
             this.tbxLastName.Name = "tbxLastName";
             this.tbxLastName.Size = new System.Drawing.Size(240, 32);
-            this.tbxLastName.TabIndex = 8;
+            this.tbxLastName.TabIndex = 2;
             // 
             // tbxEmail
             // 
             this.tbxEmail.Location = new System.Drawing.Point(244, 277);
-            this.tbxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxEmail.Margin = new System.Windows.Forms.Padding(4);
             this.tbxEmail.Name = "tbxEmail";
             this.tbxEmail.Size = new System.Drawing.Size(240, 32);
-            this.tbxEmail.TabIndex = 7;
+            this.tbxEmail.TabIndex = 3;
             // 
             // tbxFirstName
             // 
             this.tbxFirstName.Location = new System.Drawing.Point(244, 96);
-            this.tbxFirstName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxFirstName.Margin = new System.Windows.Forms.Padding(4);
             this.tbxFirstName.Name = "tbxFirstName";
             this.tbxFirstName.Size = new System.Drawing.Size(240, 32);
-            this.tbxFirstName.TabIndex = 6;
+            this.tbxFirstName.TabIndex = 1;
             // 
             // label6
             // 
@@ -219,7 +219,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(750, 883);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AccountForm";
             this.Text = "AccountForm";
             this.Load += new System.EventHandler(this.AccountForm_Load);
