@@ -20,9 +20,7 @@ namespace CMPG213_Prototype
 
         private void FuelSalesForm_Load(object sender, EventArgs e)
         {
-            gBoxAccount.Enabled = false;
-
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
             string sql = @"Select Fuel_Description From FUEL";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
@@ -42,17 +40,7 @@ namespace CMPG213_Prototype
 
         }
 
-        private void cBoxAccCredit_CheckedChanged(object sender, EventArgs e)
-        {
-            if(cBoxAccCredit.Checked == true)
-            {
-                gBoxAccount.Enabled = true;
-            }
-            if(cBoxAccCredit.Checked == false)
-            {
-                gBoxAccount.Enabled = false;
-            }
-        }
+        
 
         private void btnReturnHome_Click(object sender, EventArgs e)
         {
@@ -98,6 +86,57 @@ namespace CMPG213_Prototype
             fuelLiterAmount = Convert.ToDecimal(tBoxFuelAmountLiters.Text);
 
             fuelTotalSum(fuelPriceLiter, fuelLiterAmount);*/
+        }
+
+        private void btnCalcTotalFuelPrice_Click(object sender, EventArgs e)
+        {
+            decimal fuelPriceLiter, fuelLiterAmount;
+
+            fuelPriceLiter = Convert.ToDecimal(lblFuelPrice.Text);
+            fuelLiterAmount = Convert.ToDecimal(tBoxFuelAmountLiters.Text);
+            decimal totalFuelPrice = fuelPriceLiter * fuelLiterAmount;
+
+            lblFuelPurchased.Text = totalFuelPrice.ToString();
+        }
+
+        private void btnAccSearch_Click(object sender, EventArgs e)
+        {
+            string accSearchNum = tboxAccNum.Text;
+
+
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+
+            string sql = @"SELECT * FROM ACCOUNT WHERE Acc_ID = '" + accSearchNum + "'";
+
+            SqlDataReader reader;
+            SqlCommand comm = new SqlCommand(sql, conn);
+
+            try
+            {
+                conn.Open();
+                reader = comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string outputFullName = Convert.ToString(reader.GetValue(1)) + " " + Convert.ToString(reader.GetValue(2));
+                    lblAccHolderName.Text = outputFullName;
+
+                    string outputCreditOutstand = Convert.ToString(reader.GetValue(6));
+                    lblAccCreditOutstand.Text = outputCreditOutstand;
+                }
+                conn.Close();
+            }
+
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
+        }
+
+        private void btnCreateNewAcc_Click(object sender, EventArgs e)
+        {
+            AccountForm formAccCreate = new AccountForm();
+            formAccCreate.ShowDialog();
         }
     }
 }

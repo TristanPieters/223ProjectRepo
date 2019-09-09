@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FuelSalesForm));
             this.label2 = new System.Windows.Forms.Label();
-            this.lblEmpName = new System.Windows.Forms.Label();
-            this.lblEmpNum = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comBoxFuelType = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,8 +38,8 @@
             this.tBoxFuelAmountLiters = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblFuelPurchased = new System.Windows.Forms.Label();
-            this.cBoxAccCredit = new System.Windows.Forms.CheckBox();
             this.gBoxAccount = new System.Windows.Forms.GroupBox();
+            this.btnAccSearch = new System.Windows.Forms.Button();
             this.btnCreateNewAcc = new System.Windows.Forms.Button();
             this.lblAccNewCredit = new System.Windows.Forms.Label();
             this.btnAccUpdateCredit = new System.Windows.Forms.Button();
@@ -57,6 +55,8 @@
             this.btnCompSale = new System.Windows.Forms.Button();
             this.btnReturnHome = new System.Windows.Forms.Button();
             this.gbSales = new System.Windows.Forms.GroupBox();
+            this.comBoxEmpNum = new System.Windows.Forms.ComboBox();
+            this.btnCalcTotalFuelPrice = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gBoxAccount.SuspendLayout();
             this.gbSales.SuspendLayout();
@@ -71,24 +71,6 @@
             this.label2.Size = new System.Drawing.Size(65, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Employee:";
-            // 
-            // lblEmpName
-            // 
-            this.lblEmpName.AutoSize = true;
-            this.lblEmpName.Location = new System.Drawing.Point(69, 32);
-            this.lblEmpName.Name = "lblEmpName";
-            this.lblEmpName.Size = new System.Drawing.Size(71, 13);
-            this.lblEmpName.TabIndex = 2;
-            this.lblEmpName.Text = "[EmpName]";
-            // 
-            // lblEmpNum
-            // 
-            this.lblEmpNum.AutoSize = true;
-            this.lblEmpNum.Location = new System.Drawing.Point(69, 49);
-            this.lblEmpNum.Name = "lblEmpNum";
-            this.lblEmpNum.Size = new System.Drawing.Size(64, 13);
-            this.lblEmpNum.TabIndex = 3;
-            this.lblEmpNum.Text = "[EmpNum]";
             // 
             // label3
             // 
@@ -111,18 +93,19 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 118);
+            this.label4.Location = new System.Drawing.Point(8, 118);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(87, 13);
+            this.label4.Size = new System.Drawing.Size(108, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Price per liter:";
+            this.label4.Text = "Price per liter (R):";
             // 
             // lblFuelPrice
             // 
-            this.lblFuelPrice.AutoSize = true;
-            this.lblFuelPrice.Location = new System.Drawing.Point(86, 118);
+            this.lblFuelPrice.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblFuelPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblFuelPrice.Location = new System.Drawing.Point(122, 117);
             this.lblFuelPrice.Name = "lblFuelPrice";
-            this.lblFuelPrice.Size = new System.Drawing.Size(0, 13);
+            this.lblFuelPrice.Size = new System.Drawing.Size(79, 15);
             this.lblFuelPrice.TabIndex = 7;
             this.lblFuelPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -147,7 +130,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(8, 190);
+            this.label6.Location = new System.Drawing.Point(8, 217);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(169, 13);
             this.label6.TabIndex = 10;
@@ -155,27 +138,17 @@
             // 
             // lblFuelPurchased
             // 
-            this.lblFuelPurchased.AutoSize = true;
+            this.lblFuelPurchased.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblFuelPurchased.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblFuelPurchased.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFuelPurchased.Location = new System.Drawing.Point(183, 190);
+            this.lblFuelPurchased.Location = new System.Drawing.Point(183, 216);
             this.lblFuelPurchased.Name = "lblFuelPurchased";
-            this.lblFuelPurchased.Size = new System.Drawing.Size(72, 13);
+            this.lblFuelPurchased.Size = new System.Drawing.Size(79, 15);
             this.lblFuelPurchased.TabIndex = 11;
-            this.lblFuelPurchased.Text = "[FuelPurch]";
-            // 
-            // cBoxAccCredit
-            // 
-            this.cBoxAccCredit.AutoSize = true;
-            this.cBoxAccCredit.Location = new System.Drawing.Point(11, 217);
-            this.cBoxAccCredit.Name = "cBoxAccCredit";
-            this.cBoxAccCredit.Size = new System.Drawing.Size(175, 17);
-            this.cBoxAccCredit.TabIndex = 12;
-            this.cBoxAccCredit.Text = "Payable on credit account";
-            this.cBoxAccCredit.UseVisualStyleBackColor = true;
-            this.cBoxAccCredit.CheckedChanged += new System.EventHandler(this.cBoxAccCredit_CheckedChanged);
             // 
             // gBoxAccount
             // 
+            this.gBoxAccount.Controls.Add(this.btnAccSearch);
             this.gBoxAccount.Controls.Add(this.btnCreateNewAcc);
             this.gBoxAccount.Controls.Add(this.lblAccNewCredit);
             this.gBoxAccount.Controls.Add(this.btnAccUpdateCredit);
@@ -191,10 +164,21 @@
             this.gBoxAccount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.gBoxAccount.Location = new System.Drawing.Point(272, 26);
             this.gBoxAccount.Name = "gBoxAccount";
-            this.gBoxAccount.Size = new System.Drawing.Size(229, 277);
+            this.gBoxAccount.Size = new System.Drawing.Size(277, 277);
             this.gBoxAccount.TabIndex = 13;
             this.gBoxAccount.TabStop = false;
             this.gBoxAccount.Text = "Accounts:";
+            // 
+            // btnAccSearch
+            // 
+            this.btnAccSearch.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnAccSearch.Location = new System.Drawing.Point(192, 15);
+            this.btnAccSearch.Name = "btnAccSearch";
+            this.btnAccSearch.Size = new System.Drawing.Size(75, 28);
+            this.btnAccSearch.TabIndex = 12;
+            this.btnAccSearch.Text = "SEARCH";
+            this.btnAccSearch.UseVisualStyleBackColor = true;
+            this.btnAccSearch.Click += new System.EventHandler(this.btnAccSearch_Click);
             // 
             // btnCreateNewAcc
             // 
@@ -205,6 +189,7 @@
             this.btnCreateNewAcc.TabIndex = 11;
             this.btnCreateNewAcc.Text = "CREATE NEW ACCOUNT";
             this.btnCreateNewAcc.UseVisualStyleBackColor = true;
+            this.btnCreateNewAcc.Click += new System.EventHandler(this.btnCreateNewAcc_Click);
             // 
             // lblAccNewCredit
             // 
@@ -252,10 +237,11 @@
             // 
             // lblAccCreditOutstand
             // 
-            this.lblAccCreditOutstand.AutoSize = true;
-            this.lblAccCreditOutstand.Location = new System.Drawing.Point(7, 116);
+            this.lblAccCreditOutstand.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAccCreditOutstand.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblAccCreditOutstand.Location = new System.Drawing.Point(10, 115);
             this.lblAccCreditOutstand.Name = "lblAccCreditOutstand";
-            this.lblAccCreditOutstand.Size = new System.Drawing.Size(99, 13);
+            this.lblAccCreditOutstand.Size = new System.Drawing.Size(79, 15);
             this.lblAccCreditOutstand.TabIndex = 5;
             this.lblAccCreditOutstand.Text = "[OutstandCredit]";
             // 
@@ -270,10 +256,11 @@
             // 
             // lblAccHolderName
             // 
-            this.lblAccHolderName.AutoSize = true;
-            this.lblAccHolderName.Location = new System.Drawing.Point(7, 75);
+            this.lblAccHolderName.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAccHolderName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblAccHolderName.Location = new System.Drawing.Point(10, 74);
             this.lblAccHolderName.Name = "lblAccHolderName";
-            this.lblAccHolderName.Size = new System.Drawing.Size(95, 13);
+            this.lblAccHolderName.Size = new System.Drawing.Size(120, 15);
             this.lblAccHolderName.TabIndex = 3;
             this.lblAccHolderName.Text = "[AccHoldName]";
             // 
@@ -305,7 +292,7 @@
             // btnCompSale
             // 
             this.btnCompSale.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCompSale.Location = new System.Drawing.Point(57, 254);
+            this.btnCompSale.Location = new System.Drawing.Point(66, 254);
             this.btnCompSale.Name = "btnCompSale";
             this.btnCompSale.Size = new System.Drawing.Size(141, 49);
             this.btnCompSale.TabIndex = 14;
@@ -327,15 +314,14 @@
             // gbSales
             // 
             this.gbSales.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.gbSales.Controls.Add(this.comBoxEmpNum);
+            this.gbSales.Controls.Add(this.btnCalcTotalFuelPrice);
             this.gbSales.Controls.Add(this.pictureBox1);
             this.gbSales.Controls.Add(this.label2);
             this.gbSales.Controls.Add(this.btnReturnHome);
-            this.gbSales.Controls.Add(this.lblEmpName);
             this.gbSales.Controls.Add(this.gBoxAccount);
             this.gbSales.Controls.Add(this.btnCompSale);
-            this.gbSales.Controls.Add(this.lblEmpNum);
             this.gbSales.Controls.Add(this.label3);
-            this.gbSales.Controls.Add(this.cBoxAccCredit);
             this.gbSales.Controls.Add(this.comBoxFuelType);
             this.gbSales.Controls.Add(this.lblFuelPurchased);
             this.gbSales.Controls.Add(this.label4);
@@ -347,15 +333,34 @@
             this.gbSales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbSales.Location = new System.Drawing.Point(12, 12);
             this.gbSales.Name = "gbSales";
-            this.gbSales.Size = new System.Drawing.Size(584, 372);
+            this.gbSales.Size = new System.Drawing.Size(662, 372);
             this.gbSales.TabIndex = 16;
             this.gbSales.TabStop = false;
             this.gbSales.Text = "SALES";
             // 
+            // comBoxEmpNum
+            // 
+            this.comBoxEmpNum.FormattingEnabled = true;
+            this.comBoxEmpNum.Location = new System.Drawing.Point(72, 29);
+            this.comBoxEmpNum.Name = "comBoxEmpNum";
+            this.comBoxEmpNum.Size = new System.Drawing.Size(100, 21);
+            this.comBoxEmpNum.TabIndex = 18;
+            // 
+            // btnCalcTotalFuelPrice
+            // 
+            this.btnCalcTotalFuelPrice.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCalcTotalFuelPrice.Location = new System.Drawing.Point(98, 176);
+            this.btnCalcTotalFuelPrice.Name = "btnCalcTotalFuelPrice";
+            this.btnCalcTotalFuelPrice.Size = new System.Drawing.Size(88, 28);
+            this.btnCalcTotalFuelPrice.TabIndex = 13;
+            this.btnCalcTotalFuelPrice.Text = "CALCULATE";
+            this.btnCalcTotalFuelPrice.UseVisualStyleBackColor = true;
+            this.btnCalcTotalFuelPrice.Click += new System.EventHandler(this.btnCalcTotalFuelPrice_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(519, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(576, 26);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(63, 326);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -367,7 +372,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(635, 424);
+            this.ClientSize = new System.Drawing.Size(700, 424);
             this.Controls.Add(this.gbSales);
             this.Name = "FuelSalesForm";
             this.Text = "FuelSalesForm";
@@ -383,8 +388,6 @@
 
         #endregion
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblEmpName;
-        private System.Windows.Forms.Label lblEmpNum;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comBoxFuelType;
         private System.Windows.Forms.Label label4;
@@ -393,7 +396,6 @@
         private System.Windows.Forms.TextBox tBoxFuelAmountLiters;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblFuelPurchased;
-        private System.Windows.Forms.CheckBox cBoxAccCredit;
         private System.Windows.Forms.GroupBox gBoxAccount;
         private System.Windows.Forms.Button btnCreateNewAcc;
         private System.Windows.Forms.Label lblAccNewCredit;
@@ -411,5 +413,8 @@
         private System.Windows.Forms.Button btnReturnHome;
         private System.Windows.Forms.GroupBox gbSales;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnAccSearch;
+        private System.Windows.Forms.Button btnCalcTotalFuelPrice;
+        private System.Windows.Forms.ComboBox comBoxEmpNum;
     }
 }

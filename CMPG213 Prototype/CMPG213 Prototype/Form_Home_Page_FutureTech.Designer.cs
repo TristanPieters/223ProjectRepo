@@ -302,7 +302,7 @@
             this.tpHome.Location = new System.Drawing.Point(4, 22);
             this.tpHome.Name = "tpHome";
             this.tpHome.Padding = new System.Windows.Forms.Padding(3);
-            this.tpHome.Size = new System.Drawing.Size(381, 304);
+            this.tpHome.Size = new System.Drawing.Size(407, 304);
             this.tpHome.TabIndex = 0;
             this.tpHome.Text = "HOME";
             this.tpHome.UseVisualStyleBackColor = true;
@@ -312,7 +312,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(-4, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(431, 308);
+            this.pictureBox1.Size = new System.Drawing.Size(415, 308);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -323,7 +323,7 @@
             this.tpAccounts.Location = new System.Drawing.Point(4, 22);
             this.tpAccounts.Name = "tpAccounts";
             this.tpAccounts.Padding = new System.Windows.Forms.Padding(3);
-            this.tpAccounts.Size = new System.Drawing.Size(381, 304);
+            this.tpAccounts.Size = new System.Drawing.Size(407, 304);
             this.tpAccounts.TabIndex = 1;
             this.tpAccounts.Text = "ACCOUNTS";
             this.tpAccounts.UseVisualStyleBackColor = true;
@@ -381,7 +381,7 @@
             this.tpEmpolyees.Controls.Add(this.panel2);
             this.tpEmpolyees.Location = new System.Drawing.Point(4, 22);
             this.tpEmpolyees.Name = "tpEmpolyees";
-            this.tpEmpolyees.Size = new System.Drawing.Size(381, 304);
+            this.tpEmpolyees.Size = new System.Drawing.Size(407, 304);
             this.tpEmpolyees.TabIndex = 2;
             this.tpEmpolyees.Text = "EMPLOYEES";
             this.tpEmpolyees.UseVisualStyleBackColor = true;
@@ -437,7 +437,7 @@
             this.tpOrders.Controls.Add(this.panel3);
             this.tpOrders.Location = new System.Drawing.Point(4, 22);
             this.tpOrders.Name = "tpOrders";
-            this.tpOrders.Size = new System.Drawing.Size(381, 304);
+            this.tpOrders.Size = new System.Drawing.Size(407, 304);
             this.tpOrders.TabIndex = 3;
             this.tpOrders.Text = "ORDERS";
             this.tpOrders.UseVisualStyleBackColor = true;
@@ -551,7 +551,7 @@
             this.tpRewards.Controls.Add(this.btnMaintainReward);
             this.tpRewards.Location = new System.Drawing.Point(4, 22);
             this.tpRewards.Name = "tpRewards";
-            this.tpRewards.Size = new System.Drawing.Size(381, 304);
+            this.tpRewards.Size = new System.Drawing.Size(407, 304);
             this.tpRewards.TabIndex = 5;
             this.tpRewards.Text = "REWARDS";
             // 
