@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FuelSalesForm));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,6 +59,9 @@
             this.comBoxEmpNum = new System.Windows.Forms.ComboBox();
             this.btnCalcTotalFuelPrice = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comBoxRewardSelect = new System.Windows.Forms.ComboBox();
+            this.toolTipRewardComBox = new System.Windows.Forms.ToolTip(this.components);
             this.gBoxAccount.SuspendLayout();
             this.gbSales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -148,6 +152,8 @@
             // 
             // gBoxAccount
             // 
+            this.gBoxAccount.Controls.Add(this.comBoxRewardSelect);
+            this.gBoxAccount.Controls.Add(this.label1);
             this.gBoxAccount.Controls.Add(this.btnAccSearch);
             this.gBoxAccount.Controls.Add(this.btnCreateNewAcc);
             this.gBoxAccount.Controls.Add(this.lblAccNewCredit);
@@ -164,7 +170,7 @@
             this.gBoxAccount.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.gBoxAccount.Location = new System.Drawing.Point(272, 26);
             this.gBoxAccount.Name = "gBoxAccount";
-            this.gBoxAccount.Size = new System.Drawing.Size(277, 277);
+            this.gBoxAccount.Size = new System.Drawing.Size(277, 326);
             this.gBoxAccount.TabIndex = 13;
             this.gBoxAccount.TabStop = false;
             this.gBoxAccount.Text = "Accounts:";
@@ -183,7 +189,7 @@
             // btnCreateNewAcc
             // 
             this.btnCreateNewAcc.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnCreateNewAcc.Location = new System.Drawing.Point(39, 217);
+            this.btnCreateNewAcc.Location = new System.Drawing.Point(58, 276);
             this.btnCreateNewAcc.Name = "btnCreateNewAcc";
             this.btnCreateNewAcc.Size = new System.Drawing.Size(147, 44);
             this.btnCreateNewAcc.TabIndex = 11;
@@ -243,7 +249,6 @@
             this.lblAccCreditOutstand.Name = "lblAccCreditOutstand";
             this.lblAccCreditOutstand.Size = new System.Drawing.Size(79, 15);
             this.lblAccCreditOutstand.TabIndex = 5;
-            this.lblAccCreditOutstand.Text = "[OutstandCredit]";
             // 
             // label9
             // 
@@ -262,7 +267,6 @@
             this.lblAccHolderName.Name = "lblAccHolderName";
             this.lblAccHolderName.Size = new System.Drawing.Size(120, 15);
             this.lblAccHolderName.TabIndex = 3;
-            this.lblAccHolderName.Text = "[AccHoldName]";
             // 
             // label8
             // 
@@ -279,6 +283,7 @@
             this.tboxAccNum.Name = "tboxAccNum";
             this.tboxAccNum.Size = new System.Drawing.Size(100, 20);
             this.tboxAccNum.TabIndex = 1;
+            this.tboxAccNum.TextChanged += new System.EventHandler(this.tboxAccNum_TextChanged);
             // 
             // label7
             // 
@@ -303,7 +308,7 @@
             // btnReturnHome
             // 
             this.btnReturnHome.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReturnHome.Location = new System.Drawing.Point(392, 309);
+            this.btnReturnHome.Location = new System.Drawing.Point(348, 358);
             this.btnReturnHome.Name = "btnReturnHome";
             this.btnReturnHome.Size = new System.Drawing.Size(112, 43);
             this.btnReturnHome.TabIndex = 15;
@@ -333,7 +338,7 @@
             this.gbSales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbSales.Location = new System.Drawing.Point(12, 12);
             this.gbSales.Name = "gbSales";
-            this.gbSales.Size = new System.Drawing.Size(662, 372);
+            this.gbSales.Size = new System.Drawing.Size(662, 451);
             this.gbSales.TabIndex = 16;
             this.gbSales.TabStop = false;
             this.gbSales.Text = "SALES";
@@ -367,12 +372,29 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 215);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Reward (No cash):";
+            // 
+            // comBoxRewardSelect
+            // 
+            this.comBoxRewardSelect.FormattingEnabled = true;
+            this.comBoxRewardSelect.Location = new System.Drawing.Point(10, 232);
+            this.comBoxRewardSelect.Name = "comBoxRewardSelect";
+            this.comBoxRewardSelect.Size = new System.Drawing.Size(64, 21);
+            this.comBoxRewardSelect.TabIndex = 14;
+            // 
             // FuelSalesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(700, 424);
+            this.ClientSize = new System.Drawing.Size(691, 477);
             this.Controls.Add(this.gbSales);
             this.Name = "FuelSalesForm";
             this.Text = "FuelSalesForm";
@@ -416,5 +438,8 @@
         private System.Windows.Forms.Button btnAccSearch;
         private System.Windows.Forms.Button btnCalcTotalFuelPrice;
         private System.Windows.Forms.ComboBox comBoxEmpNum;
+        private System.Windows.Forms.ComboBox comBoxRewardSelect;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolTip toolTipRewardComBox;
     }
 }

@@ -20,6 +20,8 @@ namespace CMPG213_Prototype
 
         private void FuelSalesForm_Load(object sender, EventArgs e)
         {
+            comBoxRewardSelect.Enabled = false;
+
             SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
             string sql = @"Select Fuel_Description From FUEL";
             SqlDataReader reader;
@@ -51,7 +53,7 @@ namespace CMPG213_Prototype
         {
             string selectFuelType = comBoxFuelType.SelectedItem.ToString();
 
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
             string sql = @"Select Fuel_Price_Per_Liter From FUEL WHERE Fuel_Description = '"+ selectFuelType +"'";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
@@ -63,7 +65,7 @@ namespace CMPG213_Prototype
 
 
                 string output = Convert.ToString(reader.GetValue(0));
-                lblFuelPrice.Text = "R" + output;
+                lblFuelPrice.Text = output;
             }
             conn.Close();
         }
@@ -104,7 +106,7 @@ namespace CMPG213_Prototype
             string accSearchNum = tboxAccNum.Text;
 
 
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
 
             string sql = @"SELECT * FROM ACCOUNT WHERE Acc_ID = '" + accSearchNum + "'";
 
@@ -137,6 +139,19 @@ namespace CMPG213_Prototype
         {
             AccountForm formAccCreate = new AccountForm();
             formAccCreate.ShowDialog();
+        }
+
+        private void tboxAccNum_TextChanged(object sender, EventArgs e)
+        {
+            if(tboxAccNum.Text == "1")
+            {
+                comBoxRewardSelect.Enabled = false;
+                toolTipRewardComBox.Show("No rewards on cash", comBoxRewardSelect);
+            }
+            else
+            {
+                comBoxRewardSelect.Enabled = true;
+            }
         }
     }
 }
