@@ -28,7 +28,7 @@ namespace CMPG213_Prototype
             // TODO: This line of code loads data into the 'stallionsDbDataSet.ACCOUNT' table. You can move, or remove it, as needed.
             this.aCCOUNTTableAdapter.Fill(this.stallionsDbDataSet.ACCOUNT);
 
-            CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+            CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBF.mdf;Integrated Security=True");
         }
 
         private void BtnDeleteAccount_Click(object sender, EventArgs e)
@@ -52,12 +52,8 @@ namespace CMPG213_Prototype
 
         private void TbxID_TextChanged(object sender, EventArgs e)
         {
-           
-            
-
-            string query = @"SELECT * from ACCOUNT WHERE Acc_IDnum
- LIKE '%" + tbxID.Text + "%'";
- SqlDataAdapter adapter = new SqlDataAdapter(query, CONN);
+            string query = @"SELECT * from ACCOUNT WHERE Acc_IDnum LIKE '%" + tbxID.Text + "%'";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, CONN);
             DataSet ds = new DataSet();
             adapter.Fill(ds, "ACCOUNT");
             dataGridView1.DataSource = ds;

@@ -35,10 +35,18 @@ namespace CMPG213_Prototype
                 tbxFirstName.Focus();
                 bAccount = false;
             }
+<<<<<<< Updated upstream
                 else
                 {
                     
                 sName = tbxFirstName.Text;
+=======
+
+
+            if (tbxLastName.Text != " ")
+            {
+                sSurname = tbxLastName.Text;
+>>>>>>> Stashed changes
             }
 
                 if (tbxLastName.Text != " ")
@@ -92,7 +100,22 @@ namespace CMPG213_Prototype
 
             if (bAccount == true)
             {
+<<<<<<< Updated upstream
                 CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
+=======
+                sEmail = tbxEmail.Text;
+            }
+           
+            //CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+
+            sName = tbxFirstName.Text;
+            sSurname = tbxLastName.Text;
+            sID = tbxID.Text;
+            sCellnr = tbxCellNumber.Text;
+            sEmail = tbxEmail.Text;
+            CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+
+>>>>>>> Stashed changes
 
                 CONN.Open();
                 sql = @"Insert into ACCOUNT (Acc_FName,Acc_LName,Acc_Email,Acc_Cellnum,Acc_IDnum) values('" + sName + "','" + sSurname + "','" + sEmail + "','" + sCellnr + "','" + sID + "') ";

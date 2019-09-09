@@ -115,6 +115,12 @@
     <Compile Include="Maintain_Fuel.Designer.cs">
       <DependentUpon>Maintain_Fuel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Maintain_Rewards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maintain_Rewards.Designer.cs">
+      <DependentUpon>Maintain_Rewards.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="ProjectDS.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -153,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Maintain_Fuel.resx">
       <DependentUpon>Maintain_Fuel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maintain_Rewards.resx">
+      <DependentUpon>Maintain_Rewards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

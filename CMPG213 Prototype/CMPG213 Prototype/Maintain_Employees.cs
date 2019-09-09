@@ -45,8 +45,12 @@ namespace CMPG213_Prototype
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter();
                 SqlCommand comm = new SqlCommand(sql, conn);
+                DataSet ds = new DataSet();               
                 adap.InsertCommand = new SqlCommand(sql, conn);
                 adap.InsertCommand.ExecuteNonQuery();
+                adap.Fill(ds, "EMPLOYEE");
+                dgvEmployee.DataSource = ds;
+                dgvEmployee.DataMember = "EMPLOYEE";
                 MessageBox.Show("Record inserted successfully");
                 comm.Dispose();
                 conn.Close();
@@ -86,8 +90,12 @@ namespace CMPG213_Prototype
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter();
                 SqlCommand comm = new SqlCommand(sql, conn);
+                DataSet ds = new DataSet();
                 adap.UpdateCommand = new SqlCommand(sql, conn);
                 adap.UpdateCommand.ExecuteNonQuery();
+                adap.Fill(ds, "EMPLOYEE");
+                dgvEmployee.DataSource = ds;
+                dgvEmployee.DataMember = "EMPLOYEE";
                 MessageBox.Show("Record successfuly updated!");
                 comm.Dispose();
                 conn.Close();
@@ -116,8 +124,12 @@ namespace CMPG213_Prototype
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter();
                 SqlCommand comm = new SqlCommand(sql, conn);
+                DataSet ds = new DataSet();
                 adap.DeleteCommand = new SqlCommand(sql, conn);
                 adap.DeleteCommand.ExecuteNonQuery();
+                adap.Fill(ds, "EMPLOYEE");
+                dgvEmployee.DataSource = ds;
+                dgvEmployee.DataMember = "EMPLOYEE";
                 MessageBox.Show("Record successfuly deleted!");
                 comm.Dispose();
                 conn.Close();
@@ -150,7 +162,9 @@ namespace CMPG213_Prototype
                 cmbUpdate.Items.Add(output);
                 cmbDelete.Items.Add(output);
             }
+            comm.Dispose();
             conn.Close();
+
         }
     }
 }

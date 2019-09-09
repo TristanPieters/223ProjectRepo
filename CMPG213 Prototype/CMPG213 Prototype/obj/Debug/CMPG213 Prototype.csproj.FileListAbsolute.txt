@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDBFF.mdf
 D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDBFF_log.ldf
 D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe.config
@@ -39,4 +40,26 @@ C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototy
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
 C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csprojAssemblyReference.cache
+>>>>>>> Stashed changes
+=======
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csprojAssemblyReference.cache
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.AccountForm.resources
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.AccountUpdateDel.resources
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.FOrderForm.resources
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_HelpSupport.resources
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_Home_Page_FutureTech.resources
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.FuelSalesForm.resources
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Maintain_Employees.resources
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Maintain_Fuel.resources
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Maintain_Rewards.resources
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Properties.Resources.resources
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.GenerateResource.cache
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDBFF.mdf
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\StallionsDBFF_log.ldf
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe.config
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.pdb
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
+C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
 >>>>>>> Stashed changes

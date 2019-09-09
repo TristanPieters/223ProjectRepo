@@ -109,12 +109,12 @@
             this.accDebtDataGridViewTextBoxColumn,
             this.accLSoldDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.aCCOUNTBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(24, 26);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(32, 32);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(665, 246);
+            this.dataGridView1.Size = new System.Drawing.Size(887, 303);
             this.dataGridView1.TabIndex = 0;
             // 
             // accIDDataGridViewTextBoxColumn
@@ -211,7 +211,7 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2});
             this.bindingNavigator1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.bindingNavigator1.Location = new System.Drawing.Point(5, 53);
+            this.bindingNavigator1.Location = new System.Drawing.Point(7, 65);
             this.bindingNavigator1.MoveFirstItem = null;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
             this.bindingNavigator1.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -220,14 +220,14 @@
             this.bindingNavigator1.Padding = new System.Windows.Forms.Padding(0);
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
             this.bindingNavigator1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.bindingNavigator1.Size = new System.Drawing.Size(192, 39);
+            this.bindingNavigator1.Size = new System.Drawing.Size(210, 39);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 36);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 36);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
@@ -250,7 +250,7 @@
             this.bindingNavigatorPositionItem.AccessibleName = "Position";
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(27, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(35, 27);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
@@ -284,10 +284,10 @@
             // 
             // tbxID
             // 
-            this.tbxID.Location = new System.Drawing.Point(24, 43);
-            this.tbxID.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxID.Location = new System.Drawing.Point(32, 53);
+            this.tbxID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxID.Name = "tbxID";
-            this.tbxID.Size = new System.Drawing.Size(126, 20);
+            this.tbxID.Size = new System.Drawing.Size(167, 23);
             this.tbxID.TabIndex = 2;
             this.tbxID.TextChanged += new System.EventHandler(this.TbxID_TextChanged);
             // 
@@ -295,10 +295,10 @@
             // 
             this.btnDeleteAccount.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnDeleteAccount.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDeleteAccount.Location = new System.Drawing.Point(32, 74);
-            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDeleteAccount.Location = new System.Drawing.Point(43, 91);
+            this.btnDeleteAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteAccount.Name = "btnDeleteAccount";
-            this.btnDeleteAccount.Size = new System.Drawing.Size(70, 29);
+            this.btnDeleteAccount.Size = new System.Drawing.Size(93, 36);
             this.btnDeleteAccount.TabIndex = 3;
             this.btnDeleteAccount.Text = "DELETE";
             this.btnDeleteAccount.UseVisualStyleBackColor = false;
@@ -308,11 +308,11 @@
             // 
             this.groupBox1.Controls.Add(this.bindingNavigator1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(706, 26);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox1.Location = new System.Drawing.Point(941, 32);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox1.Size = new System.Drawing.Size(205, 115);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(273, 142);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "NAVIGATE";
@@ -323,11 +323,11 @@
             this.groupBox2.Controls.Add(this.btnDeleteAccount);
             this.groupBox2.Controls.Add(this.tbxID);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Location = new System.Drawing.Point(706, 292);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Location = new System.Drawing.Point(941, 359);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox2.Size = new System.Drawing.Size(205, 115);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Size = new System.Drawing.Size(273, 142);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DELETE";
@@ -336,10 +336,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 23);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(28, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.Size = new System.Drawing.Size(102, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Delete by ID:";
             // 
@@ -352,11 +351,11 @@
             this.groupBox3.Controls.Add(this.btnFillterLiters);
             this.groupBox3.Controls.Add(this.btnOutstanding);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox3.Location = new System.Drawing.Point(706, 157);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Location = new System.Drawing.Point(941, 193);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox3.Size = new System.Drawing.Size(205, 115);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox3.Size = new System.Drawing.Size(273, 142);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "FILTER BY";
@@ -365,10 +364,10 @@
             // 
             this.btnFillterLiters.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnFillterLiters.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnFillterLiters.Location = new System.Drawing.Point(15, 66);
-            this.btnFillterLiters.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFillterLiters.Location = new System.Drawing.Point(20, 81);
+            this.btnFillterLiters.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFillterLiters.Name = "btnFillterLiters";
-            this.btnFillterLiters.Size = new System.Drawing.Size(138, 32);
+            this.btnFillterLiters.Size = new System.Drawing.Size(184, 39);
             this.btnFillterLiters.TabIndex = 1;
             this.btnFillterLiters.Text = "MOST LITERS";
             this.btnFillterLiters.UseVisualStyleBackColor = false;
@@ -378,10 +377,10 @@
             // 
             this.btnOutstanding.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnOutstanding.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnOutstanding.Location = new System.Drawing.Point(15, 22);
-            this.btnOutstanding.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOutstanding.Location = new System.Drawing.Point(20, 27);
+            this.btnOutstanding.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOutstanding.Name = "btnOutstanding";
-            this.btnOutstanding.Size = new System.Drawing.Size(138, 31);
+            this.btnOutstanding.Size = new System.Drawing.Size(184, 38);
             this.btnOutstanding.TabIndex = 0;
             this.btnOutstanding.Text = "OUSTANDING ACCOUNTS";
             this.btnOutstanding.UseVisualStyleBackColor = false;
@@ -400,11 +399,11 @@
             this.groupBox4.Controls.Add(this.label6);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox4.Location = new System.Drawing.Point(11, 11);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox4.Location = new System.Drawing.Point(15, 14);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox4.Size = new System.Drawing.Size(994, 523);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox4.Size = new System.Drawing.Size(1325, 644);
             this.groupBox4.TabIndex = 6;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "UPDATE  AND DELETE ACCOUNT";
@@ -412,9 +411,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(936, 26);
+            this.pictureBox1.Location = new System.Drawing.Point(1248, 32);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 468);
+            this.pictureBox1.Size = new System.Drawing.Size(68, 576);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
@@ -423,9 +423,10 @@
             // 
             this.btnClose.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnClose.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnClose.Location = new System.Drawing.Point(792, 450);
+            this.btnClose.Location = new System.Drawing.Point(1056, 554);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(119, 44);
+            this.btnClose.Size = new System.Drawing.Size(159, 54);
             this.btnClose.TabIndex = 22;
             this.btnClose.Text = "CLOSE";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -451,9 +452,11 @@
             this.groupBox5.Controls.Add(this.tbxIDu);
             this.groupBox5.Controls.Add(this.tbxDebt);
             this.groupBox5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox5.Location = new System.Drawing.Point(24, 292);
+            this.groupBox5.Location = new System.Drawing.Point(32, 359);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(631, 212);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox5.Size = new System.Drawing.Size(841, 261);
             this.groupBox5.TabIndex = 21;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "UPDATE";
@@ -461,19 +464,18 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(297, 63);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(396, 78);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.Size = new System.Drawing.Size(52, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Email:";
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(470, 120);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2);
+            this.numericUpDown1.Location = new System.Drawing.Point(627, 148);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(60, 20);
+            this.numericUpDown1.Size = new System.Drawing.Size(80, 23);
             this.numericUpDown1.TabIndex = 20;
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
@@ -484,30 +486,27 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(17, 30);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Location = new System.Drawing.Point(23, 37);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 13);
+            this.label7.Size = new System.Drawing.Size(91, 17);
             this.label7.TabIndex = 0;
             this.label7.Text = "First Name:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(297, 30);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(396, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 13);
+            this.label2.Size = new System.Drawing.Size(90, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Last Name:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 63);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(23, 78);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.Size = new System.Drawing.Size(101, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Cell Number:";
             // 
@@ -515,10 +514,10 @@
             // 
             this.btnUpdateAccount.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnUpdateAccount.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnUpdateAccount.Location = new System.Drawing.Point(506, 158);
-            this.btnUpdateAccount.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdateAccount.Location = new System.Drawing.Point(675, 194);
+            this.btnUpdateAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateAccount.Name = "btnUpdateAccount";
-            this.btnUpdateAccount.Size = new System.Drawing.Size(86, 44);
+            this.btnUpdateAccount.Size = new System.Drawing.Size(115, 54);
             this.btnUpdateAccount.TabIndex = 12;
             this.btnUpdateAccount.Text = "Update";
             this.btnUpdateAccount.UseVisualStyleBackColor = false;
@@ -527,116 +526,111 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(17, 92);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(23, 113);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 13);
+            this.label5.Size = new System.Drawing.Size(28, 17);
             this.label5.TabIndex = 4;
             this.label5.Text = "ID:";
             // 
             // tbxFirstNameU
             // 
-            this.tbxFirstNameU.Location = new System.Drawing.Point(103, 23);
-            this.tbxFirstNameU.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxFirstNameU.Location = new System.Drawing.Point(137, 28);
+            this.tbxFirstNameU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxFirstNameU.Name = "tbxFirstNameU";
-            this.tbxFirstNameU.Size = new System.Drawing.Size(122, 20);
+            this.tbxFirstNameU.Size = new System.Drawing.Size(161, 23);
             this.tbxFirstNameU.TabIndex = 6;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(297, 127);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(396, 156);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(136, 13);
+            this.label10.Size = new System.Drawing.Size(168, 17);
             this.label10.TabIndex = 19;
             this.label10.Text = "Account ID to change:";
             // 
             // tbxEmailU
             // 
-            this.tbxEmailU.Location = new System.Drawing.Point(470, 60);
-            this.tbxEmailU.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxEmailU.Location = new System.Drawing.Point(627, 74);
+            this.tbxEmailU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxEmailU.Name = "tbxEmailU";
-            this.tbxEmailU.Size = new System.Drawing.Size(122, 20);
+            this.tbxEmailU.Size = new System.Drawing.Size(161, 23);
             this.tbxEmailU.TabIndex = 7;
             // 
             // tbxLiters
             // 
-            this.tbxLiters.Location = new System.Drawing.Point(103, 120);
-            this.tbxLiters.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxLiters.Location = new System.Drawing.Point(137, 148);
+            this.tbxLiters.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxLiters.Name = "tbxLiters";
-            this.tbxLiters.Size = new System.Drawing.Size(122, 20);
+            this.tbxLiters.Size = new System.Drawing.Size(161, 23);
             this.tbxLiters.TabIndex = 17;
             // 
             // tbxLastNameU
             // 
-            this.tbxLastNameU.Location = new System.Drawing.Point(470, 27);
-            this.tbxLastNameU.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxLastNameU.Location = new System.Drawing.Point(627, 33);
+            this.tbxLastNameU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxLastNameU.Name = "tbxLastNameU";
-            this.tbxLastNameU.Size = new System.Drawing.Size(122, 20);
+            this.tbxLastNameU.Size = new System.Drawing.Size(161, 23);
             this.tbxLastNameU.TabIndex = 8;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 127);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(23, 156);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(42, 13);
+            this.label9.Size = new System.Drawing.Size(54, 17);
             this.label9.TabIndex = 16;
             this.label9.Text = "Liters:";
             // 
             // tbxCellNumberU
             // 
-            this.tbxCellNumberU.Location = new System.Drawing.Point(103, 56);
-            this.tbxCellNumberU.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxCellNumberU.Location = new System.Drawing.Point(137, 69);
+            this.tbxCellNumberU.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxCellNumberU.Name = "tbxCellNumberU";
-            this.tbxCellNumberU.Size = new System.Drawing.Size(122, 20);
+            this.tbxCellNumberU.Size = new System.Drawing.Size(161, 23);
             this.tbxCellNumberU.TabIndex = 9;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(297, 92);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(396, 113);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(38, 13);
+            this.label8.Size = new System.Drawing.Size(47, 17);
             this.label8.TabIndex = 15;
             this.label8.Text = "Debt:";
             // 
             // tbxIDu
             // 
-            this.tbxIDu.Location = new System.Drawing.Point(103, 89);
-            this.tbxIDu.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxIDu.Location = new System.Drawing.Point(137, 110);
+            this.tbxIDu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxIDu.Name = "tbxIDu";
-            this.tbxIDu.Size = new System.Drawing.Size(122, 20);
+            this.tbxIDu.Size = new System.Drawing.Size(161, 23);
             this.tbxIDu.TabIndex = 11;
             // 
             // tbxDebt
             // 
-            this.tbxDebt.Location = new System.Drawing.Point(470, 89);
-            this.tbxDebt.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxDebt.Location = new System.Drawing.Point(627, 110);
+            this.tbxDebt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxDebt.Name = "tbxDebt";
-            this.tbxDebt.Size = new System.Drawing.Size(122, 20);
+            this.tbxDebt.Size = new System.Drawing.Size(161, 23);
             this.tbxDebt.TabIndex = 14;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(36, 302);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(48, 372);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 13);
+            this.label6.Size = new System.Drawing.Size(0, 17);
             this.label6.TabIndex = 5;
             // 
             // AccountUpdateDel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1033, 545);
+            this.ClientSize = new System.Drawing.Size(1377, 671);
             this.Controls.Add(this.groupBox4);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AccountUpdateDel";
             this.Text = "AccountUpdateDel";
             this.Load += new System.EventHandler(this.AccountUpdateDel_Load);
