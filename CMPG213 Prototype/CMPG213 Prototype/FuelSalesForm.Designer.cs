@@ -40,6 +40,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblFuelPurchased = new System.Windows.Forms.Label();
             this.gBoxAccount = new System.Windows.Forms.GroupBox();
+            this.comBoxRewardSelect = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAccSearch = new System.Windows.Forms.Button();
             this.btnCreateNewAcc = new System.Windows.Forms.Button();
             this.lblAccNewCredit = new System.Windows.Forms.Label();
@@ -59,8 +61,6 @@
             this.comBoxEmpNum = new System.Windows.Forms.ComboBox();
             this.btnCalcTotalFuelPrice = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comBoxRewardSelect = new System.Windows.Forms.ComboBox();
             this.toolTipRewardComBox = new System.Windows.Forms.ToolTip(this.components);
             this.gBoxAccount.SuspendLayout();
             this.gbSales.SuspendLayout();
@@ -175,6 +175,23 @@
             this.gBoxAccount.TabStop = false;
             this.gBoxAccount.Text = "Accounts:";
             // 
+            // comBoxRewardSelect
+            // 
+            this.comBoxRewardSelect.FormattingEnabled = true;
+            this.comBoxRewardSelect.Location = new System.Drawing.Point(10, 232);
+            this.comBoxRewardSelect.Name = "comBoxRewardSelect";
+            this.comBoxRewardSelect.Size = new System.Drawing.Size(64, 21);
+            this.comBoxRewardSelect.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 215);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Reward (No cash):";
+            // 
             // btnAccSearch
             // 
             this.btnAccSearch.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -199,12 +216,11 @@
             // 
             // lblAccNewCredit
             // 
-            this.lblAccNewCredit.AutoSize = true;
-            this.lblAccNewCredit.Location = new System.Drawing.Point(132, 192);
+            this.lblAccNewCredit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblAccNewCredit.Location = new System.Drawing.Point(132, 190);
             this.lblAccNewCredit.Name = "lblAccNewCredit";
-            this.lblAccNewCredit.Size = new System.Drawing.Size(73, 13);
+            this.lblAccNewCredit.Size = new System.Drawing.Size(79, 15);
             this.lblAccNewCredit.TabIndex = 10;
-            this.lblAccNewCredit.Text = "[NewCredit]";
             // 
             // btnAccUpdateCredit
             // 
@@ -215,6 +231,7 @@
             this.btnAccUpdateCredit.TabIndex = 9;
             this.btnAccUpdateCredit.Text = "UPDATE";
             this.btnAccUpdateCredit.UseVisualStyleBackColor = true;
+            this.btnAccUpdateCredit.Click += new System.EventHandler(this.btnAccUpdateCredit_Click);
             // 
             // label11
             // 
@@ -231,6 +248,7 @@
             this.tBoxAccCreditAmount.Name = "tBoxAccCreditAmount";
             this.tBoxAccCreditAmount.Size = new System.Drawing.Size(100, 20);
             this.tBoxAccCreditAmount.TabIndex = 7;
+            this.tBoxAccCreditAmount.Click += new System.EventHandler(this.tBoxAccCreditAmount_Click);
             // 
             // label10
             // 
@@ -371,23 +389,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 215);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 13);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Reward (No cash):";
-            // 
-            // comBoxRewardSelect
-            // 
-            this.comBoxRewardSelect.FormattingEnabled = true;
-            this.comBoxRewardSelect.Location = new System.Drawing.Point(10, 232);
-            this.comBoxRewardSelect.Name = "comBoxRewardSelect";
-            this.comBoxRewardSelect.Size = new System.Drawing.Size(64, 21);
-            this.comBoxRewardSelect.TabIndex = 14;
             // 
             // FuelSalesForm
             // 

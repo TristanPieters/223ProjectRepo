@@ -13,6 +13,8 @@ namespace CMPG213_Prototype
 {
     public partial class FuelSalesForm : Form
     {
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
+
         public FuelSalesForm()
         {
             InitializeComponent();
@@ -22,19 +24,45 @@ namespace CMPG213_Prototype
         {
             comBoxRewardSelect.Enabled = false;
 
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
-            string sql = @"Select Fuel_Description From FUEL";
-            SqlDataReader reader;
-            SqlCommand comm = new SqlCommand(sql, conn);
-            conn.Open();
-            reader = comm.ExecuteReader();
-
-            while (reader.Read())
+            try
             {
-                string output = Convert.ToString(reader.GetValue(0));
-                comBoxFuelType.Items.Add(output);
+                string sqlFuelComBFill = @"Select Fuel_Description From FUEL";
+                SqlDataReader reader;
+                SqlCommand comm = new SqlCommand(sqlFuelComBFill, conn);
+                conn.Open();
+                reader = comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string outputFuelComBFill = Convert.ToString(reader.GetValue(0));
+                    comBoxFuelType.Items.Add(outputFuelComBFill);
+                }
+                conn.Close();
             }
-            conn.Close();
+            catch(SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
+
+            try
+            {
+                string sqlRewardComBFill = @"SELECT Reward_ID From REWARD";
+                SqlDataReader reader;
+                SqlCommand comm = new SqlCommand(sqlRewardComBFill, conn);
+                conn.Open();
+                reader = comm.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string outputRewardComBFill = Convert.ToString(reader.GetValue(0));
+                    comBoxRewardSelect.Items.Add(outputRewardComBFill);
+                }
+                conn.Close();
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
 
         private void btnCompSale_Click(object sender, EventArgs e)
@@ -53,7 +81,6 @@ namespace CMPG213_Prototype
         {
             string selectFuelType = comBoxFuelType.SelectedItem.ToString();
 
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
             string sql = @"Select Fuel_Price_Per_Liter From FUEL WHERE Fuel_Description = '"+ selectFuelType +"'";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
@@ -106,8 +133,6 @@ namespace CMPG213_Prototype
             string accSearchNum = tboxAccNum.Text;
 
 
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
-
             string sql = @"SELECT * FROM ACCOUNT WHERE Acc_ID = '" + accSearchNum + "'";
 
             SqlDataReader reader;
@@ -152,6 +177,44 @@ namespace CMPG213_Prototype
             {
                 comBoxRewardSelect.Enabled = true;
             }
+        }
+
+        private void btnAccUpdateCredit_Click(object sender, EventArgs e)
+        {
+            string accNum = tboxAccNum.Text;
+            string currCredAmnt = tBoxAccCreditAmount.Text;
+
+            try
+            {
+                string sqlUpdateCredit = @"UPDATE ACCOUNT SET Acc_Debt =  '"+currCredAmnt+"'WHERE Acc_ID = '"+ accNum +"'";
+
+                conn.Open();
+                SqlCommand comm = new SqlCommand();
+                SqlDataAdapter adap = new SqlDataAdapter();
+
+                comm = new SqlCommand(sqlUpdateCredit, conn);
+                adap.UpdateCommand = new SqlCommand(sqlUpdateCredit, conn);
+                adap.UpdateCommand.ExecuteNonQuery();
+
+                comm.Dispose();
+                conn.Close();
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
+
+            decimal currentCredAmount, addCreditAmount;
+            currentCredAmount = Convert.ToDecimal(lblAccCreditOutstand.Text);
+            addCreditAmount = Convert.ToDecimal(tBoxAccCreditAmount.Text);
+            decimal newCredAmount = currentCredAmount + addCreditAmount;
+
+            lblAccNewCredit.Text = newCredAmount.ToString();
+        }
+
+        private void tBoxAccCreditAmount_Click(object sender, EventArgs e)
+        {
+            tBoxAccCreditAmount.Text = lblFuelPurchased.Text;
         }
     }
 }
