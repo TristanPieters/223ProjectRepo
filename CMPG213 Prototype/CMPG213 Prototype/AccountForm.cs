@@ -28,109 +28,95 @@ namespace CMPG213_Prototype
             int length = tbxID.Text.Length;
             int lengthCell = tbxCellNumber.Text.Length;
             Boolean bAccount = true;
-            
-                if (tbxFirstName.Text == " ")
-                {
+
+            if (tbxFirstName.Text == " ")
+            {
                 MessageBox.Show("First Name Required");
                 tbxFirstName.Focus();
                 bAccount = false;
             }
-<<<<<<< Updated upstream
-                else
-                {
-                    
-                sName = tbxFirstName.Text;
-=======
 
+            else
+            {
+                sName = tbxFirstName.Text;
+            }
 
             if (tbxLastName.Text != " ")
             {
                 sSurname = tbxLastName.Text;
->>>>>>> Stashed changes
-            }
 
-                if (tbxLastName.Text != " ")
-                {
-                    sSurname = tbxLastName.Text;
-                }
-                else
-                {
-                    MessageBox.Show("LastName Required");
-                    tbxLastName.Focus();
+            }
+            
+            if (tbxLastName.Text != " ")
+            {
+                sSurname = tbxLastName.Text;
+            }
+            
+            else
+            {
+                MessageBox.Show("LastName Required");
+                tbxLastName.Focus();
                 bAccount = false;
             }
-
-                if ((length == 13) && (tbxID.Text != " "))
-                {
-                    sID = tbxID.Text;
-                
+            
+            if ((length == 13) && (tbxID.Text != " "))
+            {
+                sID = tbxID.Text;
             }
-                else
-                {
-                    MessageBox.Show("ID required and must be 13 digits");
-                    tbxID.Focus();
+            
+            else
+            {
+                MessageBox.Show("ID required and must be 13 digits");
+                tbxID.Focus();
                 bAccount = false;
             }
-
-                if ((lengthCell == 10) || (tbxCellNumber.Text != " "))
-                {
-                    sCellnr = tbxCellNumber.Text;
-                }
-                else
-                {
-                    MessageBox.Show("Cell required and must be 10 digits");
-                    tbxCellNumber.Focus();
+            
+            if ((lengthCell == 10) || (tbxCellNumber.Text != " "))
+            {
+                sCellnr = tbxCellNumber.Text;
+            }
+            
+            else
+            {
+                MessageBox.Show("Cell required and must be 10 digits");
+                tbxCellNumber.Focus();
                 bAccount = false;
-
             }
-
-                if ((tbxEmail.Text != " ") || (!tbxEmail.Text.Contains('@') || !this.tbxEmail.Text.Contains('.')))
-                {
-                    sEmail = tbxEmail.Text;
-                }
-                else
-                {
-                         MessageBox.Show("Email incorrect");
-                          tbxEmail.Focus();
-                        bAccount = false;
+            
+            if ((tbxEmail.Text != " ") || (!tbxEmail.Text.Contains('@') || !this.tbxEmail.Text.Contains('.')))
+            {
+                sEmail = tbxEmail.Text;
             }
-
-    
-
+            
+            else
+            {
+                MessageBox.Show("Email incorrect");
+                tbxEmail.Focus();
+                bAccount = false;
+            }
 
             if (bAccount == true)
             {
-<<<<<<< Updated upstream
                 CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
-=======
-                sEmail = tbxEmail.Text;
-            }
-           
-            //CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
-
-            sName = tbxFirstName.Text;
-            sSurname = tbxLastName.Text;
-            sID = tbxID.Text;
-            sCellnr = tbxCellNumber.Text;
-            sEmail = tbxEmail.Text;
-            CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
-
->>>>>>> Stashed changes
-
+                
+                /*sEmail = tbxEmail.Text;
+                sName = tbxFirstName.Text;
+                sSurname = tbxLastName.Text;
+                sID = tbxID.Text;
+                sCellnr = tbxCellNumber.Text;
+                sEmail = tbxEmail.Text;*/
+                
                 CONN.Open();
                 sql = @"Insert into ACCOUNT (Acc_FName,Acc_LName,Acc_Email,Acc_Cellnum,Acc_IDnum) values('" + sName + "','" + sSurname + "','" + sEmail + "','" + sCellnr + "','" + sID + "') ";
-
-
                 comm = new SqlCommand(sql, CONN);
-
                 adapter.InsertCommand = new SqlCommand(sql, CONN);
                 adapter.InsertCommand.ExecuteNonQuery();
                 MessageBox.Show("Account Added");
                 CONN.Close();
                 comm.Dispose();
-
                 this.Close();
             }
+
             else
             {
                 MessageBox.Show("Try Again");
