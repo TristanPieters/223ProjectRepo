@@ -29,7 +29,7 @@ namespace CMPG213_Prototype
             int lengthCell = tbxCellNumber.Text.Length;
             Boolean bAccount = true;
 
-            if (tbxFirstName.Text == " ")
+            if (string.IsNullOrEmpty(tbxFirstName.Text))
             {
                 MessageBox.Show("First Name Required");
                 tbxFirstName.Focus();
@@ -41,70 +41,65 @@ namespace CMPG213_Prototype
                 sName = tbxFirstName.Text;
             }
 
-            if (tbxLastName.Text != " ")
-            {
-                sSurname = tbxLastName.Text;
-
-            }
-            
-            if (tbxLastName.Text != " ")
-            {
-                sSurname = tbxLastName.Text;
-            }
-            
-            else
+            if (string.IsNullOrEmpty(tbxLastName.Text))
             {
                 MessageBox.Show("LastName Required");
                 tbxLastName.Focus();
                 bAccount = false;
-            }
-            
-            if ((length == 13) && (tbxID.Text != " "))
-            {
-                sID = tbxID.Text;
-            }
-            
+
+            }            
             else
+            {
+               
+
+                sSurname = tbxLastName.Text;
+            }
+            
+            if (!(length == 13) || (string.IsNullOrEmpty(tbxID.Text)))
             {
                 MessageBox.Show("ID required and must be 13 digits");
                 tbxID.Focus();
                 bAccount = false;
             }
             
-            if ((lengthCell == 10) || (tbxCellNumber.Text != " "))
+            else
             {
-                sCellnr = tbxCellNumber.Text;
+                
+                sID = tbxID.Text;
             }
             
-            else
+            if (!(lengthCell == 10) || (string.IsNullOrEmpty(tbxCellNumber.Text)))
             {
                 MessageBox.Show("Cell required and must be 10 digits");
                 tbxCellNumber.Focus();
                 bAccount = false;
-            }
-            
-            if ((tbxEmail.Text != " ") || (!tbxEmail.Text.Contains('@') || !this.tbxEmail.Text.Contains('.')))
-            {
-                sEmail = tbxEmail.Text;
+              
             }
             
             else
             {
+                sCellnr = tbxCellNumber.Text; ;
+
+            }
+            
+            if ((string.IsNullOrEmpty(tbxEmail.Text)) || !(tbxEmail.Text.Contains('@')) || !(this.tbxEmail.Text.Contains('.')))
+            {
+                
                 MessageBox.Show("Email incorrect");
                 tbxEmail.Focus();
                 bAccount = false;
+            }
+            
+            else
+            {
+                sEmail = tbxEmail.Text;
             }
 
             if (bAccount == true)
             {
                 CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
                 
-                /*sEmail = tbxEmail.Text;
-                sName = tbxFirstName.Text;
-                sSurname = tbxLastName.Text;
-                sID = tbxID.Text;
-                sCellnr = tbxCellNumber.Text;
-                sEmail = tbxEmail.Text;*/
+                
                 
                 CONN.Open();
                 sql = @"Insert into ACCOUNT (Acc_FName,Acc_LName,Acc_Email,Acc_Cellnum,Acc_IDnum) values('" + sName + "','" + sSurname + "','" + sEmail + "','" + sCellnr + "','" + sID + "') ";

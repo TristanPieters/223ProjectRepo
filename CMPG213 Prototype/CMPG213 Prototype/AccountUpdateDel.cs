@@ -25,10 +25,20 @@ namespace CMPG213_Prototype
 
         private void AccountUpdateDel_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'stallionsDbDataSet.ACCOUNT' table. You can move, or remove it, as needed.
-            this.aCCOUNTTableAdapter.Fill(this.stallionsDbDataSet.ACCOUNT);
+            CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
 
-            CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBF.mdf;Integrated Security=True");
+            CONN.Open();
+            SqlCommand comm;
+            string sql;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            sql = @"Select * FROM ACCOUNT";
+            comm = new SqlCommand(sql, CONN);
+            DataSet ds = new DataSet();
+            adapter.SelectCommand = comm;
+            adapter.Fill(ds, "ACCOUNT");
+            dataGridView1.DataSource = ds;
+            dataGridView1.DataMember = "ACCOUNT";
+
         }
 
         private void BtnDeleteAccount_Click(object sender, EventArgs e)
