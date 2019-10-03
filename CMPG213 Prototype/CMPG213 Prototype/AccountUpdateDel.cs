@@ -38,6 +38,8 @@ namespace CMPG213_Prototype
             adapter.Fill(ds, "ACCOUNT");
             dataGridView1.DataSource = ds;
             dataGridView1.DataMember = "ACCOUNT";
+            CONN.Close();
+
 
         }
 
@@ -83,6 +85,7 @@ namespace CMPG213_Prototype
             adapter.Fill(ds, "ACCOUNT");
             dataGridView1.DataSource = ds;
             dataGridView1.DataMember = "ACCOUNT";
+            CONN.Close();
         }
 
         private void BtnAdd_Click(object sender, EventArgs e)

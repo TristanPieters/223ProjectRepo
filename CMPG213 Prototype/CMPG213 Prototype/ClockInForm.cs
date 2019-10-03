@@ -20,25 +20,32 @@ namespace CMPG213_Prototype
 
         private void ClockInForm_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf; Integrated Security = True");
-            string sql = @"Select * From EMPLOYEE";
-            SqlDataReader reader;
-            SqlCommand comm = new SqlCommand(sql, conn);
-            conn.Open();
-            reader = comm.ExecuteReader();
-
-            while (reader.Read())
+            SqlConnection CONN = new SqlConnection();
+            try
             {
-                string output = Convert.ToString(reader.GetValue(0));
-                comboBox1.Items.Add(output);
+                CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
+                string query = "Select Emp_FName, Emp_ID , Emp_LName from EMPLOYEE";
+                SqlCommand comm = new SqlCommand(query, CONN);
+                comm.CommandText = query;
+                CONN.Open();
+                SqlDataReader reader = comm.ExecuteReader();
+                while (reader.Read())
+                {
+                    cmbEmployee.Items.Add(reader["Emp_FName"].ToString() + " " + reader["Emp_LName"].ToString());
+                    cmbEmployee.ValueMember = reader["Emp_ID"].ToString();
+                    cmbEmployee.DisplayMember = reader["Emp_FName"].ToString();
+                }
             }
-            conn.Close();
+            catch
+            {
+                MessageBox.Show("Error ");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
-            string semp = comboBox1.SelectedText;
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
+            string semp = cmbEmployee.SelectedText;
             string sql = @"Insert Into WSHIFT (Shift_StartT, Emp_ID) Values('" + DateTime.Now + "','" + semp + "')";
 
             try

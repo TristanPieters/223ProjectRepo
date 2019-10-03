@@ -29,45 +29,49 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cmbEmployee = new System.Windows.Forms.ComboBox();
+            this.btnClockIn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 13);
+            this.label1.Location = new System.Drawing.Point(26, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.Size = new System.Drawing.Size(113, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Employee:";
             // 
-            // comboBox1
+            // cmbEmployee
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(93, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cmbEmployee.FormattingEnabled = true;
+            this.cmbEmployee.Location = new System.Drawing.Point(186, 19);
+            this.cmbEmployee.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.cmbEmployee.Name = "cmbEmployee";
+            this.cmbEmployee.Size = new System.Drawing.Size(238, 33);
+            this.cmbEmployee.TabIndex = 1;
             // 
-            // button1
+            // btnClockIn
             // 
-            this.button1.Location = new System.Drawing.Point(16, 43);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Clock In";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnClockIn.Location = new System.Drawing.Point(32, 83);
+            this.btnClockIn.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btnClockIn.Name = "btnClockIn";
+            this.btnClockIn.Size = new System.Drawing.Size(396, 44);
+            this.btnClockIn.TabIndex = 2;
+            this.btnClockIn.Text = "Clock In";
+            this.btnClockIn.UseVisualStyleBackColor = true;
+            this.btnClockIn.Click += new System.EventHandler(this.button1_Click);
             // 
             // ClockInForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(227, 83);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(464, 160);
+            this.Controls.Add(this.btnClockIn);
+            this.Controls.Add(this.cmbEmployee);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "ClockInForm";
             this.Text = "ClockInForm";
             this.Load += new System.EventHandler(this.ClockInForm_Load);
@@ -79,7 +83,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox cmbEmployee;
+        private System.Windows.Forms.Button btnClockIn;
     }
 }
