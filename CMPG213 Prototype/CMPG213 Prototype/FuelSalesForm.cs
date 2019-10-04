@@ -24,6 +24,7 @@ namespace CMPG213_Prototype
         {
             comBoxRewardSelect.Enabled = false;
 
+<<<<<<< Updated upstream
             try
             {
                 string sqlFuelComBFill = @"Select Fuel_Description From FUEL";
@@ -31,6 +32,14 @@ namespace CMPG213_Prototype
                 SqlCommand comm = new SqlCommand(sqlFuelComBFill, conn);
                 conn.Open();
                 reader = comm.ExecuteReader();
+=======
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+            string sql = @"Select Fuel_Description From FUEL";
+            SqlDataReader reader;
+            SqlCommand comm = new SqlCommand(sql, conn);
+            conn.Open();
+            reader = comm.ExecuteReader();
+>>>>>>> Stashed changes
 
                 while (reader.Read())
                 {
@@ -81,6 +90,10 @@ namespace CMPG213_Prototype
         {
             string selectFuelType = comBoxFuelType.SelectedItem.ToString();
 
+<<<<<<< Updated upstream
+=======
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+>>>>>>> Stashed changes
             string sql = @"Select Fuel_Price_Per_Liter From FUEL WHERE Fuel_Description = '"+ selectFuelType +"'";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
@@ -133,6 +146,11 @@ namespace CMPG213_Prototype
             string accSearchNum = tboxAccNum.Text;
 
 
+<<<<<<< Updated upstream
+=======
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+
+>>>>>>> Stashed changes
             string sql = @"SELECT * FROM ACCOUNT WHERE Acc_ID = '" + accSearchNum + "'";
 
             SqlDataReader reader;

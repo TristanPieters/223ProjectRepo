@@ -20,6 +20,7 @@ namespace CMPG213_Prototype
 
         private void ClockInForm_Load(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             SqlConnection CONN = new SqlConnection();
             try
             {
@@ -37,6 +38,16 @@ namespace CMPG213_Prototype
                 }
             }
             catch
+=======
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+            string sql = @"Select * From EMPLOYEE";
+            SqlDataReader reader;
+            SqlCommand comm = new SqlCommand(sql, conn);
+            conn.Open();
+            reader = comm.ExecuteReader();
+
+            while (reader.Read())
+>>>>>>> Stashed changes
             {
                 MessageBox.Show("Error ");
             }

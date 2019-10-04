@@ -25,9 +25,32 @@ namespace CMPG213_Prototype
         
         private void Form_Home_Page_FutureTech_Load(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             string selectall = "SELECT Fuel_Description, Fuel_Price_Per_Liter FROM FUEL";
 
             try
+=======
+<<<<<<< Updated upstream
+            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True";
+
+            MessageBox.Show("Welcome to Stallion's Gas Station designed and developed by FUTURETECH");
+=======
+            
+            MessageBox.Show("Welcome to Stallion's Gas Station designed and developed by FUTURETECH");
+            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBF.mdf;Integrated Security=True";
+
+>>>>>>> Stashed changes
+            SqlConnection conn = new SqlConnection(connstr);
+            string sql = @"Select * From FUEL";
+            SqlDataReader reader;
+            SqlCommand comm = new SqlCommand(sql, conn);
+            conn.Open();
+            reader = comm.ExecuteReader();
+            int counter = 1;
+            //string reffrance = "label" + Convert.ToString(counter);
+
+            while (reader.Read())
+>>>>>>> Stashed changes
             {
                 SqlConnection con = new SqlConnection(connectionString);
                 con.Open();

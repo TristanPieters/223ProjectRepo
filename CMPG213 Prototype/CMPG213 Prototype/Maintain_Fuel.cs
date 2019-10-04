@@ -22,9 +22,14 @@ namespace CMPG213_Prototype
         
         private void btnADD_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
 
             conn = new SqlConnection(constr);
+=======
+            SqlConnection conn = new SqlConnection(constr);
+            
+>>>>>>> Stashed changes
             string fueldescription = textBox1.Text;
             string fuelppl = textBox2.Text;
             string sql = @"Insert Into FUEL (Fuel_Description, Fuel_Price_Per_Liter) Values('" + fueldescription + "','" + fuelppl + "')";
@@ -48,7 +53,7 @@ namespace CMPG213_Prototype
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Crispy\Desktop\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
             string todelete = Convert.ToString(comboBox2.SelectedItem);
             string sql = @"DELETE FROM FUEL WHERE Fuel_Description ='" + todelete + "'";
 
@@ -71,7 +76,7 @@ namespace CMPG213_Prototype
 
         private void btnUdate_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBF.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
             string fueldescription = Convert.ToString(comboBox1.SelectedItem);
             string fuelppl = textBox6.Text;
             string fuelreserves = textBox5.Text;
@@ -96,7 +101,7 @@ namespace CMPG213_Prototype
 
         private void Maintain_Fuel_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf; Integrated Security = True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
             string sql = @"Select * From FUEL";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
