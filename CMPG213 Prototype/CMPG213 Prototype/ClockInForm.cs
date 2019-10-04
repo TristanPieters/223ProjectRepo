@@ -20,60 +20,8 @@ namespace CMPG213_Prototype
 
         private void ClockInForm_Load(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-            SqlConnection CONN = new SqlConnection();
-            try
-            {
-                CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
-                string query = "Select Emp_FName, Emp_ID , Emp_LName from EMPLOYEE";
-                SqlCommand comm = new SqlCommand(query, CONN);
-                comm.CommandText = query;
-                CONN.Open();
-                SqlDataReader reader = comm.ExecuteReader();
-                while (reader.Read())
-                {
-                    cmbEmployee.Items.Add(reader["Emp_FName"].ToString() + " " + reader["Emp_LName"].ToString());
-                    cmbEmployee.ValueMember = reader["Emp_ID"].ToString();
-                    cmbEmployee.DisplayMember = reader["Emp_FName"].ToString();
-                }
-            }
-            catch
-=======
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
-            string sql = @"Select * From EMPLOYEE";
-            SqlDataReader reader;
-            SqlCommand comm = new SqlCommand(sql, conn);
-            conn.Open();
-            reader = comm.ExecuteReader();
 
-            while (reader.Read())
->>>>>>> Stashed changes
-            {
-                MessageBox.Show("Error ");
-            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
-            string semp = cmbEmployee.SelectedText;
-            string sql = @"Insert Into WSHIFT (Shift_StartT, Emp_ID) Values('" + DateTime.Now + "','" + semp + "')";
-
-            try
-            {
-                conn.Open();
-                SqlDataAdapter adap = new SqlDataAdapter();
-                SqlCommand comm = new SqlCommand(sql, conn);
-                adap.InsertCommand = new SqlCommand(sql, conn);
-                adap.InsertCommand.ExecuteNonQuery();
-                MessageBox.Show("Record inserted successfully");
-                comm.Dispose();
-                conn.Close();
-            }
-            catch (SqlException error)
-            {
-                MessageBox.Show(error.Message);
-            }
-        }
     }
 }

@@ -63,7 +63,6 @@
             this.btnClockIn.TabIndex = 2;
             this.btnClockIn.Text = "Clock In";
             this.btnClockIn.UseVisualStyleBackColor = false;
-            this.btnClockIn.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 

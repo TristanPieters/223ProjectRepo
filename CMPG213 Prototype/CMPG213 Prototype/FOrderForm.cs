@@ -16,10 +16,8 @@ namespace CMPG213_Prototype
         public FOrderForm()
         {
             InitializeComponent();
-<<<<<<< Updated upstream
         }
         string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True";
-        string amt;
         SqlConnection conn;
         private void BtnADD_Click(object sender, EventArgs e)
         {
@@ -156,13 +154,6 @@ namespace CMPG213_Prototype
         {
 
         }
-=======
-        }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
->>>>>>> Stashed changes
     }
 }
