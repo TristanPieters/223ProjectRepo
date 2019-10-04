@@ -92,6 +92,110 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
+<<<<<<< Updated upstream
+=======
+            // gbFuelType
+            // 
+            this.gbFuelType.Controls.Add(this.lblDiesel500);
+            this.gbFuelType.Controls.Add(this.lblDiesel50);
+            this.gbFuelType.Controls.Add(this.lblUnleaded95);
+            this.gbFuelType.Controls.Add(this.lblUnleaded93);
+            this.gbFuelType.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gbFuelType.Location = new System.Drawing.Point(484, 29);
+            this.gbFuelType.Name = "gbFuelType";
+            this.gbFuelType.Size = new System.Drawing.Size(103, 141);
+            this.gbFuelType.TabIndex = 0;
+            this.gbFuelType.TabStop = false;
+            this.gbFuelType.Text = "FUEL TYPE";
+            this.gbFuelType.Enter += new System.EventHandler(this.GbFuelType_Enter);
+            // 
+            // lblDiesel500
+            // 
+            this.lblDiesel500.AutoSize = true;
+            this.lblDiesel500.Location = new System.Drawing.Point(6, 110);
+            this.lblDiesel500.Name = "lblDiesel500";
+            this.lblDiesel500.Size = new System.Drawing.Size(80, 13);
+            this.lblDiesel500.TabIndex = 3;
+            this.lblDiesel500.Text = "DIESEL 500:";
+            // 
+            // lblDiesel50
+            // 
+            this.lblDiesel50.AutoSize = true;
+            this.lblDiesel50.Location = new System.Drawing.Point(6, 83);
+            this.lblDiesel50.Name = "lblDiesel50";
+            this.lblDiesel50.Size = new System.Drawing.Size(73, 13);
+            this.lblDiesel50.TabIndex = 2;
+            this.lblDiesel50.Text = "DIESEL 50:";
+            // 
+            // lblUnleaded95
+            // 
+            this.lblUnleaded95.AutoSize = true;
+            this.lblUnleaded95.Location = new System.Drawing.Point(6, 54);
+            this.lblUnleaded95.Name = "lblUnleaded95";
+            this.lblUnleaded95.Size = new System.Drawing.Size(96, 13);
+            this.lblUnleaded95.TabIndex = 1;
+            this.lblUnleaded95.Text = "UNLEADED 95:";
+            // 
+            // lblUnleaded93
+            // 
+            this.lblUnleaded93.AutoSize = true;
+            this.lblUnleaded93.Location = new System.Drawing.Point(6, 26);
+            this.lblUnleaded93.Name = "lblUnleaded93";
+            this.lblUnleaded93.Size = new System.Drawing.Size(96, 13);
+            this.lblUnleaded93.TabIndex = 0;
+            this.lblUnleaded93.Text = "UNLEADED 93:";
+            // 
+            // gbPrice
+            // 
+            this.gbPrice.Controls.Add(this.label4);
+            this.gbPrice.Controls.Add(this.label3);
+            this.gbPrice.Controls.Add(this.label2);
+            this.gbPrice.Controls.Add(this.label1);
+            this.gbPrice.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.gbPrice.Location = new System.Drawing.Point(587, 29);
+            this.gbPrice.Name = "gbPrice";
+            this.gbPrice.Size = new System.Drawing.Size(103, 141);
+            this.gbPrice.TabIndex = 1;
+            this.gbPrice.TabStop = false;
+            this.gbPrice.Text = "PRICE";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "label3";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "label2";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "label1";
+            // 
+>>>>>>> Stashed changes
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -132,7 +236,11 @@
             // 
             this.btnUpdateFuelPrice.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnUpdateFuelPrice.ForeColor = System.Drawing.SystemColors.ControlText;
+<<<<<<< Updated upstream
             this.btnUpdateFuelPrice.Location = new System.Drawing.Point(456, 188);
+=======
+            this.btnUpdateFuelPrice.Location = new System.Drawing.Point(531, 188);
+>>>>>>> Stashed changes
             this.btnUpdateFuelPrice.Name = "btnUpdateFuelPrice";
             this.btnUpdateFuelPrice.Size = new System.Drawing.Size(103, 40);
             this.btnUpdateFuelPrice.TabIndex = 1;
@@ -193,7 +301,11 @@
             this.tpHome.Controls.Add(this.pictureBox1);
             this.tpHome.Location = new System.Drawing.Point(4, 22);
             this.tpHome.Name = "tpHome";
+<<<<<<< Updated upstream
             this.tpHome.Padding = new System.Windows.Forms.Padding(3);
+=======
+            this.tpHome.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+>>>>>>> Stashed changes
             this.tpHome.Size = new System.Drawing.Size(407, 304);
             this.tpHome.TabIndex = 0;
             this.tpHome.Text = "HOME";
@@ -214,7 +326,11 @@
             this.tpAccounts.Controls.Add(this.panel1);
             this.tpAccounts.Location = new System.Drawing.Point(4, 22);
             this.tpAccounts.Name = "tpAccounts";
+<<<<<<< Updated upstream
             this.tpAccounts.Padding = new System.Windows.Forms.Padding(3);
+=======
+            this.tpAccounts.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+>>>>>>> Stashed changes
             this.tpAccounts.Size = new System.Drawing.Size(407, 304);
             this.tpAccounts.TabIndex = 1;
             this.tpAccounts.Text = "ACCOUNTS";

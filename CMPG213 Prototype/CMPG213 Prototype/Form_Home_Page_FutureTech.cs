@@ -113,7 +113,6 @@ namespace CMPG213_Prototype
         private void BtnReports_Click(object sender, EventArgs e)
         {
             //Daily report
-            /*
             SqlConnection CONN = new SqlConnection();
             CONN.Open();
             String transID;
@@ -132,7 +131,7 @@ namespace CMPG213_Prototype
             String sqlTrans,sqlEmp,sqlAcc,sqlFuel,sqlReward, Output;
 
             sqlTrans = "Select Trans_ID,Dateofsale,Amount_Liters_Sold, Liters_Sold from TRANSACT";
-            sqlEmp = "Select Emp_ID from EMPLOYEE";
+            sqlEmp = "Select * from S";
             sqlAcc = "Select Acc_ID from ACCOUNT";
             sqlFuel = "Select Fuel_ID from FUEL";
             sqlReward = "Select Reward_ID from REWARD";
@@ -147,24 +146,33 @@ namespace CMPG213_Prototype
 
             try
             {
-                StreamWriter inputFile;
-                inputFile = File.CreateText("Report.txt");
+                StreamWriter outputFile;
+                string myFile;
+                DateTime date;
+                date = DateTime.Now;
 
-                saveFileDialog1.InitialDirectory = @"c:/";
+                string reportOutput = "";
+
+                reportOutput = "*********************";
+                reportOutput = reportOutput + "\nStallions Gas Station";
+                reportOutput = reportOutput + "\n*********************";
+                reportOutput = reportOutput + "\n" + date.ToString() + "\n";
+                
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    inputFile = File.CreateText(saveFileDialog1.FileName);
-                   
-
-                    inputFile.Close();
+                    myFile = saveFileDialog1.FileName;
+                    outputFile = File.CreateText(saveFileDialog1.FileName);
+                    outputFile.WriteLine(reportOutput);
+                    outputFile
+                    outputFile.Close();
                 }
 
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Error" + ex);
+                MessageBox.Show("Error occured during exporting report","ERROR",MessageBoxButtons.OKCancel,MessageBoxIcon.Exclamation);
             }
-            */
+          
             
     
            
