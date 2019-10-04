@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Maintain_Employees));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpAdd = new System.Windows.Forms.TabPage();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -76,7 +75,6 @@
             this.btnBack1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvEmployee = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.stallionsDbDataSet = new CMPG213_Prototype.StallionsDbDataSet();
             this.aCCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCCOUNTTableAdapter = new CMPG213_Prototype.StallionsDbDataSetTableAdapters.ACCOUNTTableAdapter();
@@ -86,7 +84,6 @@
             this.tpDelete.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stallionsDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -96,11 +93,11 @@
             this.tabControl1.Controls.Add(this.tpAdd);
             this.tabControl1.Controls.Add(this.tpUpdate);
             this.tabControl1.Controls.Add(this.tpDelete);
-            this.tabControl1.Location = new System.Drawing.Point(31, 97);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Location = new System.Drawing.Point(19, 33);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(355, 326);
+            this.tabControl1.Size = new System.Drawing.Size(418, 423);
             this.tabControl1.TabIndex = 0;
             // 
             // tpAdd
@@ -123,11 +120,11 @@
             this.tpAdd.Controls.Add(this.label3);
             this.tpAdd.Controls.Add(this.label2);
             this.tpAdd.Controls.Add(this.label1);
-            this.tpAdd.Location = new System.Drawing.Point(4, 22);
-            this.tpAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpAdd.Location = new System.Drawing.Point(4, 29);
+            this.tpAdd.Margin = new System.Windows.Forms.Padding(2);
             this.tpAdd.Name = "tpAdd";
-            this.tpAdd.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tpAdd.Size = new System.Drawing.Size(347, 300);
+            this.tpAdd.Padding = new System.Windows.Forms.Padding(2);
+            this.tpAdd.Size = new System.Drawing.Size(410, 390);
             this.tpAdd.TabIndex = 0;
             this.tpAdd.Text = "Add";
             // 
@@ -135,8 +132,8 @@
             // 
             this.btnAdd.BackColor = System.Drawing.Color.White;
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAdd.Location = new System.Drawing.Point(118, 243);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Location = new System.Drawing.Point(298, 325);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(96, 41);
             this.btnAdd.TabIndex = 32;
@@ -146,120 +143,120 @@
             // 
             // txbEmp_JobAdd
             // 
-            this.txbEmp_JobAdd.Location = new System.Drawing.Point(200, 137);
+            this.txbEmp_JobAdd.Location = new System.Drawing.Point(266, 193);
             this.txbEmp_JobAdd.Name = "txbEmp_JobAdd";
-            this.txbEmp_JobAdd.Size = new System.Drawing.Size(128, 20);
+            this.txbEmp_JobAdd.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_JobAdd.TabIndex = 31;
             // 
             // txbEmp_EmailAdd
             // 
-            this.txbEmp_EmailAdd.Location = new System.Drawing.Point(200, 160);
+            this.txbEmp_EmailAdd.Location = new System.Drawing.Point(266, 229);
             this.txbEmp_EmailAdd.Name = "txbEmp_EmailAdd";
-            this.txbEmp_EmailAdd.Size = new System.Drawing.Size(128, 20);
+            this.txbEmp_EmailAdd.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_EmailAdd.TabIndex = 30;
             // 
             // txbUsernameAdd
             // 
-            this.txbUsernameAdd.Location = new System.Drawing.Point(200, 186);
+            this.txbUsernameAdd.Location = new System.Drawing.Point(266, 266);
             this.txbUsernameAdd.Name = "txbUsernameAdd";
-            this.txbUsernameAdd.Size = new System.Drawing.Size(128, 20);
+            this.txbUsernameAdd.Size = new System.Drawing.Size(128, 26);
             this.txbUsernameAdd.TabIndex = 29;
             // 
             // txbEmp_FNameAdd
             // 
-            this.txbEmp_FNameAdd.Location = new System.Drawing.Point(200, 40);
+            this.txbEmp_FNameAdd.Location = new System.Drawing.Point(266, 53);
             this.txbEmp_FNameAdd.Name = "txbEmp_FNameAdd";
-            this.txbEmp_FNameAdd.Size = new System.Drawing.Size(128, 20);
+            this.txbEmp_FNameAdd.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_FNameAdd.TabIndex = 28;
             // 
             // txbEmp_LNameAdd
             // 
-            this.txbEmp_LNameAdd.Location = new System.Drawing.Point(200, 64);
+            this.txbEmp_LNameAdd.Location = new System.Drawing.Point(266, 88);
             this.txbEmp_LNameAdd.Name = "txbEmp_LNameAdd";
-            this.txbEmp_LNameAdd.Size = new System.Drawing.Size(128, 20);
+            this.txbEmp_LNameAdd.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_LNameAdd.TabIndex = 27;
             // 
             // txbEmp_PasswordAdd
             // 
-            this.txbEmp_PasswordAdd.Location = new System.Drawing.Point(200, 89);
+            this.txbEmp_PasswordAdd.Location = new System.Drawing.Point(266, 121);
             this.txbEmp_PasswordAdd.Name = "txbEmp_PasswordAdd";
-            this.txbEmp_PasswordAdd.Size = new System.Drawing.Size(128, 20);
+            this.txbEmp_PasswordAdd.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_PasswordAdd.TabIndex = 26;
             // 
             // txbEmp_CellNumAdd
             // 
-            this.txbEmp_CellNumAdd.Location = new System.Drawing.Point(200, 114);
+            this.txbEmp_CellNumAdd.Location = new System.Drawing.Point(266, 156);
             this.txbEmp_CellNumAdd.Name = "txbEmp_CellNumAdd";
-            this.txbEmp_CellNumAdd.Size = new System.Drawing.Size(128, 20);
+            this.txbEmp_CellNumAdd.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_CellNumAdd.TabIndex = 25;
             // 
             // txbShiftTimeAdd
             // 
-            this.txbShiftTimeAdd.Location = new System.Drawing.Point(200, 15);
+            this.txbShiftTimeAdd.Location = new System.Drawing.Point(266, 18);
             this.txbShiftTimeAdd.Name = "txbShiftTimeAdd";
-            this.txbShiftTimeAdd.Size = new System.Drawing.Size(128, 20);
+            this.txbShiftTimeAdd.Size = new System.Drawing.Size(128, 26);
             this.txbShiftTimeAdd.TabIndex = 24;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 189);
+            this.label8.Location = new System.Drawing.Point(16, 266);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(146, 13);
+            this.label8.Size = new System.Drawing.Size(210, 20);
             this.label8.TabIndex = 23;
             this.label8.Text = "EMPLOYEE USERNAME";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(16, 165);
+            this.label7.Location = new System.Drawing.Point(16, 229);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(114, 13);
+            this.label7.Size = new System.Drawing.Size(164, 20);
             this.label7.TabIndex = 22;
             this.label7.Text = "EMPLOYEE EMAIL";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 140);
+            this.label6.Location = new System.Drawing.Point(16, 193);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 13);
+            this.label6.Size = new System.Drawing.Size(144, 20);
             this.label6.TabIndex = 21;
             this.label6.Text = "EMPLOYEE JOB";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 117);
+            this.label5.Location = new System.Drawing.Point(16, 156);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 13);
+            this.label5.Size = new System.Drawing.Size(235, 20);
             this.label5.TabIndex = 20;
             this.label5.Text = "EMPLOYEE CELL NUMBER";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 92);
+            this.label4.Location = new System.Drawing.Point(16, 121);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 13);
+            this.label4.Size = new System.Drawing.Size(212, 20);
             this.label4.TabIndex = 19;
             this.label4.Text = "EMPLOYEE PASSWORD";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(16, 67);
+            this.label3.Location = new System.Drawing.Point(16, 88);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 13);
+            this.label3.Size = new System.Drawing.Size(209, 20);
             this.label3.TabIndex = 18;
             this.label3.Text = "EMPLOYEE LAST NAME";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 43);
+            this.label2.Location = new System.Drawing.Point(16, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(152, 13);
+            this.label2.Size = new System.Drawing.Size(217, 20);
             this.label2.TabIndex = 17;
             this.label2.Text = "EMPLOYEE FIRST NAME";
             // 
@@ -268,7 +265,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 13);
+            this.label1.Size = new System.Drawing.Size(108, 20);
             this.label1.TabIndex = 16;
             this.label1.Text = "SHIFT TIME";
             // 
@@ -294,41 +291,41 @@
             this.tpUpdate.Controls.Add(this.label14);
             this.tpUpdate.Controls.Add(this.label15);
             this.tpUpdate.Controls.Add(this.label16);
-            this.tpUpdate.Location = new System.Drawing.Point(4, 22);
-            this.tpUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpUpdate.Location = new System.Drawing.Point(4, 29);
+            this.tpUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.tpUpdate.Name = "tpUpdate";
-            this.tpUpdate.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tpUpdate.Size = new System.Drawing.Size(347, 300);
+            this.tpUpdate.Padding = new System.Windows.Forms.Padding(2);
+            this.tpUpdate.Size = new System.Drawing.Size(410, 390);
             this.tpUpdate.TabIndex = 1;
             this.tpUpdate.Text = "Update";
             // 
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(13, 8);
+            this.label18.Location = new System.Drawing.Point(13, 16);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(90, 13);
+            this.label18.Size = new System.Drawing.Size(129, 20);
             this.label18.TabIndex = 51;
             this.label18.Text = "EMPLOYEE ID";
             // 
             // cmbUpdate
             // 
             this.cmbUpdate.FormattingEnabled = true;
-            this.cmbUpdate.Location = new System.Drawing.Point(180, 5);
-            this.cmbUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbUpdate.Location = new System.Drawing.Point(253, 8);
+            this.cmbUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.cmbUpdate.Name = "cmbUpdate";
-            this.cmbUpdate.Size = new System.Drawing.Size(128, 21);
+            this.cmbUpdate.Size = new System.Drawing.Size(128, 28);
             this.cmbUpdate.TabIndex = 50;
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.White;
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnUpdate.Location = new System.Drawing.Point(118, 248);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(285, 337);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(103, 39);
+            this.btnUpdate.Size = new System.Drawing.Size(96, 39);
             this.btnUpdate.TabIndex = 48;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -336,154 +333,154 @@
             // 
             // txbEmp_JobUp
             // 
-            this.txbEmp_JobUp.Location = new System.Drawing.Point(180, 154);
+            this.txbEmp_JobUp.Location = new System.Drawing.Point(253, 220);
             this.txbEmp_JobUp.Name = "txbEmp_JobUp";
-            this.txbEmp_JobUp.Size = new System.Drawing.Size(128, 20);
+            this.txbEmp_JobUp.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_JobUp.TabIndex = 47;
             // 
             // txbEmp_EmailUp
             // 
-            this.txbEmp_EmailUp.Location = new System.Drawing.Point(180, 179);
+            this.txbEmp_EmailUp.Location = new System.Drawing.Point(253, 253);
             this.txbEmp_EmailUp.Name = "txbEmp_EmailUp";
-            this.txbEmp_EmailUp.Size = new System.Drawing.Size(128, 20);
+            this.txbEmp_EmailUp.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_EmailUp.TabIndex = 46;
             // 
             // txbUsernameUp
             // 
-            this.txbUsernameUp.Location = new System.Drawing.Point(180, 203);
+            this.txbUsernameUp.Location = new System.Drawing.Point(253, 288);
             this.txbUsernameUp.Name = "txbUsernameUp";
-            this.txbUsernameUp.Size = new System.Drawing.Size(128, 20);
+            this.txbUsernameUp.Size = new System.Drawing.Size(128, 26);
             this.txbUsernameUp.TabIndex = 45;
             // 
             // txbEmp_FNameUp
             // 
-            this.txbEmp_FNameUp.Location = new System.Drawing.Point(180, 57);
+            this.txbEmp_FNameUp.Location = new System.Drawing.Point(253, 79);
             this.txbEmp_FNameUp.Name = "txbEmp_FNameUp";
-            this.txbEmp_FNameUp.Size = new System.Drawing.Size(128, 20);
+            this.txbEmp_FNameUp.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_FNameUp.TabIndex = 44;
             // 
             // txbEmp_LNameUp
             // 
-            this.txbEmp_LNameUp.Location = new System.Drawing.Point(180, 81);
+            this.txbEmp_LNameUp.Location = new System.Drawing.Point(253, 114);
             this.txbEmp_LNameUp.Name = "txbEmp_LNameUp";
-            this.txbEmp_LNameUp.Size = new System.Drawing.Size(128, 20);
+            this.txbEmp_LNameUp.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_LNameUp.TabIndex = 43;
             // 
             // txbEmp_PasswordUp
             // 
-            this.txbEmp_PasswordUp.Location = new System.Drawing.Point(180, 106);
+            this.txbEmp_PasswordUp.Location = new System.Drawing.Point(253, 150);
             this.txbEmp_PasswordUp.Name = "txbEmp_PasswordUp";
-            this.txbEmp_PasswordUp.Size = new System.Drawing.Size(128, 20);
+            this.txbEmp_PasswordUp.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_PasswordUp.TabIndex = 42;
             // 
             // txbEmp_CellNumUp
             // 
-            this.txbEmp_CellNumUp.Location = new System.Drawing.Point(180, 130);
+            this.txbEmp_CellNumUp.Location = new System.Drawing.Point(253, 185);
             this.txbEmp_CellNumUp.Name = "txbEmp_CellNumUp";
-            this.txbEmp_CellNumUp.Size = new System.Drawing.Size(128, 20);
+            this.txbEmp_CellNumUp.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_CellNumUp.TabIndex = 41;
             // 
             // txbShiftTimeUp
             // 
-            this.txbShiftTimeUp.Location = new System.Drawing.Point(180, 32);
+            this.txbShiftTimeUp.Location = new System.Drawing.Point(253, 44);
             this.txbShiftTimeUp.Name = "txbShiftTimeUp";
-            this.txbShiftTimeUp.Size = new System.Drawing.Size(128, 20);
+            this.txbShiftTimeUp.Size = new System.Drawing.Size(128, 26);
             this.txbShiftTimeUp.TabIndex = 40;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(13, 210);
+            this.label9.Location = new System.Drawing.Point(13, 295);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(146, 13);
+            this.label9.Size = new System.Drawing.Size(210, 20);
             this.label9.TabIndex = 39;
             this.label9.Text = "EMPLOYEE USERNAME";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(13, 182);
+            this.label10.Location = new System.Drawing.Point(13, 260);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 13);
+            this.label10.Size = new System.Drawing.Size(164, 20);
             this.label10.TabIndex = 38;
             this.label10.Text = "EMPLOYEE EMAIL";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(13, 157);
+            this.label11.Location = new System.Drawing.Point(13, 223);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(100, 13);
+            this.label11.Size = new System.Drawing.Size(144, 20);
             this.label11.TabIndex = 37;
             this.label11.Text = "EMPLOYEE JOB";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(13, 133);
+            this.label12.Location = new System.Drawing.Point(13, 188);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(164, 13);
+            this.label12.Size = new System.Drawing.Size(235, 20);
             this.label12.TabIndex = 36;
             this.label12.Text = "EMPLOYEE CELL NUMBER";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(13, 109);
+            this.label13.Location = new System.Drawing.Point(13, 153);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(148, 13);
+            this.label13.Size = new System.Drawing.Size(212, 20);
             this.label13.TabIndex = 35;
             this.label13.Text = "EMPLOYEE PASSWORD";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(13, 84);
+            this.label14.Location = new System.Drawing.Point(12, 117);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(147, 13);
+            this.label14.Size = new System.Drawing.Size(209, 20);
             this.label14.TabIndex = 34;
             this.label14.Text = "EMPLOYEE LAST NAME";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(13, 60);
+            this.label15.Location = new System.Drawing.Point(13, 82);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(152, 13);
+            this.label15.Size = new System.Drawing.Size(217, 20);
             this.label15.TabIndex = 33;
             this.label15.Text = "EMPLOYEE FIRST NAME";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(13, 35);
+            this.label16.Location = new System.Drawing.Point(13, 51);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(77, 13);
+            this.label16.Size = new System.Drawing.Size(108, 20);
             this.label16.TabIndex = 32;
             this.label16.Text = "SHIFT TIME";
             // 
             // tpDelete
             // 
-            this.tpDelete.BackColor = System.Drawing.Color.Black;
+            this.tpDelete.BackColor = System.Drawing.SystemColors.ControlDark;
             this.tpDelete.Controls.Add(this.cmbDelete);
             this.tpDelete.Controls.Add(this.label17);
             this.tpDelete.Controls.Add(this.btnDelete);
             this.tpDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tpDelete.Location = new System.Drawing.Point(4, 22);
-            this.tpDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpDelete.Location = new System.Drawing.Point(4, 29);
+            this.tpDelete.Margin = new System.Windows.Forms.Padding(2);
             this.tpDelete.Name = "tpDelete";
-            this.tpDelete.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tpDelete.Size = new System.Drawing.Size(347, 300);
+            this.tpDelete.Padding = new System.Windows.Forms.Padding(2);
+            this.tpDelete.Size = new System.Drawing.Size(410, 390);
             this.tpDelete.TabIndex = 2;
             this.tpDelete.Text = "Delete";
             // 
             // cmbDelete
             // 
             this.cmbDelete.FormattingEnabled = true;
-            this.cmbDelete.Location = new System.Drawing.Point(117, 47);
-            this.cmbDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbDelete.Location = new System.Drawing.Point(157, 47);
+            this.cmbDelete.Margin = new System.Windows.Forms.Padding(2);
             this.cmbDelete.Name = "cmbDelete";
-            this.cmbDelete.Size = new System.Drawing.Size(131, 21);
+            this.cmbDelete.Size = new System.Drawing.Size(131, 28);
             this.cmbDelete.TabIndex = 36;
             // 
             // label17
@@ -492,7 +489,7 @@
             this.label17.Location = new System.Drawing.Point(4, 50);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(90, 13);
+            this.label17.Size = new System.Drawing.Size(129, 20);
             this.label17.TabIndex = 35;
             this.label17.Text = "EMPLOYEE ID";
             // 
@@ -500,10 +497,10 @@
             // 
             this.btnDelete.BackColor = System.Drawing.Color.White;
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDelete.Location = new System.Drawing.Point(109, 108);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Location = new System.Drawing.Point(192, 103);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(88, 43);
+            this.btnDelete.Size = new System.Drawing.Size(96, 43);
             this.btnDelete.TabIndex = 33;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -513,8 +510,8 @@
             // 
             this.btnBack1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnBack1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnBack1.Location = new System.Drawing.Point(147, 439);
-            this.btnBack1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack1.Location = new System.Drawing.Point(791, 429);
+            this.btnBack1.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack1.Name = "btnBack1";
             this.btnBack1.Size = new System.Drawing.Size(96, 41);
             this.btnBack1.TabIndex = 33;
@@ -526,14 +523,13 @@
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ControlDark;
             this.groupBox1.Controls.Add(this.dgvEmployee);
-            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.tabControl1);
             this.groupBox1.Controls.Add(this.btnBack1);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(888, 485);
+            this.groupBox1.Size = new System.Drawing.Size(910, 485);
             this.groupBox1.TabIndex = 34;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "EMPLOYEES";
@@ -541,22 +537,12 @@
             // dgvEmployee
             // 
             this.dgvEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvEmployee.Location = new System.Drawing.Point(420, 119);
-            this.dgvEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvEmployee.Location = new System.Drawing.Point(466, 33);
+            this.dgvEmployee.Margin = new System.Windows.Forms.Padding(2);
             this.dgvEmployee.Name = "dgvEmployee";
             this.dgvEmployee.RowTemplate.Height = 24;
             this.dgvEmployee.Size = new System.Drawing.Size(421, 175);
             this.dgvEmployee.TabIndex = 35;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(201, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(462, 59);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 34;
-            this.pictureBox1.TabStop = false;
             // 
             // stallionsDbDataSet
             // 
@@ -591,7 +577,6 @@
             this.tpDelete.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stallionsDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -645,7 +630,6 @@
         private System.Windows.Forms.ComboBox cmbDelete;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvEmployee;
         private StallionsDbDataSet stallionsDbDataSet;
         private System.Windows.Forms.BindingSource aCCOUNTBindingSource;

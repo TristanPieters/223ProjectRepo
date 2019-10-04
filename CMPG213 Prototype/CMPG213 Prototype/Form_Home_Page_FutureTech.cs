@@ -280,5 +280,10 @@ namespace CMPG213_Prototype
                 MessageBox.Show(error.Message);
             }
         }
+
+        private void BtnReceiveOrder_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

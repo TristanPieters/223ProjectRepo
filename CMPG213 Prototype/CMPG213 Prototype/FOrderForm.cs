@@ -16,6 +16,7 @@ namespace CMPG213_Prototype
         public FOrderForm()
         {
             InitializeComponent();
+<<<<<<< Updated upstream
         }
         string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True";
         string amt;
@@ -150,5 +151,18 @@ namespace CMPG213_Prototype
                 MessageBox.Show(error.Message);
             }
         }
+
+        private void TabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+=======
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> Stashed changes
     }
 }
