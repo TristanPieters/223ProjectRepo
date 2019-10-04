@@ -86,7 +86,11 @@
             this.tpHome.SuspendLayout();
             this.tabControl.SuspendLayout();
             this.SuspendLayout();
+<<<<<<< Updated upstream
             // 
+=======
+            //             
+>>>>>>> Stashed changes
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -127,7 +131,12 @@
             // 
             this.btnUpdateFuelPrice.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnUpdateFuelPrice.ForeColor = System.Drawing.SystemColors.ControlText;
+<<<<<<< Updated upstream
             this.btnUpdateFuelPrice.Location = new System.Drawing.Point(11, 187);
+=======
+            this.btnUpdateFuelPrice.Location = new System.Drawing.Point(456, 188);
+            this.btnUpdateFuelPrice.Location = new System.Drawing.Point(531, 188);
+>>>>>>> Stashed changes
             this.btnUpdateFuelPrice.Name = "btnUpdateFuelPrice";
             this.btnUpdateFuelPrice.Size = new System.Drawing.Size(127, 51);
             this.btnUpdateFuelPrice.TabIndex = 1;
@@ -182,6 +191,7 @@
             // 
             // button1
             // 
+<<<<<<< Updated upstream
             this.button1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(172, 187);
@@ -191,6 +201,17 @@
             this.button1.Text = "Refresh";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+=======
+            this.tpHome.Controls.Add(this.pictureBox1);
+            this.tpHome.Location = new System.Drawing.Point(4, 22);
+            this.tpHome.Name = "tpHome";
+            this.tpHome.Padding = new System.Windows.Forms.Padding(3);
+            this.tpHome.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpHome.Size = new System.Drawing.Size(407, 304);
+            this.tpHome.TabIndex = 0;
+            this.tpHome.Text = "HOME";
+            this.tpHome.UseVisualStyleBackColor = true;
+>>>>>>> Stashed changes
             // 
             // dataGridView1
             // 
@@ -205,6 +226,7 @@
             // 
             // groupBox2
             // 
+<<<<<<< Updated upstream
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.dataGridView1);
             this.groupBox2.Controls.Add(this.btnUpdateFuelPrice);
@@ -215,6 +237,17 @@
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CURRENT FUEL PRICES";
+=======
+            this.tpAccounts.Controls.Add(this.panel1);
+            this.tpAccounts.Location = new System.Drawing.Point(4, 22);
+            this.tpAccounts.Name = "tpAccounts";
+            this.tpAccounts.Padding = new System.Windows.Forms.Padding(3);
+            this.tpAccounts.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpAccounts.Size = new System.Drawing.Size(407, 304);
+            this.tpAccounts.TabIndex = 1;
+            this.tpAccounts.Text = "ACCOUNTS";
+            this.tpAccounts.UseVisualStyleBackColor = true;
+>>>>>>> Stashed changes
             // 
             // tpRewards
             // 

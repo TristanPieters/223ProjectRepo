@@ -134,43 +134,13 @@ namespace CMPG213_Prototype
         }
 
         private void BtnReports_Click(object sender, EventArgs e)
-        {
-            //Daily report
-            SqlConnection CONN = new SqlConnection();
-            CONN.Open();
-            String transID;
-            DateTime transDate;
-            decimal transAmnt;
-            double transLitersSold;
+        {          
+            SqlConnection con = new SqlConnection(connectionString);
 
-            SqlCommand commTrans;
-            SqlCommand commEmp;
-            SqlCommand commAcc;
-            SqlCommand commFuel;
-            SqlCommand commReward;
-
-            SqlDataAdapter dataReader = new SqlDataAdapter();
-
-            String sqlTrans,sqlEmp,sqlAcc,sqlFuel,sqlReward, Output;
-
-            sqlTrans = "Select Trans_ID,Dateofsale,Amount_Liters_Sold, Liters_Sold from TRANSACT";
-            sqlEmp = "Select * from S";
-            sqlAcc = "Select Acc_ID from ACCOUNT";
-            sqlFuel = "Select Fuel_ID from FUEL";
-            sqlReward = "Select Reward_ID from REWARD";
-
-            commTrans = new SqlCommand(sqlTrans, CONN);
-            commEmp = new SqlCommand(sqlEmp, CONN);
-            commAcc = new SqlCommand(sqlAcc, CONN);
-            commFuel = new SqlCommand(sqlFuel, CONN);
-            commReward = new SqlCommand(sqlReward, CONN);
-
-            dataReader = comm.ExcecuteReader();
 
             try
             {
                 StreamWriter outputFile;
-                string myFile;
                 DateTime date;
                 date = DateTime.Now;
 
@@ -180,20 +150,78 @@ namespace CMPG213_Prototype
                 reportOutput = reportOutput + "\nStallions Gas Station";
                 reportOutput = reportOutput + "\n*********************";
                 reportOutput = reportOutput + "\n" + date.ToString() + "\n";
-                
+
+                con.Open();
+                SqlDataReader reader;
+
+                string sqlShifts = @"SELECT * FROM WSHIFT";
+                SqlCommand command = new SqlCommand(sqlShifts, con);
+                reader = command.ExecuteReader();
+
+                reportOutput = reportOutput + "\n*********************";
+                reportOutput = reportOutput + "\nShifts";
+                reportOutput = reportOutput + "\n*********************";
+
+
+                while (reader.Read())
+                {
+                    if (Convert.ToDateTime(reader.GetValue(3)) == DateTime.Today.Date)
+                    {
+                        reportOutput = reportOutput + "\nEmp ID: " + reader.GetValue(4).ToString();
+                        reportOutput = reportOutput + "\nShift Start Time: " + reader.GetValue(1).ToString();
+                        reportOutput = reportOutput + "\nShift End Time: " + reader.GetValue(2).ToString();
+                        reportOutput = reportOutput + "\n";
+
+                    }
+                }
+                command.Dispose();
+                reader.Close();
+
+
+                reportOutput = reportOutput + "\n*********************";
+                reportOutput = reportOutput + "\nFuel Orders";
+                reportOutput = reportOutput + "\n*********************";
+
+                string sqlFO = @"SELECT * FROM FORDER";
+                command = new SqlCommand(sqlFO, con);
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if (Convert.ToDateTime(reader.GetValue(3)) == DateTime.Today.Date)
+                    {
+                        reportOutput = reportOutput + "\nOrder ID: " + reader.GetValue(0).ToString();
+                        reportOutput = reportOutput + "\nOrder Date: " + reader.GetValue(3).ToString();
+                        reportOutput = reportOutput + "\nOrder Recieved: " + reader.GetValue(4).ToString();
+                        reportOutput = reportOutput + "\nAmount Orderd: " + reader.GetValue(5).ToString();
+                        reportOutput = reportOutput + "\nFuel ID: " + reader.GetValue(2).ToString();
+                        reportOutput = reportOutput + "\nEmp ID: " + reader.GetValue(1).ToString();
+
+                    }
+                }
+                command.Dispose();
+                reader.Close();
+                string myFile;
+
+                SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+                saveFileDialog1.Title = "StallionsReport_" + DateTime.Now.ToString() + ".txt";
+                saveFileDialog1.DefaultExt = "txt";
+                saveFileDialog1.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+                saveFileDialog1.FilterIndex = 2;
+                saveFileDialog1.RestoreDirectory = true;
+                saveFileDialog1.FileName = "StallionsReport_" + DateTime.Now.ToLongDateString().ToString()+ ".txt";
                 if (saveFileDialog1.ShowDialog() == DialogResult.OK)
                 {
                     myFile = saveFileDialog1.FileName;
                     outputFile = File.CreateText(saveFileDialog1.FileName);
                     outputFile.WriteLine(reportOutput);
-                    outputFile
                     outputFile.Close();
                 }
-
             }
-            catch(Exception ex)
+
+            catch (Exception ex)
             {
-                MessageBox.Show("Error occured during exporting report","ERROR",MessageBoxButtons.OKCancel,MessageBoxIcon.Exclamation);
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation);
             }
           
             
