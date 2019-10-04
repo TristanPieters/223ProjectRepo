@@ -17,6 +17,7 @@ namespace CMPG213_Prototype
 {
     public partial class Form_Home_Page_FutureTech : Form
     {
+        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security = True";
         public Form_Home_Page_FutureTech()
         {
             InitializeComponent();
@@ -24,46 +25,56 @@ namespace CMPG213_Prototype
         
         private void Form_Home_Page_FutureTech_Load(object sender, EventArgs e)
         {
-            string connstr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True";
+            string selectall = "SELECT Fuel_Description, Fuel_Price_Per_Liter FROM FUEL";
 
-            MessageBox.Show("Welcome to Stallion's Gas Station designed and developed by FUTURETECH");
-            SqlConnection conn = new SqlConnection(connstr);
-            string sql = @"Select * From FUEL";
-            SqlDataReader reader;
-            SqlCommand comm = new SqlCommand(sql, conn);
-            conn.Open();
-            reader = comm.ExecuteReader();
-            int counter = 1;
-            //string reffrance = "label" + Convert.ToString(counter);
-
-            while (reader.Read())
+            try
             {
-                string output = Convert.ToString(reader.GetValue(2));
+                SqlConnection con = new SqlConnection(connectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand(selectall, con); DataSet
 
-                if(counter == 1)
-                {
-                    label1.Text = output;
-                }
-               else if (counter == 2 )
-                {
-                   label2.Text = output;
-                }
-                else if(counter == 3 )
-                {
-                    label3.Text = output;
-                }
-                else if (counter == 4)
-                {
-                    label4.Text = output;
-                }
-                counter++;  
+                ds = new DataSet();
+
+                SqlDataAdapter adapt = new SqlDataAdapter();
+                adapt.SelectCommand = cmd;
+
+                adapt.Fill(ds, "FUEL");
+                dataGridView1.DataSource = ds;
+                dataGridView1.DataMember = "FUEL";
+                con.Close();
             }
-            conn.Close();
+
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
 
         private void GbFuelType_Enter(object sender, EventArgs e)
         {
+            string selectall = "SELECT Fuel_Description, Fuel_Price_Per_Liter FROM FUEL";
 
+            try
+            {
+                SqlConnection con = new SqlConnection(connectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand(selectall, con); DataSet
+
+                ds = new DataSet();
+
+                SqlDataAdapter adapt = new SqlDataAdapter();
+                adapt.SelectCommand = cmd;
+
+                adapt.Fill(ds, "FUEL");
+                dataGridView1.DataSource = ds;
+                dataGridView1.DataMember = "FUEL";
+                con.Close();
+            }
+
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
 
         private void BtnExit_Click(object sender, EventArgs e)
@@ -205,6 +216,38 @@ namespace CMPG213_Prototype
             this.Close();
             Maintain_Rewards rewards = new Maintain_Rewards();
             rewards.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string selectall = "SELECT Fuel_Description, Fuel_Price_Per_Liter FROM FUEL";
+
+            try
+            {
+                SqlConnection con = new SqlConnection(connectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand(selectall, con); DataSet
+
+                ds = new DataSet();
+
+                SqlDataAdapter adapt = new SqlDataAdapter();
+                adapt.SelectCommand = cmd;
+
+                adapt.Fill(ds, "FUEL");
+                dataGridView1.DataSource = ds;
+                dataGridView1.DataMember = "FUEL";
+                con.Close();
+            }
+
+            catch (Exception error)
+            {
+                MessageBox.Show(error.Message);
+            }
         }
     }
 }
