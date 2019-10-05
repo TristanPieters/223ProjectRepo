@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.txbOrDate = new System.Windows.Forms.TextBox();
+            this.mcOr = new System.Windows.Forms.MonthCalendar();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbOrEmployee = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,9 +45,9 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tpUpdate = new System.Windows.Forms.TabPage();
+            this.mcUp = new System.Windows.Forms.MonthCalendar();
             this.cmbUpEmployee = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txbUpDate = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cmbUpFuel = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -57,12 +58,28 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tbDelete.SuspendLayout();
             this.tpUpdate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -70,16 +87,17 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tbDelete);
             this.tabControl1.Controls.Add(this.tpUpdate);
-            this.tabControl1.Location = new System.Drawing.Point(19, 33);
+            this.tabControl1.Location = new System.Drawing.Point(25, 41);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(424, 310);
+            this.tabControl1.Size = new System.Drawing.Size(600, 573);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.tabPage1.Controls.Add(this.txbOrDate);
+            this.tabPage1.Controls.Add(this.mcOr);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.cmbOrEmployee);
             this.tabPage1.Controls.Add(this.label7);
@@ -89,66 +107,69 @@
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 34);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage1.Size = new System.Drawing.Size(416, 277);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(592, 535);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "ORDER";
             this.tabPage1.Click += new System.EventHandler(this.TabPage1_Click);
             // 
-            // txbOrDate
+            // mcOr
             // 
-            this.txbOrDate.Location = new System.Drawing.Point(206, 151);
-            this.txbOrDate.Name = "txbOrDate";
-            this.txbOrDate.Size = new System.Drawing.Size(120, 26);
-            this.txbOrDate.TabIndex = 9;
+            this.mcOr.Location = new System.Drawing.Point(275, 190);
+            this.mcOr.Name = "mcOr";
+            this.mcOr.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(6, 150);
+            this.label6.Location = new System.Drawing.Point(8, 190);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(140, 20);
+            this.label6.Size = new System.Drawing.Size(169, 25);
             this.label6.TabIndex = 8;
             this.label6.Text = "RECIEVE DATE";
             // 
             // cmbOrEmployee
             // 
             this.cmbOrEmployee.FormattingEnabled = true;
-            this.cmbOrEmployee.Location = new System.Drawing.Point(206, 107);
-            this.cmbOrEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbOrEmployee.Location = new System.Drawing.Point(275, 83);
+            this.cmbOrEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbOrEmployee.Name = "cmbOrEmployee";
-            this.cmbOrEmployee.Size = new System.Drawing.Size(120, 28);
+            this.cmbOrEmployee.Size = new System.Drawing.Size(159, 33);
             this.cmbOrEmployee.TabIndex = 7;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(6, 108);
+            this.label7.Location = new System.Drawing.Point(8, 84);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 20);
+            this.label7.Size = new System.Drawing.Size(156, 25);
             this.label7.TabIndex = 6;
             this.label7.Text = "EMPLOYEE ID";
             // 
             // cmbOrFuel
             // 
             this.cmbOrFuel.FormattingEnabled = true;
-            this.cmbOrFuel.Location = new System.Drawing.Point(206, 20);
-            this.cmbOrFuel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbOrFuel.Location = new System.Drawing.Point(275, 25);
+            this.cmbOrFuel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbOrFuel.Name = "cmbOrFuel";
-            this.cmbOrFuel.Size = new System.Drawing.Size(120, 28);
+            this.cmbOrFuel.Size = new System.Drawing.Size(159, 33);
             this.cmbOrFuel.TabIndex = 5;
             // 
             // btnADD
             // 
             this.btnADD.BackColor = System.Drawing.Color.White;
             this.btnADD.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnADD.Location = new System.Drawing.Point(231, 211);
+            this.btnADD.Location = new System.Drawing.Point(335, 450);
+            this.btnADD.Margin = new System.Windows.Forms.Padding(4);
             this.btnADD.Name = "btnADD";
-            this.btnADD.Size = new System.Drawing.Size(95, 31);
+            this.btnADD.Size = new System.Drawing.Size(127, 38);
             this.btnADD.TabIndex = 4;
             this.btnADD.Text = "ADD";
             this.btnADD.UseVisualStyleBackColor = false;
@@ -156,18 +177,22 @@
             // 
             // txbOrAmt
             // 
-            this.txbOrAmt.Location = new System.Drawing.Point(206, 63);
+            this.txbOrAmt.Location = new System.Drawing.Point(275, 137);
+            this.txbOrAmt.Margin = new System.Windows.Forms.Padding(4);
             this.txbOrAmt.Name = "txbOrAmt";
-            this.txbOrAmt.Size = new System.Drawing.Size(120, 26);
+            this.txbOrAmt.Size = new System.Drawing.Size(159, 30);
             this.txbOrAmt.TabIndex = 3;
+            this.txbOrAmt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxbOrAmt_KeyPress);
+            this.txbOrAmt.Validating += new System.ComponentModel.CancelEventHandler(this.TxbOrAmt_Validating);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(6, 65);
+            this.label2.Location = new System.Drawing.Point(8, 139);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(177, 20);
+            this.label2.Size = new System.Drawing.Size(215, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "AMOUNT ORDERED";
             // 
@@ -175,9 +200,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(6, 23);
+            this.label1.Location = new System.Drawing.Point(8, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(79, 20);
+            this.label1.Size = new System.Drawing.Size(93, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "FUEL ID";
             // 
@@ -187,28 +213,31 @@
             this.tbDelete.Controls.Add(this.cmbDelete);
             this.tbDelete.Controls.Add(this.btnDelete);
             this.tbDelete.Controls.Add(this.label3);
-            this.tbDelete.Location = new System.Drawing.Point(4, 29);
+            this.tbDelete.Location = new System.Drawing.Point(4, 34);
+            this.tbDelete.Margin = new System.Windows.Forms.Padding(4);
             this.tbDelete.Name = "tbDelete";
-            this.tbDelete.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tbDelete.Size = new System.Drawing.Size(416, 277);
+            this.tbDelete.Padding = new System.Windows.Forms.Padding(4);
+            this.tbDelete.Size = new System.Drawing.Size(592, 535);
             this.tbDelete.TabIndex = 1;
             this.tbDelete.Text = "DELETE";
             // 
             // cmbDelete
             // 
             this.cmbDelete.FormattingEnabled = true;
-            this.cmbDelete.Location = new System.Drawing.Point(130, 25);
+            this.cmbDelete.Location = new System.Drawing.Point(173, 31);
+            this.cmbDelete.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDelete.Name = "cmbDelete";
-            this.cmbDelete.Size = new System.Drawing.Size(116, 28);
+            this.cmbDelete.Size = new System.Drawing.Size(153, 33);
             this.cmbDelete.TabIndex = 8;
             // 
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.White;
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnDelete.Location = new System.Drawing.Point(135, 72);
+            this.btnDelete.Location = new System.Drawing.Point(180, 89);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(111, 36);
+            this.btnDelete.Size = new System.Drawing.Size(148, 44);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "DELETE";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -218,18 +247,19 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(6, 31);
+            this.label3.Location = new System.Drawing.Point(8, 38);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 20);
+            this.label3.Size = new System.Drawing.Size(113, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "ORDER ID";
             // 
             // tpUpdate
             // 
             this.tpUpdate.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.tpUpdate.Controls.Add(this.mcUp);
             this.tpUpdate.Controls.Add(this.cmbUpEmployee);
             this.tpUpdate.Controls.Add(this.label10);
-            this.tpUpdate.Controls.Add(this.txbUpDate);
             this.tpUpdate.Controls.Add(this.label9);
             this.tpUpdate.Controls.Add(this.cmbUpFuel);
             this.tpUpdate.Controls.Add(this.label8);
@@ -238,88 +268,97 @@
             this.tpUpdate.Controls.Add(this.label5);
             this.tpUpdate.Controls.Add(this.label4);
             this.tpUpdate.Controls.Add(this.btnUpdate);
-            this.tpUpdate.Location = new System.Drawing.Point(4, 29);
+            this.tpUpdate.Location = new System.Drawing.Point(4, 34);
+            this.tpUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.tpUpdate.Name = "tpUpdate";
-            this.tpUpdate.Size = new System.Drawing.Size(416, 277);
+            this.tpUpdate.Size = new System.Drawing.Size(592, 535);
             this.tpUpdate.TabIndex = 2;
             this.tpUpdate.Text = "UPDATE";
+            // 
+            // mcUp
+            // 
+            this.mcUp.Location = new System.Drawing.Point(307, 212);
+            this.mcUp.Name = "mcUp";
+            this.mcUp.TabIndex = 5;
             // 
             // cmbUpEmployee
             // 
             this.cmbUpEmployee.FormattingEnabled = true;
-            this.cmbUpEmployee.Location = new System.Drawing.Point(230, 96);
-            this.cmbUpEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbUpEmployee.Location = new System.Drawing.Point(307, 118);
+            this.cmbUpEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbUpEmployee.Name = "cmbUpEmployee";
-            this.cmbUpEmployee.Size = new System.Drawing.Size(120, 28);
+            this.cmbUpEmployee.Size = new System.Drawing.Size(159, 33);
             this.cmbUpEmployee.TabIndex = 13;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(38, 97);
+            this.label10.Location = new System.Drawing.Point(51, 119);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(129, 20);
+            this.label10.Size = new System.Drawing.Size(156, 25);
             this.label10.TabIndex = 12;
             this.label10.Text = "EMPLOYEE ID";
-            // 
-            // txbUpDate
-            // 
-            this.txbUpDate.Location = new System.Drawing.Point(230, 173);
-            this.txbUpDate.Name = "txbUpDate";
-            this.txbUpDate.Size = new System.Drawing.Size(120, 26);
-            this.txbUpDate.TabIndex = 11;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(38, 172);
+            this.label9.Location = new System.Drawing.Point(51, 212);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(140, 20);
+            this.label9.Size = new System.Drawing.Size(169, 25);
             this.label9.TabIndex = 10;
             this.label9.Text = "RECIEVE DATE";
             // 
             // cmbUpFuel
             // 
             this.cmbUpFuel.FormattingEnabled = true;
-            this.cmbUpFuel.Location = new System.Drawing.Point(230, 57);
+            this.cmbUpFuel.Location = new System.Drawing.Point(307, 70);
+            this.cmbUpFuel.Margin = new System.Windows.Forms.Padding(4);
             this.cmbUpFuel.Name = "cmbUpFuel";
-            this.cmbUpFuel.Size = new System.Drawing.Size(120, 28);
+            this.cmbUpFuel.Size = new System.Drawing.Size(159, 33);
             this.cmbUpFuel.TabIndex = 9;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(38, 58);
+            this.label8.Location = new System.Drawing.Point(51, 71);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 20);
+            this.label8.Size = new System.Drawing.Size(93, 25);
             this.label8.TabIndex = 8;
             this.label8.Text = "FUEL ID";
             // 
             // cmbUpOrder
             // 
             this.cmbUpOrder.FormattingEnabled = true;
-            this.cmbUpOrder.Location = new System.Drawing.Point(230, 20);
+            this.cmbUpOrder.Location = new System.Drawing.Point(307, 25);
+            this.cmbUpOrder.Margin = new System.Windows.Forms.Padding(4);
             this.cmbUpOrder.Name = "cmbUpOrder";
-            this.cmbUpOrder.Size = new System.Drawing.Size(120, 28);
+            this.cmbUpOrder.Size = new System.Drawing.Size(159, 33);
             this.cmbUpOrder.TabIndex = 7;
             // 
             // txbUpAmt
             // 
-            this.txbUpAmt.Location = new System.Drawing.Point(230, 135);
+            this.txbUpAmt.Location = new System.Drawing.Point(307, 166);
+            this.txbUpAmt.Margin = new System.Windows.Forms.Padding(4);
             this.txbUpAmt.Name = "txbUpAmt";
-            this.txbUpAmt.Size = new System.Drawing.Size(120, 26);
+            this.txbUpAmt.Size = new System.Drawing.Size(159, 30);
             this.txbUpAmt.TabIndex = 6;
+            this.txbUpAmt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxbUpAmt_KeyPress);
+            this.txbUpAmt.Validating += new System.ComponentModel.CancelEventHandler(this.TxbUpAmt_Validating);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(38, 135);
+            this.label5.Location = new System.Drawing.Point(51, 166);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 20);
+            this.label5.Size = new System.Drawing.Size(215, 25);
             this.label5.TabIndex = 2;
             this.label5.Text = "AMOUNT ORDERED";
             // 
@@ -327,9 +366,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(38, 20);
+            this.label4.Location = new System.Drawing.Point(51, 25);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 20);
+            this.label4.Size = new System.Drawing.Size(113, 25);
             this.label4.TabIndex = 1;
             this.label4.Text = "ORDER ID";
             // 
@@ -337,9 +377,10 @@
             // 
             this.btnUpdate.BackColor = System.Drawing.Color.White;
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnUpdate.Location = new System.Drawing.Point(239, 225);
+            this.btnUpdate.Location = new System.Drawing.Point(367, 467);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(111, 33);
+            this.btnUpdate.Size = new System.Drawing.Size(148, 41);
             this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "UPDATE";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -348,11 +389,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(474, 33);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(632, 41);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(356, 122);
+            this.dataGridView1.Size = new System.Drawing.Size(475, 150);
             this.dataGridView1.TabIndex = 3;
             // 
             // groupBox1
@@ -361,20 +402,55 @@
             this.groupBox1.Controls.Add(this.tabControl1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(12, 25);
+            this.groupBox1.Location = new System.Drawing.Point(16, 31);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(849, 402);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(1132, 655);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FUEL ORDERS";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
+            // errorProvider5
+            // 
+            this.errorProvider5.ContainerControl = this;
+            // 
+            // errorProvider6
+            // 
+            this.errorProvider6.ContainerControl = this;
+            // 
+            // errorProvider7
+            // 
+            this.errorProvider7.ContainerControl = this;
+            // 
+            // errorProvider8
+            // 
+            this.errorProvider8.ContainerControl = this;
+            // 
             // FOrderForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(889, 450);
+            this.ClientSize = new System.Drawing.Size(1185, 699);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FOrderForm";
             this.Text = "FOrderForm";
             this.Load += new System.EventHandler(this.FOrderForm_Load);
@@ -387,6 +463,14 @@
             this.tpUpdate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -415,12 +499,20 @@
         private System.Windows.Forms.ComboBox cmbUpFuel;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txbOrDate;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txbUpDate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cmbUpEmployee;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.MonthCalendar mcOr;
+        private System.Windows.Forms.MonthCalendar mcUp;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.ErrorProvider errorProvider5;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
+        private System.Windows.Forms.ErrorProvider errorProvider7;
+        private System.Windows.Forms.ErrorProvider errorProvider8;
     }
 }

@@ -21,9 +21,36 @@ namespace CMPG213_Prototype
         SqlConnection conn;
         private void BtnADD_Click(object sender, EventArgs e)
         {
-            DateTime todayDate = DateTime.Now;
-            string sql = @"Insert Into FORDER (Emp_ID, Fuel_ID, Order_Date, Recieve_date, Amount_Ordered )Values('" + cmbOrEmployee.SelectedItem + "','" + cmbOrFuel.SelectedItem + "','" + todayDate + "', '" + txbOrDate.Text + "','" + txbOrAmt.Text + "')";
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(txbOrAmt.Text, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
+            if (cmbOrEmployee.SelectedItem == null)
+            {
+                errorProvider3.SetError(cmbOrEmployee, "Please select an item from the list!");
+                MessageBox.Show("Please select an item from the list!");
+            }
+            else
+            {
+                errorProvider3.Clear();
+            }
+
+            if (cmbOrFuel.SelectedItem == null)
+            {
+                errorProvider4.SetError(cmbOrFuel, "Please select an item from the list!");
+                MessageBox.Show("Please select an item from the list!");
+            }
+            else
+            {
+                errorProvider4.Clear();
+            }
+
+            DateTime todayDate = DateTime.Now;
+            mcOr.MaxSelectionCount = 1;
+            string recDate = mcOr.SelectionRange.Start.ToString();
+
+            string sql = @"Insert Into FORDER (Emp_ID, Fuel_ID, Order_Date, Recieve_date, Amount_Ordered )Values('" + cmbOrEmployee.SelectedItem + "','" + cmbOrFuel.SelectedItem + "','" + todayDate + "', '" + recDate + "','" + txbOrAmt.Text + "')";
             try
             {
                 conn.Open();
@@ -44,12 +71,21 @@ namespace CMPG213_Prototype
                 MessageBox.Show(error.Message);
             }
             txbOrAmt.Text = "";
-            txbOrDate.Text = "";
 
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            if (cmbDelete.SelectedItem == null)
+            {
+                errorProvider5.SetError(cmbDelete, "Please select an item from the list!");
+                MessageBox.Show("Please select an item from the list!");
+            }
+            else
+            {
+                errorProvider5.Clear();
+            }
+
             string sql = @"DELETE FROM FORDER WHERE Order_ID = '" + cmbDelete.SelectedItem + "'";
             try
             {
@@ -125,8 +161,46 @@ namespace CMPG213_Prototype
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
+            if (cmbUpEmployee.SelectedItem == null)
+            {
+                errorProvider6.SetError(cmbUpEmployee, "Please select an item from the list!");
+                MessageBox.Show("Please select an item from the list!");
+            }
+            else
+            {
+                errorProvider6.Clear();
+            }
+
+            if (cmbUpFuel.SelectedItem == null)
+            {
+                errorProvider7.SetError(cmbUpFuel, "Please select an item from the list!");
+                MessageBox.Show("Please select an item from the list!");
+            }
+            else
+            {
+                errorProvider7.Clear();
+            }
+
+            if (cmbUpOrder.SelectedItem == null)
+            {
+                errorProvider8.SetError(cmbUpOrder, "Please select an item from the list!");
+                MessageBox.Show("Please select an item from the list!");
+            }
+            else
+            {
+                errorProvider8.Clear();
+            }
+
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(txbUpAmt.Text, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
             DateTime todayDate = DateTime.Now;
-            string sql = @"UPDATE FORDER SET Emp_ID ='" + cmbUpEmployee.SelectedItem + "', Fuel_ID ='" + cmbUpFuel.SelectedItem + "', Recieve_Date ='" + txbUpDate.Text + "', Amount_Ordered ='" + txbUpAmt.Text + "' WHERE Order_ID = '" + cmbUpOrder.SelectedItem + "'";
+            mcUp.MaxSelectionCount = 1;
+            string recDate = mcUp.SelectionRange.Start.ToString();
+
+            string sql = @"UPDATE FORDER SET Emp_ID ='" + cmbUpEmployee.SelectedItem + "', Fuel_ID ='" + cmbUpFuel.SelectedItem + "', Recieve_Date ='" + recDate + "', Amount_Ordered ='" + txbUpAmt.Text + "' WHERE Order_ID = '" + cmbUpOrder.SelectedItem + "'";
 
             try
             {
@@ -155,5 +229,52 @@ namespace CMPG213_Prototype
 
         }
 
+        private void TxbOrAmt_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txbOrAmt.Text))
+            {
+                e.Cancel = true;
+                txbOrAmt.Focus();
+                errorProvider1.SetError(txbOrAmt, "Pleased enter a valid number! ");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txbOrAmt, null);
+            }
+
+        }
+
+        private void TxbOrAmt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void TxbUpAmt_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txbUpAmt.Text))
+            {
+                e.Cancel = true;
+                txbUpAmt.Focus();
+                errorProvider1.SetError(txbUpAmt, "Pleased enter a valid number! ");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txbUpAmt, null);
+            }
+        }
+
+        private void TxbUpAmt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
