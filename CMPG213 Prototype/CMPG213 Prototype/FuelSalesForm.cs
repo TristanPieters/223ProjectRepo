@@ -65,13 +65,123 @@ namespace CMPG213_Prototype
             }
         }
 
+        private void tBoxEmpNum_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(tBoxEmpNum.Text))
+            {
+                e.Cancel = true;
+                tBoxEmpNum.Focus();
+                errProvEmpID.SetError(tBoxEmpNum, "Please enter a valid employee ID!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errProvEmpID.SetError(tBoxEmpNum, null);
+            }
+        }
+
+        private void tBoxEmpNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tBoxFuelAmountLiters_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(tBoxFuelAmountLiters.Text))
+            {
+                e.Cancel = true;
+                tBoxFuelAmountLiters.Focus();
+                errProvAmountLiters.SetError(tBoxFuelAmountLiters, "Please enter in the correct format using ',' and decimal values");
+            }
+            else
+            {
+                e.Cancel = false;
+                errProvAmountLiters.SetError(tBoxFuelAmountLiters, null);
+            }
+        }
+
+        private void tBoxFuelAmountLiters_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ',')
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tboxAccNum_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(tboxAccNum.Text))
+            {
+                e.Cancel = true;
+                tboxAccNum.Focus();
+                errProvAccNum.SetError(tboxAccNum, "Please enter in the correct format using ',' and decimal values");
+            }
+            else
+            {
+                e.Cancel = false;
+                errProvAccNum.SetError(tboxAccNum, null);
+            }
+        }
+
+        private void tboxAccNum_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tBoxAccCreditAmount_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(tBoxAccCreditAmount.Text))
+            {
+                e.Cancel = true;
+                tBoxAccCreditAmount.Focus();
+                errProvAmountCredit.SetError(tBoxAccCreditAmount, "Please enter a amount to be credited.");
+            }
+            else
+            {
+                e.Cancel = false;
+                errProvAmountCredit.SetError(tBoxAccCreditAmount, null);
+            }
+        }
+
         private void btnCompSale_Click(object sender, EventArgs e)
         {
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(tBoxEmpNum.Text, "Please enter a valid employee ID.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (comBoxFuelType.SelectedItem == null)
+            {
+                errProvComBoxFuelType.SetError(comBoxFuelType, "Please select an item from the combobox.");
+                MessageBox.Show("Please select an item from the combobox.");
+            }
+            else
+            {
+                errProvComBoxFuelType.Clear();
+            }
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(tBoxFuelAmountLiters.Text, "Please enter a valid amount of fuel using format '00,00'.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(tboxAccNum.Text, "Please enter a valid account number or create a new account.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(tBoxAccCreditAmount.Text, "Please enter a valid credit amount using format '00,00'", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
             string fuelResType = comBoxFuelType.SelectedItem.ToString();
             int empNum = Convert.ToInt32(tBoxEmpNum.Text);
             int accNum = Convert.ToInt32(tboxAccNum.Text);
             int fuelTypeID = Convert.ToInt32(comBoxFuelType.SelectedIndex.ToString());
-            int rewardIDNum = Convert.ToInt32(comBoxRewardSelect.SelectedItem.ToString());
+            //int rewardIDNum = Convert.ToInt32(comBoxRewardSelect.SelectedItem.ToString());
             string dateSale = DateTime.Now.Date.ToString("yyyy-MM-dd");
             decimal fuelPurchAmountSold = Convert.ToDecimal(lblFuelPurchased.Text);
             decimal fuelLiterSold = Convert.ToDecimal(tBoxFuelAmountLiters.Text);
@@ -142,7 +252,7 @@ namespace CMPG213_Prototype
             {
                 if(comBoxRewardSelect.SelectedItem != null)
                 {
-                    string sqlInsertRewAccTbl = @"INSERT INTO REWARD_ACCOUNT (Acc_ID, Reward_ID, R_DateReceived) VALUES ('" + accNum + "', '" + rewardIDNum + "', '" + dateSale + "'";
+                    string sqlInsertRewAccTbl = @"INSERT INTO REWARD_ACCOUNT (Acc_ID, R_DateReceived) VALUES ('" + accNum + "', '" + dateSale + "'";
 
                     conn.Open();
                     SqlCommand commInsertRewAcc = new SqlCommand();
@@ -159,6 +269,8 @@ namespace CMPG213_Prototype
             {
                 MessageBox.Show(ex.Message);
             }
+
+            
         }
 
         private void btnReturnHome_Click(object sender, EventArgs e)

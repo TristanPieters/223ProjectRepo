@@ -59,12 +59,22 @@
             this.btnReturnHome = new System.Windows.Forms.Button();
             this.gbSales = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tBoxEmpNum = new System.Windows.Forms.TextBox();
             this.btnCalcTotalFuelPrice = new System.Windows.Forms.Button();
             this.toolTipRewardComBox = new System.Windows.Forms.ToolTip(this.components);
-            this.tBoxEmpNum = new System.Windows.Forms.TextBox();
+            this.errProvEmpID = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errProvComBoxFuelType = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errProvAmountLiters = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errProvAccNum = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errProvAmountCredit = new System.Windows.Forms.ErrorProvider(this.components);
             this.gBoxAccount.SuspendLayout();
             this.gbSales.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvEmpID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvComBoxFuelType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvAmountLiters)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvAccNum)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvAmountCredit)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -129,6 +139,8 @@
             this.tBoxFuelAmountLiters.Size = new System.Drawing.Size(100, 26);
             this.tBoxFuelAmountLiters.TabIndex = 9;
             this.tBoxFuelAmountLiters.TextChanged += new System.EventHandler(this.tBoxFuelAmountLiters_TextChanged);
+            this.tBoxFuelAmountLiters.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxFuelAmountLiters_KeyPress);
+            this.tBoxFuelAmountLiters.Validating += new System.ComponentModel.CancelEventHandler(this.tBoxFuelAmountLiters_Validating);
             // 
             // label6
             // 
@@ -263,6 +275,7 @@
             this.tBoxAccCreditAmount.Size = new System.Drawing.Size(100, 26);
             this.tBoxAccCreditAmount.TabIndex = 7;
             this.tBoxAccCreditAmount.Click += new System.EventHandler(this.tBoxAccCreditAmount_Click);
+            this.tBoxAccCreditAmount.Validating += new System.ComponentModel.CancelEventHandler(this.tBoxAccCreditAmount_Validating);
             // 
             // label10
             // 
@@ -318,6 +331,8 @@
             this.tboxAccNum.Size = new System.Drawing.Size(100, 26);
             this.tboxAccNum.TabIndex = 1;
             this.tboxAccNum.TextChanged += new System.EventHandler(this.tboxAccNum_TextChanged);
+            this.tboxAccNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tboxAccNum_KeyPress);
+            this.tboxAccNum.Validating += new System.ComponentModel.CancelEventHandler(this.tboxAccNum_Validating);
             // 
             // label7
             // 
@@ -387,6 +402,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CASH SALES:";
             // 
+            // tBoxEmpNum
+            // 
+            this.tBoxEmpNum.Location = new System.Drawing.Point(187, 31);
+            this.tBoxEmpNum.Name = "tBoxEmpNum";
+            this.tBoxEmpNum.Size = new System.Drawing.Size(100, 26);
+            this.tBoxEmpNum.TabIndex = 15;
+            this.tBoxEmpNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxEmpNum_KeyPress);
+            this.tBoxEmpNum.Validating += new System.ComponentModel.CancelEventHandler(this.tBoxEmpNum_Validating);
+            // 
             // btnCalcTotalFuelPrice
             // 
             this.btnCalcTotalFuelPrice.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -398,12 +422,25 @@
             this.btnCalcTotalFuelPrice.UseVisualStyleBackColor = true;
             this.btnCalcTotalFuelPrice.Click += new System.EventHandler(this.btnCalcTotalFuelPrice_Click);
             // 
-            // tBoxEmpNum
+            // errProvEmpID
             // 
-            this.tBoxEmpNum.Location = new System.Drawing.Point(187, 31);
-            this.tBoxEmpNum.Name = "tBoxEmpNum";
-            this.tBoxEmpNum.Size = new System.Drawing.Size(100, 26);
-            this.tBoxEmpNum.TabIndex = 15;
+            this.errProvEmpID.ContainerControl = this;
+            // 
+            // errProvComBoxFuelType
+            // 
+            this.errProvComBoxFuelType.ContainerControl = this;
+            // 
+            // errProvAmountLiters
+            // 
+            this.errProvAmountLiters.ContainerControl = this;
+            // 
+            // errProvAccNum
+            // 
+            this.errProvAccNum.ContainerControl = this;
+            // 
+            // errProvAmountCredit
+            // 
+            this.errProvAmountCredit.ContainerControl = this;
             // 
             // FuelSalesForm
             // 
@@ -421,6 +458,11 @@
             this.gbSales.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvEmpID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvComBoxFuelType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvAmountLiters)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvAccNum)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvAmountCredit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -459,5 +501,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblRewardDetail;
         private System.Windows.Forms.TextBox tBoxEmpNum;
+        private System.Windows.Forms.ErrorProvider errProvEmpID;
+        private System.Windows.Forms.ErrorProvider errProvComBoxFuelType;
+        private System.Windows.Forms.ErrorProvider errProvAmountLiters;
+        private System.Windows.Forms.ErrorProvider errProvAccNum;
+        private System.Windows.Forms.ErrorProvider errProvAmountCredit;
     }
 }

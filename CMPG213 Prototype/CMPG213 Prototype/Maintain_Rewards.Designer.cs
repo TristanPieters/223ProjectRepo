@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpAdd = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -51,6 +52,11 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.dgvReward = new System.Windows.Forms.DataGridView();
             this.REWARDS = new System.Windows.Forms.GroupBox();
+            this.errProvAddRewDesc = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errProvComboxUpdate = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errProvTboxUpd = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errProvComboxDelete = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errProvTboxDelete = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tpAdd.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -60,6 +66,11 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReward)).BeginInit();
             this.REWARDS.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvAddRewDesc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvComboxUpdate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvTboxUpd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvComboxDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvTboxDelete)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -69,7 +80,7 @@
             this.tabControl1.Controls.Add(this.tpDelete);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(22, 40);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(465, 286);
@@ -80,9 +91,9 @@
             this.tpAdd.BackColor = System.Drawing.SystemColors.ControlDark;
             this.tpAdd.Controls.Add(this.groupBox1);
             this.tpAdd.Location = new System.Drawing.Point(4, 29);
-            this.tpAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpAdd.Margin = new System.Windows.Forms.Padding(2);
             this.tpAdd.Name = "tpAdd";
-            this.tpAdd.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpAdd.Padding = new System.Windows.Forms.Padding(2);
             this.tpAdd.Size = new System.Drawing.Size(457, 253);
             this.tpAdd.TabIndex = 0;
             this.tpAdd.Text = "Add";
@@ -94,9 +105,9 @@
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(20, 17);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(416, 208);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
@@ -105,10 +116,11 @@
             // txbAdd
             // 
             this.txbAdd.Location = new System.Drawing.Point(262, 48);
-            this.txbAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbAdd.Margin = new System.Windows.Forms.Padding(2);
             this.txbAdd.Name = "txbAdd";
             this.txbAdd.Size = new System.Drawing.Size(133, 26);
             this.txbAdd.TabIndex = 7;
+            this.txbAdd.Validating += new System.ComponentModel.CancelEventHandler(this.txbAdd_Validating);
             // 
             // label1
             // 
@@ -124,7 +136,7 @@
             // 
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAdd.Location = new System.Drawing.Point(308, 124);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(87, 39);
             this.btnAdd.TabIndex = 4;
@@ -137,9 +149,9 @@
             this.tpUpdate.BackColor = System.Drawing.SystemColors.ControlDark;
             this.tpUpdate.Controls.Add(this.groupBox2);
             this.tpUpdate.Location = new System.Drawing.Point(4, 29);
-            this.tpUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.tpUpdate.Name = "tpUpdate";
-            this.tpUpdate.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpUpdate.Padding = new System.Windows.Forms.Padding(2);
             this.tpUpdate.Size = new System.Drawing.Size(457, 253);
             this.tpUpdate.TabIndex = 1;
             this.tpUpdate.Text = "Update";
@@ -153,9 +165,9 @@
             this.groupBox2.Controls.Add(this.btnUpdate);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox2.Location = new System.Drawing.Point(22, 13);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(405, 208);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -165,7 +177,7 @@
             // 
             this.cmbUpdate.FormattingEnabled = true;
             this.cmbUpdate.Location = new System.Drawing.Point(240, 29);
-            this.cmbUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.cmbUpdate.Name = "cmbUpdate";
             this.cmbUpdate.Size = new System.Drawing.Size(133, 28);
             this.cmbUpdate.TabIndex = 9;
@@ -183,10 +195,11 @@
             // txbUpdate
             // 
             this.txbUpdate.Location = new System.Drawing.Point(240, 78);
-            this.txbUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.txbUpdate.Name = "txbUpdate";
             this.txbUpdate.Size = new System.Drawing.Size(133, 26);
             this.txbUpdate.TabIndex = 7;
+            this.txbUpdate.Validating += new System.ComponentModel.CancelEventHandler(this.txbUpdate_Validating);
             // 
             // label2
             // 
@@ -202,7 +215,7 @@
             // 
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnUpdate.Location = new System.Drawing.Point(276, 139);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(97, 39);
             this.btnUpdate.TabIndex = 4;
@@ -216,9 +229,9 @@
             this.tpDelete.Controls.Add(this.groupBox3);
             this.tpDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.tpDelete.Location = new System.Drawing.Point(4, 29);
-            this.tpDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpDelete.Margin = new System.Windows.Forms.Padding(2);
             this.tpDelete.Name = "tpDelete";
-            this.tpDelete.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpDelete.Padding = new System.Windows.Forms.Padding(2);
             this.tpDelete.Size = new System.Drawing.Size(457, 253);
             this.tpDelete.TabIndex = 2;
             this.tpDelete.Text = "Delete";
@@ -232,9 +245,9 @@
             this.groupBox3.Controls.Add(this.btnDelete);
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox3.Location = new System.Drawing.Point(22, 21);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(409, 208);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
@@ -244,7 +257,7 @@
             // 
             this.cmbDelete.FormattingEnabled = true;
             this.cmbDelete.Location = new System.Drawing.Point(241, 29);
-            this.cmbDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbDelete.Margin = new System.Windows.Forms.Padding(2);
             this.cmbDelete.Name = "cmbDelete";
             this.cmbDelete.Size = new System.Drawing.Size(133, 28);
             this.cmbDelete.TabIndex = 11;
@@ -262,10 +275,11 @@
             // txbDelete
             // 
             this.txbDelete.Location = new System.Drawing.Point(241, 70);
-            this.txbDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txbDelete.Margin = new System.Windows.Forms.Padding(2);
             this.txbDelete.Name = "txbDelete";
             this.txbDelete.Size = new System.Drawing.Size(133, 26);
             this.txbDelete.TabIndex = 7;
+            this.txbDelete.Validating += new System.ComponentModel.CancelEventHandler(this.txbDelete_Validating);
             // 
             // label3
             // 
@@ -281,7 +295,7 @@
             // 
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnDelete.Location = new System.Drawing.Point(280, 139);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 39);
             this.btnDelete.TabIndex = 4;
@@ -293,7 +307,7 @@
             // 
             this.btnBack.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnBack.Location = new System.Drawing.Point(48, 361);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(87, 39);
             this.btnBack.TabIndex = 5;
@@ -305,7 +319,7 @@
             // 
             this.dgvReward.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReward.Location = new System.Drawing.Point(522, 37);
-            this.dgvReward.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvReward.Margin = new System.Windows.Forms.Padding(2);
             this.dgvReward.Name = "dgvReward";
             this.dgvReward.RowTemplate.Height = 24;
             this.dgvReward.Size = new System.Drawing.Size(535, 305);
@@ -326,6 +340,26 @@
             this.REWARDS.TabStop = false;
             this.REWARDS.Text = "REWARDS";
             // 
+            // errProvAddRewDesc
+            // 
+            this.errProvAddRewDesc.ContainerControl = this;
+            // 
+            // errProvComboxUpdate
+            // 
+            this.errProvComboxUpdate.ContainerControl = this;
+            // 
+            // errProvTboxUpd
+            // 
+            this.errProvTboxUpd.ContainerControl = this;
+            // 
+            // errProvComboxDelete
+            // 
+            this.errProvComboxDelete.ContainerControl = this;
+            // 
+            // errProvTboxDelete
+            // 
+            this.errProvTboxDelete.ContainerControl = this;
+            // 
             // Maintain_Rewards
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,7 +367,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(1124, 497);
             this.Controls.Add(this.REWARDS);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Maintain_Rewards";
             this.Text = "Maintain_Rewards";
             this.Load += new System.EventHandler(this.Maintain_Rewards_Load);
@@ -349,6 +383,11 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReward)).EndInit();
             this.REWARDS.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errProvAddRewDesc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvComboxUpdate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvTboxUpd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvComboxDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errProvTboxDelete)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -378,5 +417,10 @@
         private System.Windows.Forms.ComboBox cmbDelete;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox REWARDS;
+        private System.Windows.Forms.ErrorProvider errProvAddRewDesc;
+        private System.Windows.Forms.ErrorProvider errProvComboxUpdate;
+        private System.Windows.Forms.ErrorProvider errProvTboxUpd;
+        private System.Windows.Forms.ErrorProvider errProvComboxDelete;
+        private System.Windows.Forms.ErrorProvider errProvTboxDelete;
     }
 }

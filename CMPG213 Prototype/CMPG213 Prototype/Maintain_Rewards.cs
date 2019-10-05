@@ -22,6 +22,11 @@ namespace CMPG213_Prototype
         string detail;
         private void BtnAdd_Click(object sender, EventArgs e)
         {
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(txbAdd.Text, "Please enter valid reward description.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
             detail = txbAdd.Text;
 
             string sql = @"Insert Into REWARD (Reward_Detail) Values('" + detail + "')";
@@ -51,6 +56,20 @@ namespace CMPG213_Prototype
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
+            if (cmbUpdate.SelectedItem == null)
+            {
+                errProvComboxUpdate.SetError(cmbUpdate, "Please select an item from the combobox !");
+                MessageBox.Show("Please select an item from the combobox!");
+            }
+            else
+            {
+                errProvComboxUpdate.Clear();
+            }
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(txbUpdate.Text, "Please enter valid reward description.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
             detail = txbUpdate.Text;
             string sql = @"UPDATE REWARD SET Reward_Detail ='" + detail + "' WHERE Reward_ID = '" + cmbUpdate.SelectedItem + "'";
 
@@ -80,6 +99,21 @@ namespace CMPG213_Prototype
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            if (cmbDelete.SelectedItem == null)
+            {
+                errProvComboxDelete.SetError(cmbDelete, "Please select an item from the combobox !");
+                MessageBox.Show("Please select an item from the combobox!");
+            }
+            else
+            {
+                errProvComboxDelete.Clear();
+            }
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(txbDelete.Text, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+
             string sql = @"DELETE FROM REWARD WHERE Reward_ID = '" + cmbDelete.SelectedItem + "'";
             try
             {
@@ -126,6 +160,53 @@ namespace CMPG213_Prototype
             this.Close();
             Form_Home_Page_FutureTech home = new Form_Home_Page_FutureTech();
             home.ShowDialog();
+        }
+
+        private void txbAdd_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txbAdd.Text))
+            {
+                e.Cancel = true;
+                txbAdd.Focus();
+                errProvAddRewDesc.SetError(txbAdd, "Please enter valid reward description !");
+            }
+            else
+            {
+                e.Cancel = false;
+                errProvAddRewDesc.SetError(txbAdd, null);
+
+            }
+        }
+
+        private void txbUpdate_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txbUpdate.Text))
+            {
+                e.Cancel = true;
+                txbUpdate.Focus();
+                errProvTboxUpd.SetError(txbUpdate, "Please enter valid reward description !");
+            }
+            else
+            {
+                e.Cancel = false;
+                errProvTboxUpd.SetError(txbUpdate, null);
+
+            }
+        }
+
+        private void txbDelete_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txbDelete.Text))
+            {
+                e.Cancel = true;
+                txbDelete.Focus();
+                errProvTboxDelete.SetError(txbDelete, "Please enter valid reward description !");
+            }
+            else
+            {
+                e.Cancel = false;
+                errProvTboxDelete.SetError(txbDelete, null);
+            }
         }
     }
 }
