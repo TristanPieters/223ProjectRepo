@@ -190,6 +190,46 @@ namespace CMPG213_Prototype
                 }
                 command.Dispose();
                 reader.Close();
+
+                reportOutput = reportOutput + "\n*********************";
+                reportOutput = reportOutput + "\nTransactions";
+                reportOutput = reportOutput + "\n*********************";
+
+                string sqlTrans = @"SELECT * FROM TRANSACT";
+                command = new SqlCommand(sqlTrans, con);
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    if (Convert.ToDateTime(reader.GetValue(5)) == DateTime.Today.Date)
+                    {
+                        if(Convert.ToInt32(reader.GetValue(2)) == 1)
+                        {
+                            reportOutput = reportOutput + "\nTransactions ID: " + reader.GetValue(0).ToString();
+                            reportOutput = reportOutput + "\nEmp ID: " + reader.GetValue(1).ToString();
+                            reportOutput = reportOutput + "\nCash Sale ";
+                            reportOutput = reportOutput + "\nFuel ID: " + reader.GetValue(3).ToString();
+                            reportOutput = reportOutput + "\nReward ID: " + reader.GetValue(4).ToString();
+                            reportOutput = reportOutput + "\nPrice: " + reader.GetValue(6).ToString();
+                            reportOutput = reportOutput + "\nAmount Liters: " + reader.GetValue(7).ToString();
+                        }
+
+                        else
+                        {
+                            reportOutput = reportOutput + "\nTransactions ID: " + reader.GetValue(0).ToString();
+                            reportOutput = reportOutput + "\nEmp ID: " + reader.GetValue(1).ToString();
+                            reportOutput = reportOutput + "\nAccount ID: " + reader.GetValue(2).ToString();
+                            reportOutput = reportOutput + "\nFuel ID: " + reader.GetValue(3).ToString();
+                            reportOutput = reportOutput + "\nReward ID: " + reader.GetValue(4).ToString();
+                            reportOutput = reportOutput + "\nPrice: " + reader.GetValue(6).ToString();
+                            reportOutput = reportOutput + "\nAmount Liters: " + reader.GetValue(7).ToString();
+                        }
+
+                    }
+                }
+                command.Dispose();
+                reader.Close();
+
                 string myFile;
 
                 SaveFileDialog saveFileDialog1 = new SaveFileDialog();
