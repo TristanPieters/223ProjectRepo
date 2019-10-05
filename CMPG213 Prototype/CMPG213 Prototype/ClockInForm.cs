@@ -20,8 +20,31 @@ namespace CMPG213_Prototype
 
         private void ClockInForm_Load(object sender, EventArgs e)
         {
-
+            SqlConnection CONN = new SqlConnection();
+            try
+            {
+                CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
+                string query = "Select Emp_FName, Emp_ID , Emp_LName from EMPLOYEE";
+                SqlCommand comm = new SqlCommand(query, CONN);
+                comm.CommandText = query;
+                CONN.Open();
+                SqlDataReader reader = comm.ExecuteReader();
+                while (reader.Read())
+                {
+                    cmbEmployee.Items.Add(reader["Emp_FName"].ToString() + " " + reader["Emp_LName"].ToString());
+                    cmbEmployee.ValueMember = reader["Emp_ID"].ToString();
+                    cmbEmployee.DisplayMember = reader["Emp_FName"].ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Error ");
+            }
         }
 
+        private void BtnClockIn_Click(object sender, EventArgs e)
+        {
+             
+        }
     }
 }
