@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -49,11 +50,21 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnUdate = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tbDelete.SuspendLayout();
             this.tpUpdate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -114,6 +125,8 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(137, 26);
             this.textBox2.TabIndex = 3;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox2_KeyPress);
+            this.textBox2.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox2_Validating);
             // 
             // textBox1
             // 
@@ -121,6 +134,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(137, 26);
             this.textBox1.TabIndex = 2;
+            this.textBox1.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox1_Validating);
             // 
             // label2
             // 
@@ -160,6 +174,7 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(140, 28);
             this.comboBox2.TabIndex = 8;
+            this.comboBox2.Validating += new System.ComponentModel.CancelEventHandler(this.ComboBox2_Validating);
             // 
             // button1
             // 
@@ -212,6 +227,8 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(149, 26);
             this.textBox6.TabIndex = 6;
+            this.textBox6.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox6_KeyPress);
+            this.textBox6.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox6_Validating);
             // 
             // textBox5
             // 
@@ -219,6 +236,9 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(149, 26);
             this.textBox5.TabIndex = 5;
+            this.textBox5.TextChanged += new System.EventHandler(this.TextBox5_TextChanged);
+            this.textBox5.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox5_KeyPress);
+            this.textBox5.Validating += new System.ComponentModel.CancelEventHandler(this.TextBox5_Validating);
             // 
             // label6
             // 
@@ -259,6 +279,26 @@
             this.btnUdate.UseVisualStyleBackColor = false;
             this.btnUdate.Click += new System.EventHandler(this.btnUdate_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            this.errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            this.errorProvider3.ContainerControl = this;
+            // 
+            // errorProvider4
+            // 
+            this.errorProvider4.ContainerControl = this;
+            // 
+            // errorProvider5
+            // 
+            this.errorProvider5.ContainerControl = this;
+            // 
             // Maintain_Fuel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,6 +317,11 @@
             this.tbDelete.PerformLayout();
             this.tpUpdate.ResumeLayout(false);
             this.tpUpdate.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -304,5 +349,10 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.ErrorProvider errorProvider3;
+        private System.Windows.Forms.ErrorProvider errorProvider4;
+        private System.Windows.Forms.ErrorProvider errorProvider5;
     }
 }

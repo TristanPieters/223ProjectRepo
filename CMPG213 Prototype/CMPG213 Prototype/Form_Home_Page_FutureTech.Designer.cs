@@ -40,6 +40,7 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnMaintainFuel = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl = new System.Windows.Forms.TabControl();
@@ -70,7 +71,6 @@
             this.tpRewards = new System.Windows.Forms.TabPage();
             this.btnShowRewardAccount = new System.Windows.Forms.Button();
             this.btnMaintainReward = new System.Windows.Forms.Button();
-            this.btnMaintainFuel = new System.Windows.Forms.Button();
             this.gbSales.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -194,6 +194,18 @@
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CURRENT FUEL PRICES";
+            // 
+            // btnMaintainFuel
+            // 
+            this.btnMaintainFuel.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btnMaintainFuel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnMaintainFuel.Location = new System.Drawing.Point(11, 188);
+            this.btnMaintainFuel.Name = "btnMaintainFuel";
+            this.btnMaintainFuel.Size = new System.Drawing.Size(110, 51);
+            this.btnMaintainFuel.TabIndex = 10;
+            this.btnMaintainFuel.Text = "MAINTAIN FUEL";
+            this.btnMaintainFuel.UseVisualStyleBackColor = false;
+            this.btnMaintainFuel.Click += new System.EventHandler(this.BtnMaintainFuel_Click);
             // 
             // button1
             // 
@@ -532,17 +544,6 @@
             this.btnMaintainReward.Text = "MAINTAIN REWARDS";
             this.btnMaintainReward.UseVisualStyleBackColor = false;
             this.btnMaintainReward.Click += new System.EventHandler(this.BtnMaintainReward_Click);
-            // 
-            // btnMaintainFuel
-            // 
-            this.btnMaintainFuel.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnMaintainFuel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMaintainFuel.Location = new System.Drawing.Point(11, 188);
-            this.btnMaintainFuel.Name = "btnMaintainFuel";
-            this.btnMaintainFuel.Size = new System.Drawing.Size(110, 51);
-            this.btnMaintainFuel.TabIndex = 10;
-            this.btnMaintainFuel.Text = "MAINTAIN FUEL";
-            this.btnMaintainFuel.UseVisualStyleBackColor = false;
             // 
             // Form_Home_Page_FutureTech
             // 

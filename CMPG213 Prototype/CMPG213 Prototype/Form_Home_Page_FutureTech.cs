@@ -342,5 +342,11 @@ namespace CMPG213_Prototype
         {
 
         }
+
+        private void BtnMaintainFuel_Click(object sender, EventArgs e)
+        {
+            Maintain_Fuel myForm = new Maintain_Fuel();
+            myForm.ShowDialog();
+        }
     }
 }
