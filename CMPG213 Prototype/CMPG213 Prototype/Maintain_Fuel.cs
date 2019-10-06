@@ -17,15 +17,9 @@ namespace CMPG213_Prototype
         {
             InitializeComponent();
         }
+       
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\NEWREPO\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security = True");
 
-<<<<<<< Updated upstream
-        string constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\NEWREPO\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security = True";
-
-
-=======
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True");
-        
->>>>>>> Stashed changes
         private void btnADD_Click(object sender, EventArgs e)
         { 
             if(ValidateChildren(ValidationConstraints.Enabled))
@@ -70,10 +64,7 @@ namespace CMPG213_Prototype
             {
                 errorProvider3.Clear();
             }
-<<<<<<< Updated upstream
-            SqlConnection conn = new SqlConnection(constr);
-=======
->>>>>>> Stashed changes
+
             string todelete = Convert.ToString(comboBox2.SelectedItem);
             string sql = @"DELETE FROM FUEL WHERE Fuel_Description ='" + todelete + "'";
 
@@ -113,11 +104,7 @@ namespace CMPG213_Prototype
             {
                 errorProvider3.Clear();
             }
-<<<<<<< Updated upstream
-            SqlConnection conn = new SqlConnection(constr);
-=======
-            
->>>>>>> Stashed changes
+      
             string fueldescription = Convert.ToString(comboBox1.SelectedItem);
             string fuelppl = textBox6.Text;
             string fuelreserves = textBox5.Text;
@@ -142,10 +129,6 @@ namespace CMPG213_Prototype
 
         private void Maintain_Fuel_Load(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-            SqlConnection conn = new SqlConnection(constr);
-=======
->>>>>>> Stashed changes
             string sql = @"Select * From FUEL";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);

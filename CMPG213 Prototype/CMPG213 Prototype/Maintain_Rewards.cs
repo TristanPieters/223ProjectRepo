@@ -17,13 +17,8 @@ namespace CMPG213_Prototype
         {
             InitializeComponent();
         }
-<<<<<<< Updated upstream
-        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\NEWREPO\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True";
-        SqlConnection conn;
-=======
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\NEWREPO\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True");
         
->>>>>>> Stashed changes
         string detail;
         private void BtnAdd_Click(object sender, EventArgs e)
         {
@@ -137,13 +132,8 @@ namespace CMPG213_Prototype
 
         private void Maintain_Rewards_Load(object sender, EventArgs e)
         {
-<<<<<<< Updated upstream
-            conn = new SqlConnection(constring);
-            string sql = @"SELECT Reward_ID FROM REWARD";
-=======
+            string sql = @"SELECT Reward_Description FROM REWARD";
             conn.Open();
-            string sql = @"SELECT * FROM REWARD";
->>>>>>> Stashed changes
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
             reader = comm.ExecuteReader();
