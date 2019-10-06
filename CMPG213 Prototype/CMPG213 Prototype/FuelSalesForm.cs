@@ -8,16 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Globalization;
 
 namespace CMPG213_Prototype
 {
     public partial class FuelSalesForm : Form
     {
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
-
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True");
+        CultureInfo enZA = CultureInfo.CreateSpecificCulture("en-ZA");
         public FuelSalesForm()
         {
             InitializeComponent();
+            btnAccUpdateCredit.Enabled = false;
+            //SetAppDomainCultures("en-ZA");
+
         }
 
         private void FuelSalesForm_Load(object sender, EventArgs e)
@@ -151,44 +155,51 @@ namespace CMPG213_Prototype
 
         private void btnCompSale_Click(object sender, EventArgs e)
         {
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(tBoxEmpNum.Text, "Please enter a valid employee ID.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            if (comBoxFuelType.SelectedItem == null)
-            {
-                errProvComBoxFuelType.SetError(comBoxFuelType, "Please select an item from the combobox.");
-                MessageBox.Show("Please select an item from the combobox.");
-            }
-            else
-            {
-                errProvComBoxFuelType.Clear();
-            }
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(tBoxFuelAmountLiters.Text, "Please enter a valid amount of fuel using format '00,00'.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(tboxAccNum.Text, "Please enter a valid account number or create a new account.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(tBoxAccCreditAmount.Text, "Please enter a valid credit amount using format '00,00'", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            //if (ValidateChildren(ValidationConstraints.Enabled))
+            //{
+            //    MessageBox.Show(tBoxEmpNum.Text, "Please enter a valid employee ID.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //if (comBoxFuelType.SelectedItem == null)
+            //{
+            //    errProvComBoxFuelType.SetError(comBoxFuelType, "Please select an item from the combobox.");
+            //    MessageBox.Show("Please select an item from the combobox.");
+            //}
+            //else
+            //{
+            //    errProvComBoxFuelType.Clear();
+            //}
+            //if (ValidateChildren(ValidationConstraints.Enabled))
+            //{
+            //    MessageBox.Show(tBoxFuelAmountLiters.Text, "Please enter a valid amount of fuel using format '00,00'.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //if (ValidateChildren(ValidationConstraints.Enabled))
+            //{
+            //    MessageBox.Show(tboxAccNum.Text, "Please enter a valid account number or create a new account.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+            //if (ValidateChildren(ValidationConstraints.Enabled))
+            //{
+            //    MessageBox.Show(tBoxAccCreditAmount.Text, "Please enter a valid credit amount using format '00,00'", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
             
             string fuelResType = comBoxFuelType.SelectedItem.ToString();
             int empNum = Convert.ToInt32(tBoxEmpNum.Text);
             int accNum = Convert.ToInt32(tboxAccNum.Text);
             int fuelTypeID = Convert.ToInt32(comBoxFuelType.SelectedIndex.ToString());
-            //int rewardIDNum = Convert.ToInt32(comBoxRewardSelect.SelectedItem.ToString());
-            string dateSale = DateTime.Now.Date.ToString("yyyy-MM-dd");
+            int rewardIDNum = comBoxRewardSelect.SelectedIndex = 1;
+
+            if(comBoxRewardSelect.SelectedItem !=null)
+            {
+                rewardIDNum = Convert.ToInt32(comBoxRewardSelect.SelectedItem.ToString());
+            }
+
+            //string dateSale = DateTime.Now.Date.ToString("yyyy/MM/dd");
+            string dateSale = DateTime.Now.ToShortDateString();
             decimal fuelPurchAmountSold = Convert.ToDecimal(lblFuelPurchased.Text);
             decimal fuelLiterSold = Convert.ToDecimal(tBoxFuelAmountLiters.Text);
 
-            /*try
-            {                
-                decimal reserveFuel = 0;                
+            try
+            {
+                decimal reserveFuel = 0;
 
                 string sqlSelectFuelTypeRes = @"SELECT Current_Fuel_Reserve FROM FUEL WHERE Fuel_Description = '"+fuelResType+"' ";
                 conn.Open();
@@ -227,7 +238,7 @@ namespace CMPG213_Prototype
             catch(SqlException ex)
             {
                 MessageBox.Show(ex.Message);
-            }*/
+            }
 
             /*try
             {
@@ -250,20 +261,25 @@ namespace CMPG213_Prototype
 
             try
             {
-                if(comBoxRewardSelect.SelectedItem != null)
-                {
-                    string sqlInsertRewAccTbl = @"INSERT INTO REWARD_ACCOUNT (Acc_ID, R_DateReceived) VALUES ('" + accNum + "', '" + dateSale + "'";
+                    string sqlInsertRewAccTbl = "INSERT INTO REWARD_ACCOUNT (Acc_ID, Reward_ID, R_DateRecieved) VALUES ( @accNum, @rewardNum, @dateSale)";
 
                     conn.Open();
                     SqlCommand commInsertRewAcc = new SqlCommand();
                     SqlDataAdapter adap = new SqlDataAdapter();
                     commInsertRewAcc = new SqlCommand(sqlInsertRewAccTbl, conn);
                     adap.InsertCommand = new SqlCommand(sqlInsertRewAccTbl, conn);
+                    adap.InsertCommand.Parameters.AddWithValue("@accNum", accNum);
+                    adap.InsertCommand.Parameters.AddWithValue("@rewardNum", rewardIDNum);
+                    //adap.InsertCommand.Parameters.AddWithValue("@dateSale", dateSale);
+                    adap.InsertCommand.Parameters.Add("@dateSale", SqlDbType.Date);
+                    adap.InsertCommand.Parameters["@dateSale"].Value = dateSale;
                     adap.InsertCommand.ExecuteNonQuery();
                     commInsertRewAcc.Dispose();
                     MessageBox.Show("Reward recorded");
                     conn.Close();
-                }
+                /*if(comBoxRewardSelect.SelectedItem != null)
+                {
+                }*/
             }
             catch (SqlException ex)
             {
@@ -331,6 +347,7 @@ namespace CMPG213_Prototype
 
         private void btnAccSearch_Click(object sender, EventArgs e)
         {
+            btnAccUpdateCredit.Enabled = true;
             string accSearchNum = tboxAccNum.Text;
             string sql = @"SELECT * FROM ACCOUNT WHERE Acc_ID = '" + accSearchNum + "'";
 
@@ -383,16 +400,24 @@ namespace CMPG213_Prototype
             try
             {
                 string accNum = tboxAccNum.Text;
+                //string currCredAmnt = tBoxAccCreditAmount.Text.Replace(',','.');
+                //string addCredAcc = lblAccCreditOutstand.Text.Replace(',', '.');
                 string currCredAmnt = tBoxAccCreditAmount.Text;
-
+                string addCredAcc = lblAccCreditOutstand.Text;
                 decimal currentCredAmount, addCreditAmount;
-                currentCredAmount = Convert.ToDecimal(lblAccCreditOutstand.Text);
-                addCreditAmount = Convert.ToDecimal(tBoxAccCreditAmount.Text);
+
+                //currentCredAmount = Convert.ToDecimal(addCredAcc, new CultureInfo("en-US"));
+                //addCreditAmount = Convert.ToDecimal(currCredAmnt, new CultureInfo("en-US"));
+                currentCredAmount = Convert.ToDecimal(addCredAcc);
+                addCreditAmount = Convert.ToDecimal(currCredAmnt);
                 decimal newCredAmount = currentCredAmount + addCreditAmount;
 
-                lblAccNewCredit.Text = newCredAmount.ToString();
+                
 
-                string sqlUpdateCredit = @"UPDATE ACCOUNT SET Acc_Debt =  '" + currCredAmnt + "'WHERE Acc_ID = '" + accNum + "'";
+                lblAccNewCredit.Text = newCredAmount.ToString();
+                //string sFormat = String.Format("{0:C}", newCredAmount).Replace('.',',');
+
+                string sqlUpdateCredit = "UPDATE ACCOUNT SET Acc_Debt = @price WHERE Acc_ID = @acc";
 
                 conn.Open();
                 SqlCommand comm = new SqlCommand();
@@ -400,6 +425,8 @@ namespace CMPG213_Prototype
 
                 comm = new SqlCommand(sqlUpdateCredit, conn);
                 adap.UpdateCommand = new SqlCommand(sqlUpdateCredit, conn);
+                adap.UpdateCommand.Parameters.AddWithValue("@price", newCredAmount);
+                adap.UpdateCommand.Parameters.AddWithValue("@acc", accNum);
                 adap.UpdateCommand.ExecuteNonQuery();
 
                 comm.Dispose();
@@ -424,7 +451,7 @@ namespace CMPG213_Prototype
             {
                 string selectRewardDet = comBoxRewardSelect.SelectedItem.ToString();
 
-                string sql = @"SELECT Reward_Detail From REWARD WHERE Reward_ID = '" + selectRewardDet + "'";
+                string sql = @"SELECT Reward_Description From REWARD WHERE Reward_ID = '" + selectRewardDet + "'";
                 SqlDataReader reader;
                 SqlCommand comm = new SqlCommand(sql, conn);
                 conn.Open();
@@ -442,5 +469,24 @@ namespace CMPG213_Prototype
                 MessageBox.Show(error.Message);
             }
         }
+        //public static void SetAppDomainCultures(string name)
+        //{
+        //    try
+        //    {
+        //        CultureInfo.DefaultThreadCurrentCulture = CultureInfo.CreateSpecificCulture(name);
+        //        CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.CreateSpecificCulture(name);
+        //    }
+        //    // If an exception occurs, we'll just fall back to the system default.
+        //    catch (CultureNotFoundException)
+        //    {
+        //        return;
+        //    }
+        //    catch (ArgumentException)
+        //    {
+        //        return;
+        //    }
+        //}
     }
+
+
 }
