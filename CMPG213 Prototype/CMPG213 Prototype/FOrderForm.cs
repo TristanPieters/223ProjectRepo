@@ -17,7 +17,7 @@ namespace CMPG213_Prototype
         {
             InitializeComponent();
         }
-        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True";
+        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True";
         SqlConnection conn;
         private void BtnADD_Click(object sender, EventArgs e)
         {
@@ -129,7 +129,6 @@ namespace CMPG213_Prototype
             string sql2 = @"SELECT Fuel_ID FROM FUEL";
             SqlDataReader reader2;
             SqlCommand comm2 = new SqlCommand(sql2, conn);
-            conn.Open();
             reader2 = comm2.ExecuteReader();
 
             while (reader2.Read())
@@ -143,7 +142,6 @@ namespace CMPG213_Prototype
             string sql3 = @"SELECT Order_ID FROM FORDER";
             SqlDataReader reader3;
             SqlCommand comm3 = new SqlCommand(sql3, conn);
-            conn.Open();
             reader3 = comm3.ExecuteReader();
 
             while (reader3.Read())
