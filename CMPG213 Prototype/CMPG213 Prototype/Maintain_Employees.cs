@@ -22,7 +22,11 @@ namespace CMPG213_Prototype
         string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True";
         SqlConnection conn;
 
+<<<<<<< Updated upstream
         string fName, lName, job, email , cellNr;
+=======
+        string fName, lName, job, email, cellNr;
+>>>>>>> Stashed changes
 
         private void TxbEmp_LNameAdd_Validating(object sender, CancelEventArgs e)
         {
