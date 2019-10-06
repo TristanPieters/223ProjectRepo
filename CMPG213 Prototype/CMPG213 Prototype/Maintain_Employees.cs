@@ -40,21 +40,6 @@ namespace CMPG213_Prototype
             }
         }
 
-        private void TxbEmp_PasswordAdd_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txbEmp_PasswordAdd.Text))
-            {
-                e.Cancel = true;
-                txbEmp_PasswordAdd.Focus();
-                epPassword.SetError(txbEmp_PasswordAdd, "Please enter employee password !");
-            }
-            else
-            {
-                e.Cancel = false;
-                epPassword.SetError(txbEmp_PasswordAdd, null);
-
-            }
-        }
 
         private void TxbEmp_CellNumAdd_Validating(object sender, CancelEventArgs e)
         {
@@ -70,6 +55,7 @@ namespace CMPG213_Prototype
                 epCell.SetError(txbEmp_CellNumAdd, null);
 
             }
+           
         }
 
         private void TxbEmp_CellNumAdd_KeyPress(object sender, KeyPressEventArgs e)
@@ -129,21 +115,6 @@ namespace CMPG213_Prototype
             }
         }
 
-        private void TxbUsernameAdd_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txbUsernameAdd.Text))
-            {
-                e.Cancel = true;
-                txbUsernameAdd.Focus();
-                epUsername.SetError(txbUsernameAdd, "Please enter employee last name !");
-            }
-            else
-            {
-                e.Cancel = false;
-                epUsername.SetError(txbUsernameAdd, null);
-
-            }
-        }
 
         private void TxbEmp_FNameAdd_TextChanged(object sender, EventArgs e)
         {
@@ -217,22 +188,6 @@ namespace CMPG213_Prototype
             }
         }
 
-        private void TxbShiftTimeUp_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txbShiftTimeUp.Text))
-            {
-                e.Cancel = true;
-                txbShiftTimeUp.Focus();
-                epUpTime.SetError(txbShiftTimeUp, "Please enter employee shift time !");
-            }
-            else
-            {
-                e.Cancel = false;
-                epUpTime.SetError(txbShiftTimeUp, null);
-
-            }
-        }
-
         private void TxbEmp_FNameUp_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrEmpty(txbEmp_FNameUp.Text))
@@ -302,21 +257,6 @@ namespace CMPG213_Prototype
             txbEmp_LNameUp.SelectionStart = txbEmp_LNameUp.Text.Length;
         }
 
-        private void TxbEmp_PasswordUp_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txbEmp_PasswordUp.Text))
-            {
-                e.Cancel = true;
-                txbEmp_PasswordUp.Focus();
-                epUpPassword.SetError(txbEmp_PasswordUp, "Please enter employee password !");
-            }
-            else
-            {
-                e.Cancel = false;
-                epUpPassword.SetError(txbEmp_PasswordUp, null);
-
-            }
-        }
 
         private void TxbEmp_CellNumUp_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -394,62 +334,27 @@ namespace CMPG213_Prototype
             }
         }
 
-        private void TxbUsernameUp_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txbUsernameUp.Text))
-            {
-                e.Cancel = true;
-                txbUsernameUp.Focus();
-                epUpUsername.SetError(txbUsernameUp, "Please enter employee Username !");
-            }
-            else
-            {
-                e.Cancel = false;
-                epUpUsername.SetError(txbUsernameUp, null);
 
-            }
-        }
 
-        private void TxbShiftTimeAdd_Validating(object sender, CancelEventArgs e)
-        {
-            if (string.IsNullOrEmpty(txbShiftTimeAdd.Text))
-            {
-                e.Cancel = true;
-                txbShiftTimeAdd.Focus();
-                epTime.SetError(txbShiftTimeAdd, "Please enter employee shift time !");
-            }
-            else
-            {
-                e.Cancel = false;
-                epTime.SetError(txbShiftTimeAdd, null);
-
-            }
-        }
 
         /*      private void btnChange_Click(object sender, EventArgs e)
               {
 
               }*/
 
-        public bool ValidateTime(string time)
-        {
-            DateTime ignored;
-            return DateTime.TryParseExact(time, "HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out ignored);
-        }
-
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            string time = txbShiftTimeAdd.Text;
-            ValidateTime(time);
+            Regex pattern = new Regex(@"^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}[0-9]{7}$");
+            if (pattern.IsMatch(txbEmp_CellNumAdd.Text))
+            {
+                MessageBox.Show("Cell phone number is valid");
+            }
+            else
+            {
+                MessageBox.Show("Invalid phone number");
+                txbEmp_CellNumAdd.Focus();
+            }
             if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(txbShiftTimeAdd.Text, "Please enter employee shift time !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(txbUsernameAdd.Text, "Please enter employee username !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 MessageBox.Show(txbEmp_EmailAdd.Text, "Please enter employee email !", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -467,22 +372,17 @@ namespace CMPG213_Prototype
             }
             else if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                MessageBox.Show(txbEmp_PasswordAdd.Text, "Please enter employee password!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (ValidateChildren(ValidationConstraints.Enabled))
-            {
                 MessageBox.Show(txbEmp_CellNumAdd.Text, "Please enter employee cell number!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            shift = txbShiftTimeAdd.Text;
+           
             fName = txbEmp_FNameAdd.Text;
             lName = txbEmp_LNameAdd.Text;
-            password = txbEmp_PasswordAdd.Text;
             cellNr = txbEmp_CellNumAdd.Text;
             job = txbEmp_JobAdd.Text;
             email = txbEmp_EmailAdd.Text;
-            username = txbUsernameAdd.Text;
+            
 
-            string sql = @"Insert Into EMPLOYEE (ShiftTime, Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email, Emp_Username, Emp_Password)Values('" + shift + "','" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "','" + username + "','" + password + "')";
+            string sql = @"Insert Into EMPLOYEE (Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email)Values('" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "')";
 
             try
             {
@@ -504,28 +404,28 @@ namespace CMPG213_Prototype
                 MessageBox.Show(error.Message);
             }
 
-            txbShiftTimeAdd.Text = "";
             txbEmp_FNameAdd.Text = "";
             txbEmp_LNameAdd.Text = "";
-            txbEmp_PasswordAdd.Text = "";
             txbEmp_CellNumAdd.Text = "";
             txbEmp_JobAdd.Text = "";
             txbEmp_EmailAdd.Text = "";
-            txbUsernameAdd.Text = "";
+
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
+            Regex pattern = new Regex(@"^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}[0-9]{7}$");
+            if (pattern.IsMatch(txbEmp_CellNumUp.Text))
+            {
+                MessageBox.Show("Cell phone number is valid");
+            }
+            else
+            {
+                MessageBox.Show("Invalid phone number");
+                txbEmp_CellNumUp.Focus();
+            }
 
             if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(txbShiftTimeUp.Text, "Please enter employee shift time !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(txbUsernameUp.Text, "Please enter employee username !", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 MessageBox.Show(txbEmp_EmailUp.Text, "Please enter employee email !", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -543,10 +443,6 @@ namespace CMPG213_Prototype
             }
             else if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                MessageBox.Show(txbEmp_PasswordUp.Text, "Please enter employee password!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (ValidateChildren(ValidationConstraints.Enabled))
-            {
                 MessageBox.Show(txbEmp_CellNumUp.Text, "Please enter employee cell number!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
@@ -561,16 +457,15 @@ namespace CMPG213_Prototype
                 epUpEmp_ID.Clear();
             }
 
-            shift = txbShiftTimeUp.Text;
+            
             fName = txbEmp_FNameUp.Text;
             lName = txbEmp_LNameUp.Text;
-            password = txbEmp_PasswordUp.Text;
             cellNr = txbEmp_CellNumUp.Text;
             job = txbEmp_JobUp.Text;
             email = txbEmp_EmailUp.Text;
-            username = txbUsernameUp.Text;
+            
 
-            string sql = @"UPDATE EMPLOYEE SET ShiftTime ='" + shift + "', Emp_FName = '" + fName + "', Emp_LName = '" + lName + "', Emp_CellNum = '" + cellNr + "', Emp_JOB = '" + job + "', Emp_Email = '" + email + "', Emp_Username = '" + username + "', Emp_Password = '" + password + "' WHERE Emp_ID = '" + cmbUpdate.SelectedItem + "'";
+            string sql = @"UPDATE EMPLOYEE SET Emp_FName = '" + fName + "', Emp_LName = '" + lName + "', Emp_CellNum = '" + cellNr + "', Emp_JOB = '" + job + "', Emp_Email = '" + email +  "' WHERE Emp_ID = '" + cmbUpdate.SelectedItem + "'";
 
 
             try
@@ -594,18 +489,25 @@ namespace CMPG213_Prototype
                 MessageBox.Show(error.Message);
             }
 
-            txbShiftTimeUp.Text = "";
             txbEmp_FNameUp.Text = "";
             txbEmp_LNameUp.Text = "";
-            txbEmp_PasswordUp.Text = "";
             txbEmp_CellNumUp.Text = "";
             txbEmp_JobUp.Text = "";
             txbEmp_EmailUp.Text = "";
-            txbUsernameUp.Text = "";
+           
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
+            if (cmbDelete.SelectedItem == null)
+            {
+                epDelete.SetError(cmbDelete, "Please select an item from the combobox !");
+                MessageBox.Show("Please select an item from the combobox!");
+            }
+            else
+            {
+                epDelete.Clear();
+            }
             string sql = @"DELETE FROM EMPLOYEE WHERE Emp_ID = '" + cmbDelete.SelectedItem + "'";
             try
             {
