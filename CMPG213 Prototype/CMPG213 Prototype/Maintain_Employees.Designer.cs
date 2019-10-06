@@ -78,6 +78,14 @@
             this.stallionsDbDataSet = new CMPG213_Prototype.StallionsDbDataSet();
             this.aCCOUNTBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.aCCOUNTTableAdapter = new CMPG213_Prototype.StallionsDbDataSetTableAdapters.ACCOUNTTableAdapter();
+            this.epTime = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epLname = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epFname = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epPassword = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epCell = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epJob = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epEmail = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epUsername = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tpAdd.SuspendLayout();
             this.tpUpdate.SuspendLayout();
@@ -86,6 +94,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stallionsDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epLname)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epFname)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epPassword)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epCell)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epJob)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epUsername)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -147,6 +163,8 @@
             this.txbEmp_JobAdd.Name = "txbEmp_JobAdd";
             this.txbEmp_JobAdd.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_JobAdd.TabIndex = 31;
+            this.txbEmp_JobAdd.TextChanged += new System.EventHandler(this.TxbEmp_JobAdd_TextChanged);
+            this.txbEmp_JobAdd.Validating += new System.ComponentModel.CancelEventHandler(this.TxbEmp_JobAdd_Validating);
             // 
             // txbEmp_EmailAdd
             // 
@@ -154,6 +172,7 @@
             this.txbEmp_EmailAdd.Name = "txbEmp_EmailAdd";
             this.txbEmp_EmailAdd.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_EmailAdd.TabIndex = 30;
+            this.txbEmp_EmailAdd.Validating += new System.ComponentModel.CancelEventHandler(this.TxbEmp_EmailAdd_Validating);
             // 
             // txbUsernameAdd
             // 
@@ -161,6 +180,7 @@
             this.txbUsernameAdd.Name = "txbUsernameAdd";
             this.txbUsernameAdd.Size = new System.Drawing.Size(128, 26);
             this.txbUsernameAdd.TabIndex = 29;
+            this.txbUsernameAdd.Validating += new System.ComponentModel.CancelEventHandler(this.TxbUsernameAdd_Validating);
             // 
             // txbEmp_FNameAdd
             // 
@@ -168,6 +188,8 @@
             this.txbEmp_FNameAdd.Name = "txbEmp_FNameAdd";
             this.txbEmp_FNameAdd.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_FNameAdd.TabIndex = 28;
+            this.txbEmp_FNameAdd.TextChanged += new System.EventHandler(this.TxbEmp_FNameAdd_TextChanged);
+            this.txbEmp_FNameAdd.Validating += new System.ComponentModel.CancelEventHandler(this.TxbEmp_FNameAdd_Validating);
             // 
             // txbEmp_LNameAdd
             // 
@@ -175,6 +197,8 @@
             this.txbEmp_LNameAdd.Name = "txbEmp_LNameAdd";
             this.txbEmp_LNameAdd.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_LNameAdd.TabIndex = 27;
+            this.txbEmp_LNameAdd.TextChanged += new System.EventHandler(this.TxbEmp_LNameAdd_TextChanged);
+            this.txbEmp_LNameAdd.Validating += new System.ComponentModel.CancelEventHandler(this.TxbEmp_LNameAdd_Validating);
             // 
             // txbEmp_PasswordAdd
             // 
@@ -182,6 +206,7 @@
             this.txbEmp_PasswordAdd.Name = "txbEmp_PasswordAdd";
             this.txbEmp_PasswordAdd.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_PasswordAdd.TabIndex = 26;
+            this.txbEmp_PasswordAdd.Validating += new System.ComponentModel.CancelEventHandler(this.TxbEmp_PasswordAdd_Validating);
             // 
             // txbEmp_CellNumAdd
             // 
@@ -189,6 +214,8 @@
             this.txbEmp_CellNumAdd.Name = "txbEmp_CellNumAdd";
             this.txbEmp_CellNumAdd.Size = new System.Drawing.Size(128, 26);
             this.txbEmp_CellNumAdd.TabIndex = 25;
+            this.txbEmp_CellNumAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxbEmp_CellNumAdd_KeyPress);
+            this.txbEmp_CellNumAdd.Validating += new System.ComponentModel.CancelEventHandler(this.TxbEmp_CellNumAdd_Validating);
             // 
             // txbShiftTimeAdd
             // 
@@ -196,6 +223,7 @@
             this.txbShiftTimeAdd.Name = "txbShiftTimeAdd";
             this.txbShiftTimeAdd.Size = new System.Drawing.Size(128, 26);
             this.txbShiftTimeAdd.TabIndex = 24;
+            this.txbShiftTimeAdd.Validating += new System.ComponentModel.CancelEventHandler(this.TxbShiftTimeAdd_Validating);
             // 
             // label8
             // 
@@ -558,6 +586,38 @@
             // 
             this.aCCOUNTTableAdapter.ClearBeforeFill = true;
             // 
+            // epTime
+            // 
+            this.epTime.ContainerControl = this;
+            // 
+            // epLname
+            // 
+            this.epLname.ContainerControl = this;
+            // 
+            // epFname
+            // 
+            this.epFname.ContainerControl = this;
+            // 
+            // epPassword
+            // 
+            this.epPassword.ContainerControl = this;
+            // 
+            // epCell
+            // 
+            this.epCell.ContainerControl = this;
+            // 
+            // epJob
+            // 
+            this.epJob.ContainerControl = this;
+            // 
+            // epEmail
+            // 
+            this.epEmail.ContainerControl = this;
+            // 
+            // epUsername
+            // 
+            this.epUsername.ContainerControl = this;
+            // 
             // Maintain_Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -579,6 +639,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stallionsDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aCCOUNTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epLname)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epFname)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epPassword)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epCell)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epJob)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epUsername)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -634,5 +702,13 @@
         private StallionsDbDataSet stallionsDbDataSet;
         private System.Windows.Forms.BindingSource aCCOUNTBindingSource;
         private StallionsDbDataSetTableAdapters.ACCOUNTTableAdapter aCCOUNTTableAdapter;
+        private System.Windows.Forms.ErrorProvider epTime;
+        private System.Windows.Forms.ErrorProvider epLname;
+        private System.Windows.Forms.ErrorProvider epFname;
+        private System.Windows.Forms.ErrorProvider epPassword;
+        private System.Windows.Forms.ErrorProvider epCell;
+        private System.Windows.Forms.ErrorProvider epJob;
+        private System.Windows.Forms.ErrorProvider epEmail;
+        private System.Windows.Forms.ErrorProvider epUsername;
     }
 }
