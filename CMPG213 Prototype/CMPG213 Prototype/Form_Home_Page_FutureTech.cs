@@ -17,7 +17,7 @@ namespace CMPG213_Prototype
 {
     public partial class Form_Home_Page_FutureTech : Form
     {
-        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True";
+        string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\NEWREPO\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True";
         public Form_Home_Page_FutureTech()
         {
             InitializeComponent();
@@ -25,7 +25,7 @@ namespace CMPG213_Prototype
         
         private void Form_Home_Page_FutureTech_Load(object sender, EventArgs e)
         {
-            string selectall = "SELECT Fuel_Description, Fuel_Price_Per_Liter FROM FUEL";
+            string selectall = "SELECT Fuel_Description, Fuel_Price_Per_Liter, Current_Fuel_Reserve FROM FUEL";
 
             try
             {
@@ -313,23 +313,34 @@ namespace CMPG213_Prototype
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string selectall = "SELECT Fuel_Description, Fuel_Price_Per_Liter FROM FUEL";
+            string selectall = "SELECT Fuel_Description, Fuel_Price_Per_Liter, Current_Fuel_Reserve FROM FUEL";
 
             try
             {
-                SqlConnection con = new SqlConnection(connectionString);
-                con.Open();
-                SqlCommand cmd = new SqlCommand(selectall, con); DataSet
 
-                ds = new DataSet();
+                SqlConnection conn = new SqlConnection(connectionString);
+                string sql = @"Select * From FUEL";
+                SqlDataReader reader;
+                SqlCommand comm = new SqlCommand(sql, conn);
+                conn.Open();
+                reader = comm.ExecuteReader();
 
-                SqlDataAdapter adapt = new SqlDataAdapter();
-                adapt.SelectCommand = cmd;
+                while (reader.Read())
+                {
+                    SqlConnection con = new SqlConnection(connectionString);
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(selectall, con); DataSet
 
-                adapt.Fill(ds, "FUEL");
-                dataGridView1.DataSource = ds;
-                dataGridView1.DataMember = "FUEL";
-                con.Close();
+                    ds = new DataSet();
+
+                    SqlDataAdapter adapt = new SqlDataAdapter();
+                    adapt.SelectCommand = cmd;
+
+                    adapt.Fill(ds, "FUEL");
+                    dataGridView1.DataSource = ds;
+                    dataGridView1.DataMember = "FUEL";
+                    con.Close();
+                }
             }
 
             catch (Exception error)

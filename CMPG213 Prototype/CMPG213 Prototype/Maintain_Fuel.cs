@@ -18,8 +18,9 @@ namespace CMPG213_Prototype
             InitializeComponent();
         }
 
-        string constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True";
-        
+        string constr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\NEWREPO\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security = True";
+
+
         private void btnADD_Click(object sender, EventArgs e)
         { 
             if(ValidateChildren(ValidationConstraints.Enabled))
@@ -46,6 +47,7 @@ namespace CMPG213_Prototype
                 MessageBox.Show("Record inserted successfully");
                 comm.Dispose();
                 conn.Close();
+                this.Close();
             }
             catch (SqlException error)
             {
@@ -64,7 +66,7 @@ namespace CMPG213_Prototype
             {
                 errorProvider3.Clear();
             }
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(constr);
             string todelete = Convert.ToString(comboBox2.SelectedItem);
             string sql = @"DELETE FROM FUEL WHERE Fuel_Description ='" + todelete + "'";
 
@@ -91,11 +93,11 @@ namespace CMPG213_Prototype
             {
                 MessageBox.Show(textBox5.Text, "Please enter valid fuel reserves value !", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            if (ValidateChildren(ValidationConstraints.Enabled))
+            else if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 MessageBox.Show(textBox6.Text, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            if (comboBox1.SelectedItem == null)
+            else if (comboBox1.SelectedItem == null)
             {
                 errorProvider3.SetError(comboBox1, "Please select an item from the combobox !");
                 MessageBox.Show("Please select an item from the combobox!");
@@ -104,7 +106,7 @@ namespace CMPG213_Prototype
             {
                 errorProvider3.Clear();
             }
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(constr);
             string fueldescription = Convert.ToString(comboBox1.SelectedItem);
             string fuelppl = textBox6.Text;
             string fuelreserves = textBox5.Text;
@@ -129,7 +131,7 @@ namespace CMPG213_Prototype
 
         private void Maintain_Fuel_Load(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(constr);
             string sql = @"Select * From FUEL";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
