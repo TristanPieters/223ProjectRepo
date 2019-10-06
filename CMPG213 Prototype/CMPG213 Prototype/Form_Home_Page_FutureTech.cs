@@ -210,7 +210,7 @@ namespace CMPG213_Prototype
                             reportOutput = reportOutput + "\nCash Sale ";
                             reportOutput = reportOutput + "\nFuel ID: " + reader.GetValue(3).ToString();
                             reportOutput = reportOutput + "\nReward ID: " + reader.GetValue(4).ToString();
-                            reportOutput = reportOutput + "\nPrice: " + reader.GetValue(6).ToString();
+                            reportOutput = reportOutput + "\nPrice: R" + reader.GetValue(6).ToString();
                             reportOutput = reportOutput + "\nAmount Liters: " + reader.GetValue(7).ToString();
                         }
 
@@ -221,11 +221,29 @@ namespace CMPG213_Prototype
                             reportOutput = reportOutput + "\nAccount ID: " + reader.GetValue(2).ToString();
                             reportOutput = reportOutput + "\nFuel ID: " + reader.GetValue(3).ToString();
                             reportOutput = reportOutput + "\nReward ID: " + reader.GetValue(4).ToString();
-                            reportOutput = reportOutput + "\nPrice: " + reader.GetValue(6).ToString();
+                            reportOutput = reportOutput + "\nPrice: R" + reader.GetValue(6).ToString();
                             reportOutput = reportOutput + "\nAmount Liters: " + reader.GetValue(7).ToString();
                         }
 
                     }
+                }
+                command.Dispose();
+                reader.Close();
+
+                reportOutput = reportOutput + "\n*********************";
+                reportOutput = reportOutput + "\nFUEL";
+                reportOutput = reportOutput + "\n*********************";
+
+                string sqlRes = @"SELECT * FROM FUEL";
+                command = new SqlCommand(sqlRes, con);
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {                   
+      
+                   reportOutput = reportOutput + "\nFuel Des: " + reader.GetValue(1).ToString();
+                   reportOutput = reportOutput + "\nPrice p/L: R" + reader.GetValue(2).ToString();
+                   reportOutput = reportOutput + "\nFuel Reserves: " + reader.GetValue(3).ToString() + " L\n";  
                 }
                 command.Dispose();
                 reader.Close();
@@ -300,10 +318,9 @@ namespace CMPG213_Prototype
         }
 
         private void BtnMaintainReward_Click(object sender, EventArgs e)
-        {
-            this.Close();
+        {            
             Maintain_Rewards rewards = new Maintain_Rewards();
-            rewards.ShowDialog();
+            rewards.Show();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -17,7 +17,7 @@ namespace CMPG213_Prototype
         {
             InitializeComponent();
         }
-        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True";
+        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\NEWREPO\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True";
         SqlConnection conn;
         string detail;
         private void BtnAdd_Click(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace CMPG213_Prototype
 
             detail = txbAdd.Text;
 
-            string sql = @"Insert Into REWARD (Reward_Detail) Values('" + detail + "')";
+            string sql = @"Insert Into REWARD (Reward_Description) Values('" + detail + "')";
 
             try
             {
@@ -40,8 +40,6 @@ namespace CMPG213_Prototype
                 adap.InsertCommand = new SqlCommand(sql, conn);
                 adap.InsertCommand.ExecuteNonQuery();
                 adap.Fill(ds, "REWARD");
-                dgvReward.DataSource = ds;
-                dgvReward.DataMember = "REWARD";
                 MessageBox.Show("Record inserted successfully");
                 comm.Dispose();
                 conn.Close();
@@ -82,8 +80,6 @@ namespace CMPG213_Prototype
                 adap.UpdateCommand = new SqlCommand(sql, conn);
                 adap.UpdateCommand.ExecuteNonQuery();
                 adap.Fill(ds, "REWARD");
-                dgvReward.DataSource = ds;
-                dgvReward.DataMember = "REWARD";
                 MessageBox.Show("Record successfuly updated!");
                 comm.Dispose();
                 conn.Close();
@@ -110,7 +106,7 @@ namespace CMPG213_Prototype
             }
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                MessageBox.Show(txbDelete.Text, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show(txbDelete.Text, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
@@ -124,8 +120,6 @@ namespace CMPG213_Prototype
                 adap.DeleteCommand = new SqlCommand(sql, conn);
                 adap.DeleteCommand.ExecuteNonQuery();
                 adap.Fill(ds, "REWARD");
-                dgvReward.DataSource = ds;
-                dgvReward.DataMember = "REWARD";
                 MessageBox.Show("Record successfuly deleted!");
                 comm.Dispose();
                 conn.Close();
@@ -139,7 +133,7 @@ namespace CMPG213_Prototype
         private void Maintain_Rewards_Load(object sender, EventArgs e)
         {
             conn = new SqlConnection(constring);
-            string sql = @"SELECT Emp_ID FROM REWARD";
+            string sql = @"SELECT Reward_ID FROM REWARD";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
             conn.Open();
@@ -194,7 +188,7 @@ namespace CMPG213_Prototype
             }
         }
 
-        private void txbDelete_Validating(object sender, CancelEventArgs e)
+       /* private void txbDelete_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrEmpty(txbDelete.Text))
             {
@@ -207,6 +201,21 @@ namespace CMPG213_Prototype
                 e.Cancel = false;
                 errProvTboxDelete.SetError(txbDelete, null);
             }
+        }
+        */
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
