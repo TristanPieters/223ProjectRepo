@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace CMPG213_Prototype
 {
@@ -82,6 +84,17 @@ namespace CMPG213_Prototype
                     tbxCellNumber.Focus();
                     bAccount = false;
 
+                }
+                Regex pattern = new Regex(@"^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}[0-9]{7}$");
+                if (pattern.IsMatch(tbxCellNumber.Text))
+                {
+                    MessageBox.Show("Phone Correct");
+                }
+                else
+                {
+                    MessageBox.Show("Invalid phone number");
+                    bAccount = false;
+                    tbxCellNumber.Focus();
                 }
 
                 if ((tbxEmail.Text != " ") || (!tbxEmail.Text.Contains('@') || !this.tbxEmail.Text.Contains('.')))
@@ -187,12 +200,29 @@ namespace CMPG213_Prototype
             {
                 e.Cancel = true;
                 tbxEmail.Focus();
-                errorProvider3.SetError(tbxEmail, "Please enter valid Email !");
+                errorProvider3.SetError(tbxEmail, "Please enter  email !");
             }
             else
             {
                 e.Cancel = false;
                 errorProvider3.SetError(tbxEmail, null);
+
+            }
+            System.Text.RegularExpressions.Regex rEMail = new System.Text.RegularExpressions.Regex(@"^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$");
+
+            if (tbxEmail.Text.Length > 0)
+            {
+
+                if (!rEMail.IsMatch(tbxEmail.Text))
+                {
+
+                    MessageBox.Show("E-Mail expected", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    tbxEmail.SelectAll();
+
+                    e.Cancel = true;
+
+                }
 
             }
         }
@@ -211,6 +241,7 @@ namespace CMPG213_Prototype
                 errorProvider4.SetError(tbxCellNumber, null);
 
             }
+
         }
 
         private void TbxID_Validating(object sender, CancelEventArgs e)
@@ -227,6 +258,57 @@ namespace CMPG213_Prototype
                 errorProvider5.SetError(tbxID, null);
 
             }
+        }
+
+        private void TbxCellNumber_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void TbxCellNumber_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TbxFirstName_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxFirstName.Text.All(chr => char.IsLetter(chr)))
+            {
+                string oldText = tbxFirstName.Text;
+                tbxFirstName.Text = oldText;
+
+                tbxFirstName.BackColor = System.Drawing.Color.White;
+                tbxFirstName.ForeColor = System.Drawing.Color.Black;
+            }
+            else
+            {
+
+                tbxFirstName.BackColor = System.Drawing.Color.Red;
+                tbxFirstName.ForeColor = System.Drawing.Color.White;
+            }
+            tbxFirstName.SelectionStart = tbxFirstName.Text.Length;
+        }
+
+        private void TbxLastName_TextChanged(object sender, EventArgs e)
+        {
+            if (tbxLastName.Text.All(chr => char.IsLetter(chr)))
+            {
+                string oldText = tbxLastName.Text;
+                tbxLastName.Text = oldText;
+
+                tbxLastName.BackColor = System.Drawing.Color.White;
+                tbxLastName.ForeColor = System.Drawing.Color.Black;
+            }
+            else
+            {
+
+                tbxLastName.BackColor = System.Drawing.Color.Red;
+                tbxLastName.ForeColor = System.Drawing.Color.White;
+            }
+            tbxLastName.SelectionStart = tbxLastName.Text.Length;
         }
     }
 }
