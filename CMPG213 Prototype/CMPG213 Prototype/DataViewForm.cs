@@ -22,23 +22,7 @@ namespace CMPG213_Prototype
 
         private void CmbTable_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            string sCombo;
-            sCombo = cmbTable.SelectedItem.ToString();
-
-            CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True");
-
-            CONN.Open();
-            SqlCommand comm;
-            string sql;
-            SqlDataAdapter adapter = new SqlDataAdapter();
-            sql = @"Select * FROM '"+ sCombo+"'";
-            comm = new SqlCommand(sql, CONN);
-            DataSet ds = new DataSet();
-            adapter.SelectCommand = comm;
-            adapter.Fill(ds,sCombo);
-            dataGridView1.DataSource = ds;
-            dataGridView1.DataMember = sCombo;
-            CONN.Close();
+            
 
         }
 
@@ -50,6 +34,30 @@ namespace CMPG213_Prototype
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void CmbTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string sCombo;
+            sCombo = cmbTable.SelectedItem.ToString();
+
+            CONN = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename = C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf; Integrated Security = True");
+
+            CONN.Open();
+        
+            string sql = "Select * FROM " + sCombo;
+            SqlCommand comm = new SqlCommand();
+            SqlDataAdapter adap = new SqlDataAdapter();
+            adap.SelectCommand = new SqlCommand(sql, CONN);
+            adap.SelectCommand.ExecuteNonQuery();
+
+            DataSet ds = new DataSet();
+
+            adap.Fill(ds, sCombo);
+            dataGridView1.DataSource = ds;
+            dataGridView1.DataMember = sCombo;
+            comm.Dispose();
+            CONN.Close();
         }
     }
 }
