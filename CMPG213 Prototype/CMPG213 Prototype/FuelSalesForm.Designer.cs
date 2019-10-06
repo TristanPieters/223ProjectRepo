@@ -100,7 +100,7 @@
             this.comBoxFuelType.FormattingEnabled = true;
             this.comBoxFuelType.Location = new System.Drawing.Point(187, 91);
             this.comBoxFuelType.Name = "comBoxFuelType";
-            this.comBoxFuelType.Size = new System.Drawing.Size(100, 28);
+            this.comBoxFuelType.Size = new System.Drawing.Size(153, 28);
             this.comBoxFuelType.TabIndex = 5;
             this.comBoxFuelType.SelectedIndexChanged += new System.EventHandler(this.comBoxFuelType_SelectedIndexChanged);
             // 
@@ -406,7 +406,7 @@
             // 
             this.tBoxEmpNum.Location = new System.Drawing.Point(187, 31);
             this.tBoxEmpNum.Name = "tBoxEmpNum";
-            this.tBoxEmpNum.Size = new System.Drawing.Size(100, 26);
+            this.tBoxEmpNum.Size = new System.Drawing.Size(153, 26);
             this.tBoxEmpNum.TabIndex = 15;
             this.tBoxEmpNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxEmpNum_KeyPress);
             this.tBoxEmpNum.Validating += new System.ComponentModel.CancelEventHandler(this.tBoxEmpNum_Validating);

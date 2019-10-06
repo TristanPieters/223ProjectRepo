@@ -16,6 +16,7 @@ namespace CMPG213_Prototype
     {
         SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True");
         CultureInfo enZA = CultureInfo.CreateSpecificCulture("en-ZA");
+
         public FuelSalesForm()
         {
             InitializeComponent();
@@ -269,8 +270,7 @@ namespace CMPG213_Prototype
                     commInsertRewAcc = new SqlCommand(sqlInsertRewAccTbl, conn);
                     adap.InsertCommand = new SqlCommand(sqlInsertRewAccTbl, conn);
                     adap.InsertCommand.Parameters.AddWithValue("@accNum", accNum);
-                    adap.InsertCommand.Parameters.AddWithValue("@rewardNum", rewardIDNum);
-                    //adap.InsertCommand.Parameters.AddWithValue("@dateSale", dateSale);
+                    adap.InsertCommand.Parameters.AddWithValue("@rewardNum", rewardIDNum);                    
                     adap.InsertCommand.Parameters.Add("@dateSale", SqlDbType.Date);
                     adap.InsertCommand.Parameters["@dateSale"].Value = dateSale;
                     adap.InsertCommand.ExecuteNonQuery();
