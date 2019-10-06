@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Home_Page_FutureTech));
             this.btnExit = new System.Windows.Forms.Button();
@@ -93,9 +92,9 @@
             // 
             this.btnExit.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnExit.Location = new System.Drawing.Point(733, 376);
+            this.btnExit.Location = new System.Drawing.Point(853, 376);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(88, 32);
+            this.btnExit.Size = new System.Drawing.Size(106, 32);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -106,7 +105,7 @@
             this.gbSales.BackColor = System.Drawing.SystemColors.ControlDark;
             this.gbSales.Controls.Add(this.btnNewSale);
             this.gbSales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gbSales.Location = new System.Drawing.Point(501, 279);
+            this.gbSales.Location = new System.Drawing.Point(595, 279);
             this.gbSales.Name = "gbSales";
             this.gbSales.Size = new System.Drawing.Size(204, 81);
             this.gbSales.TabIndex = 3;
@@ -141,7 +140,7 @@
             // 
             this.btnHelpAndSupport.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnHelpAndSupport.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnHelpAndSupport.Location = new System.Drawing.Point(407, 376);
+            this.btnHelpAndSupport.Location = new System.Drawing.Point(19, 376);
             this.btnHelpAndSupport.Name = "btnHelpAndSupport";
             this.btnHelpAndSupport.Size = new System.Drawing.Size(208, 32);
             this.btnHelpAndSupport.TabIndex = 4;
@@ -153,7 +152,7 @@
             // 
             this.btnReports.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnReports.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnReports.Location = new System.Drawing.Point(621, 376);
+            this.btnReports.Location = new System.Drawing.Point(853, 338);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(106, 32);
             this.btnReports.TabIndex = 5;
@@ -177,7 +176,7 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupBox1.Location = new System.Drawing.Point(12, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(850, 414);
+            this.groupBox1.Size = new System.Drawing.Size(985, 414);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "STALLION\'S GAS STATION";
@@ -191,7 +190,7 @@
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox2.Location = new System.Drawing.Point(455, 23);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(366, 250);
+            this.groupBox2.Size = new System.Drawing.Size(500, 250);
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CURRENT FUEL PRICES";
@@ -212,7 +211,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(232, 188);
+            this.button1.Location = new System.Drawing.Point(369, 188);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(117, 51);
             this.button1.TabIndex = 9;
@@ -222,21 +221,13 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(11, 25);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(338, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(475, 150);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -560,7 +551,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(880, 450);
+            this.ClientSize = new System.Drawing.Size(1020, 450);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Home_Page_FutureTech";
