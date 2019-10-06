@@ -79,6 +79,12 @@
     <Compile Include="ClockInForm.Designer.cs">
       <DependentUpon>ClockInForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataViewForm.Designer.cs">
+      <DependentUpon>DataViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,16 @@
       <DependentUpon>ProjectDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SGSDBFDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGSDBFDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SGSDBFDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SGSDBFDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="StallionsDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -141,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClockInForm.resx">
       <DependentUpon>ClockInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataViewForm.resx">
+      <DependentUpon>DataViewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FOrderForm.resx">
       <DependentUpon>FOrderForm.cs</DependentUpon>
@@ -192,6 +211,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SGSDBFDataSet.xsc">
+      <DependentUpon>SGSDBFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SGSDBFDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SGSDBFDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGSDBFDataSet.xss">
+      <DependentUpon>SGSDBFDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SGSDBFDataSet1.xsc">
+      <DependentUpon>SGSDBFDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="SGSDBFDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SGSDBFDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SGSDBFDataSet1.xss">
+      <DependentUpon>SGSDBFDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="StallionsDbDataSet.xsc">
       <DependentUpon>StallionsDbDataSet.xsd</DependentUpon>
     </None>

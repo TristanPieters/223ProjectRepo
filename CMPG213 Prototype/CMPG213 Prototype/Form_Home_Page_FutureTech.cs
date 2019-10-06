@@ -376,5 +376,12 @@ namespace CMPG213_Prototype
             Maintain_Fuel myForm = new Maintain_Fuel();
             myForm.ShowDialog();
         }
+
+        private void BtnViewTables_Click(object sender, EventArgs e)
+        {
+            DataViewForm myForm = new DataViewForm();
+            myForm.ShowDialog();
+
+        }
     }
 }
