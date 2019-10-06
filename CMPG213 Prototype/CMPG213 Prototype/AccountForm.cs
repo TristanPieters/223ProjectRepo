@@ -143,5 +143,90 @@ namespace CMPG213_Prototype
 
             }*/
         }
+
+        private void TbxFirstName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbxFirstName.Text))
+            {
+                e.Cancel = true;
+                tbxFirstName.Focus();
+                errorProvider1.SetError(tbxFirstName, "Please enter valid Name !");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(tbxFirstName , null);
+
+            }
+        }
+
+        private void AccountForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TbxLastName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbxLastName.Text))
+            {
+                e.Cancel = true;
+                tbxLastName.Focus();
+                errorProvider2.SetError(tbxLastName, "Please enter valid Last Name !");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider2.SetError(tbxLastName, null);
+
+            }
+        }
+
+        private void TbxEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbxEmail.Text))
+            {
+                e.Cancel = true;
+                tbxEmail.Focus();
+                errorProvider3.SetError(tbxEmail, "Please enter valid Email !");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider3.SetError(tbxEmail, null);
+
+            }
+        }
+
+        private void TbxCellNumber_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbxCellNumber.Text))
+            {
+                e.Cancel = true;
+                tbxCellNumber.Focus();
+                errorProvider4.SetError(tbxCellNumber, "Please enter valid Number !");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider4.SetError(tbxCellNumber, null);
+
+            }
+        }
+
+        private void TbxID_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbxID.Text))
+            {
+                e.Cancel = true;
+                tbxFirstName.Focus();
+                errorProvider5.SetError(tbxID, "Please enter valid  !");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider5.SetError(tbxID, null);
+
+            }
+        }
     }
 }
