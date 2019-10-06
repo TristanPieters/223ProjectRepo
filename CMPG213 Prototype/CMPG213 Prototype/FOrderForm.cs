@@ -11,14 +11,16 @@ using System.Data.SqlClient;
 
 namespace CMPG213_Prototype
 {
+
     public partial class FOrderForm : Form
     {
+        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True";
+        SqlConnection conn;
         public FOrderForm()
         {
             InitializeComponent();
         }
-        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True";
-        SqlConnection conn;
+        
         private void BtnADD_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
@@ -28,41 +30,37 @@ namespace CMPG213_Prototype
 
             if (cmbOrEmployee.SelectedItem == null)
             {
-                errorProvider3.SetError(cmbOrEmployee, "Please select an item from the list!");
-                MessageBox.Show("Please select an item from the list!");
+                epOrEmp.SetError(cmbOrEmployee, "Please select an item from the list!");
             }
             else
             {
-                errorProvider3.Clear();
+                epOrEmp.Clear();
             }
 
             if (cmbOrFuel.SelectedItem == null)
             {
-                errorProvider4.SetError(cmbOrFuel, "Please select an item from the list!");
-                MessageBox.Show("Please select an item from the list!");
+                epOrFuel.SetError(cmbOrFuel, "Please select an item from the list!");
             }
             else
             {
-                errorProvider4.Clear();
+                epOrFuel.Clear();
             }
 
             DateTime todayDate = DateTime.Now;
+            string td = todayDate.ToShortDateString();
             mcOr.MaxSelectionCount = 1;
-            string recDate = mcOr.SelectionRange.Start.ToString();
+            string recDate = mcOr.SelectionRange.Start.ToShortDateString();
 
-            string sql = @"Insert Into FORDER (Emp_ID, Fuel_ID, Order_Date, Recieve_date, Amount_Ordered )Values('" + cmbOrEmployee.SelectedItem + "','" + cmbOrFuel.SelectedItem + "','" + todayDate + "', '" + recDate + "','" + txbOrAmt.Text + "')";
+            string sql = @"Insert Into FORDER (Emp_ID, Fuel_ID, Order_Date, Recieve_date, Amt_OrderdLiters )Values('" + cmbOrEmployee.SelectedItem + "','" + cmbOrFuel.SelectedItem + "','" + td + "', '" + recDate + "','" + txbOrAmt.Text + "')";
             try
             {
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter();
                 SqlCommand comm = new SqlCommand(sql, conn);
-                DataSet ds = new DataSet();
                 adap.InsertCommand = new SqlCommand(sql, conn);
                 adap.InsertCommand.ExecuteNonQuery();
-                adap.Fill(ds, "FORDER");
-                dataGridView1.DataSource = ds;
-                dataGridView1.DataMember = "FORDER";
                 MessageBox.Show("Record inserted successfully");
+                refresh();
                 comm.Dispose();
                 conn.Close();
             }
@@ -71,19 +69,18 @@ namespace CMPG213_Prototype
                 MessageBox.Show(error.Message);
             }
             txbOrAmt.Text = "";
-
+            conn.Close();
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
         {
             if (cmbDelete.SelectedItem == null)
             {
-                errorProvider5.SetError(cmbDelete, "Please select an item from the list!");
-                MessageBox.Show("Please select an item from the list!");
+                epDelete.SetError(cmbDelete, "Please select an item from the list!");
             }
             else
             {
-                errorProvider5.Clear();
+                epDelete.Clear();
             }
 
             string sql = @"DELETE FROM FORDER WHERE Order_ID = '" + cmbDelete.SelectedItem + "'";
@@ -92,20 +89,19 @@ namespace CMPG213_Prototype
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter();
                 SqlCommand comm = new SqlCommand(sql, conn);
-                DataSet ds = new DataSet();
                 adap.DeleteCommand = new SqlCommand(sql, conn);
                 adap.DeleteCommand.ExecuteNonQuery();
-                adap.Fill(ds, "FORDER");
-                dataGridView1.DataSource = ds;
-                dataGridView1.DataMember = "FORDER";
                 MessageBox.Show("Record successfuly deleted!");
+                refresh();
                 comm.Dispose();
                 conn.Close();
+
             }
             catch (SqlException error)
             {
                 MessageBox.Show(error.Message);
             }
+            conn.Close();
         }
 
         private void FOrderForm_Load(object sender, EventArgs e)
@@ -117,42 +113,43 @@ namespace CMPG213_Prototype
             SqlCommand comm1 = new SqlCommand(sql1, conn);
             conn.Open();
             reader1 = comm1.ExecuteReader();
-
             while (reader1.Read())
             {
                 string output = Convert.ToString(reader1.GetValue(0));
                 cmbOrEmployee.Items.Add(output);
                 cmbUpEmployee.Items.Add(output);
             }
+            comm1.Dispose();
+            conn.Close();
 
             //Fuel description comboBox
             string sql2 = @"SELECT Fuel_ID FROM FUEL";
             SqlDataReader reader2;
             SqlCommand comm2 = new SqlCommand(sql2, conn);
+            conn.Open();
             reader2 = comm2.ExecuteReader();
-
             while (reader2.Read())
             {
                 string output = Convert.ToString(reader2.GetValue(0));
                 cmbOrFuel.Items.Add(output);
                 cmbUpFuel.Items.Add(output);
             }
+            comm2.Dispose();
+            conn.Close();
 
             //Order_ID comboBox
             string sql3 = @"SELECT Order_ID FROM FORDER";
             SqlDataReader reader3;
             SqlCommand comm3 = new SqlCommand(sql3, conn);
+            conn.Open();
             reader3 = comm3.ExecuteReader();
-
             while (reader3.Read())
             {
                 string output = Convert.ToString(reader3.GetValue(0));
                 cmbUpOrder.Items.Add(output);
                 cmbDelete.Items.Add(output);
             }
-
-            comm1.Dispose();
-            comm2.Dispose();
+            refresh();
             comm3.Dispose();
             conn.Close();
         }
@@ -161,32 +158,28 @@ namespace CMPG213_Prototype
         {
             if (cmbUpEmployee.SelectedItem == null)
             {
-                errorProvider6.SetError(cmbUpEmployee, "Please select an item from the list!");
-                MessageBox.Show("Please select an item from the list!");
+                epUpEmp.SetError(cmbUpEmployee, "Please select an item from the list!");
             }
             else
             {
-                errorProvider6.Clear();
+                epUpEmp.Clear();
             }
 
             if (cmbUpFuel.SelectedItem == null)
             {
-                errorProvider7.SetError(cmbUpFuel, "Please select an item from the list!");
-                MessageBox.Show("Please select an item from the list!");
+                epUpFuel.SetError(cmbUpFuel, "Please select an item from the list!");
             }
             else
             {
-                errorProvider7.Clear();
+                epUpFuel.Clear();
             }
-
             if (cmbUpOrder.SelectedItem == null)
             {
-                errorProvider8.SetError(cmbUpOrder, "Please select an item from the list!");
-                MessageBox.Show("Please select an item from the list!");
+                epUpOrder.SetError(cmbUpOrder, "Please select an item from the list!");
             }
             else
             {
-                errorProvider8.Clear();
+                epUpOrder.Clear();
             }
 
             if (ValidateChildren(ValidationConstraints.Enabled))
@@ -205,13 +198,10 @@ namespace CMPG213_Prototype
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter();
                 SqlCommand comm = new SqlCommand(sql, conn);
-                DataSet ds = new DataSet();
                 adap.UpdateCommand = new SqlCommand(sql, conn);
                 adap.UpdateCommand.ExecuteNonQuery();
-                adap.Fill(ds, "FORDER");
-                dataGridView1.DataSource = ds;
-                dataGridView1.DataMember = "FORDER";
                 MessageBox.Show("Record successfuly updated!");
+                refresh();
                 comm.Dispose();
                 conn.Close();
 
@@ -220,6 +210,7 @@ namespace CMPG213_Prototype
             {
                 MessageBox.Show(error.Message);
             }
+            conn.Close();
         }
 
         private void TabPage1_Click(object sender, EventArgs e)
@@ -233,12 +224,12 @@ namespace CMPG213_Prototype
             {
                 e.Cancel = true;
                 txbOrAmt.Focus();
-                errorProvider1.SetError(txbOrAmt, "Pleased enter a valid number! ");
+                epOrAmt.SetError(txbOrAmt, "Pleased enter a valid number! ");
             }
             else
             {
                 e.Cancel = false;
-                errorProvider1.SetError(txbOrAmt, null);
+                epOrAmt.SetError(txbOrAmt, null);
             }
 
         }
@@ -258,12 +249,12 @@ namespace CMPG213_Prototype
             {
                 e.Cancel = true;
                 txbUpAmt.Focus();
-                errorProvider1.SetError(txbUpAmt, "Pleased enter a valid number! ");
+                epUpAmt.SetError(txbUpAmt, "Pleased enter a valid number! ");
             }
             else
             {
                 e.Cancel = false;
-                errorProvider1.SetError(txbUpAmt, null);
+                epUpAmt.SetError(txbUpAmt, null);
             }
         }
 
@@ -273,6 +264,31 @@ namespace CMPG213_Prototype
             {
                 e.Handled = true;
             }
+        }
+
+        public void refresh()
+        {
+            conn.Close();
+            conn.Open();
+            SqlDataAdapter adap = new SqlDataAdapter();
+            //string sql = "";
+            adap.SelectCommand = new SqlCommand();
+            //string sql = "Select * from FORDER";
+            //SqlCommand comm = new SqlCommand(sql, conn);
+            DataSet ds = new DataSet();
+            adap.SelectCommand = new SqlCommand("Select * from FORDER");
+            adap.SelectCommand.Connection = conn;
+            adap.SelectCommand.ExecuteNonQuery();
+            adap.Fill(ds, "FORDER");
+            dataGridView1.DataSource = ds;
+            dataGridView1.DataMember = "FORDER";
+        }
+
+        private void BtnExit_Click(object sender, EventArgs e)
+        {
+            Form_Home_Page_FutureTech hp = new Form_Home_Page_FutureTech();
+            hp.ShowDialog();
+            this.Close();
         }
     }
 }

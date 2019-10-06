@@ -58,28 +58,29 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider7 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProvider8 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epOrFuel = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epOrEmp = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epOrAmt = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epDelete = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epUpOrder = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epUpFuel = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epUpEmp = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epUpAmt = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnExit = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tbDelete.SuspendLayout();
             this.tpUpdate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epOrFuel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epOrEmp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epOrAmt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epDelete)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epUpOrder)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epUpFuel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epUpEmp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epUpAmt)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -119,6 +120,7 @@
             // mcOr
             // 
             this.mcOr.Location = new System.Drawing.Point(275, 190);
+            this.mcOr.MaxSelectionCount = 1;
             this.mcOr.Name = "mcOr";
             this.mcOr.TabIndex = 4;
             // 
@@ -389,15 +391,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(632, 41);
+            this.dataGridView1.Location = new System.Drawing.Point(632, 75);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(475, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(475, 226);
             this.dataGridView1.TabIndex = 3;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnExit);
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.Controls.Add(this.tabControl1);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -411,37 +414,50 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "FUEL ORDERS";
             // 
-            // errorProvider1
+            // epOrFuel
             // 
-            this.errorProvider1.ContainerControl = this;
+            this.epOrFuel.ContainerControl = this;
             // 
-            // errorProvider2
+            // epOrEmp
             // 
-            this.errorProvider2.ContainerControl = this;
+            this.epOrEmp.ContainerControl = this;
             // 
-            // errorProvider3
+            // epOrAmt
             // 
-            this.errorProvider3.ContainerControl = this;
+            this.epOrAmt.ContainerControl = this;
             // 
-            // errorProvider4
+            // epDelete
             // 
-            this.errorProvider4.ContainerControl = this;
+            this.epDelete.ContainerControl = this;
             // 
-            // errorProvider5
+            // epUpOrder
             // 
-            this.errorProvider5.ContainerControl = this;
+            this.epUpOrder.ContainerControl = this;
             // 
-            // errorProvider6
+            // epUpFuel
             // 
-            this.errorProvider6.ContainerControl = this;
+            this.epUpFuel.ContainerControl = this;
             // 
-            // errorProvider7
+            // epUpEmp
             // 
-            this.errorProvider7.ContainerControl = this;
+            this.epUpEmp.ContainerControl = this;
             // 
-            // errorProvider8
+            // epUpAmt
             // 
-            this.errorProvider8.ContainerControl = this;
+            this.epUpAmt.ContainerControl = this;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.White;
+            this.btnExit.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnExit.Location = new System.Drawing.Point(813, 525);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(213, 69);
+            this.btnExit.TabIndex = 5;
+            this.btnExit.Text = "BACK";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.BtnExit_Click);
             // 
             // FOrderForm
             // 
@@ -463,14 +479,14 @@
             this.tpUpdate.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProvider8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epOrFuel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epOrEmp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epOrAmt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epDelete)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epUpOrder)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epUpFuel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epUpEmp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epUpAmt)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -506,13 +522,14 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.MonthCalendar mcOr;
         private System.Windows.Forms.MonthCalendar mcUp;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.ErrorProvider errorProvider2;
-        private System.Windows.Forms.ErrorProvider errorProvider3;
-        private System.Windows.Forms.ErrorProvider errorProvider4;
-        private System.Windows.Forms.ErrorProvider errorProvider5;
-        private System.Windows.Forms.ErrorProvider errorProvider6;
-        private System.Windows.Forms.ErrorProvider errorProvider7;
-        private System.Windows.Forms.ErrorProvider errorProvider8;
+        private System.Windows.Forms.ErrorProvider epOrFuel;
+        private System.Windows.Forms.ErrorProvider epOrEmp;
+        private System.Windows.Forms.ErrorProvider epOrAmt;
+        private System.Windows.Forms.ErrorProvider epDelete;
+        private System.Windows.Forms.ErrorProvider epUpOrder;
+        private System.Windows.Forms.ErrorProvider epUpFuel;
+        private System.Windows.Forms.ErrorProvider epUpEmp;
+        private System.Windows.Forms.ErrorProvider epUpAmt;
+        private System.Windows.Forms.Button btnExit;
     }
 }
