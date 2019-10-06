@@ -95,16 +95,16 @@
             // 
             this.btnExit.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnExit.ForeColor = System.Drawing.SystemColors.ControlText;
-<<<<<<< Updated upstream
+
             this.btnExit.Location = new System.Drawing.Point(853, 376);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(106, 32);
-=======
+
             this.btnExit.Location = new System.Drawing.Point(1466, 723);
             this.btnExit.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(176, 62);
->>>>>>> Stashed changes
+
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -115,12 +115,12 @@
             this.gbSales.BackColor = System.Drawing.SystemColors.ControlDark;
             this.gbSales.Controls.Add(this.btnNewSale);
             this.gbSales.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-<<<<<<< Updated upstream
+
             this.gbSales.Location = new System.Drawing.Point(595, 279);
-=======
+
             this.gbSales.Location = new System.Drawing.Point(1002, 537);
             this.gbSales.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
->>>>>>> Stashed changes
+
             this.gbSales.Name = "gbSales";
             this.gbSales.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.gbSales.Size = new System.Drawing.Size(408, 156);
@@ -158,12 +158,11 @@
             // 
             this.btnHelpAndSupport.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnHelpAndSupport.ForeColor = System.Drawing.SystemColors.ControlText;
-<<<<<<< Updated upstream
+
             this.btnHelpAndSupport.Location = new System.Drawing.Point(19, 376);
-=======
             this.btnHelpAndSupport.Location = new System.Drawing.Point(814, 723);
             this.btnHelpAndSupport.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
->>>>>>> Stashed changes
+
             this.btnHelpAndSupport.Name = "btnHelpAndSupport";
             this.btnHelpAndSupport.Size = new System.Drawing.Size(416, 62);
             this.btnHelpAndSupport.TabIndex = 4;
@@ -175,12 +174,12 @@
             // 
             this.btnReports.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnReports.ForeColor = System.Drawing.SystemColors.ControlText;
-<<<<<<< Updated upstream
+
             this.btnReports.Location = new System.Drawing.Point(853, 338);
-=======
+
             this.btnReports.Location = new System.Drawing.Point(1242, 723);
             this.btnReports.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
->>>>>>> Stashed changes
+
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(212, 62);
             this.btnReports.TabIndex = 5;
@@ -205,12 +204,13 @@
             this.groupBox1.Location = new System.Drawing.Point(24, 17);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox1.Name = "groupBox1";
-<<<<<<< Updated upstream
+
+
             this.groupBox1.Size = new System.Drawing.Size(985, 414);
-=======
+
             this.groupBox1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox1.Size = new System.Drawing.Size(1700, 796);
->>>>>>> Stashed changes
+
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "STALLION\'S GAS STATION";
@@ -225,12 +225,12 @@
             this.groupBox2.Location = new System.Drawing.Point(910, 44);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox2.Name = "groupBox2";
-<<<<<<< Updated upstream
+
             this.groupBox2.Size = new System.Drawing.Size(500, 250);
-=======
+
             this.groupBox2.Padding = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.groupBox2.Size = new System.Drawing.Size(732, 481);
->>>>>>> Stashed changes
+
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "CURRENT FUEL PRICES";
@@ -252,12 +252,12 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ControlLight;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-<<<<<<< Updated upstream
+
             this.button1.Location = new System.Drawing.Point(369, 188);
-=======
+
             this.button1.Location = new System.Drawing.Point(464, 362);
             this.button1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
->>>>>>> Stashed changes
+
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(234, 98);
             this.button1.TabIndex = 9;
@@ -274,12 +274,12 @@
             this.dataGridView1.Location = new System.Drawing.Point(22, 48);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.dataGridView1.Name = "dataGridView1";
-<<<<<<< Updated upstream
+
             this.dataGridView1.Size = new System.Drawing.Size(475, 150);
-=======
+
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.Size = new System.Drawing.Size(676, 288);
->>>>>>> Stashed changes
+
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -653,11 +653,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-<<<<<<< Updated upstream
+
             this.ClientSize = new System.Drawing.Size(1020, 450);
-=======
+
             this.ClientSize = new System.Drawing.Size(1760, 865);
->>>>>>> Stashed changes
+
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
