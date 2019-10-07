@@ -17,29 +17,34 @@ namespace CMPG213_Prototype
         {
             InitializeComponent();
         }
-        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True");
-        
-        string detail;
+
+        SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True");
+
+
+        string detail, amt;
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                MessageBox.Show(txbAdd.Text, "Please enter valid reward description.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(txbAddDesc.Text, "Please enter valid reward description.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(txbAddAmt.Text, "Please enter valid amount !", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-            detail = txbAdd.Text;
+            detail = txbAddDesc.Text;
+            amt = txbAddAmt.Text;
 
-            string sql = @"Insert Into REWARD (Reward_Description) Values('" + detail + "')";
+            string sql = @"Insert Into REWARD (Reward_Description, Reward_Amount) Values('" + detail + "', '" + amt + "')";
 
             try
             {
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter();
                 SqlCommand comm = new SqlCommand(sql, conn);
-                DataSet ds = new DataSet();
                 adap.InsertCommand = new SqlCommand(sql, conn);
                 adap.InsertCommand.ExecuteNonQuery();
-                adap.Fill(ds, "REWARD");
                 MessageBox.Show("Record inserted successfully");
                 comm.Dispose();
                 conn.Close();
@@ -49,7 +54,8 @@ namespace CMPG213_Prototype
                 MessageBox.Show(error.Message);
             }
 
-            txbAdd.Text = "";
+            txbAddDesc.Text = "";
+            txbAddAmt.Text = "";
         }
 
         private void BtnUpdate_Click(object sender, EventArgs e)
@@ -57,7 +63,6 @@ namespace CMPG213_Prototype
             if (cmbUpdate.SelectedItem == null)
             {
                 errProvComboxUpdate.SetError(cmbUpdate, "Please select an item from the combobox !");
-                MessageBox.Show("Please select an item from the combobox!");
             }
             else
             {
@@ -65,21 +70,25 @@ namespace CMPG213_Prototype
             }
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
-                MessageBox.Show(txbUpdate.Text, "Please enter valid reward description.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(txbUpDesc.Text, "Please enter valid reward description.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(txbUpAmt.Text, "Please enter valid amount.", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-            detail = txbUpdate.Text;
-            string sql = @"UPDATE REWARD SET Reward_Detail ='" + detail + "' WHERE Reward_ID = '" + cmbUpdate.SelectedItem + "'";
+            detail = txbUpDesc.Text;
+            amt = txbUpAmt.Text;
+
+            string sql = @"UPDATE REWARD SET Reward_Description ='" + detail + "', Reward_Amount = '" + amt + "' WHERE Reward_ID = '" + cmbUpdate.SelectedItem + "'";
 
             try
             {
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter();
                 SqlCommand comm = new SqlCommand(sql, conn);
-                DataSet ds = new DataSet();
                 adap.UpdateCommand = new SqlCommand(sql, conn);
                 adap.UpdateCommand.ExecuteNonQuery();
-                adap.Fill(ds, "REWARD");
                 MessageBox.Show("Record successfuly updated!");
                 comm.Dispose();
                 conn.Close();
@@ -90,7 +99,8 @@ namespace CMPG213_Prototype
                 MessageBox.Show(error.Message);
             }
 
-            txbUpdate.Text = "";
+            txbUpDesc.Text = "";
+            txbUpAmt.Text = "";
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -104,22 +114,16 @@ namespace CMPG213_Prototype
             {
                 errProvComboxDelete.Clear();
             }
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                //MessageBox.Show(txbDelete.Text, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-
 
             string sql = @"DELETE FROM REWARD WHERE Reward_ID = '" + cmbDelete.SelectedItem + "'";
+
             try
             {
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter();
                 SqlCommand comm = new SqlCommand(sql, conn);
-                DataSet ds = new DataSet();
                 adap.DeleteCommand = new SqlCommand(sql, conn);
                 adap.DeleteCommand.ExecuteNonQuery();
-                adap.Fill(ds, "REWARD");
                 MessageBox.Show("Record successfuly deleted!");
                 comm.Dispose();
                 conn.Close();
@@ -128,11 +132,12 @@ namespace CMPG213_Prototype
             {
                 MessageBox.Show(error.Message);
             }
+
         }
 
         private void Maintain_Rewards_Load(object sender, EventArgs e)
         {
-            string sql = @"SELECT Reward_Description FROM REWARD";
+            string sql = @"SELECT Reward_ID FROM REWARD";
             conn.Open();
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
@@ -155,65 +160,127 @@ namespace CMPG213_Prototype
             home.ShowDialog();
         }
 
-        private void txbAdd_Validating(object sender, CancelEventArgs e)
+
+        private void TxbAddAmt_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(txbAdd.Text))
+            if (string.IsNullOrEmpty(txbAddAmt.Text))
             {
                 e.Cancel = true;
-                txbAdd.Focus();
-                errProvAddRewDesc.SetError(txbAdd, "Please enter valid reward description !");
+                txbAddAmt.Focus();
+                errProvAddAmt.SetError(txbAddAmt, "Please enter valid amount !");
             }
             else
             {
                 e.Cancel = false;
-                errProvAddRewDesc.SetError(txbAdd, null);
+                errProvAddAmt.SetError(txbAddAmt, null);
 
             }
+
         }
 
-        private void txbUpdate_Validating(object sender, CancelEventArgs e)
+        private void TxbAddAmt_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (string.IsNullOrEmpty(txbUpdate.Text))
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void TxbAddDesc_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txbAddDesc.Text))
             {
                 e.Cancel = true;
-                txbUpdate.Focus();
-                errProvTboxUpd.SetError(txbUpdate, "Please enter valid reward description !");
+                txbAddDesc.Focus();
+                errProvAddRewDesc.SetError(txbAddDesc, "Please enter valid reward description !");
             }
             else
             {
                 e.Cancel = false;
-                errProvTboxUpd.SetError(txbUpdate, null);
-
+                errProvAddRewDesc.SetError(txbAddDesc, null);
             }
+
         }
 
-       /* private void txbDelete_Validating(object sender, CancelEventArgs e)
+        private void TxbAddDesc_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txbDelete.Text))
+            if (txbAddDesc.Text.All(chr => char.IsLetter(chr)))
+            {
+                string oldText = txbAddDesc.Text;
+                txbAddDesc.Text = oldText;
+
+                txbAddDesc.BackColor = System.Drawing.Color.White;
+                txbAddDesc.ForeColor = System.Drawing.Color.Black;
+            }
+            else
+            {
+
+                txbAddDesc.BackColor = System.Drawing.Color.Red;
+                txbAddDesc.ForeColor = System.Drawing.Color.White;
+            }
+            txbAddDesc.SelectionStart = txbAddDesc.Text.Length;
+
+        }
+
+        private void TxbUpDesc_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txbUpDesc.Text))
             {
                 e.Cancel = true;
-                txbDelete.Focus();
-                errProvTboxDelete.SetError(txbDelete, "Please enter valid reward description !");
+                txbUpDesc.Focus();
+                errProvUpDesc.SetError(txbUpDesc, "Please enter valid reward description !");
             }
             else
             {
                 e.Cancel = false;
-                errProvTboxDelete.SetError(txbDelete, null);
+                errProvUpDesc.SetError(txbUpDesc, null);
             }
-        }
-        */
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void TxbUpDesc_TextChanged(object sender, EventArgs e)
         {
+            if (txbUpDesc.Text.All(chr => char.IsLetter(chr)))
+            {
+                string oldText = txbUpDesc.Text;
+                txbUpDesc.Text = oldText;
+
+                txbUpDesc.BackColor = System.Drawing.Color.White;
+                txbUpDesc.ForeColor = System.Drawing.Color.Black;
+            }
+            else
+            {
+
+                txbUpDesc.BackColor = System.Drawing.Color.Red;
+                txbUpDesc.ForeColor = System.Drawing.Color.White;
+            }
+            txbUpDesc.SelectionStart = txbUpDesc.Text.Length;
+        }
+
+        private void TxbUpAmt_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(txbUpAmt.Text))
+            {
+                e.Cancel = true;
+                txbUpAmt.Focus();
+                errProvUpAmt.SetError(txbUpAmt, "Please enter employee cell number !");
+            }
+            else
+            {
+                e.Cancel = false;
+                errProvUpAmt.SetError(txbUpAmt, null);
+
+            }
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void TxbUpAmt_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
 
         }
     }

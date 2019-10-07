@@ -23,14 +23,13 @@ namespace CMPG213_Prototype
         SqlConnection conn;
 
 
-        string fName, lName, job, email , cellNr;
+        string fName, lName, job, email, cellNr;
 
         private void TxbEmp_LNameAdd_Validating(object sender, CancelEventArgs e)
         {
             if (string.IsNullOrEmpty(txbEmp_LNameAdd.Text))
             {
                 e.Cancel = true;
-                txbEmp_LNameAdd.Focus();
                 epLname.SetError(txbEmp_LNameAdd, "Please enter employee last name !");
             }
             else
@@ -47,7 +46,6 @@ namespace CMPG213_Prototype
             if (string.IsNullOrEmpty(txbEmp_CellNumAdd.Text))
             {
                 e.Cancel = true;
-                txbEmp_CellNumAdd.Focus();
                 epCell.SetError(txbEmp_CellNumAdd, "Please enter employee cell number !");
             }
             else
@@ -56,7 +54,7 @@ namespace CMPG213_Prototype
                 epCell.SetError(txbEmp_CellNumAdd, null);
 
             }
-           
+
         }
 
         private void TxbEmp_CellNumAdd_KeyPress(object sender, KeyPressEventArgs e)
@@ -72,7 +70,6 @@ namespace CMPG213_Prototype
             if (string.IsNullOrEmpty(txbEmp_JobAdd.Text))
             {
                 e.Cancel = true;
-                txbEmp_JobAdd.Focus();
                 epJob.SetError(txbEmp_JobAdd, "Please enter employee job description !");
             }
             else
@@ -88,7 +85,6 @@ namespace CMPG213_Prototype
             if (string.IsNullOrEmpty(txbEmp_EmailAdd.Text))
             {
                 e.Cancel = true;
-                txbEmp_EmailAdd.Focus();
                 epEmail.SetError(txbEmp_EmailAdd, "Please enter employee email !");
             }
             else
@@ -129,7 +125,7 @@ namespace CMPG213_Prototype
             }
             else
             {
-                
+
                 txbEmp_FNameAdd.BackColor = System.Drawing.Color.Red;
                 txbEmp_FNameAdd.ForeColor = System.Drawing.Color.White;
             }
@@ -178,7 +174,6 @@ namespace CMPG213_Prototype
             if (string.IsNullOrEmpty(txbEmp_FNameAdd.Text))
             {
                 e.Cancel = true;
-                txbEmp_FNameAdd.Focus();
                 epFname.SetError(txbEmp_FNameAdd, "Please enter employee first name !");
             }
             else
@@ -353,7 +348,6 @@ namespace CMPG213_Prototype
             else
             {
                 MessageBox.Show("Invalid phone number");
-                txbEmp_CellNumAdd.Focus();
             }
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
@@ -375,13 +369,13 @@ namespace CMPG213_Prototype
             {
                 MessageBox.Show(txbEmp_CellNumAdd.Text, "Please enter employee cell number!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-           
+
             fName = txbEmp_FNameAdd.Text;
             lName = txbEmp_LNameAdd.Text;
             cellNr = txbEmp_CellNumAdd.Text;
             job = txbEmp_JobAdd.Text;
             email = txbEmp_EmailAdd.Text;
-            
+
 
             string sql = @"Insert Into EMPLOYEE (Emp_FName, Emp_LName, Emp_CellNum, Emp_JOB, Emp_Email)Values('" + fName + "','" + lName + "','" + cellNr + "','" + job + "','" + email + "')";
 
@@ -390,12 +384,10 @@ namespace CMPG213_Prototype
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter();
                 SqlCommand comm = new SqlCommand(sql, conn);
-                DataSet ds = new DataSet();               
+                DataSet ds = new DataSet();
                 adap.InsertCommand = new SqlCommand(sql, conn);
                 adap.InsertCommand.ExecuteNonQuery();
-                adap.Fill(ds, "EMPLOYEE");
-                dgvEmployee.DataSource = ds;
-                dgvEmployee.DataMember = "EMPLOYEE";
+                refresh();
                 MessageBox.Show("Record inserted successfully");
                 comm.Dispose();
                 conn.Close();
@@ -458,15 +450,15 @@ namespace CMPG213_Prototype
                 epUpEmp_ID.Clear();
             }
 
-            
+
             fName = txbEmp_FNameUp.Text;
             lName = txbEmp_LNameUp.Text;
             cellNr = txbEmp_CellNumUp.Text;
             job = txbEmp_JobUp.Text;
             email = txbEmp_EmailUp.Text;
-            
 
-            string sql = @"UPDATE EMPLOYEE SET Emp_FName = '" + fName + "', Emp_LName = '" + lName + "', Emp_CellNum = '" + cellNr + "', Emp_JOB = '" + job + "', Emp_Email = '" + email +  "' WHERE Emp_ID = '" + cmbUpdate.SelectedItem + "'";
+
+            string sql = @"UPDATE EMPLOYEE SET Emp_FName = '" + fName + "', Emp_LName = '" + lName + "', Emp_CellNum = '" + cellNr + "', Emp_JOB = '" + job + "', Emp_Email = '" + email + "' WHERE Emp_ID = '" + cmbUpdate.SelectedItem + "'";
 
 
             try
@@ -477,9 +469,7 @@ namespace CMPG213_Prototype
                 DataSet ds = new DataSet();
                 adap.UpdateCommand = new SqlCommand(sql, conn);
                 adap.UpdateCommand.ExecuteNonQuery();
-                adap.Fill(ds, "EMPLOYEE");
-                dgvEmployee.DataSource = ds;
-                dgvEmployee.DataMember = "EMPLOYEE";
+                refresh();
                 MessageBox.Show("Record successfuly updated!");
                 comm.Dispose();
                 conn.Close();
@@ -495,7 +485,7 @@ namespace CMPG213_Prototype
             txbEmp_CellNumUp.Text = "";
             txbEmp_JobUp.Text = "";
             txbEmp_EmailUp.Text = "";
-           
+
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
@@ -518,9 +508,7 @@ namespace CMPG213_Prototype
                 DataSet ds = new DataSet();
                 adap.DeleteCommand = new SqlCommand(sql, conn);
                 adap.DeleteCommand.ExecuteNonQuery();
-                adap.Fill(ds, "EMPLOYEE");
-                dgvEmployee.DataSource = ds;
-                dgvEmployee.DataMember = "EMPLOYEE";
+                refresh();
                 MessageBox.Show("Record successfuly deleted!");
                 comm.Dispose();
                 conn.Close();
@@ -545,6 +533,7 @@ namespace CMPG213_Prototype
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
             conn.Open();
+            refresh();
             reader = comm.ExecuteReader();
 
             while (reader.Read())
@@ -552,9 +541,28 @@ namespace CMPG213_Prototype
                 string output = Convert.ToString(reader.GetValue(0));
                 cmbUpdate.Items.Add(output);
                 cmbDelete.Items.Add(output);
+
             }
             comm.Dispose();
             conn.Close();
+
+        }
+        public void refresh()
+        {
+            conn.Close();
+            conn.Open();
+            SqlDataAdapter adap = new SqlDataAdapter();
+            //string sql = "";
+            adap.SelectCommand = new SqlCommand();
+            //string sql = "Select * from FORDER";
+            //SqlCommand comm = new SqlCommand(sql, conn);
+            DataSet ds = new DataSet();
+            adap.SelectCommand = new SqlCommand("Select * from EMPLOYEE");
+            adap.SelectCommand.Connection = conn;
+            adap.SelectCommand.ExecuteNonQuery();
+            adap.Fill(ds, "EMPLOYEE");
+            dgvEmployee.DataSource = ds;
+            dgvEmployee.DataMember = "EMPLOYEE";
 
         }
     }
