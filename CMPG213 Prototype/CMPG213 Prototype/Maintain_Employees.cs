@@ -415,7 +415,7 @@ namespace CMPG213_Prototype
             }
             else
             {
-                MessageBox.Show("Invalid phone number");
+                //MessageBox.Show("Invalid phone number");
                 txbEmp_CellNumUp.Focus();
             }
 
@@ -486,6 +486,19 @@ namespace CMPG213_Prototype
             txbEmp_JobUp.Text = "";
             txbEmp_EmailUp.Text = "";
 
+        }
+
+        private void TxbEmp_CellNumAdd_Leave(object sender, EventArgs e)
+        {
+            Regex pattern = new Regex(@"^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}[0-9]{7}$");
+            if (pattern.IsMatch(txbEmp_CellNumAdd.Text))
+            {
+                MessageBox.Show("OK");
+            }
+            else
+            {
+                MessageBox.Show("Invalid phone number");
+            }
         }
 
         private void BtnDelete_Click(object sender, EventArgs e)
