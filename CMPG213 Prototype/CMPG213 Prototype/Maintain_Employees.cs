@@ -341,6 +341,7 @@ namespace CMPG213_Prototype
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             Regex pattern = new Regex(@"^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}[0-9]{7}$");
+
             if (pattern.IsMatch(txbEmp_CellNumAdd.Text))
             {
                 MessageBox.Show("Cell phone number is valid");
@@ -349,6 +350,7 @@ namespace CMPG213_Prototype
             {
                 MessageBox.Show("Invalid phone number");
             }
+
             if (ValidateChildren(ValidationConstraints.Enabled))
             {
                 MessageBox.Show(txbEmp_EmailAdd.Text, "Please enter employee email !", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -384,7 +386,6 @@ namespace CMPG213_Prototype
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter();
                 SqlCommand comm = new SqlCommand(sql, conn);
-                DataSet ds = new DataSet();
                 adap.InsertCommand = new SqlCommand(sql, conn);
                 adap.InsertCommand.ExecuteNonQuery();
                 refresh();
@@ -466,7 +467,6 @@ namespace CMPG213_Prototype
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter();
                 SqlCommand comm = new SqlCommand(sql, conn);
-                DataSet ds = new DataSet();
                 adap.UpdateCommand = new SqlCommand(sql, conn);
                 adap.UpdateCommand.ExecuteNonQuery();
                 refresh();
@@ -505,7 +505,6 @@ namespace CMPG213_Prototype
                 conn.Open();
                 SqlDataAdapter adap = new SqlDataAdapter();
                 SqlCommand comm = new SqlCommand(sql, conn);
-                DataSet ds = new DataSet();
                 adap.DeleteCommand = new SqlCommand(sql, conn);
                 adap.DeleteCommand.ExecuteNonQuery();
                 refresh();
@@ -552,10 +551,7 @@ namespace CMPG213_Prototype
             conn.Close();
             conn.Open();
             SqlDataAdapter adap = new SqlDataAdapter();
-            //string sql = "";
             adap.SelectCommand = new SqlCommand();
-            //string sql = "Select * from FORDER";
-            //SqlCommand comm = new SqlCommand(sql, conn);
             DataSet ds = new DataSet();
             adap.SelectCommand = new SqlCommand("Select * from EMPLOYEE");
             adap.SelectCommand.Connection = conn;

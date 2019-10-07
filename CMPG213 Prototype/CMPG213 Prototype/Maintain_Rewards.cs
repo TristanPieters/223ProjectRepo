@@ -103,37 +103,7 @@ namespace CMPG213_Prototype
             txbUpAmt.Text = "";
         }
 
-        private void BtnDelete_Click(object sender, EventArgs e)
-        {
-            if (cmbDelete.SelectedItem == null)
-            {
-                errProvComboxDelete.SetError(cmbDelete, "Please select an item from the combobox !");
-                MessageBox.Show("Please select an item from the combobox!");
-            }
-            else
-            {
-                errProvComboxDelete.Clear();
-            }
-
-            string sql = @"DELETE FROM REWARD WHERE Reward_ID = '" + cmbDelete.SelectedItem + "'";
-
-            try
-            {
-                conn.Open();
-                SqlDataAdapter adap = new SqlDataAdapter();
-                SqlCommand comm = new SqlCommand(sql, conn);
-                adap.DeleteCommand = new SqlCommand(sql, conn);
-                adap.DeleteCommand.ExecuteNonQuery();
-                MessageBox.Show("Record successfuly deleted!");
-                comm.Dispose();
-                conn.Close();
-            }
-            catch (SqlException error)
-            {
-                MessageBox.Show(error.Message);
-            }
-
-        }
+       
 
         private void Maintain_Rewards_Load(object sender, EventArgs e)
         {
@@ -147,7 +117,6 @@ namespace CMPG213_Prototype
             {
                 string output = Convert.ToString(reader.GetValue(0));
                 cmbUpdate.Items.Add(output);
-                cmbDelete.Items.Add(output);
             }
             comm.Dispose();
             conn.Close();

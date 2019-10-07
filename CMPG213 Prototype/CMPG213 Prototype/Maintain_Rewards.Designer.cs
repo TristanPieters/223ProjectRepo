@@ -44,26 +44,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txbUpDesc = new System.Windows.Forms.TextBox();
-            this.tpDelete = new System.Windows.Forms.TabPage();
-            this.cmbDelete = new System.Windows.Forms.ComboBox();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.REWARDS = new System.Windows.Forms.GroupBox();
             this.errProvAddRewDesc = new System.Windows.Forms.ErrorProvider(this.components);
             this.errProvComboxUpdate = new System.Windows.Forms.ErrorProvider(this.components);
             this.errProvUpDesc = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errProvComboxDelete = new System.Windows.Forms.ErrorProvider(this.components);
             this.errProvAddAmt = new System.Windows.Forms.ErrorProvider(this.components);
             this.errProvUpAmt = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl1.SuspendLayout();
             this.tpAdd.SuspendLayout();
             this.tpUpdate.SuspendLayout();
-            this.tpDelete.SuspendLayout();
             this.REWARDS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errProvAddRewDesc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvComboxUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvUpDesc)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errProvComboxDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvAddAmt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvUpAmt)).BeginInit();
             this.SuspendLayout();
@@ -72,7 +65,6 @@
             // 
             this.tabControl1.Controls.Add(this.tpAdd);
             this.tabControl1.Controls.Add(this.tpUpdate);
-            this.tabControl1.Controls.Add(this.tpDelete);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(29, 49);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -233,51 +225,6 @@
             this.txbUpDesc.TextChanged += new System.EventHandler(this.TxbUpDesc_TextChanged);
             this.txbUpDesc.Validating += new System.ComponentModel.CancelEventHandler(this.TxbUpDesc_Validating);
             // 
-            // tpDelete
-            // 
-            this.tpDelete.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.tpDelete.Controls.Add(this.cmbDelete);
-            this.tpDelete.Controls.Add(this.btnDelete);
-            this.tpDelete.Controls.Add(this.label5);
-            this.tpDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.tpDelete.Location = new System.Drawing.Point(4, 34);
-            this.tpDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tpDelete.Name = "tpDelete";
-            this.tpDelete.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tpDelete.Size = new System.Drawing.Size(612, 314);
-            this.tpDelete.TabIndex = 2;
-            this.tpDelete.Text = "Delete";
-            // 
-            // cmbDelete
-            // 
-            this.cmbDelete.FormattingEnabled = true;
-            this.cmbDelete.Location = new System.Drawing.Point(380, 31);
-            this.cmbDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbDelete.Name = "cmbDelete";
-            this.cmbDelete.Size = new System.Drawing.Size(176, 33);
-            this.cmbDelete.TabIndex = 11;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDelete.Location = new System.Drawing.Point(432, 222);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(125, 48);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "DELETE";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(84, 41);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 25);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Reward ID";
-            // 
             // REWARDS
             // 
             this.REWARDS.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -285,9 +232,9 @@
             this.REWARDS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.REWARDS.ForeColor = System.Drawing.SystemColors.Control;
             this.REWARDS.Location = new System.Drawing.Point(16, 14);
-            this.REWARDS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.REWARDS.Margin = new System.Windows.Forms.Padding(4);
             this.REWARDS.Name = "REWARDS";
-            this.REWARDS.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.REWARDS.Padding = new System.Windows.Forms.Padding(4);
             this.REWARDS.Size = new System.Drawing.Size(709, 450);
             this.REWARDS.TabIndex = 7;
             this.REWARDS.TabStop = false;
@@ -304,10 +251,6 @@
             // errProvUpDesc
             // 
             this.errProvUpDesc.ContainerControl = this;
-            // 
-            // errProvComboxDelete
-            // 
-            this.errProvComboxDelete.ContainerControl = this;
             // 
             // errProvAddAmt
             // 
@@ -333,13 +276,10 @@
             this.tpAdd.PerformLayout();
             this.tpUpdate.ResumeLayout(false);
             this.tpUpdate.PerformLayout();
-            this.tpDelete.ResumeLayout(false);
-            this.tpDelete.PerformLayout();
             this.REWARDS.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errProvAddRewDesc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvComboxUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvUpDesc)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errProvComboxDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvAddAmt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errProvUpAmt)).EndInit();
             this.ResumeLayout(false);
@@ -357,17 +297,12 @@
         private System.Windows.Forms.TextBox txbUpDesc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.TabPage tpDelete;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.ComboBox cmbUpdate;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbDelete;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox REWARDS;
         private System.Windows.Forms.ErrorProvider errProvAddRewDesc;
         private System.Windows.Forms.ErrorProvider errProvComboxUpdate;
         private System.Windows.Forms.ErrorProvider errProvUpDesc;
-        private System.Windows.Forms.ErrorProvider errProvComboxDelete;
         private System.Windows.Forms.ErrorProvider errProvAddAmt;
         private System.Windows.Forms.TextBox txbAddAmt;
         private System.Windows.Forms.Label label6;
