@@ -19,7 +19,7 @@ namespace CMPG213_Prototype
         {
             InitializeComponent();
         }
-        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\FinalFinalFinal\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True";
+        string constring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True";
         SqlConnection conn;
 
 
@@ -340,15 +340,12 @@ namespace CMPG213_Prototype
 
         private void BtnAdd_Click(object sender, EventArgs e)
         {
-            Regex pattern = new Regex(@"^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}[0-9]{7}$");
+            int temp = txbEmp_CellNumAdd.Text.Length;
+            int num = Int32.Parse(txbEmp_CellNumAdd.Text);
 
-            if (pattern.IsMatch(txbEmp_CellNumAdd.Text))
+            if(temp == 10 && (num/1) ==num)
             {
-                MessageBox.Show("Cell phone number is valid");
-            }
-            else
-            {
-                MessageBox.Show("Invalid phone number");
+                cellNr = txbEmp_CellNumAdd.Text;
             }
 
             if (ValidateChildren(ValidationConstraints.Enabled))
@@ -374,7 +371,6 @@ namespace CMPG213_Prototype
 
             fName = txbEmp_FNameAdd.Text;
             lName = txbEmp_LNameAdd.Text;
-            cellNr = txbEmp_CellNumAdd.Text;
             job = txbEmp_JobAdd.Text;
             email = txbEmp_EmailAdd.Text;
 
@@ -408,15 +404,12 @@ namespace CMPG213_Prototype
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            Regex pattern = new Regex(@"^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}[0-9]{7}$");
-            if (pattern.IsMatch(txbEmp_CellNumUp.Text))
+            int temp = txbEmp_CellNumUp.Text.Length;
+            int num = Int32.Parse(txbEmp_CellNumUp.Text);
+
+            if (temp == 10 && (num / 1) == num)
             {
-                MessageBox.Show("Cell phone number is valid");
-            }
-            else
-            {
-                //MessageBox.Show("Invalid phone number");
-                txbEmp_CellNumUp.Focus();
+                cellNr = txbEmp_CellNumUp.Text;
             }
 
             if (ValidateChildren(ValidationConstraints.Enabled))
@@ -454,7 +447,6 @@ namespace CMPG213_Prototype
 
             fName = txbEmp_FNameUp.Text;
             lName = txbEmp_LNameUp.Text;
-            cellNr = txbEmp_CellNumUp.Text;
             job = txbEmp_JobUp.Text;
             email = txbEmp_EmailUp.Text;
 
@@ -497,6 +489,7 @@ namespace CMPG213_Prototype
             }
             else
             {
+                //
                 MessageBox.Show("Invalid phone number");
             }
         }
@@ -541,10 +534,10 @@ namespace CMPG213_Prototype
         private void Maintain_Employees_Load(object sender, EventArgs e)
         {
             conn = new SqlConnection(constring);
+            conn.Open();
             string sql = @"SELECT Emp_ID FROM EMPLOYEE";
             SqlDataReader reader;
             SqlCommand comm = new SqlCommand(sql, conn);
-            conn.Open();
             refresh();
             reader = comm.ExecuteReader();
 
