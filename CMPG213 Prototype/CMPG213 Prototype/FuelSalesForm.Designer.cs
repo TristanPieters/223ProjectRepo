@@ -59,7 +59,6 @@
             this.btnReturnHome = new System.Windows.Forms.Button();
             this.gbSales = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tBoxEmpNum = new System.Windows.Forms.TextBox();
             this.btnCalcTotalFuelPrice = new System.Windows.Forms.Button();
             this.toolTipRewardComBox = new System.Windows.Forms.ToolTip(this.components);
             this.errProvEmpID = new System.Windows.Forms.ErrorProvider(this.components);
@@ -67,6 +66,9 @@
             this.errProvAmountLiters = new System.Windows.Forms.ErrorProvider(this.components);
             this.errProvAccNum = new System.Windows.Forms.ErrorProvider(this.components);
             this.errProvAmountCredit = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblDiscountedAmount = new System.Windows.Forms.Label();
+            this.comBoxEmpNum = new System.Windows.Forms.ComboBox();
             this.gBoxAccount.SuspendLayout();
             this.gbSales.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -120,7 +122,7 @@
             this.lblFuelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFuelPrice.Location = new System.Drawing.Point(187, 153);
             this.lblFuelPrice.Name = "lblFuelPrice";
-            this.lblFuelPrice.Size = new System.Drawing.Size(79, 18);
+            this.lblFuelPrice.Size = new System.Drawing.Size(100, 18);
             this.lblFuelPrice.TabIndex = 7;
             // 
             // label5
@@ -138,7 +140,6 @@
             this.tBoxFuelAmountLiters.Name = "tBoxFuelAmountLiters";
             this.tBoxFuelAmountLiters.Size = new System.Drawing.Size(100, 26);
             this.tBoxFuelAmountLiters.TabIndex = 9;
-            this.tBoxFuelAmountLiters.TextChanged += new System.EventHandler(this.tBoxFuelAmountLiters_TextChanged);
             this.tBoxFuelAmountLiters.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxFuelAmountLiters_KeyPress);
             this.tBoxFuelAmountLiters.Validating += new System.ComponentModel.CancelEventHandler(this.tBoxFuelAmountLiters_Validating);
             // 
@@ -165,6 +166,8 @@
             // gBoxAccount
             // 
             this.gBoxAccount.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.gBoxAccount.Controls.Add(this.lblDiscountedAmount);
+            this.gBoxAccount.Controls.Add(this.label12);
             this.gBoxAccount.Controls.Add(this.lblRewardDetail);
             this.gBoxAccount.Controls.Add(this.comBoxRewardSelect);
             this.gBoxAccount.Controls.Add(this.label1);
@@ -194,15 +197,16 @@
             // 
             this.lblRewardDetail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblRewardDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRewardDetail.Location = new System.Drawing.Point(280, 326);
+            this.lblRewardDetail.Location = new System.Drawing.Point(280, 315);
             this.lblRewardDetail.Name = "lblRewardDetail";
-            this.lblRewardDetail.Size = new System.Drawing.Size(71, 18);
+            this.lblRewardDetail.Size = new System.Drawing.Size(116, 18);
             this.lblRewardDetail.TabIndex = 15;
+            this.lblRewardDetail.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // comBoxRewardSelect
             // 
             this.comBoxRewardSelect.FormattingEnabled = true;
-            this.comBoxRewardSelect.Location = new System.Drawing.Point(280, 295);
+            this.comBoxRewardSelect.Location = new System.Drawing.Point(280, 284);
             this.comBoxRewardSelect.Name = "comBoxRewardSelect";
             this.comBoxRewardSelect.Size = new System.Drawing.Size(116, 28);
             this.comBoxRewardSelect.TabIndex = 14;
@@ -211,7 +215,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 303);
+            this.label1.Location = new System.Drawing.Point(7, 292);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 20);
             this.label1.TabIndex = 13;
@@ -222,7 +226,7 @@
             this.btnAccSearch.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnAccSearch.Location = new System.Drawing.Point(280, 63);
             this.btnAccSearch.Name = "btnAccSearch";
-            this.btnAccSearch.Size = new System.Drawing.Size(100, 28);
+            this.btnAccSearch.Size = new System.Drawing.Size(116, 28);
             this.btnAccSearch.TabIndex = 12;
             this.btnAccSearch.Text = "SEARCH";
             this.btnAccSearch.UseVisualStyleBackColor = true;
@@ -243,17 +247,17 @@
             // 
             this.lblAccNewCredit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblAccNewCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccNewCredit.Location = new System.Drawing.Point(280, 260);
+            this.lblAccNewCredit.Location = new System.Drawing.Point(280, 249);
             this.lblAccNewCredit.Name = "lblAccNewCredit";
-            this.lblAccNewCredit.Size = new System.Drawing.Size(79, 18);
+            this.lblAccNewCredit.Size = new System.Drawing.Size(116, 18);
             this.lblAccNewCredit.TabIndex = 10;
             // 
             // btnAccUpdateCredit
             // 
             this.btnAccUpdateCredit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAccUpdateCredit.Location = new System.Drawing.Point(280, 208);
+            this.btnAccUpdateCredit.Location = new System.Drawing.Point(280, 205);
             this.btnAccUpdateCredit.Name = "btnAccUpdateCredit";
-            this.btnAccUpdateCredit.Size = new System.Drawing.Size(107, 28);
+            this.btnAccUpdateCredit.Size = new System.Drawing.Size(116, 28);
             this.btnAccUpdateCredit.TabIndex = 9;
             this.btnAccUpdateCredit.Text = "UPDATE";
             this.btnAccUpdateCredit.UseVisualStyleBackColor = true;
@@ -262,7 +266,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 253);
+            this.label11.Location = new System.Drawing.Point(7, 242);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(198, 20);
             this.label11.TabIndex = 8;
@@ -270,9 +274,9 @@
             // 
             // tBoxAccCreditAmount
             // 
-            this.tBoxAccCreditAmount.Location = new System.Drawing.Point(280, 176);
+            this.tBoxAccCreditAmount.Location = new System.Drawing.Point(280, 173);
             this.tBoxAccCreditAmount.Name = "tBoxAccCreditAmount";
-            this.tBoxAccCreditAmount.Size = new System.Drawing.Size(100, 26);
+            this.tBoxAccCreditAmount.Size = new System.Drawing.Size(116, 26);
             this.tBoxAccCreditAmount.TabIndex = 7;
             this.tBoxAccCreditAmount.Click += new System.EventHandler(this.tBoxAccCreditAmount_Click);
             this.tBoxAccCreditAmount.Validating += new System.ComponentModel.CancelEventHandler(this.tBoxAccCreditAmount_Validating);
@@ -280,7 +284,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 182);
+            this.label10.Location = new System.Drawing.Point(7, 179);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(192, 20);
             this.label10.TabIndex = 6;
@@ -291,15 +295,16 @@
             this.lblAccCreditOutstand.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblAccCreditOutstand.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblAccCreditOutstand.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccCreditOutstand.Location = new System.Drawing.Point(280, 135);
+            this.lblAccCreditOutstand.Location = new System.Drawing.Point(280, 132);
             this.lblAccCreditOutstand.Name = "lblAccCreditOutstand";
-            this.lblAccCreditOutstand.Size = new System.Drawing.Size(79, 18);
+            this.lblAccCreditOutstand.Size = new System.Drawing.Size(116, 18);
             this.lblAccCreditOutstand.TabIndex = 5;
+            this.lblAccCreditOutstand.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 133);
+            this.label9.Location = new System.Drawing.Point(7, 130);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(257, 20);
             this.label9.TabIndex = 4;
@@ -312,7 +317,7 @@
             this.lblAccHolderName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAccHolderName.Location = new System.Drawing.Point(11, 99);
             this.lblAccHolderName.Name = "lblAccHolderName";
-            this.lblAccHolderName.Size = new System.Drawing.Size(120, 18);
+            this.lblAccHolderName.Size = new System.Drawing.Size(253, 18);
             this.lblAccHolderName.TabIndex = 3;
             // 
             // label8
@@ -328,9 +333,8 @@
             // 
             this.tboxAccNum.Location = new System.Drawing.Point(280, 28);
             this.tboxAccNum.Name = "tboxAccNum";
-            this.tboxAccNum.Size = new System.Drawing.Size(100, 26);
+            this.tboxAccNum.Size = new System.Drawing.Size(116, 26);
             this.tboxAccNum.TabIndex = 1;
-            this.tboxAccNum.TextChanged += new System.EventHandler(this.tboxAccNum_TextChanged);
             this.tboxAccNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tboxAccNum_KeyPress);
             this.tboxAccNum.Validating += new System.ComponentModel.CancelEventHandler(this.tboxAccNum_Validating);
             // 
@@ -382,7 +386,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tBoxEmpNum);
+            this.groupBox1.Controls.Add(this.comBoxEmpNum);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnCalcTotalFuelPrice);
             this.groupBox1.Controls.Add(this.label5);
@@ -397,19 +401,10 @@
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.groupBox1.Location = new System.Drawing.Point(30, 25);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(408, 426);
+            this.groupBox1.Size = new System.Drawing.Size(408, 429);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CASH SALES:";
-            // 
-            // tBoxEmpNum
-            // 
-            this.tBoxEmpNum.Location = new System.Drawing.Point(187, 31);
-            this.tBoxEmpNum.Name = "tBoxEmpNum";
-            this.tBoxEmpNum.Size = new System.Drawing.Size(153, 26);
-            this.tBoxEmpNum.TabIndex = 15;
-            this.tBoxEmpNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxEmpNum_KeyPress);
-            this.tBoxEmpNum.Validating += new System.ComponentModel.CancelEventHandler(this.tBoxEmpNum_Validating);
             // 
             // btnCalcTotalFuelPrice
             // 
@@ -441,6 +436,33 @@
             // errProvAmountCredit
             // 
             this.errProvAmountCredit.ContainerControl = this;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(7, 344);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(172, 20);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Discounted Amount:";
+            // 
+            // lblDiscountedAmount
+            // 
+            this.lblDiscountedAmount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDiscountedAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscountedAmount.Location = new System.Drawing.Point(280, 346);
+            this.lblDiscountedAmount.Name = "lblDiscountedAmount";
+            this.lblDiscountedAmount.Size = new System.Drawing.Size(116, 18);
+            this.lblDiscountedAmount.TabIndex = 17;
+            this.lblDiscountedAmount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // comBoxEmpNum
+            // 
+            this.comBoxEmpNum.FormattingEnabled = true;
+            this.comBoxEmpNum.Location = new System.Drawing.Point(187, 31);
+            this.comBoxEmpNum.Name = "comBoxEmpNum";
+            this.comBoxEmpNum.Size = new System.Drawing.Size(153, 28);
+            this.comBoxEmpNum.TabIndex = 15;
             // 
             // FuelSalesForm
             // 
@@ -500,11 +522,13 @@
         private System.Windows.Forms.ToolTip toolTipRewardComBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblRewardDetail;
-        private System.Windows.Forms.TextBox tBoxEmpNum;
         private System.Windows.Forms.ErrorProvider errProvEmpID;
         private System.Windows.Forms.ErrorProvider errProvComBoxFuelType;
         private System.Windows.Forms.ErrorProvider errProvAmountLiters;
         private System.Windows.Forms.ErrorProvider errProvAccNum;
         private System.Windows.Forms.ErrorProvider errProvAmountCredit;
+        private System.Windows.Forms.Label lblDiscountedAmount;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comBoxEmpNum;
     }
 }
