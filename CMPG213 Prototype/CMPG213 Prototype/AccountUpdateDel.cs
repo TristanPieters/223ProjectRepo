@@ -26,7 +26,7 @@ namespace CMPG213_Prototype
 
         private void AccountUpdateDel_Load(object sender, EventArgs e)
         {
-            CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDBFF.mdf;Integrated Security=True");
+            CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\FinalFinalFinal\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True");
 
             CONN.Open();
             SqlCommand comm;
@@ -132,7 +132,7 @@ namespace CMPG213_Prototype
                 MessageBox.Show(tbxLiters.Text, "Please enter valid account liters sold !", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-            SqlConnection conn = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename =D:\Akademie\CMPG_223\FutureTech Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security = True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\FinalFinalFinal\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True");
             string sName, sSurname, sID, sCellnr, sEmail;
             decimal dDebt;
             double Liters;
