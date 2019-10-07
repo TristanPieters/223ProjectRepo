@@ -20,6 +20,7 @@ C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG21
 C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
 C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
 C:\Users\User\Documents\2de Sem\CMPG 223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
+<<<<<<< Updated upstream
 D:\Akademie\CMPG_223\FinalFinalFinal\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\SGSDBF.mdf
 D:\Akademie\CMPG_223\FinalFinalFinal\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\SGSDBF_log.ldf
 D:\Akademie\CMPG_223\FinalFinalFinal\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe.config
@@ -42,3 +43,26 @@ D:\Akademie\CMPG_223\FinalFinalFinal\223ProjectRepo\CMPG213 Prototype\CMPG213 Pr
 D:\Akademie\CMPG_223\FinalFinalFinal\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.CoreCompileInputs.cache
 D:\Akademie\CMPG_223\FinalFinalFinal\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
 D:\Akademie\CMPG_223\FinalFinalFinal\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
+=======
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\SGSDBF.mdf
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\SGSDBF_log.ldf
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe.config
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.exe
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\bin\Debug\CMPG213 Prototype.pdb
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csprojAssemblyReference.cache
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.AccountForm.resources
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.AccountUpdateDel.resources
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.ClockInForm.resources
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.DataViewForm.resources
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.FOrderForm.resources
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_HelpSupport.resources
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Form_Home_Page_FutureTech.resources
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.FuelSalesForm.resources
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Maintain_Employees.resources
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Maintain_Fuel.resources
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Maintain_Rewards.resources
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213_Prototype.Properties.Resources.resources
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.csproj.GenerateResource.cache
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.exe
+D:\PUK\Year 2\2nd Sem\CMPG223\Project\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\obj\Debug\CMPG213 Prototype.pdb
+>>>>>>> Stashed changes

@@ -27,8 +27,6 @@ namespace CMPG213_Prototype
 
         private void FuelSalesForm_Load(object sender, EventArgs e)
         {
-            comBoxRewardSelect.SelectedItem = 2;
-
             try
             {
                 string sqlFillEmployeeComB = @"SELECT Emp_ID FROM EMPLOYEE";
@@ -83,6 +81,7 @@ namespace CMPG213_Prototype
                     string outputRewardComBFill = Convert.ToString(reader.GetValue(0));
                     comBoxRewardSelect.Items.Add(outputRewardComBFill);
                 }
+                
                 comm.Dispose();
                 conn.Close();
             }
@@ -94,25 +93,12 @@ namespace CMPG213_Prototype
 
         private void tBoxFuelAmountLiters_Validating(object sender, CancelEventArgs e)
         {
-            if (string.IsNullOrEmpty(tBoxFuelAmountLiters.Text))
-            {
-                e.Cancel = true;
-                tBoxFuelAmountLiters.Focus();
-                errProvAmountLiters.SetError(tBoxFuelAmountLiters, "Please enter in the correct format using '00,00' and decimal values");
-            }
-            else
-            {
-                e.Cancel = false;
-                errProvAmountLiters.SetError(tBoxFuelAmountLiters, null);
-            }
+
         }
 
         private void tBoxFuelAmountLiters_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ',')
-            {
-                e.Handled = true;
-            }
+
         }
 
         private void tboxAccNum_Validating(object sender, CancelEventArgs e)
@@ -154,28 +140,8 @@ namespace CMPG213_Prototype
         }
 
         private void btnCompSale_Click(object sender, EventArgs e)
-        {
-            if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(tBoxFuelAmountLiters.Text, "Please enter a valid amount of fuel using format '00,00'.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(tboxAccNum.Text, "Please enter a valid account number or create a new account.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (ValidateChildren(ValidationConstraints.Enabled))
-            {
-                MessageBox.Show(tBoxAccCreditAmount.Text, "Please enter a valid credit amount using format '00,00'", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if (comBoxFuelType.SelectedItem == null)
-            {
-                errProvComBoxFuelType.SetError(comBoxFuelType, "Please select an item from the combobox.");
-                MessageBox.Show("Please select an item from the combobox.");
-            }
-            else
-            {
-                errProvComBoxFuelType.Clear();
-            }
+        {            
+            
 
             string fuelResType = comBoxFuelType.SelectedItem.ToString();
             int empNum = Convert.ToInt32(comBoxEmpNum.SelectedIndex.ToString());
@@ -292,7 +258,27 @@ namespace CMPG213_Prototype
                 MessageBox.Show(ex.Message);
             }
 
-            
+            if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(tboxAccNum.Text, "Account credit has been updated.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(tBoxFuelAmountLiters.Text, "Please enter a valid fuel amount using format '00,00'.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (ValidateChildren(ValidationConstraints.Enabled))
+            {
+                MessageBox.Show(tBoxAccCreditAmount.Text, "Please enter a valid credit amount using format '00,00'", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (comBoxFuelType.SelectedItem == null)
+            {
+                errProvComBoxFuelType.SetError(comBoxFuelType, "Please select an item from the combobox.");
+                MessageBox.Show("Please select an item from the combobox.");
+            }
+            else
+            {
+                errProvComBoxFuelType.Clear();
+            }
         }
 
         private void btnReturnHome_Click(object sender, EventArgs e)
@@ -383,17 +369,14 @@ namespace CMPG213_Prototype
             try
             {
                 string accNum = tboxAccNum.Text;
-                //string currCredAmnt = tBoxAccCreditAmount.Text.Replace(',','.');
-                //string addCredAcc = lblAccCreditOutstand.Text.Replace(',', '.');
                 string currCredAmnt = tBoxAccCreditAmount.Text;
-                string addCredAcc = lblAccCreditOutstand.Text;
-                decimal currentCredAmount, addCreditAmount;
+                string addDiscountAcc = lblDiscountedAmount.Text;
 
-                //currentCredAmount = Convert.ToDecimal(addCredAcc, new CultureInfo("en-US"));
-                //addCreditAmount = Convert.ToDecimal(currCredAmnt, new CultureInfo("en-US"));
-                currentCredAmount = Convert.ToDecimal(addCredAcc);
-                addCreditAmount = Convert.ToDecimal(currCredAmnt);
-                decimal newCredAmount = currentCredAmount + addCreditAmount;
+                decimal currentCredAmount, discountAmnt;
+                currentCredAmount = Convert.ToDecimal(currCredAmnt);
+                discountAmnt = Convert.ToDecimal(addDiscountAcc);
+
+                decimal newCredAmount = currentCredAmount - discountAmnt;
 
                 
 
@@ -428,13 +411,13 @@ namespace CMPG213_Prototype
 
         private void comBoxRewardSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string selectRewardDet = comBoxRewardSelect.SelectedItem.ToString();
+
             try
             {
-                string selectRewardDet = comBoxRewardSelect.SelectedItem.ToString();
-
-                string sql = @"SELECT Reward_Description From REWARD WHERE Reward_ID = '" + selectRewardDet + "'";
+                string sqlSelectRewDsecript = @"SELECT Reward_Description From REWARD WHERE Reward_ID = '" + selectRewardDet + "'";
                 SqlDataReader reader;
-                SqlCommand comm = new SqlCommand(sql, conn);
+                SqlCommand comm = new SqlCommand(sqlSelectRewDsecript, conn);
                 conn.Open();
                 reader = comm.ExecuteReader();
 
@@ -443,6 +426,42 @@ namespace CMPG213_Prototype
                     string output = Convert.ToString(reader.GetValue(0));
                     lblRewardDetail.Text = output;
                 }
+                conn.Close();
+            }
+            catch (SqlException error)
+            {
+                MessageBox.Show(error.Message);
+            }
+
+            try
+            {
+                decimal DiscAmount = 0;
+
+                string sqlSelectDiscountAmount = @"SELECT Reward_Amount FROM REWARD WHERE Reward_ID = '" + selectRewardDet + "'";
+
+                SqlDataReader reader;
+                SqlCommand comm = new SqlCommand(sqlSelectDiscountAmount, conn);
+
+                conn.Open();
+                reader = comm.ExecuteReader();
+
+                while(reader.Read())
+                {
+                    decimal output = Convert.ToDecimal(reader.GetValue(0));
+                    DiscAmount = output;
+                }
+
+                string currOutstandCred = tBoxAccCreditAmount.Text;
+                
+                decimal currentCredAmount, divDiscAmount;
+                currentCredAmount = Convert.ToDecimal(currOutstandCred);
+                divDiscAmount = Convert.ToDecimal(DiscAmount);
+
+                decimal newCredAmount = currentCredAmount * (divDiscAmount/100);
+
+                lblDiscountedAmount.Text = newCredAmount.ToString();
+
+                comm.Dispose();
                 conn.Close();
             }
             catch (SqlException error)

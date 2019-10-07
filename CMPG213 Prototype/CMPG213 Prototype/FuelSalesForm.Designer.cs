@@ -39,6 +39,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblFuelPurchased = new System.Windows.Forms.Label();
             this.gBoxAccount = new System.Windows.Forms.GroupBox();
+            this.lblDiscountedAmount = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.lblRewardDetail = new System.Windows.Forms.Label();
             this.comBoxRewardSelect = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,6 +61,7 @@
             this.btnReturnHome = new System.Windows.Forms.Button();
             this.gbSales = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.comBoxEmpNum = new System.Windows.Forms.ComboBox();
             this.btnCalcTotalFuelPrice = new System.Windows.Forms.Button();
             this.toolTipRewardComBox = new System.Windows.Forms.ToolTip(this.components);
             this.errProvEmpID = new System.Windows.Forms.ErrorProvider(this.components);
@@ -66,9 +69,6 @@
             this.errProvAmountLiters = new System.Windows.Forms.ErrorProvider(this.components);
             this.errProvAccNum = new System.Windows.Forms.ErrorProvider(this.components);
             this.errProvAmountCredit = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblDiscountedAmount = new System.Windows.Forms.Label();
-            this.comBoxEmpNum = new System.Windows.Forms.ComboBox();
             this.gBoxAccount.SuspendLayout();
             this.gbSales.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -140,8 +140,6 @@
             this.tBoxFuelAmountLiters.Name = "tBoxFuelAmountLiters";
             this.tBoxFuelAmountLiters.Size = new System.Drawing.Size(100, 26);
             this.tBoxFuelAmountLiters.TabIndex = 9;
-            this.tBoxFuelAmountLiters.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tBoxFuelAmountLiters_KeyPress);
-            this.tBoxFuelAmountLiters.Validating += new System.ComponentModel.CancelEventHandler(this.tBoxFuelAmountLiters_Validating);
             // 
             // label6
             // 
@@ -169,13 +167,13 @@
             this.gBoxAccount.Controls.Add(this.lblDiscountedAmount);
             this.gBoxAccount.Controls.Add(this.label12);
             this.gBoxAccount.Controls.Add(this.lblRewardDetail);
+            this.gBoxAccount.Controls.Add(this.btnAccUpdateCredit);
+            this.gBoxAccount.Controls.Add(this.lblAccNewCredit);
             this.gBoxAccount.Controls.Add(this.comBoxRewardSelect);
+            this.gBoxAccount.Controls.Add(this.label11);
             this.gBoxAccount.Controls.Add(this.label1);
             this.gBoxAccount.Controls.Add(this.btnAccSearch);
             this.gBoxAccount.Controls.Add(this.btnCreateNewAcc);
-            this.gBoxAccount.Controls.Add(this.lblAccNewCredit);
-            this.gBoxAccount.Controls.Add(this.btnAccUpdateCredit);
-            this.gBoxAccount.Controls.Add(this.label11);
             this.gBoxAccount.Controls.Add(this.tBoxAccCreditAmount);
             this.gBoxAccount.Controls.Add(this.label10);
             this.gBoxAccount.Controls.Add(this.lblAccCreditOutstand);
@@ -193,11 +191,30 @@
             this.gBoxAccount.TabStop = false;
             this.gBoxAccount.Text = "ACCOUNT SALES: ";
             // 
+            // lblDiscountedAmount
+            // 
+            this.lblDiscountedAmount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDiscountedAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiscountedAmount.Location = new System.Drawing.Point(280, 270);
+            this.lblDiscountedAmount.Name = "lblDiscountedAmount";
+            this.lblDiscountedAmount.Size = new System.Drawing.Size(116, 18);
+            this.lblDiscountedAmount.TabIndex = 17;
+            this.lblDiscountedAmount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(7, 268);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(172, 20);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Discounted Amount:";
+            // 
             // lblRewardDetail
             // 
             this.lblRewardDetail.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblRewardDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRewardDetail.Location = new System.Drawing.Point(280, 315);
+            this.lblRewardDetail.Location = new System.Drawing.Point(280, 239);
             this.lblRewardDetail.Name = "lblRewardDetail";
             this.lblRewardDetail.Size = new System.Drawing.Size(116, 18);
             this.lblRewardDetail.TabIndex = 15;
@@ -206,7 +223,7 @@
             // comBoxRewardSelect
             // 
             this.comBoxRewardSelect.FormattingEnabled = true;
-            this.comBoxRewardSelect.Location = new System.Drawing.Point(280, 284);
+            this.comBoxRewardSelect.Location = new System.Drawing.Point(280, 208);
             this.comBoxRewardSelect.Name = "comBoxRewardSelect";
             this.comBoxRewardSelect.Size = new System.Drawing.Size(116, 28);
             this.comBoxRewardSelect.TabIndex = 14;
@@ -215,7 +232,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 292);
+            this.label1.Location = new System.Drawing.Point(7, 216);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 20);
             this.label1.TabIndex = 13;
@@ -247,7 +264,7 @@
             // 
             this.lblAccNewCredit.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblAccNewCredit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAccNewCredit.Location = new System.Drawing.Point(280, 249);
+            this.lblAccNewCredit.Location = new System.Drawing.Point(280, 336);
             this.lblAccNewCredit.Name = "lblAccNewCredit";
             this.lblAccNewCredit.Size = new System.Drawing.Size(116, 18);
             this.lblAccNewCredit.TabIndex = 10;
@@ -255,7 +272,7 @@
             // btnAccUpdateCredit
             // 
             this.btnAccUpdateCredit.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnAccUpdateCredit.Location = new System.Drawing.Point(280, 205);
+            this.btnAccUpdateCredit.Location = new System.Drawing.Point(280, 297);
             this.btnAccUpdateCredit.Name = "btnAccUpdateCredit";
             this.btnAccUpdateCredit.Size = new System.Drawing.Size(116, 28);
             this.btnAccUpdateCredit.TabIndex = 9;
@@ -266,7 +283,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 242);
+            this.label11.Location = new System.Drawing.Point(7, 334);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(198, 20);
             this.label11.TabIndex = 8;
@@ -299,7 +316,6 @@
             this.lblAccCreditOutstand.Name = "lblAccCreditOutstand";
             this.lblAccCreditOutstand.Size = new System.Drawing.Size(116, 18);
             this.lblAccCreditOutstand.TabIndex = 5;
-            this.lblAccCreditOutstand.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label9
             // 
@@ -406,6 +422,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CASH SALES:";
             // 
+            // comBoxEmpNum
+            // 
+            this.comBoxEmpNum.FormattingEnabled = true;
+            this.comBoxEmpNum.Location = new System.Drawing.Point(187, 31);
+            this.comBoxEmpNum.Name = "comBoxEmpNum";
+            this.comBoxEmpNum.Size = new System.Drawing.Size(153, 28);
+            this.comBoxEmpNum.TabIndex = 15;
+            // 
             // btnCalcTotalFuelPrice
             // 
             this.btnCalcTotalFuelPrice.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -436,33 +460,6 @@
             // errProvAmountCredit
             // 
             this.errProvAmountCredit.ContainerControl = this;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(7, 344);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(172, 20);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Discounted Amount:";
-            // 
-            // lblDiscountedAmount
-            // 
-            this.lblDiscountedAmount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblDiscountedAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscountedAmount.Location = new System.Drawing.Point(280, 346);
-            this.lblDiscountedAmount.Name = "lblDiscountedAmount";
-            this.lblDiscountedAmount.Size = new System.Drawing.Size(116, 18);
-            this.lblDiscountedAmount.TabIndex = 17;
-            this.lblDiscountedAmount.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // comBoxEmpNum
-            // 
-            this.comBoxEmpNum.FormattingEnabled = true;
-            this.comBoxEmpNum.Location = new System.Drawing.Point(187, 31);
-            this.comBoxEmpNum.Name = "comBoxEmpNum";
-            this.comBoxEmpNum.Size = new System.Drawing.Size(153, 28);
-            this.comBoxEmpNum.TabIndex = 15;
             // 
             // FuelSalesForm
             // 
