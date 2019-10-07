@@ -92,16 +92,8 @@ namespace CMPG213_Prototype
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             int length = tbxIDu.Text.Length;
-            Regex pattern = new Regex(@"^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}[0-9]{7}$");
-            if (pattern.IsMatch(tbxCellNumberU.Text))
-            {
-                MessageBox.Show("Cell phone number is valid");
-            }
-            else
-            {
-                MessageBox.Show("Invalid phone number");
-                tbxCellNumberU.Focus();
-            }
+           
+           
 
             if (ValidateChildren(ValidationConstraints.Enabled))
             {

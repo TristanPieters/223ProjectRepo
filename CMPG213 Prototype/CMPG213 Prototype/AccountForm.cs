@@ -45,11 +45,7 @@ namespace CMPG213_Prototype
 
 
 
-                if (tbxLastName.Text != " ")
-                {
-                    sSurname = tbxLastName.Text;
-
-                }
+               
 
                 if (tbxLastName.Text != " ")
                 {
@@ -85,17 +81,7 @@ namespace CMPG213_Prototype
                     bAccount = false;
 
                 }
-                Regex pattern = new Regex(@"^((\+){0,1}91(\s){0,1}(\-){0,1}(\s){0,1}){0,1}9[0-9](\s){0,1}(\-){0,1}(\s){0,1}[1-9]{1}[0-9]{7}$");
-                if (pattern.IsMatch(tbxCellNumber.Text))
-                {
-                    MessageBox.Show("Phone Correct");
-                }
-                else
-                {
-                    MessageBox.Show("Invalid phone number");
-                    bAccount = false;
-                    tbxCellNumber.Focus();
-                }
+               
 
                 if ((tbxEmail.Text != " ") || (!tbxEmail.Text.Contains('@') || !this.tbxEmail.Text.Contains('.')))
                 {
@@ -117,32 +103,31 @@ namespace CMPG213_Prototype
                     CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\FinalFinalFinal\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True");
 
                     sEmail = tbxEmail.Text;
+
+                    CONN.Open();
+                    sql = @"Insert into ACCOUNT (Acc_FName,Acc_LName,Acc_Email,Acc_Cellnum,Acc_IDnum) values('" + sName + "','" + sSurname + "','" + sEmail + "','" + sCellnr + "','" + sID + "') ";
+
+
+                    comm = new SqlCommand(sql, CONN);
+
+                    adapter.InsertCommand = new SqlCommand(sql, CONN);
+                    adapter.InsertCommand.ExecuteNonQuery();
+                    MessageBox.Show("Account Added");
+                    CONN.Close();
+                    comm.Dispose();
+
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Account can not be added");
                 }
 
-                //CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Dewald\Desktop\CMPG223\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\StallionsDb.mdf;Integrated Security=True");
-
-                sName = tbxFirstName.Text;
-                sSurname = tbxLastName.Text;
-                sID = tbxID.Text;
-                sCellnr = tbxCellNumber.Text;
-                sEmail = tbxEmail.Text;
-                CONN = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Akademie\CMPG_223\FinalFinalFinal\223ProjectRepo\CMPG213 Prototype\CMPG213 Prototype\SGSDBF.mdf;Integrated Security=True");
+               
+               
 
 
-
-                CONN.Open();
-                sql = @"Insert into ACCOUNT (Acc_FName,Acc_LName,Acc_Email,Acc_Cellnum,Acc_IDnum) values('" + sName + "','" + sSurname + "','" + sEmail + "','" + sCellnr + "','" + sID + "') ";
-
-
-                comm = new SqlCommand(sql, CONN);
-
-                adapter.InsertCommand = new SqlCommand(sql, CONN);
-                adapter.InsertCommand.ExecuteNonQuery();
-                MessageBox.Show("Account Added");
-                CONN.Close();
-                comm.Dispose();
-
-                this.Close();
+              
 
                 /*else
                 {
